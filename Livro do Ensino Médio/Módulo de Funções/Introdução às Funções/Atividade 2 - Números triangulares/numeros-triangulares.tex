@@ -1,0 +1,185 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Números triangulares}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Reconhecer a relação de dependência entre a ordem e os termos de uma sequência.
+
+\item[OE2] Reconhecer, a partir de um padrão geométrico, os primeiros termos de uma sequência e ser capaz de, a partir do padrão identificado, inferir os próximos termos da sequência.
+
+\item[OE3] Generalizar, ainda que em palavras, a determinação de um termo qualquer da sequência a partir da sua ordem segundo um padrão identificado.
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Nível de abstração: \textbf{Ação}.
+
+
+\item Muito provavelmente os estudantes descreverão a sequência de formas diferentes, mas obtendo o mesmo resultado para o sexto, o sétimo e o oitavo números triangulares. Por exemplo, um estudante poderá dizer que, para identificar os números triangulares solicitados, “constrói”{} os triângulos “de cima para baixo”{}. Já ouro pode argumentar que o faz “de baixo para cima”. Outro ainda pode agumentar a partir da observação do padrão recursivo: “basta acrescentar uma linha ao último triângulo construído”. Assim, como a resposta ao ítem (b) não é única, procure aproveitar e explorar as diferentes respostas na discussão com a turma: os resultados são os mesmos para essas diferentes formas de descrever a sequência? Por que? Por exemplo, “somar de cima para baixo” produz o mesmo resultado que “somar de baixo para cima”, pois a adição é comutativa.
+
+
+\item Pela mesma razão apontada no ítem (b), a resposta do item (d) não é única.
+
+\item Não é objetivo, neste momento, que o estudante expresse a relação por meio da linguagem simbólica matemática, escrevendo, por exemplo, $T_n=T_n−1+n$, mas que seja matematicamente preciso em suas palavras, dizendo, por exemplo, que “o $n$-ésimo termo da sequência é obtido a partir do termo anterior acrescido de mais uma fileira com $n$”{} ou que “o $n$-ésimo triângulo da sequência é obtido a partir do triângulo anterior acrescido de mais uma fileira com $n$ círculos", portanto, “o $n$-ésimo número triangular é obtido a partir do termo anterior acrescido de $n$“.
+
+
+\item É possível que algum estudante descreva o $n$-ésimo número triangular como a soma dos primeiros $n$ números naturais. Nesse caso, você pode mostrar que essa maneira de descrever o procedimento é equivalente à recursiva. Não apenas testando exemplos, mas sim fazendo uso da propriedade associativa da adição: seja qual for o $n$ tem-se
+
+\begin{align*}
+T_n &= 1+2+...+(n-1)+n \\
+&=[1+2+...+(n-1)]+n \\
+&=T_{n-1}+n
+\end{align*}
+
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
+\tikzstyle{circ}=[circle,draw,minimum size=1cm, fill=session1];
+\begin{scope}
+\node (A) [circ] {};
+\node [below of=A] {$T_1=1$};
+\end{scope}
+
+\begin{scope}[xshift=1.3cm,node distance=1cm]
+
+\node (A) [circ] {};
+\node (B) [circ, right of=A] {};
+\node (C) at ($(A)!.5!(B)$) [circ, 
+yshift=.86602cm] {};
+
+\node [below of=A, xshift=.5cm] {$T_2=3$};
+\end{scope}
+
+\begin{scope}[xshift=3.4cm,node distance=1cm]
+
+\node (A) [circ] {};
+\node (B) [circ, right of=A] {};
+\node (C) at ($(A)!.5!(B)$) [circ, 
+yshift=.86602cm] {};
+\node (D) [circ, right of=B] {};
+\node (E) [circ, right of=C] {};
+\node (F) at ($(C)!.5!(E)$) [circ, yshift=.86602cm] {};
+
+\node [below of=B] {$T_3=6$};
+\end{scope}
+
+\begin{scope}[xshift=6.6cm,node distance=1cm]
+
+\node (A) [circ] {};
+\node (B) [circ, right of=A] {};
+\node (C) at ($(A)!.5!(B)$) [circ, 
+yshift=.86602cm] {};
+\node (D) [circ, right of=B] {};
+\node (E) [circ, right of=C] {};
+\node (F) at ($(C)!.5!(E)$) [circ, yshift=.86602cm] {};
+\node (G) [circ, right of=D] {};
+\node (H) [circ, right of=E] {};
+\node (I) [circ, right of=F] {};
+\node (J) at ($(F)!.5!(I)$) [circ, yshift=.86602cm] {};
+
+\node [below of=B, xshift=.5cm] {$T_4=10$};
+\end{scope}
+
+\begin{scope}[xshift=10.8cm,node distance=1cm]
+
+\node (A) [circ] {};
+\node (B) [circ, right of=A] {};
+\node (C) at ($(A)!.5!(B)$) [circ, 
+yshift=.86602cm] {};
+\node (D) [circ, right of=B] {};
+\node (E) [circ, right of=C] {};
+\node (F) at ($(C)!.5!(E)$) [circ, yshift=.86602cm] {};
+\node (G) [circ, right of=D] {};
+\node (H) [circ, right of=E] {};
+\node (I) [circ, right of=F] {};
+\node (J) at ($(F)!.5!(I)$) [circ, yshift=.86602cm] {};
+\node (K) [circ, right of=G] {};
+\node (L) [circ, right of=H] {};
+\node (M) [circ, right of=I] {};
+\node (N) [circ, right of=J] {};
+\node (O) at ($(N)!.5!(J)$) [circ, yshift=.86602cm] {};
+
+\node [below of=D] {$T_5=15$};
+\end{scope}
+
+\end{tikzpicture}
+\end{figure}
+
+
+Considere a sequência de números ilustrada acima. Ela é conhecida como a sequência dos \emph{números triangulares}. O \(n\)-ésimo número triangular, \(T_n\), é igual a quantidade total de círculos congruentes necessários para formar um triângulo equilátero cujo lado tem \(n\) círculos. Por exemplo, o quarto número triangular é \(T_4=10\), porque são necessários \(10\) círculos congruentes para formar um triângulo cujo lado tem \(4\) desses círculos.
+\begin{enumerate}
+\item {} 
+Determine o 6º, o 7º e o 8º números triangulares.
+
+\item {} 
+Descreva o procedimento que você usou para determinar \(T_6\), \(T_7\) e \(T_8\) no item anterior.
+
+\item {} 
+Determine o milésimo número triangular, \(T_{1000}\).
+
+\item {} 
+Descreva um procedimento que permita determinar qualquer número triangular a partir da sua ordem na sequência? Explique.
+
+\item {} 
+Quais são as variáveis relacionadas?
+
+\end{enumerate}
+
+
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item {} 
+$21$, $28$ e $36$
+
+\item {} 
+Uma resposta possível seria a partir de um raciocínio aditivo baseado em contagem: $T_6$ é obtido adicionando $6$ círculos a um dos lados do triângulo equilátero que corresponde a $T_5$ e efetuando a soma dos círculos presentes nesse novo triângulo equilátero: $T_6=1+2+3+4+5+6=21$. Outra maneira é a partir do raciocínio recursivo. Assim $T_6$ é obrido adicionando $6$ círculos ao total de círculos do triângulo equilátero que corresponde a $T_5$: $T_6=T_5+6=15+6=21$. Os números triangulares $T_7$ e $T_8$ podem ser obtidos de formas análogas.
+
+\item {} 
+$T_1000=1+2+3+4+5+6+...+1000=500500$.
+
+\item {} 
+Uma resposta possível é: o número triangular $T_n$ é obtido somando $n$ ao número triangular anterior
+
+\item {} 
+$n$ e $T_n$.
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

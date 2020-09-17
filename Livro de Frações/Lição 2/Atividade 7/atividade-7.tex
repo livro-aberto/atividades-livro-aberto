@@ -1,0 +1,77 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Comparando um quarto e um oitavo}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+  \item Expressar as frações $\frac{1}{4}$ e $\frac{1}{8}$ em símbolos matemáticos.
+  \item Comparar as frações um quarto e um oitavo a partir de modelos visuais.
+
+\end{enumerate}
+\tcblower
+
+\begin{itemize} %s
+    \item Esta atividade pode ser resolvida individualmente, mas é essencial que seja discutida com toda a turma.
+    \item Os estudantes compararam as frações um quarto e um oitavo em modelos retangulares na Atividade 8 da Lição 1, isso justifica a opção por um modelo circular nesta atividade.
+    \item Em particular, incentive os alunos a argumentar, justificando a sua resposta.
+    \item Conduza a discussão de modo a conseguirem reconhecer a relação inversa entre denominador (número de partes) e o tamanho de cada parte: quanto maior o denominador, maior é o número de partes em que foi repartida a pizza, logo menor o tamanho da parte.
+      \item Embora não seja o objetivo da atividade, algum estudante pode reconhecer que uma fatia da primeira pizza tem o dobro da quantidade de uma fatia da segunda  pizza, ou seja, são necessárias duas fatias da segunda pizza para ter-se a mesma quantidade de pizza que uma fatia da primeira pizza.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Um grupo de amigos está dividindo duas pizzas circulares iguais, isto é, de mesmo tamanho. A primeira pizza foi cortada em 4 fatias de mesmo tamanho. A segunda pizza foi repartida em 8 pedaços iguais.
+\begin{enumerate} [label=\alph*)] %s
+\item Uma fatia da primeira pizza é que fração dessa pizza? Responda usando símbolos matemáticos.
+\item Uma fatia da segunda pizza é que fração dessa pizza? Responda usando símbolos matemáticos.
+\item Qual fatia tem mais quantidade de pizza: uma fatia da primeira ou uma fatia da segunda? Explique usando uma figura.
+\end{enumerate} %s
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+\begin{multicols}{2}
+\begin{enumerate} [label=\alph*)] %s
+    \item $\frac{1}{4}$.
+    \item $\frac{1}{8}$.
+    \item Uma fatia da primeira pizza é maior do que uma fatia da segunda pizza: como partimos a segunda pizza em mais partes, cada fatia tem menos pizza.
+
+\end{enumerate} %s
+\begin{center}
+       \begin{tikzpicture}[x=1mm,y=1mm, scale=.7]
+        \draw[fill=common, fill opacity=.3] (0,0) circle (10);
+        \fill[attention] (180:10) arc (180:270:10) -- (0,0) -- cycle;
+        \foreach \x in {0,90}\draw (\x:10) -- (\x:-10);
+       \end{tikzpicture} \quad \quad
+       \begin{tikzpicture}[x=1mm,y=1mm, scale=.7]
+        \draw[fill=common, fill opacity=.3] (0,0) circle (10);
+        \fill[attention] (180:10) arc (180:270:10) -- (0,0) -- cycle;
+        \foreach \x in {0,45,90, 135}\draw (\x:10) -- (\x:-10);
+       \end{tikzpicture}
+\end{center}
+\end{multicols}
+\end{solucao}
+\fi
+
+\end{document}

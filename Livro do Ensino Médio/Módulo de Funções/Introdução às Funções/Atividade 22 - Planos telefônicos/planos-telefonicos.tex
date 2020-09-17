@@ -1,0 +1,111 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Planos telefônicos}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{EM13MT404} Analisar funções definidas por uma ou mais sentenças (tabela do Imposto de Renda, contas de luz, água, gás etc.), em suas representações algébrica e gráfica, identificando domínios de validade, imagem, crescimento e decrescimento, e convertendo essas representações de uma para outra, com ou sem apoio de tecnologias digitais
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Interpretar informações registradas textual e graficamente.
+
+\item[OE2] Visualizar o gráfico de uma função definida por mais de uma sentença.
+
+\item[OE3] Utilizar informações de um gráfico para tomada de decisão.
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Não é esperado nesse momento que os estudantes apresentem uma expressão para a função cujo gráfico é apresentado.
+
+\item Estimule uma discussão sobre os diferentes planos oferecidos pelas operadoras e as experiências de cada um.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Você deseja trocar o plano do seu telefone e ao consultar a sua operadora tem a opção de escolher entre dois planos: plano Prata e plano Ouro. No seu plano atual, você paga R\$$70{,}00$ por 500MB de internet e os dados além disso custam R\$$0{,}20$ por MB. 
+
+O plano Ouro cobra R\$$140{,}00$ por dados ilimitados e o plano Prata tem a mesma estrutura do seu plano atual. Os valores cobrados pelo plano Prata estão representados no gráfico a seguir.
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}[yscale=.5,scale=.75, every node/.style={scale=.75}]
+
+\draw [->] (0,0) -- (14,0) node [below left, yshift=-.5cm] {Dados (MB)};
+\draw [->] (0,0) -- (0,20) node [above left, rotate=90, yshift=.5cm] {Valor (R\$)};
+\draw [help lines] (0,0) grid (14,20);
+
+\foreach \x in {2,4,...,20} \node [left] at (0,\x) {\x0};
+\foreach \x in {1,2,...,14} \node [below] at (\x,0) {\x00};
+
+\node [below left] at (0,0) {0};
+
+\draw [thick, session1] (0,8) -- (6,8) -- (14,20);
+
+\end{tikzpicture}
+\end{figure}
+
+\begin{enumerate}
+\item Qual o valor fixo cobrado no plano Prata e que quantidade de dados ele cobre?
+\item Qual o valor por MB excedente do valor estipulado?
+\item A partir de que quantidade de dados consumidos o plano Ouro passa a ser mais vantajoso?
+\item Represente no sistema de coordenadas acima o gráfico do preço a pagar pelo plano Ouro.
+\end{enumerate}
+
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item R\$$80{,}00$
+\item R\$$0{,}15$
+\item 1000MB
+\item\adjustbox{valign=t}{
+	
+\begin{tikzpicture}[yscale=.5,scale=.75, every node/.style={scale=.75}]
+
+\draw [->] (0,0) -- (14,0) node [below left, yshift=-.5cm] {Dados (MB)};
+\draw [->] (0,0) -- (0,20) node [above left, rotate=90, yshift=.75cm] {Valor (R\$)};
+\draw [help lines] (0,0) grid (14,20);
+
+\foreach \x in {2,4,...,20} \node [left] at (0,\x) {\x0};
+\foreach \x in {1,2,...,14} \node [below] at (\x,0) {\x00};
+
+\node [below left] at (0,0) {0};
+
+\draw [thick, session1] (0,8) -- (6,8) -- (14,20);
+
+\draw [thick, session3] (0,14) -- (14,14);
+
+\end{tikzpicture}
+
+}
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: É função?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Identificar, em um contexto, diferentes relações de dependência entre conjuntos de dados, reconhecendo quais são funções.
+
+\item[OE2] Identificar a univocidade (ou não) de uma relação.
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Nível de abstração: \textbf{Processo}.
+
+\item Esta é a oportunidade para reforçar as condições que garantem que uma relação é função, em particular, a univocidade.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+No contexto da atividade anterior são observados diferentes conjuntos de dados: O conjunto dos tempos de travessia da ponte, \(A=\{13, 14, 15, 16, 18, 23\}\); O conjunto das cores que compoõem a escala, \(B=\{\) Verde, Laranja, Vermelho, Vinho \(\}\); e o conjunto de velocidades obtidas,{}`C{}`. Considere as diferentes relações de dependências estabelecidas entre esses conjuntos. Quais são funções?
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|>{\centering}m{6cm}|}
+\hline
+\thead
+Relação & É função? &  Se não, por que? \\
+\hline
+De A em B
+&&\\
+\hline
+De B em A
+&&\\
+\hline
+De A em C
+&&\\
+\hline
+De C em A
+&&\\
+\hline
+De B em C
+&&\\
+\hline
+De C em B
+&&\\
+\hline
+\end{tabu}
+\end{table}
+
+
+
+\ifdefined\prof
+\begin{solucao}
+
+Apenas as relações de $B$ em $A$ e de $B$ em $C$ não são funções. A primeira porque a uma mesma cor estão associados diferentes tempos de travessia, e a segunda porque a uma mesma cor estão assiciadas velocidades médias diferentes.
+
+
+\end{solucao}
+\fi
+
+\end{document}

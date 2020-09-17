@@ -1,0 +1,99 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Bandeiras tarifárias}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{EM13MT404} Analisar funções definidas por uma ou mais sentenças (tabela do Imposto de Renda, contas de luz, água, gás etc.), em suas representações algébrica e gráfica, identificando domínios de validade, imagem, crescimento e decrescimento, e convertendo essas representações de uma para outra, com ou sem apoio de tecnologias digitais
+\end{objetivos}
+
+\begin{goals}
+
+\begin{enumerate}
+
+\item[OE1] Interpretar informações registradas textual e graficamente.
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Este é um tema que tem potencial interdisciplinar. Considere conversar com os professores de Geografia, Física, Química, Biologia, Sociologia para tratar de temas como: energia, formas alternativas de geração, custo de produção e distribuição, políticas públicas de fornecimento, roubos de carga, etc.
+
+\item Caso haja a possibilidade assista com seus alunos o vídeo oficial da ANEEL sobre as bandeiras tarifárias \url{https://youtu.be/w1rS7_tGSvM}.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Desde o ano de 2015, as contas de energia passaram a trazer uma novidade: o Sistema de Bandeiras Tarifárias, que apresenta as seguintes modalidades: verde, amarela e vermelha - as mesmas cores dos semáforos - e indicam se haverá ou não acréscimo no valor de energia a ser repassada ao consumidor final, em função das condições de geração de eletricidade. Cada modalidade apresenta as seguintes características:
+
+%adicionar bandeiras
+\begin{itemize}
+\item \textbf{Bandeira verde}: condições favoráveis de geração de energia. A tarifa não sofre nenhum acréscimo;
+
+\item \textbf{Bandeira amarela}: condições de geração menos favoráveis. A tarifa sobre acréscimo de R\$$0{,}01343$ para cada quilowatt-hora (kWh) consumidos;
+
+\item \textbf{Bandeira vermelha - patamar 1}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$$0{,}04169$ para cada quilowatt-hora (kWh) consumido.
+
+\item \textbf{Bandeira vermelha - patamar 2}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$$0{,}06243$ para cada quilowatt-hora (kWh) consumido.
+\end{itemize}
+
+\flushright{\small
+
+Texto extraído da página da ANEEL em 28/03/2020 \\ \url{https://www.aneel.gov.br/bandeiras-tarifárias}}
+
+\justify
+O sistema de coordenadas abaixo contém os gráficos para as funções que relacionam o preço a pagar pela energia em relação ao consumo em quilowatt-hora (kWh) para cada uma das bandeiras tarifárias, em uma cidade vizinha. Com base nas informações do gráfico a seguir, responda:
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[yscale=2.5,scale=.75, every node/.style={scale=.75}]
+
+\draw [->] (0,5) -- (11,5) node [below left, yshift=-.5cm] {consumo (kWh)};
+\draw [->] (0,5) -- (0,9) node [above left, , rotate=90, yshift=1.2cm] {Preço a pagar (R\$)};
+
+\foreach \x in {2,4,...,10} {\node [below] at (\x,5) {\x00};
+\draw [help lines] (\x,5) -- (\x,9);
+};
+\foreach \x/\y in {8/{800,00},8.1343/{813,43},8.4169/{841,89},8.6243/{862,43}} {
+
+\node [left] at (0,\x) {\y};
+
+\draw [thick, session3] (0,5) -- (10,\x);
+\draw [help lines] (0,\x) -- (10,\x);
+};
+
+\end{tikzpicture}
+\end{figure}
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item R\$$0{,}80$ por kWh
+\item R\$$284{,}70$
+\item $356$ kWh
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

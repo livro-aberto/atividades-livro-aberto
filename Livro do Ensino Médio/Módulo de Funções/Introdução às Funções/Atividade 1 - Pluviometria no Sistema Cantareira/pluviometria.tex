@@ -1,0 +1,139 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Pluviometria no Sistema Cantareira}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Interpretar representações gráficas de relações de dependência entre grandezas.
+
+\item[OE2] Reconhecer uma relação de dependência entre grandezas a partir da sua representação gráfica.
+
+\item[OE3] Reconhecer a univocidade em uma relação de dependência entre grandezas.
+
+\end{enumerate}
+
+\tcblower
+\begin{itemize}
+\item Nível de abstração: \textbf{Processo}.
+
+\item Os valores apresentados no gráfico são estimativas. Na página \url{https://www.nivelaguasaopaulo.com/cantareira} é possível ter acesso aos valores exatos para cada mês. No entanto, cabe observar que os dados do período apresentado na atividade (de 12/2013 a 11/2016) podem não estar mais disponíveis na página de referência. Você pode (e é interessante que o faça) modificar e adequar esta atividade usando dados atualizados do Sistema Cantareira ou substiuindo esses dados por dados da região em que você leciona.
+
+\item No item (b), o objetivo é identificar o valor absoluto da diferença, não sendo importante se o valor é positivo ou negativo, ou seja, se choveu menos ou mais do que o esperado.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+As chuvas são a principal fonte de água para os reservatórios que abastecem as grandes cidades. Com base em dados passados, constrói-se uma média mensal esperada de chuvas. Em períodos em que a chuva real é menor do que o esperado pode-se observar uma diminuição da quantidade de água armazenada no sistema.
+
+O gráfico a seguir apresenta a variação pluviométrica (em milímetros) da chuva real e da chuva esperada no Sistema Cantareira, que abastece a região metropolitana de São Paulo, no período de dezembro de 2013 (2013-12) a novembro de 2016 (2016-11).
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.8]
+\draw[step=1,black,thin,  xscale=.5, yscale=1, help lines, line width =-.1] (-.1,-.1) grid (35, 4);
+\draw[color=session1, very thick]  (0,.6)--(.5, .9)--(1, .8)--(1.5, 2) --(2, .4)--(2.5,.2)--(3, .5)--(3.5, .2)--(4, .7)--(4.5,.5)--(5,1.3)--(5.5, 1.6)--(6, 1.5)--(6.5, 3.2)--(7,2)--(7.5, .5)--(8, .7)--(8.5, .3)--(9, .4)--(9.5, .3)--(10,1.5 )--(10.5,1.2 )--(11., 2)--(11.5, 2.6)--(12.5,2.4)--(13,1.7)--(13.5, 0)--(14, 1)--(14.5,1.9)--(15, 0)--(15.5, .6)--(16, .6)--(16.5,1.7)--(17, 1.7)--(17.5,.8);
+\draw[color=secundario, very thick] (0,2.3)--(.5, 2.5)--(1,2)--(1.5, 1.8)--(2, .9)--(2.5, .6)--(3, .5)--(3.5, .4)--(4, 1)--(4.5, 1.3)--(5, 1.6)--(5.5, 2.2)--(6,2.7 )--(6.5,1.9 )--(7, 1.7)--(7.5, .9)--(8, .7)--(8.5,.6 )--(9,.46)--(9.5,.3)--(10, .9)--(10.5,1.4 )--(11,1.6 )--(11.5, 2.2)--(12, 2.6)--(12.5, 2)--(13, 1.8)--(13.5, .9)--(14, .8)--(14.5, .6)--(15, .5)--(15.5,.5)--(16, .9)--(16.5,1.2)--(17, 1.6)--(17.5,2.2);
+\draw[color=black, very thick](-.1,0)--(17.5,0);
+\begin{scriptsize}
+\draw (0, -.15)node[left, rotate=30] {2013-12};
+\draw (1, -.15)node[left, rotate=30] {2014-02};
+\draw (2, -.15)node[left, rotate=30] {2014-05};
+\draw (3, -.15)node[left, rotate=30] {2014-07};
+\draw (4, -.15)node[left, rotate=30] {2014-09};
+\draw (5, -.15)node[left, rotate=30] {2014-11};
+\draw (6, -.15)node[left, rotate=30] {2015-01};
+\draw (7, -.15)node[left, rotate=30] {2015-03};
+\draw (8, -.15)node[left, rotate=30] {2015-05};
+\draw (9, -.15)node[left, rotate=30] {2015-07};
+\draw (10, -.15)node[left, rotate=30] {2015-09};
+\draw (11, -.15)node[left, rotate=30] {2015-11};
+\draw (12, -.15)node[left, rotate=30] {2016-01};
+\draw (13, -.15)node[left, rotate=30] {2016-03};
+\draw (14, -.15)node[left, rotate=30] {2016-05};
+\draw (15, -.15)node[left, rotate=30] {2016-07};
+\draw (16, -.15)node[left, rotate=30] {2016-09};
+\draw (17, -.15)node[left, rotate=30] {2016-11};
+\draw(0,.15) node[left]{0};
+\draw(0,1.0) node[left]{100};
+\draw(0,2.0) node[left]{200};
+\draw(0,3.0) node[left]{300};
+\draw(0,4.0) node[left]{400};
+\end{scriptsize}
+\draw(9,-1.5) node {Mês};
+\draw[color=session1, very thick](6,-2.5)--(6.5, -2.5) node[color=black, right] {Real};
+\draw[color=secundario, very thick](8,-2.5)--(8.5, -2.5) node[color=black, right] {Esperada};
+
+\end{tikzpicture}
+\caption{Volume de chuvas real e esperado no Sistema Cantareira
+}
+\end{figure}
+
+De acordo com o gráfico acima:
+\begin{enumerate}
+\item {} 
+Que grandezas estão sendo relacionadas?
+
+\item {} 
+Em que mês e ano houve a maior incidência de chuvas? E a menor?
+
+\item {} 
+Em que período(s) a diferença entre a quantidade de chuva esperada e a quantidade real de chuva superou 100mm?
+
+\item {} 
+Houve algum mês em que não foi registrada chuva na região do Sistema Cantareira?
+
+\item {} 
+O que pode ser observado nos meses de agosto de 2015 e março de 2016?
+
+\end{enumerate}
+
+
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item {} 
+Há duas relações: uma envolvendo tempo e volume de chuva real e a outra tempo e o volume de chuva esperado.
+
+\item {} 
+De acordo com os dados apresentados no gráfico, a maior e a menor incidência de chuvas ocorreram e fevereiro de 2015 e em abril de 2016, respectivamente.
+
+\item {} 
+Em dezembro de 2013, janeiro e fevereiro de 2014, janeiro e fevereiro de 2015 e junho de 2016.
+
+\item {} 
+Sim, nos meses de abril e julho do ano de 2016.
+
+\item {} 
+Houve uma coindicência entre a quantidade de chuva esperada e a que realmente caiu sobre a região do Sistema Cantareira
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

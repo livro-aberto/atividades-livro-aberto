@@ -1,0 +1,140 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Domínio e Imagem}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Determinar a partir da expressão algébrica os conjuntos domínio e imagem.
+
+\end{enumerate}
+
+\tcblower
+\begin{itemize}
+\item Nível de abstração: \textbf{Ação}.
+
+\item É importante que o estudante perceba as restrições para a escolha de $x$ impostas por algumas das expressões dadas.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Considere a seguinte lista de expressões algébricas.
+\begin{multicols}{3}
+\begin{enumerate}
+\item {} 
+\(f(x)=\sqrt{x}\)
+
+\item {} 
+\(G(z)=\sqrt{z-5}\)
+
+\item {} 
+\(h(s)=\frac{1}{3-s}\)
+
+\item {} 
+\(J(t)=\frac{1}{t+8}\)
+
+\item {} 
+\(T(x)=\frac{1}{\sqrt{x}}\)
+
+\item {} 
+\(R(x)=(x-2)^2+7\)
+
+\item {} 
+\(g(u)=5u^2+8\)
+
+\item {} 
+\(F(x)=(x+1)^2-3\)
+
+\end{enumerate}
+\end{multicols}
+
+Veja que, em algumas das expressões, a variável independente não pode assumir alguns valores, por exemplo, na letra (a) \(x\) não pode assumir valores negativos. Complete a tabela abaixo com o maior conjunto domínio possível que cada uma das funções pode ter e o correspondente conjunto imagem.
+
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Expressão & Domínio $A$ & Imagem \\
+\hline
+\((a)\) & \(\mathbb{R}^+\) & \\
+\hline
+\((b)\) & & \\
+\hline
+\((c)\) & & \(\mathbb{R}\setminus \{0\}\) \\
+\hline
+\((d)\) & \(\mathbb{R}\setminus \{-8\}\) & \\
+\hline
+\((e)\) & & \\ 
+\hline
+\((f)\) & & \([7,+\infty[\) \\
+\hline
+\((g)\) & & \\
+\hline
+\((h)\) & & \\
+\hline
+\end{tabu}
+\end{table}
+
+
+
+
+\ifdefined\prof
+\begin{solucao}
+
+Ajude o estudante a completar a tabela.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Expressão & Domínio $A$ & Imagem \\
+\hline
+\((a)\) & \(\mathbb{R}^+\) & $\mathbb{R}^+$\\
+\hline
+\((b)\) & $[5,+\infty[$ & $\mathbb{R}^+$\\
+\hline
+\((c)\) & $\mathbb{R}\setminus\{3\}$ & \(\mathbb{R}\setminus \{0\}\) \\
+\hline
+\((d)\) & \(\mathbb{R}\setminus \{-8\}\) & $\mathbb{R}\setminus\{0\}$ \\
+\hline
+\((e)\) & $]0,+\infty[$ & $]0,+\infty[$ \\ 
+\hline
+\((f)\) & $\mathbb{R}$ & \([7,+\infty[\) \\
+\hline
+\((g)\) & $\mathbb{R}$  & $[8,+\infty[$ \\
+\hline
+\((h)\) & $\mathbb{R}$  & $[-3,+\infty[$ \\
+\hline
+\end{tabu}
+\end{table}
+
+\end{solucao}
+\fi
+
+\end{document}

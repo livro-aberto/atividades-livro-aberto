@@ -1,0 +1,125 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Praticando a notação}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Compreender funções a partir de sua representação analítica.
+
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Nível de abstração: \textbf{Ação}.
+
+\item Muitos estudantes cometem erros relacionados ao uso da expressão analítica que representa a função. É comum, por exemplo, que o cálculo de $f(-2)$ para $f(x)=x^2$ seja feito da seguinte forma: $f(-2)=-2^2=-4$. O que claramente está errado. Muito frequentemente, esse tipo de erro está relacionado à falta de compreensão do papel de uma varíavel em uma expressão algébrica. Aproveite a atividade para fazer uma revisão.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Considere as funções \(f\), \(g\), \(k\) e \(h\), todas de domínio \(\mathbb{R}\), tais que:
+\begin{equation*}
+\begin{split}f(x)=3x^2+5x\quad ; \quad g(x)=\frac{x-1}{x^3+3}\quad ; \quad k(x)=(x-2)^2+6\quad ; \quad h(x)=2x-7\end{split}
+\end{equation*}
+Determine o valor de:
+
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|l|c|}
+\hline
+\thead
+Função & Valor \\
+\hline
+\(f(3)\) & \\ 
+\hline
+\(g(-1)\) & \\
+\hline
+\(k(2)\) & \\
+\hline
+\(f(1)+g(1)\) & \\
+\hline
+\(g(2)-k(-1)\) & \\
+\hline
+\(k(0).f(-2)\) & \\
+\hline
+\(f(0)+h(0)-1\) & \\
+\hline
+\(f(-2).g(-2)+k(2)\) & \\
+\hline
+\(\dfrac{f(-3)}{k(0)}\) & \\
+\hline
+\(x\) quando \(h(x)=0\) & \\
+\hline
+\(x\) quando \(h(x)=3\) & \\
+\hline
+\end{tabu}
+\end{table}
+
+
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|l|>{$}c<{$}|}
+\hline
+\cellcolor{primario}\textcolor{white}{\textbf{Função}} & $\cellcolor{primario}\textcolor{white}{\textbf{Valor}}$ \\
+\hline
+\(f(3)\) & 42\\ 
+\hline
+\(g(-1)\) & -1\\
+\hline
+\(k(2)\) & 6\\
+\hline
+\(f(1)+g(1)\) & 8\\
+\hline
+\(g(2)-k(-1)\) & -\frac{46}{3}\\
+\hline
+\(k(0).f(-2)\) & 20\\
+\hline
+\(f(0)+h(0)-1\) & -8\\
+\hline
+\(f(-2).g(-2)+k(2)\) & \frac{36}{5}\\
+\hline
+\(\dfrac{f(-3)}{k(0)}\) & \frac{6}{5}\\
+\hline
+\(x\) quando \(h(x)=0\) & \frac{7}{2}\\
+\hline
+\(x\) quando \(h(x)=3\) & 5\\
+\hline
+\end{tabu}
+\end{table}
+
+\end{solucao}
+\fi
+
+\end{document}

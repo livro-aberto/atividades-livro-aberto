@@ -1,0 +1,148 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Um meio ou um quarto?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+    \item       Perceber a importância da explicitação unidade na representação de quantidades.
+
+\end{enumerate}
+\tcblower
+
+\begin{itemize} %s
+    \item       Esta é uma atividade que o aluno pode fazer individualmente, mas é essencial que seja discutida com toda a turma.
+    \item       Recomenda-se que os itens da atividade sejam feitos e corrigidos um a um, de forma a permitir que um aluno que tenha errado um item possa acertar o seguinte.
+    \item       O fato de a unidade não estar explicitada, torna ambígua a questão. É importante que os alunos percebam que, por exemplo, no item a), se a unidade considerada for um dos hexágonos, a fração correspondente à região em vermelho é $\frac{1}{2}$. No entanto, se forem os dois hexágonos, é $\frac{1}{4}$.
+    \item       No final de cada item da atividade, é importante enfatizar para seus alunos que uma mesma quantidade pode ser expressa por frações diferentes dependendo da unidade escolhida. Observe para eles que, no contexto       ``frações de'', é fundamental saber a que o       ``de''     se refere, isto é, qual é a unidade que está sendo considerada. Neste sentido, esta atividade está fortemente relacionada com as Atividades 8 e 13. Ela também é uma preparação para a Atividade 18, em que a mesma questão é posta, mas agora com um modelo mais comumente usado e, portanto, mais resistente à reflexão que se deseja estabelecer.
+\end{itemize} %s
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{enumerate} [label=\alph*)] %s
+  \item     A região em vermelho na figura a seguir representa $\frac{1}{2}$ ou $\frac{1}{4}$?
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+ \draw \tripinha;
+\begin{scope}
+ \clip \tripinha;
+\draw[fill=attention] (-4,-4) rectangle (0,4);
+\draw[fill=common, fill opacity=.3] (0,-4) rectangle (12,4);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+  \item     A região em vermelho na figura a seguir representa     $\frac{1}{2}$     ou     $\frac{3}{2}$?
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+ \draw \tripa;
+\begin{scope}
+ \clip \tripa;
+\draw[fill=attention] (-4,-4) rectangle ({4*sqrt(3)},4);
+\draw[fill=common, fill opacity=.3] ({4*sqrt(3)},-4) rectangle ({12*sqrt(3)},4);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\def \tripalonga{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4)[shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}]--  (270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)[shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)--cycle;}
+
+  \item     A região em vermelho na figura a seguir representa     $\frac{3}{5}$     ou     $3$?
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+ \draw \tripalonga;
+\begin{scope}
+ \clip \tripalonga;
+  \draw[fill=attention] (-4,-4) rectangle ({10*sqrt(3)},4);
+\draw[fill=common, fill opacity=.3] ({10*sqrt(3)},-4) rectangle ({20*sqrt(3)},4);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+  \end{enumerate} %s
+
+\ifdefined\prof
+
+\begin{solucao}
+
+\begin{enumerate} [label=\alph*)] %s
+    \item       A região em vermelho pode representar       $\frac{1}{2}$ ou       $\frac{1}{4}$ dependendo da unidade, que não foi explicitada no enunciado. Se, por exemplo, a unidade for
+    \begin{tikzpicture}
+     \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+    \end{tikzpicture}
+ então a região pintada de vermelho em  \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripinha;
+\begin{scope}
+ \clip \tripinha;
+\draw[fill=attention] (-4,-4) rectangle (0,4);
+\end{scope}
+\end{tikzpicture}
+é   $\frac{1}{2}$ dessa unidade. Por outro lado,  se a unidade for   \begin{tikzpicture}[x=1mm,y=1mm]
+                                                                        \draw[fill=common, fill opacity=.3] \tripinha;
+                                                                       \end{tikzpicture}
+   então a região pintada de vermelho em  \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripinha;
+\begin{scope}
+ \clip \tripinha;
+\draw[fill=attention] (-4,-4) rectangle (0,4);
+\end{scope}
+\end{tikzpicture}    é   $\frac{1}{4}$ dessa unidade.
+
+    \item       A região em vermelho pode representar       $\frac{1}{2}$ ou       $\frac{3}{2}$ dependendo da unidade, que não foi explicitada no enunciado. Se, por exemplo, a unidade for \begin{tikzpicture}[x=1mm,y=1mm] \draw[fill=common, fill opacity=.3] \tripa  \end{tikzpicture} então a região pintada de vermelho em \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripa;
+\begin{scope}
+ \clip \tripa;
+\draw[fill=attention] (-4,-4) rectangle ({4*sqrt(3)},4);
+\end{scope}
+\end{tikzpicture}
+   é   $\frac{1}{2}$ dessa unidade. Por outro lado,  se a unidade for  \begin{tikzpicture}[x=1mm,y=1mm]
+     \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+    \end{tikzpicture}  então a região pintada de vermelho em
+    \begin{tikzpicture}[x=1mm,y=1mm]
+    \draw[fill=common, fill opacity=.3] \tripa;
+    \begin{scope}
+    \clip \tripa;
+    \draw[fill=attention] (-4,-4) rectangle ({4*sqrt(3)},4);
+    \end{scope}
+    \end{tikzpicture}    é   $\frac{3}{2}$ dessa unidade.
+
+    \item       A região em vermelho pode representar       $\frac{3}{5}$ ou       $3$ dependendo da unidade, que não foi explicitada no enunciado. Se, por exemplo, a unidade for \begin{tikzpicture}[x=1mm,y=1mm] \draw[fill=common, fill opacity=.3] \tripalonga  \end{tikzpicture} então a região pintada de vermelho em \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripalonga;
+\begin{scope}
+ \clip \tripalonga;
+  \draw[fill=attention] (-4,-4) rectangle ({10*sqrt(3)},4);
+\end{scope}
+\end{tikzpicture}
+  é   $\frac{3}{5}$ dessa unidade. Por outro lado,  se a unidade for \begin{tikzpicture}[x=1mm,y=1mm]
+     \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+    \end{tikzpicture} então a região pintada de vermelho em \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripalonga;
+\begin{scope}
+ \clip \tripalonga;
+  \draw[fill=attention] (-4,-4) rectangle ({10*sqrt(3)},4);
+\end{scope}
+\end{tikzpicture} é   $3$ dessa unidade.
+\end{enumerate} %s
+
+\end{solucao}
+\fi
+
+\end{document}

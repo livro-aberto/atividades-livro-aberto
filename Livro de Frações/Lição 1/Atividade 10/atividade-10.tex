@@ -1,0 +1,170 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao01/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Reconhecendo metades em figuras}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+
+\begin{enumerate}
+    \item       Reconhecer a metade de uma unidade pela reunião de partes menores e em partições diversas.
+    \item       Estabelecer representações diferentes para a mesma fração unitária para uma mesma unidade.
+\end{enumerate}
+
+\tcblower
+  \begin{itemize} %s
+  \item       Esta é uma atividade que o aluno pode fazer individualmente.
+  \item       Cada aluno deve receber as imagens das figuras, disponíveis para reprodução no final do livro para que possa manipular como achar melhor e conduzir a sua decisão.
+  \item       Esta atividade pretende levar o aluno a perceber que a metade de uma unidade pode ser considerada e identificada mesmo sem que se tenha uma divisão em duas partes iguais.
+  \item       Como nas atividades anteriores, não se espera que o aluno use a medida para confirmar a metade da unidade. O objetivo é que o aluno identifique a representação da metade (ou não) por sobreposição e justaposição das partes, decompondo e recompondo a figura.
+  \item       Incentive os alunos a argumentar, justificando a sua decisão. Para isso, podem, por exemplo, se apoiar em dobraduras ou em recortes das partes da figura.
+  \item       Procure apresentar e discutir com a turma mais do que uma solução para cada item.
+\end{itemize} %s
+
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Identifique as figuras em que a parte pintada de vermelho é a metade da figura.
+
+\begin{center}
+  \begin{longtable}{ccccc}
+%retângulos
+\endfirsthead
+\begin{tikzpicture}[scale=5]
+ \draw[fill=attention] (0,0) rectangle (3,2);
+ \draw[fill=common, fill opacity=.3] (3,0) rectangle (6,2);
+ \node at (3,-1) {Figura 1};
+\end{tikzpicture}
+&
+\quad \quad \quad
+&
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,0) rectangle (3,2);
+ \draw (1,0) -- (1,2);
+ \draw (1.5,0) -- (1.5,2);
+ \draw (2.2,0) -- (2.2,2);
+ \draw[fill=attention] (3,0) rectangle (6,2);
+ \node at (3,-1) {Figura 2};
+\end{tikzpicture}
+&
+\quad \quad \quad
+&
+
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,0) rectangle (3,2);
+ \draw[fill=common, fill opacity=.3] (3,0) rectangle (6,2);
+ \node at (3,-1) {Figura 3};
+ \filldraw[fill=attention, draw=black] (0,2) rectangle (6,1.2);
+ \end{tikzpicture}
+\\
+ % círculos
+
+\begin{tikzpicture}[scale=5]
+  \filldraw[fill=attention, draw=black] (0,-2) arc (-90:90: 2);
+  \draw (0, 2) -- (0, -2);
+  \draw[fill=common, fill opacity=.3] (0,2) arc (90:270:2);
+  \node at (0,-3) {Figura 4};
+\end{tikzpicture}
+&&
+
+\begin{tikzpicture}[scale=5]
+ \filldraw[fill=attention, draw=black] (45:2) arc (45:225:2);
+ \draw[fill=common, fill opacity=.3] (225:2) arc (225:405:2);
+ \node at (0,-3) {Figura 5};
+ \draw (0,0) -- (0,-2);
+ \draw (0,0) -- (-30:2);
+ \draw (225:2) -- (45:2);
+ \end{tikzpicture}
+
+ &&
+ \begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,0) circle (2);
+ \filldraw[fill=attention, draw=black] (0,0) -- (2,0) arc (0:90:2) -- cycle;
+ \filldraw[fill=attention, draw=black] (0,0) -- (-2,0) arc (180:270: 2) -- cycle;
+ \node at (0,-3) {Figura 6};
+\end{tikzpicture}
+\\
+% hexágonos
+
+\begin{tikzpicture}[scale=5]
+ \filldraw[fill=common, fill opacity=.3] (60:2) -- (120:2) -- (180:2) -- (240:2) -- (300:2) --cycle;
+ \filldraw[fill=attention, draw=black] (2,0) -- (60:2) -- (300:2) --cycle;
+ \node at (0,-3) {Figura 7};
+\end{tikzpicture}
+& &
+
+\begin{tikzpicture}[scale=5]
+  \filldraw[fill=attention, draw=black] (60:2) -- (120:2) -- (180:2) -- (240:2) --cycle;
+\filldraw[fill=common, fill opacity=.3] (60:2) -- (240:2) -- (300:2) -- (0:2) --cycle;
+  \draw (60:2) -- (0,0) -- (240:2);
+  \draw (2,0) -- (0,0) -- (300:2) (0,-3) node{Figura 8};
+\end{tikzpicture}
+&&
+
+\begin{tikzpicture}[scale=5]
+  \filldraw[fill=attention] (0:2) -- (60:2) -- (0:0) --cycle;
+  \filldraw[fill=attention] (120:2) -- (180:2) -- (0:0) --cycle;
+  \filldraw[fill=attention] (240:2) -- (300:2) -- (0:0) --cycle;
+  \filldraw[fill=common, fill opacity=.3] (0,0) -- (60:2) -- (120:2)--cycle;
+  \filldraw[fill=common, fill opacity=.3] (0,0) -- (0:2) -- (300:2)--cycle;
+  \filldraw[fill=common, fill opacity=.3] (0,0) -- (180:2) -- (240:2)--cycle;
+  \node at (0,-3) {Figura 9};
+\end{tikzpicture}
+\\
+%círculo
+
+\begin{tikzpicture}[scale=5]
+ \draw[fill=attention] (0:2) arc (0:270:2) -- (0,0) -- cycle;
+ \draw[fill=common, fill opacity=.3] (270:2) arc (270:360:2) -- (0,0) -- cycle;
+ \draw (0,0) -- (0,-2);
+ \draw (0,0) -- (2,0)  (0,-3) node{Figura 10};
+ \end{tikzpicture}
+&&
+%hexágonos
+
+\begin{tikzpicture}[scale=5]
+  \filldraw[fill=attention] (120:2) -- (180:2) -- (240:2) -- cycle;
+  \filldraw[fill=attention] (240:2) -- (300:2) -- (60:2) -- cycle;
+  \draw[fill=common, fill opacity=.3] (60:2) -- (120:2) -- (240:2) -- cycle;
+  \draw[fill=common, fill opacity=.3] (0:2) -- (300:2) -- (60:2) -- cycle;
+  \node at (0,-3) {Figura 11};
+\end{tikzpicture}
+&&
+%retângulo
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,-1) rectangle (6,1);
+ \filldraw[fill=attention, draw=black] (1,-1) rectangle (4,1);
+ \node at (3,-2) {Figura 12};
+ \end{tikzpicture}
+
+\end{longtable}
+\end{center}
+
+\ifdefined\prof
+
+\begin{solucao}
+
+As figuras que correspondem à metade da unidade são as de números 1, 2, 4, 5, 6, 8, 9, 11 e 12.
+
+\end{solucao}
+\fi
+
+\end{document}

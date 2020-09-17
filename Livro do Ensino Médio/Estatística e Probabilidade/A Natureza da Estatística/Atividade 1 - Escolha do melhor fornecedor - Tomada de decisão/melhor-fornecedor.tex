@@ -1,0 +1,252 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Escolha do melhor fornecedor -- Tomada de \\ Decisão}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Comparar distribuições empíricas de dados, estimulando a necessidade de resumir a informação a partir de medidas de posição e de dispersão, tais como moda e amplitude, que auxiliam na descrição das distribuições.
+
+\end{enumerate}
+
+\tcblower
+
+Pretende-se trabalhar nessa atividade vários conceitos importantes na Estatística tais como distribuição empírica, medidas de posição, medidas de dispersão, forma da distribuição, sem se preocupar com formalizações.
+
+No item a) a resposta esperada é “diâmetros dos parafusos”. No entanto os alunos podem achar que a frequência com que cada valor de diâmetro ocorre também é necessária. Esse tipo de gráfico, diagrama de pontos, reflete exatamente a tabela de frequências absolutas. No entanto, ele permite perceber por simples visualização a forma da distribuição e suas propriedades.
+
+No item b), como todos os parafusos estão fora da especificação, a resposta é zero.
+
+Item c): Fornecedor A: $14{,}5$ mm; fornecedor B: $15{,}0$ mm; fornecedor C: $15{,}0$ mm e fornecedor D: $14{,}74$ mm.
+
+Para o item d) é necessário perceber que os intervalos assinalados no eixo horizontal correspondentes a $0{,}1$ mm estão subdivididos em 5 partes de medida $0{,}02$ mm. Portanto, a resposta a esse item é
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Fornecedor & Valor Mínimo & Valor Máximo \\
+\hline
+A & $14{,}42$ & $14{,}58$ \\
+\hline
+B & $14{,}60$ & $15{,}24$ \\
+\hline
+C & $14{,}58$ & $15{,}60$ \\
+\hline
+D & $14{,}56$ & $14{,}12$ \\
+\hline
+\end{tabu}
+\end{table}
+
+A reflexão tem o intuito de provocar um debate sobre estratégias de amostragem e representatividade das amostras, mesmo sem formalizar tais conceitos. No último item, observe que não é para resolver o problema proposto e sim, pensar em situações semelhantes que levariam a uma análise similar à análise feita nessa atividade, como por exemplo, estudar a vida de baterias de diferentes marcas, ou de uma mesma marca, porém fabricada em países diferentes, etc.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\textit{Controle de Qualidade na Produção de Parafusos (Inspirada em ROSSMAN and CHANCE, 1998).}
+\vspace{.5em}
+
+Uma indústria precisa comprar parafusos de diâmetro $15$ mm cuja variação aceitável é $15{,}0$ mm “mais ou menos”{}$0,2$ mm. Há quatro empresas, A, B, C e D, fornecedoras desses parafusos, que são vendidos em caixas com 60 unidades. Para decidir de qual fornecedor passará a comprar os parafusos, a empresa resolveu comprar e analisar uma caixa de cada um dos fornecedores.  Os diâmetros das peças foram medidos com instrumento de alta precisão e os valores obtidos estão representados nos gráficos a seguir, em que cada círculo representa um parafuso posicionado sobre a abscissa correspondente à medida do seu diâmetro, medido em precisão de $0{,}02$ mm.
+
+
+
+\begin{figure}[H]
+
+\centering
+\begin{tikzpicture}[x = 200, y=5, scale=1.2]
+
+   \draw [help lines, lightgray, xstep=0.02,   ystep=1,xshift=-0.6] (14.383,0) grid (15.625,15) ;
+   \draw [eixos] (14.37,0) -- (15.65,0);
+   \foreach \x in {0,...,12}{
+   \newcommand \y {\pgfmathparse{14.4+0.1* \x}\pgfmathprintnumber{\pgfmathresult}}
+      \coordinate (A\x) at ($(14.4,0)+(0.1*\x,0)$);
+      \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+      \node [below] at ($(A\x)-(0,0.5ex)$) {\small \y} ;
+   }
+   \node[left] at (15.6,16) {Fornecedor A};
+   \foreach \x/\y in {14.42/1,14.44/8,14.46/9,14.48/10,14.50/13,14.52/7,14.54/8,14.56/3,14.58/1}{
+      \foreach \i in {1,...,\y}{
+         \filldraw[color=\currentcolor!80] (\x,\i) circle (1.5pt);
+      }}
+\end{tikzpicture}
+\end{figure} 
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
+\begin{scope}[x = 200, y=5, scale=1.2]
+
+   \draw [help lines, lightgray, xstep=0.02,   ystep=1,xshift=-0.6] (14.383,0) grid (15.625,15) ;
+   \draw [eixos] (14.37,0) -- (15.65,0);
+   \foreach \x in {0,...,12}{
+   \newcommand \y {\pgfmathparse{14.4+0.1*  \x}\pgfmathprintnumber{\pgfmathresult}}
+      \coordinate (A\x) at ($(14.4,0)+(0.1*\x,0)$);
+      \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+      \node [below] at ($(A\x)-(0,0.5ex)$) {\small \y} ;
+   }
+   \node[left] at (15.6,16) {Fornecedor B};
+   \foreach \x/\y in {14.6/1,14.82/1,14.84/1,14.86/1,14.88/3,14.9/3,14.92/3,14.94/3,14.96/2,14.98/6,15/10,15.02/4,15.04/5,15.06/3,15.08/2,15.1/6,15.12/2,15.18/3,15.24/1}{
+      \foreach \i in {1,...,\y}{
+         \filldraw[color=\currentcolor!80] (\x,\i) circle (1.5pt);
+      }
+   }
+   \end{scope}
+\end{tikzpicture}
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{scope}[x = 200, y=5, scale=1.2]
+
+   \draw [help lines, lightgray, xstep=0.02,   ystep=1,xshift=-0.6] (14.383,0) grid (15.625,15) ;
+   \draw [eixos] (14.37,0) -- (15.65,0);
+   \foreach \x in {0,...,12}{
+   \newcommand \y {\pgfmathparse{14.4+0.1*  \x}\pgfmathprintnumber{\pgfmathresult}}
+      \coordinate (A\x) at ($(14.4,0)+(0.1*\x,0)$);
+      \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+      \node [below] at ($(A\x)-(0,0.5ex)$) {\small \y} ;
+   }
+   \node[left] at (15.6,16) {Fornecedor C};
+   \foreach \x/\y in {14.48/1,14.52/1,14.54/1,14.62/2,14.66 /2,14.7/2,14.72/1,14.78/2,14.8/2,14.84/2,14.88/2,14.9 /2,14.92/4,14.98/3,15/5,15.02/4,15.04/1,15.08/3,15.12 /3,15.16/4,15.18/1,15.2/2,15.22/1,15.3/1,15.32/1,15.38 /1,15.44/2,15.46/1,15.48/2,15.6/1}{
+      \foreach \i in {1,...,\y}{
+         \filldraw[color=\currentcolor!80] (\x,\i) circle (1.5pt);
+      }
+   }
+   \end{scope}
+\end{tikzpicture}
+   \end{figure} 
+   \begin{figure}[H]
+   \centering
+\begin{tikzpicture}
+\begin{scope}[x = 200, y=5, scale=1.2]
+
+   \draw [help lines, lightgray, xstep=0.02,    ystep=1,xshift=-0.6] (14.383,0) grid (15.625,15) ;
+   \draw [eixos] (14.37,0) -- (15.65,0);
+   \foreach \x in {0,...,12}{
+   \newcommand \y {\pgfmathparse{14.4+0.1*  \x}\pgfmathprintnumber{\pgfmathresult}}
+      \coordinate (A\x) at ($(14.4,0)+(0.1*\x,0)$);
+      \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+      \node [below] at ($(A\x)-(0,0.5ex)$) {\small \y} ;
+   }
+   \node[left] at (15.6,16) {Fornecedor D};
+   \foreach \x/\y in {14.46/1,14.48/2,14.54/1,14.58/1,14.62/3,14.64/5,14.68/6,14.7/4,14.72/2,14.74/9,14.76/1,14.78/3,14.8/2,14.82/2,14.88/3,14.9/2,14.92/2,14.94/4,14.96/2,15/1,15.02/1,15.08/1,15.12/1}{
+      \foreach \i in {1,...,\y}{
+         \filldraw[color=\currentcolor!80] (\x,\i) circle (1.5pt);
+      }
+   }
+\end{scope}
+\end{tikzpicture}
+
+\caption{Diâmetro das peças dos fornecedores}
+\label{est1-fig-1}
+\end{figure}
+
+
+\begin{enumerate}
+\item {} 
+Qual é a observação usada na construção desses gráficos?
+
+\item {} 
+Quantos parafusos da caixa do fornecedor $A$ atendem a especificação do comprador?
+
+\item {} 
+Para cada fornecedor, identifique a medida do diâmetro de maior frequência.
+
+\item {} 
+Considerando cada um dos fornecedores, identifique o menor e o maior diâmetros observados.
+
+\begin{description}
+\item[{Amplitude\index{Amplitude|textbf}}] \leavevmode\phantomsection\label{est1-def-2}
+Em Estatística, a amplitude é definida como a diferença entre o maior e o menor valores observados.
+\end{description}
+
+\item {} 
+Com base na sua resposta anterior, identifique os fornecedores cujos diâmetros dos parafusos observados variaram nos intervalos de menor \index{amplitude}amplitude e de maior amplitude.
+
+\begin{description}
+
+\item[{Dispersão\index{Dispersão|textbf}}] \leavevmode\phantomsection\label{est1-def-3}
+Segundo o dicionário Aurélio, dispersão significa (1) ato ou efeito de dispersar; (2) separação (de pessoas ou coisas) para diferentes partes.  Em Estatística, existem diferentes medidas de dispersão, dentre as quais, a amplitude.
+
+\end{description}
+
+\item De qual fornecedor você classifica o comportamento dos diâmetros dos parafusos como o de maior dispersão? E o de menor dispersão?
+
+
+\item Com base nesses dados, a(s) caixa(s) de qual(is)  fornecedor(es) apresenta(m) pelo menos um parafuso dentro das especificações do comprador?
+
+\item Supondo que, para cada fornecedor, os comportamentos dos diâmetros dos parafusos sejam similares para as outras caixas, que fornecedor, com base nas especificações do comprador, você recomendaria ao comprador? Por quê?
+
+\item Todos os parafusos da caixa do fornecedor escolhido no item anterior seriam aproveitados?
+\end{enumerate}
+
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+
+\item Apenas as medidas dis diâmetros dos parfusos.
+
+\item Nenhum, pois todos apresentam diâmetro inferior ao mínimo aceitável $14{,}8$ mm.
+
+\item Fornecedor A: $14{,}5$ mm; fornecedor B: $15{,}0$ mm; fornecedor C: $15{,}0$ mm e fornecedor D: $14{,}74$ mm.
+
+\clearpage
+
+\item \adjustbox{valign=t}
+{
+	\begin{tabu} to \textwidth{|c|c|c|}
+	\hline
+	\thead
+	Fornecedor & Valor Mínimo & Valor Máximo \\
+	\hline
+	A & $14{,}42$ & $14{,}58$ \\
+	\hline
+	B & $14{,}60$ & $15{,}24$ \\
+	\hline
+	C & $14{,}58$ & $15{,}60$ \\
+	\hline
+	D & $14{,}56$ & $14{,}12$ \\
+	\hline
+	\end{tabu}
+}
+
+\item Menor amplitude: fornecedor A e maior amplitude: fornecedor C
+
+\item Em relação à amplitude, menor dispersão: fornecedor A e maior dispersão: fornecedor C.
+
+\item Fornecedores B, C e D.
+
+\item Fornecedor B, pois é o que tem maior número de parafusos dentro das especificações.
+
+\item Não, dois seriam descartados.
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,135 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Colorindo o mapa}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Identificar, em um contexto, diferentes relações de dependência entre conjuntos de dados.
+
+\item[OE2] Identificar característica de univocidade (ou não) de uma relação..
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Nível de abstração: \textbf{Processo/Ação}.
+
+\item Nem todos os estudantes vão usar o mesmo critério para a distribuição das cores. Incentive-os a usarem as quatro cores e, no momento da discussão do item (b), chame a atenção para o fato de não haver uma única resposta correta para o item (a).
+
+\item Deixamos a seu critério a escolha da unidade para a velocidade média. Os valores obtidos em km/min podem causar certa estranheza, uma vez que na maioria das situações cotidianas a velocidade é apresentada em km/h.
+
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A imagem a seguir, que foi retirada do aplicativo Google Maps, exibe o trânsito na ponte Rio-Niterói e seus acessos em um determinado dia e hora. Várias informações podem ser observadas a partir dos elementos apresentados. Por exemplo, as cores nas vias informam a velocidade média dos veículos que trafegam por elas, conforme a legenda na parte inferior; a distância entre dois pontos quaisquer do mapa pode ser estimada usando a escala exibida no canto inferior direito. Gráficos como esse são produzidos a partir das relações entre diversas informações coletadas.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=440bp]{{rio_niteroi_maps}.png}
+\end{figure}
+
+A tabela a seguir mostra os dados coletados sobre o tempo gasto pelos veículos (em média) para atravessar a ponte, ao longo de um dia.
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|>{\centering}m{.1\textwidth}|c|}
+\hline
+\thead
+Período do Dia & Tempo (min) & Cor & Velocidade Média (km/min) \\
+\hline
+5:00 - 7:00 & 13 & & \\
+\hline
+7:00 - 9:00 & 18 & & \\
+\hline
+9:00 - 11:00 & 15 & & \\
+\hline
+11:00 - 13:00 & 15 & & \\
+\hline
+13:00 - 15:00 & 16 & & \\
+\hline
+15:00 - 17:00 & 16 & & \\
+\hline
+17:00 - 19:00 & 23 & & \\
+\hline
+19:00 - 21:00 & 14 & & \\
+\hline
+21:00 - 23:00 & 13 & & \\
+\hline
+\end{tabu}
+\end{table}
+
+\begin{enumerate}
+\item {} 
+Tomando como referência a ilustração anterior e utilizando a escala de cores a seguir, complete a terceira coluna da tabela com a cor que a ponte deveria estar colorida em cada período do dia destacado. Descreva os critérios que você utilizou na escolha de cada uma das cores e compare com os critérios dos seus colegas.
+\begin{center}\begin{tikzpicture}[scale=3]
+\tikzset{fontscale/.style = {font=\relsize{#1}}}
+\fill[fill=green] (3.,1.) rectangle (3.6,1.2);
+\fill[fill=orange] (3.65,1.) rectangle (4.25,1.2);
+\fill[fill=red] (4.3,1.) rectangle (4.9,1.2);
+\fill[fill=brown] (4.95,1.) rectangle (5.55,1.2);
+\node[below left, font=\small] at (3,1.15) {RÁPIDO};
+\node[below right, font=\small] at (5.55,1.15) {LENTO};
+\node at ($(3,1)!0.5!(3.6,1.2)$) {verde};
+\node at ($(3.65,1)!0.5!(4.25,1.2)$) {laranja};
+\node at ($(4.3,1)!0.5!(4.9,1.2)$) {vermelho};
+\node at ($(4.95,1)!0.5!(5.55,1.2)$) {marrom};
+\end{tikzpicture}\end{center}
+\item {} 
+Você precisou associar uma mesma cor para para períodos diferentes do dia. Por que?
+
+\item {} 
+Sabendo que a ponte Rio-Niterói tem aproximadamente \(13\) km de extensão complete a quarta coluna da tabela com a velocidade média registrada em cada um dos períodos do dia.
+
+\item {} 
+É possível que uma mesma velocidade média esteja associada a dois tempos de travessia diferentes? Por quê?
+\end{enumerate}
+
+
+
+\ifdefined\prof\clearpage
+\begin{solucao}
+\begin{enumerate}
+\item {} 
+Uma resposta possível é: associar a cor verde aos tempos de $13$ e $14$ minutos, a cor laranja aos tempos de $15$ e $16$ minutos, vermelha ao tempo de $18$ minutos e a cor vinho ao tempo de $23$ minutos.
+\item {} 
+Isso se deu pelo fato de haver somente 4 cores disponíveis e, na tabela, haver 6 tempos diferentes de travessia.
+
+\item {} 
+A velocidade média é determinada pela razão entre a distância percorrida e o tempo gasto para percorrê-la. Assim, os valores das velocidades médias nos diferentes poríodos do dia são, pela ordem em que aparecem na tabela: $1{,}00$ km/min, $0{,}72$ km/min, $0{,}87$ km/min, $0{,}81$ km/min, $0{,}56$ km/min e $1{,}00$ km/min.
+
+\item {} 
+Não. Como a velocidade média é calculada efetuando-se a divisão da distância percorrida pelo tempo gasto no percurso, uma vez que o trecho considerado é o mesmo, diferentes tempos de travessia da ponte irão resultar em velocidades médias diferentes.
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

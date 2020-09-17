@@ -1,0 +1,80 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Por que não é função?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Identificar em contextos mais variados por que uma dada relação não define uma função.
+
+\end{enumerate}
+
+\tcblower
+\begin{itemize}
+\item Nível de abstração \textbf{Processo}.
+
+\item Procure incentivar os estudantes a se manifesrem verbalmente, expressando seu entendimento sobre a relação dada. Para a primeira relação, por exemplo, sugerimos que seja considerado, em um primeiro momento, o conjunto formado por todos os estudantes da sala. Possivelmente haverá estudantes sem irmãos e estudantes com mais de um irmão.
+
+\item No item (b) relembre com os alunos que a raiz quadrada é sempre um valor positivo. Por exemplo, $\sqrt{4}=2$. Apesar de a equação $x^2=4$ ter duas soluções: $2$ e $−2$.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Vimos que para que uma relação de \(A\) em \(B\) seja uma função não pode haver:
+
+\((I)\) Elementos no conjunto \(A\) sem correspondente em \(B\);
+\((II)\) Ambiguidade na determinação de correspondente em \(B\).
+
+Determine se cada uma das relações apresentadas a seguir é função. Justifique suas respostas a partir das condições \((I)\) e \((II)\).
+\begin{enumerate}
+\item {} 
+Seja \(\mathcal{P}\) o conjunto de todas as pessoas e considere a relação de \(\mathcal{P}\) em \(\mathcal{P}\), que a cada “pessoa” associa “irmão da pessoa”.
+
+\item {} 
+Seja \(\mathbb{R}\)  o conjunto dos números reais e considere a relação de \(\mathbb{R}\) em \(\mathbb{R}\), que a cada “número real \(x\) ” associa “raiz quadrada do número real \(x\) “.
+
+\item {} 
+Sejam \(\mathbb{R}^+\) o conjunto dos números reais positivos e \(\mathcal{T}\) o conjunto de todos os triângulos. Considere a relação de \(\mathbb{R}^+\) em \(\mathcal{T}\) que a cada “número real positivo \(x\) ” associa “triângulo de área \(x\) “.
+
+\end{enumerate}
+
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+\begin{enumerate}
+\item Como existem filhos únicos no mundo e famílias com mais do que dois filhos, existem "pessoas" no conjunto $\mathcal{P}$ que não têm irmão e pessoas que têm mais do que um irmão. Portanto, pela relação dada, há no conjunto $\mathcal{P}$ elementos sem correspondente bem como elementos com mais do que um correspondente. Por isso, a relação dada não é função.
+
+\item Como não existe $\mathbb{R}$ raiz quadrada de número negativo, a relação dada não se aplica aos números reais negativos, isto é, por exemplo o número real $-1$ não pode ser associado à $\sqrt{-1}$, uma vez que $\sqrt{-1}$ não pertence ao conjunto dos números reais. Portanto, haverá elementos (todos os números reais negativos) sem correspondente. Por isso, a relação dada não é função. Observe que, no entanto, a mesma relação considerada apenas para os números reais não negativos, ou seja, com domínio $\mathbb{R}^+$, seria uma função.
+
+\item Considerando, por exemplo, o número real $15$ é possível construir dois triângulos distintos, ambos com área igual a $15$. Basta considerar para o primeiro base e altura iguais a $5$ e $6$ e para o segundo base e altura iguais a $10$ e $3$, que claramente não são triângulos congruentes. Dessa forma, haverá ambiguidade na determinação de correspondentes. Por isso, a relação dada não é função.
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,122 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item 
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Avaliar a forma do histograma a partir da variação do número de intervalos considerados
+\end{enumerate}
+
+\tcblower
+
+Essa atividade deve ser realizada com algum recurso tecnológico. Um exemplo de como realizá-la usando o Geogebra pode ser acessado em \url{shorturl.at/qDNQZ}.
+
+Arrastando o cursor na linha que representa classes (intervalos) é possível variar de três a 20 intervalos.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Refaça o histograma dos dados de registros de tempo variando o número de intervalos de classe. Compare a forma dos histogramas obtidos com a forma do histograma construído na atividade \textit{Construção do Histograma}.
+
+\ifdefined\prof
+\begin{solucao}
+
+Existem várias possibilidades e algumas delas estão apresentadas aqui. Na comparação é importante perceber que esses dados revelam uma estrutura simétrica, ocorrendo com frequências altas entre 4 e 6, e, occorrendo com frequências bem menores nos intervalos extremos inferior e superior.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.75*0.5]
+
+\draw (0,0) -- (0,18) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};       
+\foreach \y/\z in {0/0,1/2,2/4,3/6,4/8,5/10,6/12,7/14,8/16,9/18} \draw (0,\y*2) -- (-0.2,\y*2) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below, scale=1.2] {\z }; 
+\foreach \x/\y in {0/4,1/11,2/17,3/17,4/11,5/4} \draw [fill=primario] (\x/6*5*4+1,0) rectangle (\x/6*5*4+5/6*4+1,\y);   
+\end{tikzpicture}
+
+\caption{Histograma com 6 intervalos}
+\label{}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=0.75, scale=.5]
+
+\draw (0,0) -- (0,12) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};          
+
+\foreach \y/\z in {0,2,4,6,8,10,12} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below, scale=1.2] {\z }; 
+
+\foreach \x/\y in {0/2,1/5,2/8,3/11,4/12,5/11,6/8,7/5,8/2} \draw [fill=primario] (\x/9*5*4+1,0) rectangle (\x/9*5*4+5/9*4+1,\y);
+\end{tikzpicture}
+\caption{Histograma com 9 intervalos}
+\label{}
+\end{figure}
+
+\hfill\null
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=0.75, scale=.5]
+
+\draw (0,0) -- (0,12) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};
+            
+\foreach \y/\z in {0,2,4,6,8,10,12} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below, scale=1.2] {\z }; 
+
+\foreach \x/\y in {0/2,1/2,2/4,3/7,4/8,5/9,6/9,7/8,8/6,9/5,10/2,11/2} \draw [fill=primario] (\x/12*5*4+1,0) rectangle (\x/12*5*4+5/12*4+1,\y); 
+\end{tikzpicture}
+\caption{Histograma com 12 intervalos}
+\label{}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=0.75, scale=.5]
+
+\draw (0,0) -- (0,12) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};
+
+\foreach \y/\z in {0,2,4,6,8,10,12} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below, scale=1.2] {\z }; 
+
+\foreach \x/\y in {0/1,1/2,2/2,3/4,4/6,5/6,6/7,7/8,8/7,9/6,10/6,11/4,12/2,13/2,14/1} \draw [fill=primario] (\x/15*5*4+1,0) rectangle (\x/15*5*4+5/15*4+1,\y)
+;
+\end{tikzpicture}
+\caption{Histograma com 15 intervalos}
+\label{}
+\end{figure}
+\end{solucao}
+\fi
+
+\end{document}
+

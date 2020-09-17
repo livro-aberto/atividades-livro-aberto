@@ -1,0 +1,160 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Imposto de Renda}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{EM13MT404} Analisar funções definidas por uma ou mais sentenças (tabela do Imposto de Renda, contas de luz, água, gás etc.), em suas representações algébrica e gráfica, identificando domínios de validade, imagem, crescimento e decrescimento, e convertendo essas representações de uma para outra, com ou sem apoio de tecnologias digitais
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item [OE1] Calcular imagens por uma função definida por mais de uma sentença
+
+\item [OE2] Transitar entre diferentes representações de função: tabela, expressão e gráfico
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item É bastante comum os estudantes acharem que se trata de várias funções em vez de uma única função definida por mais de uma sentença. Isso se dá pelo fato de fazerem confusão entre o conceito de função e a expressão que a define.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A seguinte tabela é utilizada para o cálculo do Imposto de Renda para Pessoa Física (IRPF).
+
+\begin{table}[H]
+\centering
+
+{\large{\textbf{Tabela do IRF - Vigência a partir de 01/04/2015}}}
+
+(Medida Provisória 670/2015 convertida na Lei 13.149/2015)
+\begin{tabu} to \textwidth{|l|c|r|}
+\hline
+\thead
+Base de cálculo (R\$) & Alíquota (\%) & Parcela a deduzir do IR (R\$) \\
+\hline
+Até $1.903{,}98$ & - & - \\
+\hline
+De $1.903{,}99$ até $2.826{,}65$ & 7,5 & $142{,}80$ \\
+\hline
+De 2$.825{,}55$ até $3.751{,}05$ & 15 & $354{,}80$ \\
+\hline
+$3.751{,}06$ até $4.664{,}68$ & 22,5 & $636{,}13$ \\
+\hline
+Acima de $4.664{,}68$ & 27,5 & $869{,}36$ \\
+\hline
+\end{tabu}
+\caption{Fonte: \url{http://www.portaltributario.com.br}}
+\end{table}
+
+Por esta tabela, um trabalhador cujo rendimento é inferior a R\$ $1.903{,}98$ está isento do imposto de renda. Já um trabalhador com rendimento de R\$$3.000{,}00$ tem um desconto, em reais, de $15\%$ de $3.000{,}00$ (450,00) menos a dedução de R\$$354{,}80$, isto é, deverá pagar de imposto de renda o valor $450-354{,}80=95{,}20$R\$.
+
+\begin{enumerate}
+\item Com os dados apresentados na tabela acima construímos a seguinte função que fornece o valor de importo de renda a ser pago, a partir do rendimento informado:
+\[f(x)=
+\begin{cases}
+0, \text{ se } x\leq1.903{,}98\\
+0{,}075x-142{,}90, \text{ se } 1.903{,}98<x<2.826{,}65\\
+0{,}15x-354{,}90, \text{ se } 2.826{,}65\leq x<3.751{,}05\\
+0{,}225x-636{,}13 \text{ se } 3.751{,}05 \leq x<4.664{,}68\\
+0{,}275x-869{,}36 \text{ se } 4.664{,}68\leq x
+\end{cases}
+\]
+
+Determine o imposto que deverá ser pago por um trabalhador cujo rendimento seja:
+\begin{enumerate}
+\item R\$$1.750{,}00$
+\item R\$$2.680{,}00$
+\item R\$$4.060{,}00$
+\item R\$$5.500{,}00$
+\end{enumerate}
+
+\item Observe o gráfico a seguir. Nele estão destacados os impostos de renda pago por três trabalhadores, indicados pelas letras $A$, $B$ e $C$.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=.2,yscale=1.2]
+\draw [->] (0,0) -- (52,0) node [below left, scale=.75] {Salários (R\$)};
+\draw [->] (0,0) -- (0,5) node [above left, rotate=90, scale=.75] {Imposto (R\$)};
+
+\draw [thick, session3] (0,0) -- (19.0390,0) -- (28.2665,28.25665*.075-1.428) -- (37.506,37.056*.15-3.548) -- (46.64468,46.64468*.225-6.3613) -- (50,50*.275-8.6936);
+
+\draw [dashed,session3](28.2665,28.25665*.075-1.428) -- (28.2665,0);
+\draw [dashed,session3] (37.506,37.056*.15-3.548) -- (37.506,0);
+\draw [dashed,session3](46.64468,46.6468*.225-6.3613) -- (46.64468,0);
+
+\draw [dashed] (0,.552) -- (26,.552) -- (26,0);
+\draw [dashed] (0,1.522) -- (34,1.552) -- (34,0);
+\draw [dashed] (0,2.6387) -- (40.3,2.6387) -- (40.3,0); 
+
+\node (a) [circle,fill, inner sep=1pt,label=above:A] at (26,.522) {};
+\node (b) [circle,fill, inner sep=1pt, label=above:B] at (34,1.522) {};
+\node (c) [circle,fill, inner sep=1pt, label=above:C, xshift=.5mm] at (40,2.6387) {};
+
+\node [left] at (0,.522) {52,20};
+\node [left] at (0,1.5520) {155,20};
+\node [left] at (0,2.6387) {263,87};
+\end{tikzpicture}
+\end{figure}
+
+Segundo a tabela IRF, determine as alíquotas de desconto que estão sendo aplicadas a cada um destes trabalhadores e qual o salário de cada um deles.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Os valores são
+
+\begin{enumerate}
+\item R\$$0$ 
+\item R\$$58{,}20$
+\item R\$$277{,}37$
+\item R\$$643{,}14$
+\end{enumerate}
+
+\item
+\adjustbox{valign=t}{
+\centering
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Ponto & Alíquota & Salário \\
+\hline
+A & $7{,}5\%$ (segundo intervalo) & R\$$2600{,}00$\\
+\hline
+B & $15\%$ (terceiro intervalo) & R\$$3400{,}00$\\
+\hline
+C & $22{,}5\%$ (quarto intervalo) & R\$$4000{,}00$\\ 
+\hline
+\end{tabu}}
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

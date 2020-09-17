@@ -1,0 +1,174 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Medição de temperatura ao longo do tempo}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item 
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Definir série temporal a partir de um conjunto de observações sobre uma variável quantitativa contínua variando no tempo.
+
+\item Trabalhar com gráficos de linha para ilustrar a evolução dos valores da variável ao longo do tempo.
+\end{enumerate}
+
+\tcblower
+
+Para a construção do gráfico de linha será fornecida uma malha quadriculada para o preenchimento dos pontos, recomenda-se também uso de planilhas de cálculo para essa construção. Veja em \url{shorturl.at/pHJLU} uma sugestão para realizar esta atividade.
+
+Respostas possíveis na reflexão proposta são: índices de inflação, preços de diversos bens, índices da bolsa de valores, a população total em um território, a incidência de alguma enfermidade, a quantidade de vendas de um produto. É importante usar exemplos de dados que tenham aparecido recentemente na mídia ou que tenham relevância local.
+
+Na discussão sobre sazonalidade, pedir aos alunos para trazer notícias de jornais ou revistas que contenham séries temporais. Mostrar que existem várias medições que são comparadas com as do ano anterior, por exemplo, inflação, crescimento do PIB, taxas de desemprego por trimestre, entre outras.
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Você deve ter notado que a previsão do tempo é feita sempre a partir de dois números, isto ocorre porque a temperatura varia de forma contínua ao longo do dia e o que está sendo previsto são as temperaturas máxima e mínima. Por exemplo: 28° / 19°, significa que a previsão da temperatura máxima durante o dia será aproximadamente de 28°C e a mínima 19°C.
+
+Diversas variáveis meteorológicas (no sentido estatístico) são registradas nas estações meteorológicas: temperatura, precipitação (quantidade de chuva), umidade do ar, entre outras.
+
+No Brasil, as estações estão a cargo do \href{http://www.inmet.gov.br}{Instituto Nacional de Meteorologia (INMET)} e as informações são armazenadas em bases de dados. Para poder tratar essas informações, frequentemente elas são resumidas por períodos de tempo de diferentes magnitudes: dias, semanas, meses ou anos.
+
+Dados coletados ao longo do tempo (como a informação meteorológica) são conhecidos como séries de dados temporais ou, apenas, \index{séries temporais}séries temporais, já que correspondem a variáveis que mudam continuamente ao longo do tempo e a informação só é útil se sabemos o momento em que foram realizadas as medições.
+
+\vspace{1.5em}
+{\large\textbf{Para refletir}:Forneça outros exemplos de séries temporais nas áreas de saúde, economia, finanças, educação, etc.}
+\vspace{1.5em}
+
+A tabela a seguir fornece a média das temperaturas máximas para cada mês nos anos de 1991 a 2000 da cidade de Porto Alegre em graus centígrados (Fonte: \href{http://www.inmet.gov.br/portal/index.php?r=bdmep/bdmep}{Banco de Dados Meteorológicos para Ensino e Pesquisa, BDMEP - INMET})
+
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{11}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Temperatura Máxima Média mensal nos anos 1991-2000 na cidade de Porto Alegre}}}} \\
+\hline
+\thead
+Mês & 1991 & 1992 & 1993 & 1994  & 1995  & 1996 & 1997 & 1998 & 1999 & 2000 \\
+\hline
+1 & 30,23 & 30,43 & 31,34 & 30,33 & 30,74 & 29,89 & 32,09 & 29,13 & 30,65 & 30,63 \\
+\hline
+2 & 31,03 & 31,48 & 29,28 & 28,85 & 29,46 & 29,78 & 29,62 & 28,26 & 29,56 & 29,93 \\
+\hline
+3 & 30,55 & 30,05 & 28,22 & 28,05 & 29,12 & 28,67 & 28,63 & 27,20 & 31,64 & 27,85 \\
+\hline
+4 & 26,15 & 25,52 & 27,66 & 25,51 & 26,22 & 27,03 & 26,56 & 24,03 & 24,00 & 26,32 \\
+\hline
+5 & 25,31 & 21,44 & 23,29 & 24,33 & 21,95 & 22,94 & 22,95 & 22,00 & 21,51 & 21,78 \\
+\hline
+6 & 20,32 & 22,68 & 19,13 & 20,09 & 20,45 & 17,76 & 19,42 & 19,60 & 18,87 & 21,50 \\
+\hline
+7 & 19,75 & 16,91 & 17,97 & 20,41 & 21,60 & 16,99 & 20,67 & 20,47 & 18,78 & 17,59 \\
+\hline
+8 & 21,81 & 20,50 & 21,90 & 21,28 & 21,55 & 22,59 & 23,06 & 19,77 & 21,94 & 20,85 \\
+\hline
+9 & 23,99 & 22,14 & 20,83 & 25,21 & 22,62 & 21,40 & 22,32 & 21,22 & 22,65 & 22,25 \\
+\hline
+10 & 26,17 & 26,16 & 26,40 & 24,60 & 24,17 & 25,34 & 23,27 & 25,19 & 23,07 & 24,02 \\
+\hline
+11 & 26,93 & 27,16 & 28,07 & 26,53 & 28,93 & 28,40 & 26,51 & 28,24 & 26,36 & 26,87 \\
+\hline
+12 & 30,60 & 29,95 & 29,73 & 32,05 & 30,44 & 29,87 & 30,28 & 28,91 & 29,08 & 29,51 \\
+\hline
+\end{tabu}
+\end{table}
+\par
+
+\begin{enumerate}
+\item {} 
+Escolha dois anos diferentes e localize os pontos da tabela na grade quadriculada usando o mês como abscissa $(x)$ e a temperatura como ordenada $(y)$. Utilize cores diferentes para a série de cada ano.
+
+\item {} 
+Una os pontos correspondentes ao mesmo ano (mesma série) de meses consecutivos com um segmento e observe o resultado. Você percebe algum comportamento similar para a  temperatura em anos diferentes?
+
+\item {} 
+Compare seu gráfico com o de colegas que escolheram outros anos (ou acrescente séries de outros anos ao seu gráfico). O que você percebe com relação à temperatura nos meses iniciais, intermediários e finais do ano?  A que se deve esse comportamento da temperatura?
+
+\end{enumerate}
+
+
+
+\titem{a)} e \titem{b)} Percebe-se temperaturas mais altas nos meses iniciais e finais do ano e, mais baixas, no meio do ano.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture} [yscale=0.5, scale=1.1, every node/.style={scale=1.2}]
+
+\foreach \y in {0,...,10}{
+   \draw [help lines,color=secundario!30] (-0.1,\y) -- (11,\y);}
+
+\foreach \x in {0,11}{
+\draw [help lines, color=secundario!30] (\x,-0.2) -- (\x,10);}
+
+\foreach \x in {1,...,11}{
+\draw [help lines, color=secundario!30] (\x,0) -- (\x,-0.2);}
+
+\node [above, scale=0.8] at (5.5,10) {Temperatura Máxima Média};
+
+\foreach \y/\z in {0/15.0,1/17.0,2/19.0,3/21.0,4/23.0,5/25.0,6/27.0,7/29.0,8/31.0,9/33.0,10/35.0} \node [left, scale=0.6] at (-0.1,\y) {\z}; 
+
+\foreach \x in {1,...,12} \node [below, scale=0.6] at (\x-1,-0.2) {\x};
+
+\foreach \x/\y/\z in {1/1991/destacado,2/1992/green!50!black,3/1993/atento,4/1994/cyan,5/1995/magenta,6/1996/yellow!90!black, 7/1997/brown,8/1998/violet,9/1999/olive,10/2000/orange}  \draw [color=\z, thick] (11.5,8.5-\x/2) -- (12,8.5-\x/2) node [right, color=black, scale=0.5] {\y};
+
+%1991
+\draw [color=destacado] (0,7.615) -- (1,8.015) -- (2,7.775) -- (3,5.575) -- (4,5.155) -- (5,2.66) -- (6,2.375) -- (7,3.405) -- (8,4.495) -- (9,5.585) -- (10,5.965) -- (11,7.8);
+
+%1992
+\draw [color=green!50!black] (0,30.43/2-7.5) -- (1,31.48/2-7.5) -- (2,30.05/2-7.5) -- (3,25.52/2-7.5) -- (4,21.44/2-7.5) -- (5,22.68/2-7.5) -- (6,16.97/2-7.5) -- (7,20.5/2-7.5) -- (8,22.15/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
+
+%1993
+\draw [color=atento] (0,31.34/2-7.5) -- (1,29.28/2-7.5) -- (2,28.22/2-7.5) -- (3,27.66/2-7.5) -- (4,23.29/2-7.5) -- (5,19.13/2-7.5) -- (6,17.97/2-7.5) -- (7,21.9/2-7.5) -- (8,20.83/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
+
+%1994
+\draw [color=cyan] (0,30.33/2-7.5) -- (1,28.85/2-7.5) -- (2,28.05/2-7.5) -- (3,25.51/2-7.5) -- (4,24.33/2-7.5) -- (5,20.09/2-7.5) -- (6,20.41/2-7.5) -- (7,21.28/2-7.5) -- (8,25.21/2-7.5) -- (9,24.6/2-7.5) -- (10,26.53/2-7.5) -- (11,32.05/2-7.5);
+
+%1995
+\draw [color=magenta] (0,30.74/2-7.5) -- (1,29.46/2-7.5) -- (2,29.12/2-7.5) -- (3,26.22/2-7.5) -- (4,21.95/2-7.5) -- (5,20.45/2-7.5) -- (6,21.6/2-7.5) -- (7,21.55/2-7.5) -- (8,22.62/2-7.5) -- (9,24.17/2-7.5) -- (10,28.93/2-7.5) -- (11,30.44/2-7.5);
+
+%1996
+\draw [color=yellow!90!black] (0,29.89/2-7.5) -- (1,29.78/2-7.5) -- (2,28.67/2-7.5) -- (3,27.02/2-7.5) -- (4,22.94/2-7.5) -- (5,17.76/2-7.5) -- (6,16.99/2-7.5) -- (7,22.59/2-7.5) -- (8,21.4/2-7.5) -- (9,25.34/2-7.5) -- (10,28.4/2-7.5) -- (11,29.87/2-7.5);
+
+%1997
+\draw [color=brown] (0,32.09/2-7.5) -- (1,29.62/2-7.5) -- (2,28.63/2-7.5) -- (3,26.56/2-7.5) -- (4,22.95/2-7.5) -- (5,19.42/2-7.5) -- (6,20.67/2-7.5) -- (7,23.06/2-7.5) -- (8,22.32/2-7.5) -- (9,23.27/2-7.5) -- (10,26.51/2-7.5) -- (11,30.28/2-7.5);
+
+%1998
+\draw [color=violet] (0,29.13/2-7.5) -- (1,28.26/2-7.5) -- (2,27.2/2-7.5) -- (3,24.03/2-7.5) -- (4,22.00/2-7.5) -- (5,19.6/2-7.5) -- (6,20.47/2-7.5) -- (7,19.77/2-7.5) -- (8,21.22/2-7.5) -- (9,25.19/2-7.5) -- (10,28.24/2-7.5) -- (11,28.91/2-7.5);
+
+%1999
+\draw [color=olive] (0,30.65/2-7.5) -- (1,29.56/2-7.5) -- (2,31.64/2-7.5) -- (3,24/2-7.5) -- (4,21.51/2-7.5) -- (5,18.87/2-7.5) -- (6,18.78/2-7.5) -- (7,21.94/2-7.5) -- (8,22.65/2-7.5) -- (9,23.07/2-7.5) -- (10,26.36/2-7.5) -- (11,29.08/2-7.5);
+
+%2000
+\draw [color=orange](0,30.63/2-7.5) -- (1,29.93/2-7.5) -- (2,27.85/2-7.5) -- (3,26.32/2-7.5) -- (4,21.78/2-7.5) -- (5,21.5/2-7.5) -- (6,17.59/2-7.5) -- (7,20.85/2-7.5) -- (8,22.25/2-7.5) -- (9,24.02/2-7.5) -- (10,26.87/2-7.5) -- (11,29.51/2-7.5);
+\end{tikzpicture}
+\label{est1-fig-12}
+\caption{Gráficos de linhas com a temperatura máxima média mensal da cidade de Porto Alegre}
+\end{figure}
+
+\titem{c)} Idem ao item \titem{b)}. Isso ocorre devido às estações do ano. No hemisfério sul temos temperaturas mais altas nos meses finais e iniciais do ano e temperaturas mais baixas no meio do ano.
+
+Os gráficos que você acabou de construir são chamados \index{gráficos de linha}gráficos de linha. Esse tipo de gráfico é muito utilizado para variáveis quantitativas contínuas que dependem de uma outra variável quantitativa, neste caso o tempo. Quando a variável quantitativa é observada ao longo do tempo, o conjunto de dados resultante é chamado uma série temporal.
+
+\end{document}

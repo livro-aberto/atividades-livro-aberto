@@ -1,0 +1,181 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Comparação de medicamentos}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item Construir diagrama de pontos
+
+\item Analisar distribuições empíricas, ou seja, construídas a partir de dados experimentais, usando diagrama de pontos para comparar médias; mais especificamente, para comparar médias populacionais, verificando que nem sempre é possível concluir que estas são iguais quando as médias amostrais são diferentes.
+
+
+\end{enumerate}
+
+\tcblower
+
+O objetivo principal dessa atividade é mostrar situações distintas nas quais ao comparar duas médias diferentes (resultantes de amostras), não é possível afirmar que na população, os parâmetros correspondentes sejam diferentes. Por exemplo, situações nas quais apesar de as médias amostrais serem diferentes, não podemos rejeitar a hipótese de que as médias populacionais são iguais, devido à dispersão resultante da amostra.
+
+As respostas possíveis a serem relatadas no campo para pesquisar devem estar contidas nos campos sobre observações referentes a reações adversas, interações medicamentosas, etc. Em geral, as bulas sempre relatam situações que envolvem a observação de dados nesses casos e, algumas, apresentam a frequência na qual essas interações ou reações ocorrem. No entanto, pode ocorrer que uma particular bula não contenha informações do tipo solicitado.
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Deseja-se comparar três medicamentos, X, Y e Z, no tratamento da dor de cabeça. Para isso 60 pacientes com perfis similares foram separados aleatoriamente em três grupos de 20 cada. Para cada grupo,  será ministrado um dos medicamentos e observado o tempo de cura da dor de cabeça (em minutos). No quadro a seguir estão dispostos os dados obtidos.
+\phantomsection\label{\detokenize{PE103-0:tabela-medicamentos}}
+
+
+    \begin{table}[H]
+        \setlength\tabcolsep{2.5pt}
+        \centering
+        \begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \thead
+            {{medicamentos}}  & \multicolumn{20}{c|}{{tempo em minutos}} & {soma} \\
+            \hline
+            X & 7 & 8 & 8 & 9 & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 & 11 & 11 & 11 & 11 & 12 & 12 & 13 & 200 \\
+            \hline
+            Y & 7 & 8 & 9 & 9 & 10 & 10 & 11 & 11 & 11 & 12 & 12 & 12 & 13 & 13 & 14 & 14 & 15 & 15 & 16 & 18 & 240 \\
+            \hline
+            Z & 11 & 11 & 11 & 11 & 11 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 13 & 13 & 13 & 13 & 13 & 240 \\
+            \hline
+        \end{tabu}
+    \end{table}
+\begin{enumerate}
+\item {} 
+Organize as informações apresentadas no quadro acima em diagramas de pontos. Utilize uma folha de papel quadriculada, usando a mesma escala.
+
+\item {} 
+A partir dos diagramas construídos, identifique o grupo que apresentou maior dispersão dos tempos de cura com base na amplitude.
+
+\item {} 
+Determine os tempos médios de cura da dor de cabeça para cada substância.
+
+\item {} 
+A partir dos diagramas construídos e das médias calculadas, responda:
+\begin{enumerate}
+\item Entre X e Y, qual medicamento você escolheria? Por quê?
+\item Entre X e Z, qual medicamento você escolheria? Por quê?
+\item Entre Y e Z, qual medicamento você escolheria? Por quê?
+\item A partir dos dados disponíveis, é possível garantir que algum medicamento é melhor que os outros? Por quê?
+\end{enumerate}
+\end{enumerate}
+
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+
+\item 
+\adjustbox{valign=t}
+{
+   \begin{tikzpicture}[x=10,y=10]
+   % \begin{scope}[x=10,y=10]
+   \draw [help lines, lightgray, xstep=1, ystep=1] (6,0) grid (19,10) ;
+   \draw [eixos] (6,0) -- (19.5,0);
+   \foreach \x in {6,...,19}{
+     \coordinate (A\x) at ($(0,0)+(\x,0)$);
+     \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+     \node [below, scale=0.5] at ($(A\x)-(0,0.5ex)$) {\x} ;
+   }
+   \foreach \y in {1,...,10}{
+     \coordinate (A\y) at ($(6,0)+(0,\y)$);
+     %\draw ($(A\y)+(2pt,0)$) -- ($(A\y)-(2pt,0)$);
+     \node [left, scale=0.5] at ($(A\y)-(0.5ex,0)$) {\y} ;
+   }
+   \node[above] at (12.5,10) {Medicamento X};
+   \foreach \x/\y in  {7/1,8/2,9/4,10/6,11/4,12/2,13/1}{
+       \foreach \i in {1,...,\y}{
+           \filldraw[color=primario] (\x,\i) circle (2.5pt);
+       }
+   }
+   \end{tikzpicture}
+   \begin{tikzpicture}[x=10,y=10]
+   \draw [help lines, lightgray, xstep=1, ystep=1] (6,0) grid (19,10) ;
+   \draw [eixos] (6,0) -- (19.5,0);
+   \foreach \x in {6,...,19}{
+     \coordinate (A\x) at ($(0,0)+(\x,0)$);
+     \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+     \node [below, scale=0.5] at ($(A\x)-(0,0.5ex)$) {\x} ;
+   }
+   \foreach \y in {1,...,10}{
+     \coordinate (A\y) at ($(6,0)+(0,\y)$);
+     %\draw ($(A\y)+(2pt,0)$) -- ($(A\y)-(2pt,0)$);
+     \node [left, scale=0.5] at ($(A\y)-(0.5ex,0)$) {\y} ;
+   }
+   \node[above] at (12.5,10) {Medicamento Y};
+   \foreach \x/\y in  {7/1,8/1,9/2,10/2,11/3,12/3,13/2,14/2,15/2,16/1,18/1}{
+       \foreach \i in {1,...,\y}{
+           \filldraw[color=primario] (\x,\i) circle (2.5pt);
+       }
+   }
+   \end{tikzpicture}
+}
+
+   \begin{tikzpicture}[x=10,y=10]
+   \draw [help lines, lightgray, xstep=1, ystep=1] (6,0) grid (19,10) ;
+   \draw [eixos] (6,0) -- (19.5,0);
+   \foreach \x in {6,...,19}{
+     \coordinate (A\x) at ($(0,0)+(\x,0)$);
+     \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+     \node [below, scale=0.5] at ($(A\x)-(0,0.5ex)$) {\x} ;
+   }
+   \foreach \y in {1,...,10}{
+     \coordinate (A\y) at ($(6,0)+(0,\y)$);
+     %\draw ($(A\y)+(2pt,0)$) -- ($(A\y)-(2pt,0)$);
+     \node [left, scale=0.5] at ($(A\y)-(0.5ex,0)$) {\y} ;
+   }
+   \node[above] at (12.5,10) {Medicamento Z};
+   \foreach \x/\y in {11/5,12/9,13/5}{
+       \foreach \i in {1,...,\y}{
+           \filldraw[color=primario] (\x,\i) circle (2.5pt);
+       }
+   }
+   ;
+
+   % \end{scope}
+   \end{tikzpicture}
+
+\item Analisando os diagramas de pontos, percebe-se que o medicamento Y foi o que apresentou maior dispersão dos tempos de cura. Observe que é a distribuição que apresentou a maior amplitude.
+
+\item De acordo com as somas informadas na tabela, as médias observadas de tempo de cura foram 10 minutos para o medicamento X; 12 minutos para o medicamento Y e 12 minutos para o medicamento Z.
+
+\item Comparando os diagramas de pontos:
+\begin{enumerate}
+\item Observa-se que o medicamento X apresenta uma média amostral (10 min) inferior à do medicamento Y (12 min), porém existe uma interseção razoável, quando analisamos as duas distribuições empíricas dos tempos de cura para esses medicamentos. Isso potencialmente indicaria não existir uma diferença significativa entre os tempos médios de cura desses dois medicamentos. Uma forma de reforçar essa conclusão seria coletar mais dados para cada um dos medicamentos e observar se reproduzem o mesmo padrão observado na análise inicial.
+
+\item Quando analisamos as distribuições empíricas dos tempos de cura dos medicamentos X e Z, observamos que o medicamento X apresenta uma média amostral inferior à do medicamento Z. Neste caso, a interseçâo das duas distribuições é pequena. Além disso, todas as 20 medições do tempo de cura de Z são maiores do que a média de X. Nesta comparação, os dados se revelam mais favoráveis à escolha do medicamento X.
+
+\item Observa-se que ambos medicamentos apresentam a mesma média amostral, porém dispersões diferentes. Assim, esses dados favorecem o medicamento Z, que apresenta menor dispersão em torno do tempo médio de cura.
+
+\item Como já foi discutido, apenas os medicamentos X e Z apresentam uma diferença clara. No entanto, para uma conclusão mais confiável seria conveniente coletar mais informações.
+\end{enumerate}
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

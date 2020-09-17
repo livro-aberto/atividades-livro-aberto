@@ -1,0 +1,87 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Aumento da população}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF2} Compreender a taxa de variação como uma medida de covariação entre grandezas e utilizá-la para interpretar situações reais.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item [OE1] Perceber a importância do intervalo no cálculo da taxa de variação média.
+
+\item [OE2] Diferenciar “variação da função” de “taxa de variação média”.
+
+\end{enumerate}
+
+\tcblower
+
+
+\begin{itemize}
+\item Podemos cair no equívoco de achar que a taxa de variação média total é a média
+aritmética das taxas intermediárias. Nesse caso, achar que $1{,}67$ deveria ser a média
+aritmética entre $2$ e $1{,}43$. Contudo, um cálculo simples mostra que não é o caso. Isso se
+deve ao fato de estarmos considerando intervalos diferentes de tempo. Para funcionar
+devemos fazer a média aritmética ponderada, nesse caso.
+\end{itemize}
+
+\end{goals}
+
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A população brasileira alcançou os 210,1 milhões de habitantes em 2019. Segundo dados do IBGE houve um aumento de $0{,}79\%$ em relação a 2018 quando o instituto estimou a população do país em 208,5 milhões de habitantes. A tabela abaixo mostra a população aproximada de brasileiros nos anos de 2007, 2012 e 2019.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+População aproximada & Ano \\
+\hline
+190 milhões & 2007 \\
+\hline
+200 milhões & 2012 \\
+\hline
+210 milhões & 2019 \\
+\hline
+\end{tabu}
+\end{table}
+\begin{enumerate}
+\item Qual foi a variação da população entre 2007 e 2012? E entre 2012 e 2019?
+\item Quando a população aumentou mais rápido? Explique.
+\item De quanto foi o aumento médio anual entre 2007 e 2012? E entre 2012 e 2019? E entre 2007 e 2019?
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate}
+\item Aumento de 10 milhões de pessoas. Idem.
+\item Entre 2007 e 2012, pois foi um intervalo menor de tempo (5 anos) comparado aos 7 anos entre 2012 e 2019.
+\item 2 milhões de pessoas a mais por ano entre 2007 e 2012. Aproximadamente 1,42 milhão de pessoas a mais por ano entre 2012 e 2019. No período total, tivemos aumento de aproximadamente $1{,}67$ milhão de pessoas por ano.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

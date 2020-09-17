@@ -1,0 +1,102 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: A família}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{LAF1} Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá-las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+
+\item[OE1] Identificar uma relação a partir de sua representação no plano cartesiano.
+
+\item[OE2] Identificar a univocidade (ou não) de uma relação a partir de sua representação no plano cartesiano.
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Nível de abstração \textbf{Processo}.
+
+\item No item (b) o objetivo é que os estudantes percebam que, como as pessoas representadas pelos pontos $C$ (Márcia) e $D$ (Júlio) têm a mesma idade mas alturas diferentes, a relação apresentada no gráfico, que associa a idade com a altura nessa ordem, não é função.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Cada ponto do gráfico a seguir representa uma das seguintes pessoas.
+
+\begin{enumerate}
+\item {} 
+Associe cada ponto do gráfico à pessoa correspondente.
+
+\item {} 
+A relação expressa pelos pares ordenados (idade, altura) apresentados no gráfico é função? Por que?
+\end{enumerate}
+
+
+\begin{center}\begin{tikzpicture}[scale=1.4]
+\draw[->](-0,0)--(6,0);
+\draw(5.7,0) node [below]{idade};
+\draw[->](0,-0)--(0,4);
+\draw(0,3.95) node [above left, rotate =90]{altura};
+\draw[fill](5.5,1.5) circle(1pt) node[right]{$F$};
+\draw[dotted] (5.5,0)--(5.5,1.5)--(0,1.5);
+\draw[fill](4.5,3.5) circle(1pt) node[above]{$E$};
+\draw[dotted](4.5,0)--(4.5,3.5)--(0,3.5);
+\draw[fill](3,3.5) circle(1pt) node[above]{$D$};
+\draw[dotted](3,0)--(3,3.5);
+\draw[fill](3,2.5) circle(1pt) node[right]{$C$};
+\draw[dotted](3,2.5)--(0,2.5);
+\draw[fill](2,1) circle(1pt) node[right]{$B$};
+\draw[dotted](2,0) -- (2,1) --(0,1);
+\draw[fill](.5,.3) circle(1pt) node[right]{$A$};
+\draw[dotted](.5,0)--(.5,.3)--(0,.3);
+\end{tikzpicture}\end{center}
+
+\begin{figure}[H]
+\centering
+
+
+
+\noindent\includegraphics[width=300bp]{{familia}.png}
+\label{\detokenize{AF106-2:fig-altura-idade}}\end{figure}
+
+
+{\color{red}\bfseries{}*}Adaptado de The Language of Functions and Graphs, Shell Centre for Mathematical Education Publications Ltd., 1985.
+
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item O ponto $A$ representa o bebê Miguel, ponto $B$ Sofia, ponto $C$ Márcia, $D$ Júlio, $E$ Antônio e o ponto $F$ Laura.
+
+\item Não é função, pois Márcia e Júlio têm a mesma idade mas alturas diferentes; no plano, os pontos $C$ e $D$ têm a mesma abscissa e ordenadas diferentes.
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

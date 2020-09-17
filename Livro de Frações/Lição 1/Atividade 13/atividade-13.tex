@@ -1,0 +1,204 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao01/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Meios, quartos e décimos em 1D, 2D e 3D}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+   \item Reconhecer e diferenciar a representação das frações ``um meio'', ``um quarto'' e       ``um décimo'' em modelos diversos, baseados  ou não em equipartição.
+
+\end{enumerate}
+\tcblower
+\tikzset{x=1cm, y=1cm}
+\begin{itemize} %s
+\item Esta é uma atividade que o aluno pode fazer individualmente.
+\item Esta atividade pode ser desenvolvida com o uso do material para reprodução disponível no final do livro caso se entenda que seus estudantes ainda precisam deste recurso.
+\item Como nas atividades anteriores, não se espera que os alunos usem a medida para confirmar a metade. O objetivo é que identifiquem a representação da metade (ou não) por sobreposição e justaposição dessas partes, decompondo e recompondo a figura.
+\item No item m), pretende-se que o estudante considere o quadrado maior como unidade e perceba que a parte em vermelho corresponde à metade desse quadrado. Isso pode ser feito observando que todos os quadradinhos vermelhos podem ser agrupados para formar a metade superior do quadrado maior e os azuis agrupados para formar a parte de baixo, por exemplo.
+\begin{center}
+  \begin{tikzpicture}[scale=.5]
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (4,4);
+ \filldraw[fill=attention, draw=black] (1,0) rectangle (2,1);
+ \filldraw[fill=attention, draw=black] (3,0) rectangle (4,1);
+ \filldraw[fill=attention, draw=black] (0,1) rectangle (1,2);
+ \filldraw[fill=attention, draw=black] (2,1) rectangle (3,2);
+ \filldraw[fill=attention, draw=black] (1,2) rectangle (2,3);
+ \filldraw[fill=attention, draw=black] (3,2) rectangle (4,3);
+ \filldraw[fill=attention, draw=black] (0,3) rectangle (1,4);
+ \filldraw[fill=attention, draw=black] (2,3) rectangle (3,4);
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[scale=.5]
+  \draw[fill=common, fill opacity=.3] (0,0) rectangle (4,4);
+  \filldraw[fill=attention, draw=black] (0,2) rectangle (4,4);
+  \draw (0,0) grid (4,4);
+\end{tikzpicture}
+\end{center}
+
+Neste item m), é prematuro e, portanto, inadequado usar o argumento de que a fração é um meio argumentando que dos 16 quadradinhos, existem 8 pintados de vermelho. Isso porque, nessa linha de raciocínio, a unidade seria o quadradinho e não o quadrado maior e, consequentemente, não se estaria fazendo uma divisão de uma unidade mas, sim, uma contagem em um modelo discreto de frações, abordagem essa que escolhemos evitar nesse momento.   
+
+
+\item Incentive os alunos a argumentar, justificando a sua decisão. Para isso, podem, por exemplo, se apoiar em dobraduras ou no recorte das partes da figura.
+\item Procure apresentar e discutir com a turma mais do que uma solução para cada item.
+\end{itemize} %s
+
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Em cada uma das imagens, a parte em vermelho é uma fração da figura. Essas frações podem ser ``um meio'', ``um quarto'' ou ``um décimo'' da figura. Associe cada imagem à fração correspondente.
+
+
+\begin{tasks}[label-width=2em](3)
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,0) rectangle (4,2);
+ \filldraw[fill=attention, draw=black] (0,0) -- (4,2) -- (4,0) -- cycle;
+\end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,0) rectangle (4,2);
+ \foreach \n in {0.4,0.8,1.2,...,3.2,3.6}{
+ \draw (\n,0) -- (\n,2);}
+ \filldraw[fill=attention, draw=black] (0.8,0) -- (0.8,2) -- (1.2,2) -- (1.2,0) -- cycle;
+\end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,0) rectangle (4,2);
+ \filldraw[fill=attention, draw=black] (2,1) rectangle (4,2);
+ \draw (0,1) -- (4,1);
+ \draw (2,0) -- (2,2);
+ \end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (135:2) arc (135:405:2) -- (0,0) --cycle;
+ \filldraw[fill=attention, draw=black] (45:2) arc (45:135:2) -- (0,0) -- cycle;
+ \end{tikzpicture}}}
+ \task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0:2) -- (60:2) -- (90:1.73) -- (0,0) -- (180:2) -- (240:2) -- (300:2) --cycle;
+ \filldraw[fill=attention, draw=black] (-2,0) -- (0,0) -- (0,1.73) -- (120:2) -- cycle;
+\end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,0) rectangle (5,1);
+ \draw[fill=attention] (0,1) rectangle (5,2);
+\end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (0,.75) rectangle (2,3);
+ \draw[fill=attention] (0,0) rectangle (2,.75);
+\end{tikzpicture}}}
+  \task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[fill=common, fill opacity=.3] (236:2) arc (236:560:2);
+ \draw[fill=attention] (200:2) arc (200:236:2) -- (0,0) -- cycle;
+\end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+ \draw[ultra thick,color=attention] (-1,0) arc (180:270:1);
+ \draw (0,-1) arc (270:360:1) -- (1,0) arc (180:0:1);
+ \end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}
+\tikzset{
+  annotated cuboid/.pic={
+    \tikzset{%
+      every edge quotes/.append style={midway, auto},
+      /cuboid/.cd,
+      #1
+    }
+    \draw [every edge/.append style={pic actions, densely dashed, opacity=0}, pic actions]
+    (0,0,0) coordinate (o) -- ++(-\cubescale*\cubex,0,0) coordinate (a) -- ++(0,-\cubescale*\cubey,0) coordinate (b) edge coordinate [pos=1] (g) ++(0,0,-\cubescale*\cubez)  -- ++(\cubescale*\cubex,0,0) coordinate (c) -- cycle
+    (o) -- ++(0,0,-\cubescale*\cubez) coordinate (d) -- ++(0,-\cubescale*\cubey,0) coordinate (e) edge (g) -- (c) -- cycle
+    (o) -- (a) -- ++(0,0,-\cubescale*\cubez) coordinate (f) edge (g) -- (d) -- cycle;
+ },
+  /cuboid/.search also={/tikz},
+  /cuboid/.cd,
+  width/.store in=\cubex,
+  height/.store in=\cubey,
+  depth/.store in=\cubez,
+  units/.store in=\cubeunits,
+  scale/.store in=\cubescale,
+  width=100,
+  height=100,
+  depth=100,
+  units=cm,
+  scale=.1,
+}
+    \draw[dotted] (2.95,-1.9) -- (25.5,-1.9);
+    \pic [fill=attention, fill opacity=.8] at (0,0) {annotated cuboid={width=25, height=50, depth=8}};
+    \pic [fill=common, fill opacity=.3] at (22.5,0) {annotated cuboid={width=225, height=50, depth=8}};
+\end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+
+  \draw[fill=common, fill opacity=.3] (0,2) rectangle (2,4);
+ \draw[fill=common, fill opacity=.3] (0,0) rectangle (2,2);
+ \draw[fill=common, fill opacity=.3] (2,0) rectangle (4,2);
+ \draw[fill=common, fill opacity=.3] (2,2) rectangle (4,4);
+ \draw[fill=attention] (1,1) rectangle (3,3);
+ \draw (2,1) -- (2,3);
+ \draw (1,2) -- (3,2);
+ \end{tikzpicture}}}
+\task \adjustbox{valign=t}{
+\parbox[t][2cm][c]{2cm}{
+\begin{tikzpicture}[scale=5]
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (4,4);
+ \filldraw[fill=attention, draw=black] (1,0) rectangle (2,1);
+ \filldraw[fill=attention, draw=black] (3,0) rectangle (4,1);
+ \filldraw[fill=attention, draw=black] (0,1) rectangle (1,2);
+ \filldraw[fill=attention, draw=black] (2,1) rectangle (3,2);
+ \filldraw[fill=attention, draw=black] (1,2) rectangle (2,3);
+ \filldraw[fill=attention, draw=black] (3,2) rectangle (4,3);
+ \filldraw[fill=attention, draw=black] (0,3) rectangle (1,4);
+ \filldraw[fill=attention, draw=black] (2,3) rectangle (3,4);
+\end{tikzpicture}}}
+\end{tasks}
+
+
+\ifdefined\prof
+
+\begin{solucao}
+
+  \begin{tabular}{lll}
+a) Um meio,&  b) Um décimo,& c) Um quarto,\\
+d) Um quarto,& e) Um quarto,& f) Um meio,\\
+g) Um quarto,& h) Um décimo,& i) Um quarto,\\
+j) Um décimo,& l) Um quarto,& m) Um meio
+\end{tabular}
+
+\end{solucao}
+\fi
+
+\end{document}

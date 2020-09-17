@@ -1,0 +1,176 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Pinte e expresse quanto ficou sem pintar}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+    \item       Representar frações não unitárias descritas com símbolos matemáticos em diversos modelos de área, incluindo casos em que as subdivisões apresentadas não coincidem com o denominador da fração dada.
+    \item       Identificar a fração complementar de uma fração da unidade usando símbolos matemáticos.
+    \item       Reconhecer (e gerar) oitavos como metades de quartos, sextos como metades de terços e décimos como metades de quintos, preparando-se assim para a discussão sobre equivalência de frações que será feita na Lição 4.
+
+\end{enumerate}
+\tcblower
+
+\begin{itemize} %s
+    \item       Essa é uma atividade que o aluno pode fazer individualmente.
+    \item       Observe que os três últimos itens constituem uma extensão natural da Atividade 8 da Lição 1. Isto é, aplicam o fato de que, para uma mesma unidade, sexto é metade de terço, oitavo é metade de quarto e décimo é metade de quinto.
+    \item       Não se espera, nem se recomenda, que, para os três últimos itens desta atividade, os alunos usem alguma medida para fazer, de forma precisa, a partição de quartos e quintos em oitavos e décimos, respectivamente. O objetivo é que façam a partição livremente e de forma coerente.
+    \item Os alunos podem pintar as partes de formas diferentes: estas, por exemplo, não precisam ser justapostas.
+    \item Procure apresentar e discutir com a turma mais do que uma solução para cada item, reforçando assim a ideia proposta na Atividade 9 da Lição 1.
+\end{itemize} %s
+
+\end{goals}
+
+\medskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi\setlength\baselineskip{.7em}
+
+Na tabela a seguir, pinte cada figura de modo que a parte pintada seja a fração da figura indicada na coluna à esquerda e na mesma linha. Indique também, usando símbolos matemáticos, qual fração da figura ficou sem ser pintada.
+
+\begin{center}
+  \begin{longtable}{|m{0.25\textwidth}|c|m{0.25\textwidth}|}
+    \hline
+      Fração da figura que deve ser pintada  & \parbox[c]{1.6cm}{\centering Figura}  &   Fração da figura que ficou sem ser pintada  \\
+    \hline
+    \endhead
+     \centering $\dfrac{5}{6}$  & \centering \parbox[c][1.75cm][c]{1.6cm}{\begin{tikzpicture}
+                                    \foreach \x in {0,60,...,300}{ \draw (0,0)--(\x:8);\draw (\x:8)--(\x+60:8);}
+                                   \end{tikzpicture}}
+&  \\
+    \hline
+     \centering $\dfrac{3}{4}$  &  \centering \parbox[c][1.75cm][c]{1.6cm}{\begin{tikzpicture}
+                                    \draw (0:8)--(180:8);
+                                    \draw (90:8)--(270:8);
+                                    \draw (0,0) circle (8);
+                                   \end{tikzpicture}}
+                                   &  \\
+    \hline
+     \centering $\dfrac{2}{5}$  &   \centering \parbox[c][1.75cm][c]{2.4cm}{
+                                    \begin{tikzpicture}
+                                    \draw (0,0) rectangle (25,16);
+                                    \foreach \x in {5,10,15,20}{\draw (\x,0)--(\x,16);}
+                                   \end{tikzpicture} }
+                                   &  \\
+    \hline
+     \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.75cm][c]{1.6cm}{\begin{tikzpicture}
+                                    \foreach \x in {0,60,...,300}{ \draw (0,0)--(\x:8);\draw (\x:8)--(\x+60:8);}
+                                   \end{tikzpicture}}
+                                   &  \\
+    \hline
+     \centering $\dfrac{3}{8}$  &   \centering \parbox[c][1.75cm][c]{1.6cm}{\begin{tikzpicture}
+                                    \draw (0:8)--(180:8);
+                                    \draw (90:8)--(270:8);
+                                    \draw (0,0) circle (8);
+                                   \end{tikzpicture}}&  \\
+    \hline
+     \centering $\dfrac{9}{10}$  & \centering \parbox[c][1.75cm][c]{2.4cm}{
+                                    \begin{tikzpicture}
+                                    \draw (0,0) rectangle (25,16);
+                                    \foreach \x in {5,10,15,20}{\draw (\x,0)--(\x,16);}
+                                   \end{tikzpicture} }
+                                   &  \\
+    \hline
+  \end{longtable}
+\end{center}
+
+\ifdefined\prof
+
+\begin{solucao}
+
+\begin{center}
+\addtolength{\cellspacetoplimit}{3pt}
+
+    \begin{tabular}{|m{.25\textwidth}|S{m{0.3\textwidth}}|m{0.25\textwidth}|}
+\hline
+      \centering A pintar  & \centering figura &\quad \quad sem ser pintada  \\
+      \hline
+ \centering $\dfrac{5}{6}$& \centering
+                                    \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \foreach \x in {120,180,...,360} \fill[attention] (\x:8)--(\x+60:8)--(0,0)--cycle;
+                                    \fill[common, opacity=.3] (60:8) -- (120:8) -- (0,0) -- cycle;
+                                    \foreach \x in {0,60,...,300}{ \draw (0,0)--(\x:8);\draw (\x:8)--(\x+60:8);}
+                                   \end{tikzpicture}
+&  $$\dfrac{1}{6}$$ \\
+    \hline
+     \centering $\dfrac{3}{4}$&  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) circle (8);
+                                    \fill[attention] (0:8) arc (0:270:8) -- (0,0) -- cycle;
+                                    \draw (0:8)--(180:8);
+                                    \draw (90:8)--(270:8);
+                                   \end{tikzpicture}
+                                   & $$\dfrac{1}{4}$$\\
+    \hline
+     \centering $\dfrac{2}{5}$&   \makecell{
+                                    \begin{tikzpicture}[x=1mm,y=1mm,scale=.8]
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (25,16);
+                                    \fill[attention] (0,0) rectangle (10,16);
+                                    \foreach \x in {5,10,15,20}{\draw (\x,0)--(\x,16);}
+                                  \end{tikzpicture}  ou 
+                                \begin{tikzpicture}[x=1mm,y=1mm,scale=.8]
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (25,16);
+                                    \fill[attention] (0,0) rectangle (5,16);
+                                    \fill[attention] (10,0) rectangle (15,16);
+                                    \foreach \x in {5,10,15,20}{\draw (\x,0)--(\x,16);}
+                                   \end{tikzpicture}}
+                                   & $$\dfrac{3}{5}$$ \\
+    \hline
+     \centering $\dfrac{2}{3}$&  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \foreach \x in {120,180,...,300} \fill[attention] (\x:8)--(\x+60:8)--(0,0)--cycle;
+                                    \fill[common, opacity=.3] (60:8) -- (120:8) -- (0,0) -- (0:8)-- cycle;
+                                    \foreach \x in {0,60,...,300}{ \draw (0,0)--(\x:8);\draw (\x:8)--(\x+60:8);}
+                                  \end{tikzpicture} ou
+                                \begin{tikzpicture}[x=1mm,y=1mm]
+                                  \foreach \x in {120,180,240} \fill[attention] (\x:8)--(\x+60:8)--(0,0)--cycle;
+                                   \fill[attention] (0:8)--(60:8)--(0,0)--cycle;
+                                   \fill[common, opacity=.3] (60:8) -- (120:8) -- (0,0)-- cycle;
+                                   \fill[common, opacity=.3] (300:8) -- (360:8) -- (0,0)-- cycle;
+                                    \foreach \x in {0,60,...,300}{ \draw (0,0)--(\x:8);\draw (\x:8)--(\x+60:8);}
+                                   \end{tikzpicture}
+                                   & $$\dfrac{1}{3}$$ \\
+    \hline
+     \centering $\dfrac{3}{8}$&   \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) circle (8);
+                                    \fill[attention] (0:8) arc (0:135:8) -- (0,0) -- cycle;
+                                    \foreach \x in {0,45,90,135} \draw (\x:8)--(\x:-8);
+                                  \end{tikzpicture} ou
+                                  \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) circle (8);
+                                    \fill[attention] (180:8) arc (180:225:8) -- (0,0) -- cycle;
+                                    \fill[attention] (0:8) arc (0:45:8) -- (0,0) -- cycle;
+                                    \fill[attention] (270:8) arc (270:315:8) -- (0,0) -- cycle;
+                                    \foreach \x in {0,45,90,135} \draw (\x:8)--(\x:-8);
+                                  \end{tikzpicture} & $$\dfrac{5}{8}$$ \\
+    \hline
+     \centering $\dfrac{9}{10}$& \centering \begin{tikzpicture}[x=1mm,y=1mm,scale=.8]
+                                    \draw[fill=common, fill opacity=.3] (20,8) rectangle (25,16);
+                                    \filldraw[fill=attention] (0,0) rectangle (20,16);
+                                    \filldraw[fill=attention] (20,0) rectangle (25,8);
+                                    \foreach \x in {5,10,15,20}{\draw (\x,0)--(\x,16);}
+                                    \draw (0,8) -- (25,8);
+                                   \end{tikzpicture}
+                                   & $$\dfrac{1}{10}$$ \\
+    \hline
+    \end{tabular}
+  \end{center}
+  
+\end{solucao}
+\fi
+
+\end{document}
