@@ -22,14 +22,9 @@ rename-professor # adiciona "-professor" ao final do nome
 
 Há dentro da pasta da pasta do Livro de Frações e do Livro do Ensino Médio os arquivos
 
-# Ensino Médio 
-base-ensino-medio.tex #arquivo de exemplo para construção de uma atividade 
+base-ensino-medio.tex (ou base-fracoes #arquivo de exemplo para construção de uma atividade 
 
-modelo-ensino-medio.sty #pacote com os ambientes e pacotes usados nas atividades
-
-# Frações 
-
-Analogamente temos os arquivos base-fracoes.tex e modelo-fracoes.sty
+modelo-ensino-medio.sty (ou modelo-fracoes #pacote com os ambientes e pacotes usados nas atividades
 
 
 Dentro dos arquivos dos modelos, há a seguinte linha:
