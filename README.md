@@ -8,6 +8,7 @@ Dentro das pasta Livro de Frações há pastas para cada lição. Já o livro do
 Todas as pastas de todos os capítulos contém os seguintes scripts em .bat:
 
 %%%%%%%%%%%%%%%%% SRIPTS %%%%%%%%%%%%%%%%%%%%
+
 compile.bat #compila em xelatex todos os arquivos nos sub-diretórios.
 
 compile-professor.bat #compila todos os arquivos nos sub-diretórios e adiciona "-professor" no final do nome.
