@@ -1,0 +1,135 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao03/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Faixa particionada e pintada}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Identificar na reta numérica pontos correspondentes a frações apresentadas em modelos contínuo. Especificamente    $\frac{0}{5}$,  $\frac{1}{5}$,       $\frac{2}{5}$,       $\frac{3}{5}$, $\frac{4}{5}$ e $\frac{5}{5}$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item A atividade evidencia a diferença entre representar uma fração a partir de um modelo contínuo de área (no caso, uma faixa retangular) e na reta numérica. No primeiro caso, a fração é identificada por uma região colorida. Na reta, a fração é associada a um único ponto, um número.
+\item Observe que as frações destacadas nas faixas foram alinhadas e ordenadas visando à correspondência com a representação na reta.  Assim, por exemplo, $\frac{1}{5}$ é representado por
+\begin{tikzpicture}[scale=.3]
+\fill [fill=common, fill opacity=.3] (0,0) rectangle (10,1);
+\fill [attention] (0,0) rectangle (2,1);
+\draw [step=2] (0,0) grid (10,1);
+\draw (0,1) -- (10,1);
+\end{tikzpicture}
+e não por       \begin{tikzpicture}[scale=.3]
+\fill [fill=common, fill opacity=.3] (0,0) rectangle (10,1);
+\fill [attention] (4,0) rectangle (6,1);
+\draw [step=2] (0,0) grid (10,1);
+\draw (0,1) -- (10,1);
+\end{tikzpicture}
+O alinhamento à esquerda faz a associação ao zero e atende à ordem estabelecida na reta.
+\item No item b) espera-se que os alunos identifiquem a faixa sem pintar à fração $\frac{0}{5}$, ou seja, a zero, e a faixa inteiramente pintada à fração $\frac{0}{5}$, ou seja, à unidade, portanto, igual a 1. Cabe aqui registrar as igualdades $\frac{0}{5}=0$ e $\frac{5}{5}=1$.
+
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A faixa a seguir está dividida em 5 partes iguais.
+
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\foreach \x in {0,1,2,...,4}{
+\draw[fill=common, fill opacity=.3] (\x/5,0) rectangle (\x/5 + 1/5,.1);
+\draw[step=.2] (0,0) grid (1,.1);
+\draw (0,.1)-- (1,.1);}
+ \end{tikzpicture}
+\end{center}
+
+
+\begin{enumerate} %s
+  \item    Considerando a faixa como unidade,  complete a reta numérica  escrevendo frações  correspondentes às regiões coloridas em vermelho. 
+
+\begin{center}
+  \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+
+\foreach \x in {0,1,2,...,5}{
+\fill[fill=common, fill opacity=.3, shift={(0,-\x*.15)}] (\x/5,0) rectangle (1,.1);
+\draw[fill=attention, shift={(0,-\x*.15)}] (0,0) rectangle (\x/5,.1);
+\draw[step=.2, shift={(0,-\x*.15)}] (0,0) grid (1,.1);
+\draw[shift={(0,-\x*.15)}] (0,.1)-- (1,.1);}
+
+\begin{scope}[shift={(0,-.9)}]
+\draw[->] (-0.1,0) -- (1.1,0) ; %edit here for the axis
+\foreach \x in  {0,1} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+
+\foreach \x in  {.2,.4,.6,.8} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {{\huge $\dfrac{\square}{\square}$}};
+\end{scope}
+
+\end{tikzpicture}
+ \end{center}
+
+  \item     E as faixas sem pintura vermelha e toda pintada de vermelho? Escreva as frações correspondentes a elas.
+
+\end{enumerate} %s
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+
+\item \adjustbox{valign=t}
+{
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+
+
+ \foreach \x in {0,1,2,...,5}{
+\fill[fill=common, fill opacity=.3, shift={(0,-\x*.15)}] (\x/5,0) rectangle (1,.1);
+\draw[fill=attention, shift={(0,-\x*.15)}] (0,0) rectangle (\x/5,.1);
+\draw[step=.2, shift={(0,-\x*.15)}] (0,0) grid (1,.1);
+\draw[shift={(0,-\x*.15)}] (0,.1)-- (1,.1);}
+
+
+ \begin{scope}[yshift=-135]
+\draw[->] (-0.1,0) -- (1.1,0) ; %edit here for the axis
+
+%\draw[shift={(0,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {0};
+
+\foreach \x in  {1,...,4} % edit here for the vertical lines
+\fill[shift={(\x/5,0)},common] (0,0) circle (3pt) node[below, black] {{\Large $\frac{\x}{5}$}};
+\foreach \x in {0,1}
+\fill[shift={(\x,0)},common] (0,0) circle (3pt) node[below, black] {\x};
+ \end{scope}
+
+\end{tikzpicture}
+}
+
+\item A faixa sem pintar é igual a fração $\frac{0}{5}$, ou seja, é igual a zero. A faixa inteiramente pintada é igual a fração $\frac{5}{5}$, ou seja, é igual à unidade, ou igual a 1. Portanto, $\frac{0}{5}=0$ e $\frac{5}{5}=1$.
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,124 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao03/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Maior, menos ou igual?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Comparar frações.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+  \item Nesta atividade, as frações são apresentadas apenas em sua representação simbólica. Espera-se que os alunos consigam compará-las a partir da ideia de quantidade e de estratégias mentais. No entanto, é importante observar que alguns alunos podem precisar do apoio de representações diversas. Portanto, a discussão de cada item deve ser amparada por, pelo menos, uma das três estratégias destacadas: (i) argumentação verbal; (ii) representação em modelo contínuo de área e (iii) representação na reta numérica. Por exemplo, na correção do item a), entre $\frac{3}{6}$ e $\frac{5}{6}$, espera-se que a discussão contemple:
+
+   \begin{enumerate}[label=\roman*)]
+    \item O fato de que, como essas frações indicam quantidades de ``sextos'', a menor (maior) é aquela que têm menor (maior) numerador. Portanto, $\frac{3}{6}< \frac{5}{6}$.
+    \item A representação em modelos contínuos de área.
+\begin{center}
+      \begin{tikzpicture}[x=56.25mm,y=56.25mm, scale=.6]
+\filldraw [fill=common, fill opacity=.3] (0,0) rectangle (1,.1);
+\draw[fill=attention] (0,0) rectangle (.5,.1);
+\foreach \x in {.167,.333,.5,.667, .833} \draw (\x,0) -- (\x,.1);
+\begin{scope}[yshift=-20]
+\filldraw [fill=common, fill opacity=.3] (0,0) rectangle (1,.1);
+\draw[fill=attention] (0,0) rectangle (.833,.1);
+\foreach \x in {.167,.333,.5,.667, .833} \draw (\x,0) -- (\x,.1);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+   %cap3:secoes:comparacao_sextos.jpg retângulo da atividade 5 indicando 2/5 e 2/7.
+    \item A representação na reta numérica. 
+      \begin{center}
+        \begin{tikzpicture}[x=5cm]
+          \draw [->] (-.2,0) -- (1.2,0);
+          \foreach \x in {1,...,5}{
+            \draw (\x/6,3pt) -- (\x/6,-3pt);
+            \node [below] at (\x/6,0) {$\frac{\x}{6}$};
+          }
+          \foreach \x in {0,1}{
+          \draw (\x,3pt) -- (\x,-3pt);
+          \node [below] at (\x,0) {$\x$};
+          }
+            \fill [common] (.5,0) circle (3pt);
+            \fill [common] (.833,0) circle (3pt);
+            
+        \end{tikzpicture}
+      \end{center}
+    \end{enumerate}
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Complete as sentenças a seguir com os sinais $>$ (maior), $<$ (menor) ou $=$ (igual) de modo a torná-las verdadeiras.
+
+\begin{center}
+\begin{longtable}{lccccccccccccc}
+ a)  &  $\dfrac{3}{6}$     &{\huge $\square$}  &  $\dfrac{5}{6}$   & \parbox[t][.6cm]{2cm}{ } \quad \quad\quad  & f)  &  $\dfrac{1}{2}$     & {\huge $\square$} &  $\dfrac{1}{3}$    & \quad \quad\quad  & m)  &  $\dfrac{3}{2}$     & {\huge $\square$} &  $\dfrac{2}{5}$    \\
+ b)  &  $\dfrac{5}{9}$     &{\huge $\square$}&  $\dfrac{4}{9}$   & \parbox[t][.6cm]{2cm}{ }    & g)  &  $\dfrac{1}{7}$     &{\huge $\square$} &  $\dfrac{1}{6}$    &   & n)  &  $\dfrac{3}{4}$     &{\huge $\square$} &  $\dfrac{6}{5}$    \\
+ c)  &  $\dfrac{27}{10}$    &{\huge $\square$} &  $\dfrac{29}{10}$   & \parbox[t][.6cm]{2cm}{ }   & h)  &  $\dfrac{2}{5}$     &{\huge $\square$}&  $\dfrac{2}{7}$    &   & o)  &  $\dfrac{7}{8}$     &{\huge $\square$} &  $\dfrac{10}{9}$   \\
+ d)  &  $\dfrac{3}{12}$    &{\huge $\square$}&  $\dfrac{9}{12}$   & \parbox[t][.6cm]{2cm}{ }   & i)  &  $\dfrac{4}{5}$     &{\huge $\square$}&  $\dfrac{4}{3}$    &   & p)  &  $\dfrac{6}{5}$     &{\huge $\square$}&  $\dfrac{12}{9}$   \\
+ e)  &  $\dfrac{139}{100}$  &{\huge $\square$}&  $\dfrac{125}{100}$ & \parbox[t][.6cm]{2cm}{ }   & j)  &  $\dfrac{12}{15}$   &{\huge $\square$}&  $\dfrac{12}{7}$   &   & q)  &  $\dfrac{4}{5}$     &{\huge $\square$}&  $\dfrac{5}{4}$    \\
+     &&                     &    &                  \parbox[t][.6cm]{2cm}{ }    &  l)  &  $\dfrac{22}{80}$   &{\huge $\square$}&  $\dfrac{22}{90}$  &   & r)  &  $\dfrac{35}{40}$   &{\huge $\square$}&  $\dfrac{30}{25}$  \\
+     &&                      &    &                    &      &  \parbox[t][.6cm]{2cm}{ }                    &   &                   &   &  s)  &  $\dfrac{99}{100}$  &{\huge $\square$}&  $\dfrac{3}{2}$    \\
+\end{longtable}
+ \end{center}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{multicols}{3}
+\begin{enumerate}
+\item $\frac{5}{9} > \frac{4}{9}$
+\item $\frac{3}{6} < \frac{5}{6}$
+\item   $\frac{27}{10} < \frac{29}{10}$
+\item  $\frac{3}{12} < \frac{9}{12}$
+\item $\frac{139}{100}~>~\frac{125}{100}$
+\columnbreak
+
+\item   $\frac{1}{2} > \frac{1}{3}$
+\item  $\frac{1}{7} < \frac{1}{6}$
+\item   $\frac{2}{5} > \frac{2}{7}$
+\item   $\frac{4}{5} < \frac{4}{3}$
+\item   $\frac{12}{15} < \frac{12}{7}$
+\item   $\frac{22}{80} > \frac{22}{90}$
+\columnbreak
+
+\item   $\frac{3}{2} > \frac{2}{5}$
+\item   $\frac{3}{4} < \frac{6}{5}$
+\item   $\frac{7}{8} < \frac{10}{9}$
+\item   $\frac{6}{5} > \frac{12}{9}$
+\item  $\frac{4}{5}< \frac{5}{4}$
+\item  $\frac{35}{40}< \frac{30}{25}$
+\item  $\frac{99}{100}<\frac{3}{2}$
+\end{enumerate}
+\end{multicols}
+
+\end{solucao}
+\fi
+
+
+\end{document}

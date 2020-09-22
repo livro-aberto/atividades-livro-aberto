@@ -1,0 +1,100 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Juntando frações de uma pizza}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+\item Estender o conceito de frações para expressar quantidades que correspondam a mais do que uma fração unitária, a partir da junção de duas ou mais partes correspondentes às frações unitárias de mesmo denominador.
+\item Reconhecer a necessidade de apresentar uma expressão verbal que identifique a quantidade correspondente à junção de duas ou
+
+\end{enumerate}
+\tcblower
+
+  \begin{itemize} %s
+\item Recomenda-se que a atividade seja realizada individualmente e que os alunos compartilhem suas respostas. 
+\item É possível que os alunos utilizem expressões variadas para nomear as quantidades de pizza que cada amigo comeu. Por exemplo, ``três de quatro fatias'', ``três fatias de um quarto de pizza'', ``três quartos de pizza'', dentre outras. É importante que a discussão conduza os alunos ao uso de quartos, sextos e oitavos: ``três quartos'', ``cinco sextos'', ``cinco oitavos'', etc. 
+\end{itemize} %s
+
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Luiza, João e Mariele foram a uma pizzaria. Cada um pediu uma pizza do seu sabor preferido. 
+Luiza cortou sua pizza em 4 fatias; João cortou sua pizza em 6 fatias e Mariele cortou sua pizza em 8 fatias.
+%Veja o quanto restou de pizza após os amigos estarem satisfeitos:
+O esquema a seguir indica o quanto restou de pizza após os amigos estarem satisfeitos:
+
+\begin{center}
+\begin{tikzpicture}[scale=.7]
+\draw [dashed] (0,0) circle (2cm);
+\filldraw[fill=common] (0,0) -- (120: 2cm) arc (120:240:2cm)--cycle;
+\foreach \t in {0,60,300}{
+  \draw [dashed] (0,0) -- (\t: 2cm);
+}
+\draw (0,0) -- (180:2cm);
+\end{tikzpicture} \hfill
+\begin{tikzpicture}[scale=.7]
+\draw [dashed] (0,0) circle (2cm);
+  \filldraw[fill=common] (0,0) -- (135: 2cm) arc (135:225:2cm)--cycle;
+
+\foreach \t in {0,45,...,315}{
+  \draw [dashed] (0,0) -- (\t: 2cm);
+}
+\draw  (0,0) -- (135: 2cm);
+\draw  (0,0) -- (180: 2cm);
+\draw  (0,0) -- (225: 2cm);
+\end{tikzpicture}\hfill
+\begin{tikzpicture}[scale=.7]
+\draw [dashed] (0,0) circle (2cm);
+  \filldraw[fill=common] (0,0) -- (180: 2cm) arc (180:270:2cm)--cycle;
+
+\foreach \t in {0,90}{
+  \draw [dashed] (0,0) -- (\t: 2cm);
+}
+\draw (0,0) -- (180: 2cm);
+\draw (0,0) -- (270: 2cm);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate} [label=\alph*)] %d
+\item   Identifique a pizza de cada um dos amigos.
+\item   Em cada caso, que fração da pizza representa uma fatia?
+\item   Escreva a quantidade de pizza que cada amigo comeu utilizando fração?
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate} [label=\alph*)] %d
+\item Da esquerda para a direita as pizzas são de João, Mariele e Luiza.
+\item Na pizza de João uma fatia representa um sexto da pizza. \newline
+  Na pizza de Mariele uma fatia representa um oitavo da pizza. \newline
+  Na pizza de Luiza uma fatia representa um quarto da pizza.
+\item João comeu quatro sextos de sua pizza; Mariele, seis oitavos; e Luiza comeu três quartos de sua pizza.
+\end{enumerate} %d
+
+\end{solucao}
+\fi
+
+\end{document}

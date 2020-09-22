@@ -1,0 +1,87 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao03/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Quem comeu mais pizza?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Comparar  duas frações nos casos  que têm o mesmo denominador e que têm o mesmo numerador.
+\item Comparar frações da unidade a partir da sua representação na reta numérica.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       No item a), espera-se que os alunos façam a comparação baseando-se no fato de que as frações envolvidas têm o mesmo denominador; no item b), espera-se que os alunos façam a comparação baseando-se no fato de que as frações envolvidas têm o mesmo numerador. Já no item c), espera-se que os alunos façam uso intuitivamente da propriedade transitiva da relação de ordem, a partir de suas respostas aos itens a) e b). Recomenda-se ressaltar que, na segunda parte do item d), a resposta ao item c) seja conferida pela representação das frações na reta numérica, uma vez que a reta numérica explicita a ordem entre as frações.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Três amigos foram a uma pizzaria e cada um pediu uma pizza média, de três sabores diferentes: João comeu $\frac{3}{4}$ da pizza de calabresa, Maria comeu  $\frac{2}{4}$ da pizza de presunto e Miguel comeu $\frac{2}{5}$ da pizza de milho. Sabendo-se que todas as pizzas eram do mesmo tamanho, pergunta-se:
+\begin{enumerate}
+  \item     Quem comeu mais pizza, João ou Maria? Explique.
+  \item     E no caso de Maria e Miguel, quem comeu mais pizza? Explique.
+  \item     Dos três amigos, quem comeu mais pizza? Explique.
+  \item     Marque na reta numérica a seguir as frações correspondentes às porções de pizza que cada amigo comeu, e confira a sua resposta do item c).
+\end{enumerate} %s
+
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[->] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\end{tikzpicture}
+\end{center}
+
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate} %s
+\item João comeu mais que Maria porque se as duas pizzas estão divididas em 4 fatias iguais, ele comeu 3 quartos enquanto Maria comeu apenas 2.
+\item Como a pizza do Miguel está dividida em 5 fatias iguais, cada fatia da pizza do Miguel é menor do que as fatias da pizza da Maria, uma vez que a pizza da Maria foi repartida em quartos. Como cada um comeu duas fatias de sua própria pizza e as fatias de Maria eram maiores do que as de Miguel, Maria comeu mais pizza do que Miguel.
+\item João comeu mais do que Maria e Maria comeu mais do que Miguel. Logo João foi o que comeu mais pizza.
+
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[x=50mm,y=100mm]
+\draw[->] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {.2,.4,...,.8}{ \draw (\x,-2pt) -- (\x,2pt);}
+\foreach \x in {.25,.5,...,.75}{ \draw (\x,-3pt) -- (\x,3pt);}
+
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+
+\fill[common] (2/5,0) circle (3pt);
+\node[below] at (.4,0) {$\frac{2}{5}$};
+\fill[common] (3/4,0) circle (3pt);
+\node[below] at (3/4,0) {$\frac{3}{4}$};
+\fill[common] (3/5,0) circle (3pt);
+\node[below] at (.6,0) {$\frac{3}{5}$};
+\end{tikzpicture}
+}
+\end{enumerate} %s
+
+\end{solucao}
+\fi
+
+\end{document}

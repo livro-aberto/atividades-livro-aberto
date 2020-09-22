@@ -1,0 +1,148 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Teor de álcool sanguíneo}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Conjecturar que taxa de variação média de uma função linear qualquer é a mesma para qualquer intervalo.
+\end{enumerate}
+
+\tcblower
+\begin{itemize}
+\item A atividade aborda assuntos relacionados a temas transversais, como saúde e consumo de álcool. Sugerimos que procure fazer um trabalho colaborativo com os professores de Biologia, Química e de Geografia para ampliar a discussão com os alunos em questões como os processos bioquímicos do metabolismo do álcool, ou mesmo em questões sobre o a relação entre álcool e direção. No site referenciado há informações adicionais que podem enriquecer a discussão.
+
+\item Caso necessário, faça uma revisão sobre taxa de variação média, vista no capítulo de funções.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+De acordo com o site \href{https://pt.wikihow.com/Calcular-o-N\%C3\%ADvel-de-\%C3\%81lcool-no-Sangue}{wikiHow} o Teor Alcoólico Sanguíneo, ou TAS, é a medida da proporção de álcool no sangue de uma pessoa. Um TAS de \(0{,}08\) indica que há \(80\) mg de álcool por \(100\) ml de sangue. O álcool é absorvido de forma diferente pelos homens e pelas mulheres. O corpo masculino geralmente tem mais água (\(61\%\) \emph{versus} \(52\%\)) e, portanto, dilui melhor o álcool, gerando TAS mais baixos.
+
+O TAS é proporcional ao número de doses de bebida consumidas, de maneira que para um homem de \(75\) kg, a função linear \(h(x)\) que relaciona o TAS com o número de doses \(x\) de bebida é dada pela expressão
+\begin{equation*}
+\begin{split}h(x)=0{,}0205 \cdot x.\end{split}
+\end{equation*}
+Para uma mulher que pesa \(60\) kg, a mesma relação é dada pela função linear
+\begin{equation*}
+\begin{split}m(x)=0{,}0307 \cdot x.\end{split}
+\end{equation*}\begin{enumerate}
+\item {} 
+Complete a tabela a seguir que relaciona os valores de \(h(x)\) e de \(m(x)\) correspondentes a valores inteiros de \(x\), de \(0\) a \(5\).
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|l|c|c|}
+\hline
+\thead
+\(\bm{x}\) & \(\bm{h(x)}\) & \(\bm{m(x)}\) \\
+\hline
+0 & & \\
+\hline
+1 & & \\
+\hline
+2 & & \\
+\hline
+3 & & \\
+\hline
+4 & & \\
+\hline
+5 & & \\
+\hline
+\end{tabu}
+\end{table}
+
+\item {} 
+Calcule, para a função \(h(x)\), as taxas de variação médias nos seguintes intervalos de valores de \(x\):
+
+\begin{enumerate}
+\item entre \(x=0\) e \(x=1\);
+
+\item entre \(x=1\) e \(x=3\);
+
+\item entre \(x=2\) e \(x=5\);
+\end{enumerate}
+
+\item {} 
+Repita o item anterior para a função \(m(x)\) nos intervalos:
+
+\begin{enumerate}
+\item entre \(x=2\) e \(x=3\);
+
+\item entre \(x=1\) e \(x=4\);
+
+\item entre \(x=0\) e \(x=5\);
+\end{enumerate}
+
+\item {} 
+A partir dos itens anteriores, faça uma conjectura sobre as taxas de variação médias de uma função linear qualquer.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|>{$}c<{$}|}
+\hline
+\rowfont{\color{white}}\rowcolor{\currentcolor!80}
+\bm{x} & \bm{h(x)} & \bm{m(x)}\tabularnewline
+\hline
+0 & 0 & 0 \tabularnewline
+\hline
+1 & 0{,}0205 & 0{,}3075 \tabularnewline
+\hline
+2 & 0{,}041 & 0{,}615 \tabularnewline
+\hline
+3 & 0{,}615 & 0{,}9225 \tabularnewline
+\hline
+4 & 0{,}082 & 1{,}23 \tabularnewline
+\hline
+5 & 0{,}1025 &1{,}5375 \tabularnewline
+\hline
+\end{tabu}
+
+}
+
+\item 
+\begin{enumerate}
+\item 0{,}0205
+\item 0{,}0205
+\item 0{,}0205
+\end{enumerate}
+\item
+\begin{enumerate}
+\item 0{,}3075
+\item 0{,}3075
+\item 0{,}3075
+\end{enumerate}
+
+\item A conjectura é que a taxa de variação média de uma função linear qualquer deve ser constante.
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

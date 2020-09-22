@@ -1,0 +1,213 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao03/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Reta númerica e retas paralelas}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Representar frações na reta numérica a partir da identificação da unidade.
+    % \item       Identificar, na reta numérica, os pontos correspondentes ao 0 e ao 1, a partir da representação de duas frações (no caso, as frações $\frac{1}{2}$       e       $\frac{3}{2}$      ).
+    \item       Reconhecer a reta numérica em uma representação não usual.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Recomenda-se que, nesta atividade, os alunos trabalhem individualmente. No entanto, é fundamental que os alunos sejam estimulados a explicar o raciocínio realizado.
+\item       A reta numérica é apresentada num formato pouco usual com o propósito de ampliar e variar o contato com outros modelos de representação.
+\item       Além disso, os pontos que identificam frações da unidade (no caso, décimos) também são determinados de uma forma não tradicional. A divisão é estabelecida a partir de um feixe de retas paralelas igualmente espaçadas e transversal à reta numérica em destaque.
+\item       No item c) , o aluno precisa identificar o segmento unitário. Para isso ele precisa reconhecer que o segmento de extremos $\frac{1}{2}$ e $\frac{3}{2}$ corresponde a 1 unidade. Como esse segmento está dividido em quatro partes iguais, cada parte é $\frac{1}{4}$. Assim, o 0 está duas marcações antes de $\frac{1}{2}$ e o 1 está duas marcações após o $\frac{1}{2}$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Na figura, há várias retas paralelas igualmente espaçadas e outra reta, destacada em vermelho, não paralela às demais. As retas paralelas marcam na reta destacada em vermelho pontos também igualmente espaçados. Um desses pontos corresponde ao zero e outro ao 1. Assim a reta vermelha pode ser considerada uma reta numérica.
+
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+
+\begin{scope}
+\clip (-.2,-.2) rectangle (.85,.85);
+
+\begin{scope}[ rotate=45]
+\foreach \x in {-1.1,-1,...,1.6}{
+\draw[common] (\x,0) --+ (45:1);
+\draw[common] (\x,0) --+ (45:-1);}
+
+\draw[attention] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\foreach \x in {0.1,.2,...,.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+\end{scope}
+\end{scope}
+
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item     Marque o ponto correspondente à fração $\frac{1}{2}$ na reta vermelha.
+\item     Escreva a fração correspondente a cada marcação na reta vermelha. Explique sua resposta.    \mbox{} \newline
+
+Na figura a seguir, há várias retas paralelas igualmente espaçadas e outra reta, destacada em azul, não paralela às anteriores. Observe que as retas paralelas marcam na reta destacada em azul pontos também igualmente espaçados. Dois desses pontos correspondem às frações $\frac{1}{2}$ e $\frac{3}{2}$, como ilustra a figura.
+
+\begin{center}
+\begin{tikzpicture}[x=56.25mm,y=56.25mm]
+
+\begin{scope}
+\clip (-.2,-.2) rectangle (.85,.85);
+
+\begin{scope}[ rotate=45]
+\foreach \x in {-1.1,-1,...,1.6}{
+\draw[common] (\x,0) --+ (135:1);
+\draw[common] (\x,0) --+ (135:-1);}
+
+\draw[blue] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,0.1,.2,...,.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+\fill[common] (.2,0) circle (3pt) node[below, black] {$\frac{1}{2}$};
+\fill[common] (.6,0) circle (3pt) node[below, black] {$\frac{3}{2}$};
+\end{scope}
+\end{scope}
+
+\end{tikzpicture}
+\end{center}
+
+\item    Indique as marcações correspondentes ao zero e ao um na reta numérica.
+\item     Marque, nesta mesma reta numérica, as frações     $\frac{3}{4}$     e     $\frac{5}{4}$.
+\item Qual das marcações na reta azul representa a maior fração? Que fração é essa?
+
+\end{enumerate} %s
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\begin{multicols}{2}
+\item\adjustbox{valign=t}
+{
+
+\begin{tikzpicture}[x=56.25mm,y=56.25mm, scale=.9]
+
+\begin{scope}
+\clip (-.2,-.2) rectangle (.85,.85);
+
+\begin{scope}[ rotate=45]
+\foreach \x in {-1.1,-1,...,1.6}{
+\draw[common] (\x,0) --+ (45:1);
+\draw[common] (\x,0) --+ (45:-1);}
+
+\draw[attention] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\foreach \x in {0.1,.2,...,.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+
+\fill[common] (.5,0) circle (3pt) node[below, black] {$\frac{1}{2}$};
+
+\end{scope}
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\item\adjustbox{valign=t}
+{
+\begin{tikzpicture}[x=56.25mm,y=56.25mm, scale=.9]
+
+\begin{scope}
+\clip (-.2,-.2) rectangle (.85,.85);
+
+\begin{scope}[ rotate=45]
+\foreach \x in {-1.1,-1,...,1.6}{
+\draw[common] (\x,0) --+ (45:1);
+\draw[common] (\x,0) --+ (45:-1);}
+
+\draw[attention] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\foreach \x in {0.1,.2,...,.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+
+\foreach \x in {1,2,...,9} \node[below] at (\x/10,0) {$\frac{\x}{10}$};
+\fill[common] (.5,0) circle (3pt) node[above, black] {$\frac{1}{2}$};
+\end{scope}
+\end{scope}
+
+\end{tikzpicture}
+}
+\end{multicols}
+\begin{multicols}{2}
+\item\adjustbox{valign=t}
+{
+\begin{tikzpicture}[x=56.25mm,y=56.25mm, scale=.9]
+
+\begin{scope}
+\clip (-.2,-.2) rectangle (.85,.85);
+
+\begin{scope}[ rotate=45]
+\foreach \x in {-1.1,-1,...,1.6}{
+\draw[common] (\x,0) --+ (135:1);
+\draw[common] (\x,0) --+ (135:-1);}
+
+\draw[blue] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,0.1,.2,...,.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+\fill[common] (.2,0) circle (3pt) node[below, black] {$\frac{1}{2}$};
+\fill[common] (.6,0) circle (3pt) node[below, black] {$\frac{3}{2}$};
+\fill[light] (0,0) circle (3pt) node[below, black] {0};
+\fill[light] (.4,0) circle (3pt) node[below, black] {1};
+\end{scope}
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[x=56.25mm,y=56.25mm, scale=.9]
+
+\begin{scope}
+\clip (-.2,-.2) rectangle (.85,.85);
+
+\begin{scope}[ rotate=45]
+\foreach \x in {-1.1,-1,...,1.6}{
+\draw[common] (\x,0) --+ (135:1);
+\draw[common] (\x,0) --+ (135:-1);}
+
+\draw[blue] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,0.1,.2,...,.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+\fill[common] (.2,0) circle (3pt) node[below, black] {$\frac{1}{2}$};
+\fill[common] (.6,0) circle (3pt) node[below, black] {$\frac{3}{2}$};
+\fill[attention] (.3,0) circle (3pt) node[below, black] {$\frac{3}{4}$};
+\fill[attention] (.5,0) circle (3pt) node[below, black] {$\frac{5}{4}$};
+\fill[light] (0,0) circle (3pt) node[below, black] {0};
+\fill[light] (.4,0) circle (3pt) node[below, black] {1};
+
+\end{scope}
+\end{scope}
+
+\end{tikzpicture}
+}
+\end{multicols}
+
+\item A última marcação no sentido que vai do $\frac{1}{2}$ para o $\frac{3}{2}$. Basta seguir contando os quartos desde o zero, por exemplo. A fração é~$\frac{9}{4}$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

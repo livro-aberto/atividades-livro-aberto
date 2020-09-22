@@ -1,0 +1,107 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Num laboratório, um químico conseguiu controlar a variação de temperatura de dois compostos. A variação de ambos está associada às funções afins \(f\) e \(g\), de maneira que a taxa de variação das temperaturas de cada um dos compostos seja constante. Observe o gráfico, onde o eixo das ordenadas indica a temperatura (em graus Celsius) de cada composto em função do tempo \(t\), em minutos. O gráfico da figura a seguir modela a situação:
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[yscale=.75]
+\tikzstyle{ponto}=[fill,circle,inner sep=1.25pt]
+
+\node [ponto] at (0,-4) {};
+\node [ponto] at (4,0) {};
+\node [ponto] at (0,2) {};
+\node [ponto] at (2,0) {};
+
+\draw [->] (-.5,0) -- (7,0) node [below] {$t$ (minutos)};
+\draw [->] (0,-5.5) -- (0,4) node [right] {T ($^{\circ}$C)};
+
+\draw [thick] (0,-4) -- (7,3) node [above left] {$f$};
+
+\draw [thick]  (0,2) -- (7,-5) node [above] {$g$};
+\end{tikzpicture}
+\end{figure}
+
+
+O gráfico da função \(f\) passa pelos pontos \(A=(0,-4)\) e \(B=(4,0)\), indicando que o composto associado à \(f\) está com uma temperatura de \(-4\,^{\circ}\mathrm{C}\) no início da medição e após \(4\) minutos a temperatura atinge \(0\,^{\circ}\mathrm{C}\).
+
+O gráfico da função \(g\) passa pelos pontos \(C=(0,2)\) e \(D=(2,0)\), indicando que o composto associado à \(g\) está com uma temperatura de \(2\,^{\circ}\mathrm{C}\) no início da medição e após \(2\) minutos a temperatura atinge \(0\,^{\circ}\mathrm{C}\).
+
+Com base nas informações do texto responda as perguntas a seguir:
+\begin{enumerate}
+\item {} 
+Determine as expressões das funções afins \(f\) e \(g\).
+
+\item {} 
+A temperatura do composto associado à função \(f\) estão aumentando ou diminuindo? E do composto associado à função \(g\)?
+
+\item {} 
+Em quanto tempo cada composto atinge a temperatura de
+
+\begin{enumerate}
+\item \(1\,^{\circ}\mathrm{C}\)?
+
+\item \(-3\,^{\circ}\mathrm{C}\)?
+
+\item \(-8\,^{\circ}\mathrm{C}\)?
+
+\item \(10\,^{\circ}\mathrm{C}\)?
+\end{enumerate}
+\item {} 
+Após quantos minutos os dois compostos terão a mesma temperatura? E que temperatura é essa?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+
+\item Como $f$ intersecta o eixo das ordenadas no ponto $A=(0,−4)$ temos que $b=−4$; substituindo o ponto $B=(4,0)$, ou seja, fazendo $f(4)=0$ encontramos $a=1$. Do mesmo modo, $g$ intersecta o eixo das ordenadas no ponto $C=(0,2)$, logo temos que $n=2$; substituindo o ponto $D=(2,0)$, ou seja, fazendo $f(2)=0$ encontramos $m=−1$.
+
+\item Observando os gráficos temos que: a temperatura do composto associado à função $f$ está aumentando, e a temperatura do composto associado à função g está diminuindo.
+\begin{enumerate}
+\item Fazendo $f(t)=1$ encontramos $t=5$, ou seja o composto associado à função afim $f$, atinge $1$ $^{\circ}$C após $5$ minutos. E fazendo $g(t)=1$ encontramos $t=1$, ou seja o composto associado à função afim $g$, atinge $1$ $^{\circ}$C após $1$ minuto.
+
+\item Fazendo $f(t)=−3$ encontramos $t=1$, ou seja o composto associado à função afim $f$, atinge $−3$ $^{\circ}$C após $1$ minuto. E fazendo $g(t)=−3$ encontramos $t=5$, ou seja o composto associado à função afim $g$, atinge $−3$ $^{\circ}$C após $5$ minutos.
+
+\item Fazendo $f(t)=−8$ encontramos $t=−4$, ou seja o composto associado à função afim $f$, nunca atingirá essa temperatura, já que $f$ é sempre maior ou igual a $−4$ $^{\circ}$C. E fazendo $g(t)=−8$ encontramos $t=10$, ou seja o composto associado à função afim $g$, atinge $−8$ $^{\circ}$C após $10$ minutos.
+
+\item Fazendo $f(t)=10$ encontramos $t=14$, ou seja o composto associado à função afim $f$, atinge $10$ $^{\circ}$C após $14$ minutos. E fazendo $g(t)=10$ encontramos $t=−8$, ou seja o composto associado à função afim $g$, nunca atingirá ess a temperatura, já que $g$ é sempre menor ou igual a $2$ $^{\circ}$C.
+
+\end{enumerate}
+\item Basta fazermos $f(t)=g(t)$, ou seja $t−4=−t+2$, resolvendo encontramos $t=3$ minutos, e a temperatura é igual a $f(3)=g(3)=−1$ $^{\circ}$C. Portanto, os dois compostos atigem $−1$ $^{\circ}$C após $3$ minutos de observação.
+
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

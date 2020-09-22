@@ -1,0 +1,112 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao03/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Associe a fração ao ponto}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Comparar frações com o mesmo numerador ou com o mesmo denominador e a partir de um referencial.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Estimule seus alunos a explicarem suas respostas.
+\item A associação das frações aos pontos correspondentes na reta numérica exigirá que os alunos façam comparações de diferentes tipos: frações com mesmo numerador, frações com mesmo denominador e comparação a partir de um referencial (mais detalhes no Para o Professor do início da Lição). Valorize e discuta as diversas estratégias apresentadas por eles.
+\item       Por exemplo, uma vez que os pontos correspondentes ao 0, ao 1 e ao $\frac{1}{2}$ já estão destacados, é natural que as primeiras frações a serem associadas a pontos na reta numérica sejam       $\frac{1}{4}$       e       $\frac{3}{4}$. Em seguida, reconhecendo que       $\frac{1}{8}$       corresponde à metade de       $\frac{1}{4}$,  as frações       $\frac{3}{8}$       e       $\frac{5}{8}$       podem ser as próximas.  Na sequência, o aluno pode reconhecer que       $\frac{4}{5}$       e       $\frac{9}{10}$       são menores do que a unidade e que       $\frac{9}{8}$       e       $\frac{11}{10}$       são maiores.  Entre       $\frac{4}{5}$       e       $\frac{9}{10}$,       $\frac{9}{10}$       pode ser identificada como maior por faltar  apenas       $\frac{1}{10}$       para compor a unidade , enquanto que para       $\frac{4}{5}$       falta       $\frac{1}{5}$       da unidade. Por fim, por raciocínio análogo, a fração       $\frac{9}{8}$       pode ser identificada como maior do que       $\frac{11}{10}$: Sabe-se que $\frac{1}{8}$ é maior do que $\frac{1}{10}$ e que $\frac{9}{8}$  é  $\frac{1}{8}$       maior do que a unidade, enquanto que       $\frac{11}{10}$       é        $\frac{1}{10}$       maior. Portanto, $\frac{9}{8}$    é maior do que       $\frac{11}{10}$.
+\item       Se achar necessário, discuta a comparação entre alguns pares das frações apresentadas antes de os alunos resolverem a atividade. Por exemplo, peça-lhes que comparem       $\frac{3}{8}$        e       $\frac{5}{8}$, que são frações com o mesmo denominador. Ou que comparem       $\frac{9}{8}$       e       $\frac{9}{10}$, frações com o mesmo numerador.
+\item       O aluno pode responder simplesmente       ``ligando''       os cartões com as frações aos pontos correspondentes na reta numérica. No entanto, recomenda-se que o professor oriente-os a escreverm as frações abaixo dos pontos correspondentes na reta numérica, a exemplo do 0, do 1, e do       $\frac{1}{2}$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Na reta numérica a seguir estão identificados os pontos correspondentes aos números 0, 1 e $\frac{1}{2}$. Os demais pontos correspondem aos números   apresentados a seguir. Associe cada fração ao ponto correspondente na reta numérica.
+
+\begin{center}
+\begin{tikzpicture}[x=.3cm,y=.3cm,]
+\draw[->] (-2,0) -- (47,0);
+
+\fill[common] (0,0) circle (3 pt);		%0
+\fill[common] (10,0) circle (3 pt);
+\fill[common] (15,0) circle (3 pt);
+\fill[common] (20,0) circle (3 pt);
+\fill[common] (25,0) circle (3 pt);
+\fill[common] (30,0) circle (3 pt);
+\fill[common] (32,0) circle (3 pt);
+\fill[common] (36,0) circle (3 pt);
+\fill[common] (40,0) circle (3 pt);
+\fill[common] (44,0) circle (3 pt);
+\fill[common] (45,0) circle (3 pt);
+
+\node[below]  at (0,-1) {0};			%0
+\node[below]  at (20,-1) {$\frac{1}{2}$};	%1/2
+\node[below]  at (40,-1) {1};			%1
+
+\tikzstyle{gray_block} = [draw,outer sep=3,inner sep=3,minimum size=1,line width=1, very thick, draw=black!55, top color=white,bottom color=black!20]
+\node [gray_block] at (10.5,5) {$\frac{1}{4}$};
+\node [gray_block] at (14.5,5) {$\frac{3}{4}$};
+\node [gray_block] at (18.5,5) {$\frac{4}{5}$};
+\node [gray_block] at (22.5,5) {$\frac{3}{8}$};
+\node [gray_block] at (26.5,5) {$\frac{5}{8}$};
+\node [gray_block] at (30.5,5) {$\frac{9}{8}$};
+\node [gray_block] at (35,5) {$\frac{9}{10}$};
+\node [gray_block] at (40,5) {$\frac{11}{10}$};
+\end{tikzpicture}
+\end{center}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{center}
+\begin{tikzpicture}[x=.3cm,y=.3cm, every node/.style={scale=1.25}]
+
+\draw  (-2,0) -- (45,0);
+\draw[->]  (45,0) -- (47,0);
+
+
+\node[below,yshift=-.1cm]  at (0,0) {0};							%0
+\node[below,yshift=-.1cm]  at (20,0) {$\frac{1}{2}$};			%1/2
+\node[below,yshift=-.1cm]  at (40,0) {1};						%1
+
+\node[below,yshift=-.1cm]  at (10,0) {$\frac{1}{4}$};			%1/4
+\node[below,yshift=-.1cm]  at (15,0) {$\frac{3}{8}$};			%3/8
+
+\node[below,yshift=-.1cm]  at (25,0) {$\frac{5}{8}$};			%5/8
+\node[below,yshift=-.1cm]  at (30,0) {$\frac{3}{4}$};			%3/4
+\node[below,yshift=-.1cm]  at (32,0) {$\frac{4}{5}$};			%4/5
+\node[below,yshift=-.1cm]  at (36,0) {$\frac{9}{10}$};			%9/10
+
+\node[below,yshift=-.1cm]  at (43.5,0) {$\frac{11}{10}$};		%11/10
+\node[below,yshift=-.1cm]  at (45.5,0) {$\frac{9}{8}$};			%9/8
+
+\foreach \x in {0,10,15,20,25,30,32,36,40,44,45} \node [fill, circle, inner sep=2pt, common] at (\x,0) {};
+\end{tikzpicture}
+
+\end{center}
+
+\end{solucao}
+\fi
+
+\end{document}

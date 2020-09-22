@@ -1,0 +1,123 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Reconhecendo frações em figuras}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+\item Compreender frações não unitárias (``m meios'', ``m terços'', etc.) em diferentes modelos visuais de frações como forma de identificar a quantidade equivalente a m cópias da fração $\frac{1}{n}$ (incluindo casos em que $m \geq n$).
+
+\end{enumerate}
+\tcblower
+
+  \begin{itemize} %s
+    \item       Esta atividade pode ser resolvida individualmente, mas é essencial que seja discutida com toda a turma.
+    \item       Observe que, enquanto que nas atividades anteriores cópias múltiplas da unidade já estavam naturalmente disponíveis (as duas barras de chocolate na Atividade 1, as três tortas salgadas na Atividade 2, as várias tortas divididas em oito partes na confeitaria da Atividade 3), nesta atividade, o aluno deve identificar frações a partir de uma única cópia da unidade, sem qualquer subdivisão registrada. Por exemplo, no item d), o aluno deve registrar nove meios de uma estrelinha, sem a subdivisão explicitada. Assim, a atividade oferece uma oportunidade para reforçar a compreensão de frações em um contexto diferente daquele em que a parte correspondente à fração é identificada e totalmente inserida em uma unidade, frequentemente já subdividida. Esse tipo de representação, muito associada ao significado parte/todo, pode limitar a compreensão de frações maiores que a unidade.
+    \item       Nesta atividade, espera-se que o aluno identifique uma equipartição adequada da unidade que defina a fração unitária       $\frac{1}{m}$ da unidade para compor a parte colorida e que, então, tome a quantidade       $n$ correta desta fração unitária, mesmo no caso em que       $n > m$.
+\end{itemize} %s
+
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Complete as afirmações com uma das frações: ``dois meios'', ``dois terços'', ``dois quintos'', ``dois nonos'', ``três quartos'', ``seis oitavos'', ``oito sextos'' e ``nove meios'', para que sejam verdadeiras.
+
+\begin{enumerate}[label=\alph*)]
+\item A parte pintada de vermelho em
+     \begin{tikzpicture}[scale=0.8]
+     \draw[fill=attention] (0,0) rectangle (20,10);
+     \draw[] (10,0) -- (10,10);
+     \draw[fill=common, fill opacity=.3] (20,0) rectangle (30,10);
+     \end{tikzpicture}
+     é
+     \begin{tikzpicture}
+     \draw (0,0) -- (20,0);
+     \end{tikzpicture}
+     de \begin{tikzpicture}[scale=0.8]
+     \draw[fill=common, fill opacity=.3] (0,0) rectangle (30,10);
+                               \end{tikzpicture}.
+\item A parte pintada de vermelho em \begin{tikzpicture}
+                           \draw[fill=attention] (0,0) rectangle (8,8);
+                           \draw (0,0) -- (8,8);
+                          \end{tikzpicture}
+                          é \begin{tikzpicture}
+                             \draw (0,0) -- (20,0);
+                            \end{tikzpicture}
+                            de \begin{tikzpicture}
+                            \draw[fill=common, fill opacity=.3] (0,0) rectangle (8,8);
+                           \end{tikzpicture}.
+
+
+ \item A parte pintada de vermelho em \begin{tikzpicture}
+                           \draw[fill=common, fill opacity=.3] (0,0) circle (4);
+                           \fill[attention] (0,0) -- (72:4) arc (72:-72:4) --cycle;
+                           \foreach \x in {0,72,...,288}{
+                           \draw (0,0) -- (\x:4);}
+                          \end{tikzpicture}
+                          é \begin{tikzpicture}
+                             \draw (0,0) -- (20,0);
+                            \end{tikzpicture}
+                            de \begin{tikzpicture}
+                            \draw[fill=common, fill opacity=.3] (0,0) circle (4);
+                           \end{tikzpicture}.
+
+ \item A parte pintada de vermelho em \begin{tikzpicture}
+                                       \fill[attention]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
+                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
+                                      \end{tikzpicture} \begin{tikzpicture}
+                                       \fill[attention]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
+                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
+                                      \end{tikzpicture} \begin{tikzpicture}
+                                       \fill[attention]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
+                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
+                                      \end{tikzpicture} \begin{tikzpicture}
+                                       \fill[attention]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
+                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
+                                      \end{tikzpicture} \begin{tikzpicture}
+                                       \fill[attention]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
+                                       \fill[white]  (90:4) -- (-90:2) -- (-56:4) -- (-18:2)-- (18:4) --(56:2) --cycle;
+                                       \fill[common, opacity=.3]  (90:4) -- (-90:2) -- (-56:4) -- (-18:2)-- (18:4) --(56:2) --cycle;
+                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
+                                      \end{tikzpicture} é \begin{tikzpicture} \draw (0,0) -- (20,0); \end{tikzpicture} de \begin{tikzpicture}
+                                       \fill[common, opacity=.3]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
+                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
+                                      \end{tikzpicture}.
+
+\item A parte pintada de vermelho em \begin{tikzpicture} \draw[fill=attention] (90:4)--(-90:4)--(-30:4)--(30:4)--cycle; \foreach \x in {30,90,...,330}{\draw (0,0) -- (\x:4);} \draw[fill=common, fill opacity=.3] (90:4) -- (150:4) -- (210:4) -- (270:4) -- cycle;\end{tikzpicture} \begin{tikzpicture} \fill[attention] (30:4)--(90:4)--(150:4)--(210:4)--(270:4)-- (330:4) -- (0,0) --cycle; \foreach \x in {30,90,...,330}{\draw (0,0) -- (\x:4); \draw (\x:4) -- (\x+60:4);} \fill[common, fill opacity=.3] (0,0) -- (30:4) -- (-30:4) -- cycle;\end{tikzpicture} é \begin{tikzpicture} \draw (0,0) -- (20,0); \end{tikzpicture} de \begin{tikzpicture} \draw[fill=common, fill opacity=.3] (30:4) --(90:4)--(150:4)--(210:4)--(270:4)-- (330:4) -- cycle;\end{tikzpicture}.
+\end{enumerate}
+
+\ifdefined\prof
+
+\begin{solucao}
+
+  \begin{enumerate}[label=\alph*)]
+   \item Dois terços.
+   \item Dois meios.
+   \item Dois quintos.
+   \item Nove meios.
+   \item Oito sextos.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

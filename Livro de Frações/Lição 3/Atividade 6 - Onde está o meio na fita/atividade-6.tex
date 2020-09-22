@@ -1,0 +1,153 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao03/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Onde está o meio da fita?
+ }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Associar na reta numérica, a partir de modelos contínuos, a unidade ao número 1.
+\item Associar as frações $\frac{n}{d}$ a pontos da reta numérica a partir da equipartição da unidade em $d$ partes e da justaposição, a partir do  $0$ de $n$ segmentos correspondentes à fração $\frac{1}{d}$ da unidade. Mais especificamente, identificar as frações $\frac{1}{4}$, $\frac{1}{2}$, $\frac{3}{4}$, $\frac{4}{4}$ e $\frac{5}{4}$ da unidade a pontos da reta numérica, reconhecendo que $\frac{4}{4}=1$ e que $\frac{5}{4}>1$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Faça, para cada aluno, uma cópia da fita que está disponível nas folhas para reprodução.
+\item       É possível que alguns estudantes considerem a faixa inteira como unidade. Já outros, observando a indicação da reta numérica na faixa, identificarão o segmento unitário como unidade. O objetivo é que eles discutam essa questão e reconheçam, ao final, que o entendimento da unidade como a fita inteira é incompatível com as marcações pré-existentes na fita. Objetiva-se a representação das frações na reta numérica e não a identificação de partes de um modelo contínuo.
+\item       Recomenda-se que os alunos usem dobradura para realizar essa atividade. Instrua-os nesse sentido. Não se espera, nem se recomenda, que a atividade seja realizada a partir da medida do comprimento da faixa.
+\item       Espera-se que os alunos, a partir da observação do modelo, façam traços para representar os pontos correspondentes às frações. Este é um processo importante, em que a fração é representada por um ponto na reta e não por uma região, por exemplo.
+\item       Observe que a marcação de       $\frac{3}{4}$       pode se dar pela justaposição, a partir do       $0$, de       ``pedaços''       da fita correspondentes a       $\frac{1}{4}$       da unidade ou, reconhecendo que       $\frac{1}{2}$       =       $\frac{2}{4}$, pela identificação do ponto médio do       ``pedaço''       de fita de extremos       $\frac{1}{2}$       e       $1$.
+\item A discussão sobre esta atividade deve levar os alunos a refletirem sobre a marcação do $\frac{4}{4}$ e a sua coincidência com a marcação do número 1, reconhecendo que $\frac{4}{4}=1$.
+\item Na discussão sobre o item d), observe se os alunos compreenderam que       $\frac{5}{4}>1$. Espera-se que os alunos saibam ler e escrever essa desigualdade fazendo uso de símbolos matemáticos.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A professora Julia pediu que os seus alunos, Pedro e Miguel, marcassem $\frac{1}{2}$ na reta numérica traçada em uma fita, como esta que vocês também receberam:
+
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\end{tikzpicture}
+\end{center}
+
+Veja as marcações de Pedro e Miguel.
+
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw[dashed] (0.6,-.15) -- (.6,.15);
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\node at (.63,-.05) {$\frac{1}{2}$};
+
+\node at (-.43,0) {Marcação de Pedro};
+\draw [->] (-.1,0) -- (-.05,0);
+
+\begin{scope}[yshift=-60]
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw[dashed] (0.5,-.15) -- (.5,.15);
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\node at (.53,-.05) {$\frac{1}{2}$};
+
+\node at (-.45,0) {Marcação de Miguel};
+\draw [->] (-.1,0) -- (-.05,0);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate} %s
+  \item     É possível ambos estarem corretos? Justifique sua resposta.
+  \item     Faça marcações correspondentes a     $\frac{1}{4}$     e a     $\frac{3}{4}$  na reta numérica desenhada na fita que você recebeu. Explique como você fez essas marcações.
+  \item     Onde deve ser feita a marcação correspondente a     $\frac{4}{4}$    ?
+  \item     E a marcação correspondente a     $\frac{5}{4}$    ?
+\end{enumerate} %s
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+    \item Miguel marcou $\frac{1}{2}$ considerando como unidade o segmento de extremos 0 e 1, enquanto Pedro marcou $\frac{1}{2}$ considerando a fita inteira como unidade. Assim, não podem estar os dois corretos. Como a resposta de Pedro não leva em consideração as marcações do 0 e do 1 na fita, esta solução não está correta.
+\begin{center}
+\begin{tikzpicture}[x=37.7mm,y=56.25mm]
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw[dashed] (0.5,-.15) -- (.5,.15);
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\node at (.53,-.05) {$\frac{1}{2}$};
+\end{tikzpicture}
+\end{center}
+    \item       A marcação de       $\frac{1}{4}$       pode ser feita dobrando-se a fita de modo a fazer coincidir as marcações do 0 e do        $\frac{1}{2}$. Já a marcação de       $\frac{3}{4}$     pode ser obtida dobrando-se a fita de modo a fazer coincidir as marcações do       $\frac{1}{2}$       e do 1.
+
+\begin{center}
+    \begin{tikzpicture}[x=37.7mm,y=56.25mm]
+\draw[fill=common,fill opacity=.3] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw[dashed] (0.25,-.15) -- (.25,.15);
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\node at (.28,-.05) {$\frac{1}{4}$};
+\end{tikzpicture}
+\end{center}
+
+    \item       As marcações de       $\frac{1}{4}$,        $\frac{1}{2}$       e       $\frac{3}{4}$       dividem o segmento unitário em quatro partes iguais, portanto, em quartos. A justaposição de quatro quartos a partir do 0, que corresponde a       $\frac{4}{4}$, é igual a 1.  Portanto, as marcas de       $\frac{4}{4}$       e de 1 são a mesma.
+
+\begin{center}
+\begin{tikzpicture}[x=37.7mm,y=56.25mm]
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw[dashed] (0.75,-.15) -- (.75,.15);
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\node at (.78,-.05) {$\frac{3}{4}$};
+\end{tikzpicture}
+\end{center}
+
+    \item A marcação de $\frac{5}{4}$ é obtida sobrepondo-se as marcas do zero e do $\frac{4}{4}$, ou seja, à marcação do 1.
+
+\begin{center}
+\begin{tikzpicture}[x=37.7mm,y=56.25mm]
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+%\draw[dashed] (0.75,-.15) -- (.75,.15);
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\node at (1.17,-.05) {$\frac{5}{4}$};
+\end{tikzpicture}
+\end{center}
+\end{enumerate} %s
+
+\end{solucao}
+\fi
+
+\end{document}

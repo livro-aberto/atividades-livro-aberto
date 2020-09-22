@@ -1,0 +1,99 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Afim de um passeio}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Compreender função afim por partes.
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Experiências envolvendo um contexto simples como esse apresentado na atividade podem ser úteis para explorar o significado da inclinação zero de uma reta. Aproveite a oportunidade para comentar sobre a diferença entre inclinação zero, que é o caso da inclinação do segmento de reta que representa o período em que o personagem da situação descrita na atividade permanece parado, e ausência de inclinação que é observado em retas verticais.
+\item Apresentamos uma possível resposta com o gráfico contendo a origem, no entanto não é necessário iniciar a representação a partir do ponto $(0,0)$.
+\item Se achar necessário peça para os estudantes efetuarem a conversão de km/h para m/min, no entanto as distâncias percorridas podem se obtidas utilizado-se o seguinte raciocínio: se em 1 hora ele percorre $1000$ metros, em 12 minutos que corresponde a $\displaystyle\frac{1}{5}$ de hora, ele percorre $\displaystyle\frac{1000}{5}=200$ metros.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Você caminha por \(12\) minutos a uma taxa de \(1\) km por hora,  ao encontrar um amigo permanece parado conversando por \(3\) minutos, voltando logo em seguida  a caminhar por mais \(6\) minutos a uma taxa de \(2\) km por hora.
+\begin{enumerate}
+\item {} 
+Como você representaria no plano cartesiano, o período em que você permaneceu parado conversando com seu amigo? Considere no eixo das abscissas o tempo em minutos e no eixo das ordenadas a distância percorrida em metros.
+
+\item {} 
+Represente no plano cartesiano um gráfico que ilustra toda a situação descrita.
+
+\item {} 
+Obtenha expressões para as funções afins cujos gráficos são os segmentos de reta que você representou no item anterior.
+
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+\begin{enumerate}
+
+\item Por uma reta horizontal (paralela ao eixo das abscissas).
+
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[xscale=.75,scale=.75]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only, label={}]
+\draw [help lines, secundario!30] (0,0) grid (22,10);
+\draw [thick, <->] (22,0) -- (0,0) -- (0, 10);
+\node [below right] at (20.5,0) {\small tempo (min)};
+\node [above right, rotate=90] at (0, 8.5) {\small dist\^ancia (m)};
+\node [below] at (0,0) {0};
+\node [below] at (12,0) {12};
+\node [below] at (15,0) {15};
+\node [below] at (20,0) {20};
+\node [left] at (0,4) {200};
+\node [left] at (0,8) {400};
+\draw [thick, dashed] (0,4) -- (12,4);
+\draw [thick, dashed] (12,0) -- (12,4);
+\draw [thick, dashed] (0,8) -- (20,8);
+\draw [thick, dashed] (15,0) -- (15,4);
+\draw [thick, dashed] (20,0) -- (20,8);
+\node [ponto, color=primario] at (0,0) {};
+\node [ponto, color=primario] at (12,4) {};
+\node [ponto, color=primario] at (15,4) {};
+\node [ponto, color=primario] at (20,8) {};
+\draw [very thick, color=primario] (0,0) -- (12,4) -- (15,4) -- (20,8);
+\end{tikzpicture}
+}
+
+\item Opção 1: $f:[0,12[\rightarrow\R$ onde $f(x)=\displaystyle\frac{3}{50}x$; $g[12,15[\rightarrow\R$ onde $g(x)=200$ e $h[15,20]\rightarrow\R$ onde $h(x)=40x-400$
+
+Opção 2: $f:[0,20]\rightarrow\R$ onde $f(x) = \left\{ 
+\begin{array}{rlll} \frac{3}{50}x, & \text{se} & 0\leq x <12 \\ 200, & \text{se} & 12\leq x < 15 \\ 40x-400, & \text{se} & 15 \leq x \leq 20 
+\end{array} \right.$
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

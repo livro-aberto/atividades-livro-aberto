@@ -1,0 +1,117 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Repartindo sanduíches no piquenique}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Reconhecer que existem frações de denominadores diferentes que representam uma mesma quantidade da unidade.
+\item       Reconhecer que as frações       $\frac{1}{2}$       e
+$\frac{2}{4}$       são iguais a partir da observação das representações destas
+frações em modelos de área retangulares.
+\item       Reconhecer que, em uma equipartição de uma região retangular, só
+é possível escolher uma quantidade de partes que corresponda à metade desta
+região se a quantidade total de partes for um número par.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Recomenda-se que, nesta atividade, os alunos trabalhem
+individualmente ou em duplas. No entanto, é fundamental que os alunos sejam
+estimulados a explicar o raciocínio realizado.
+\item       Reforce para seus alunos que o item b) deve ser respondido com a
+partição apresentada, isto é, sem gerar novas partições.
+\item       Observe que o item c) pode ser respondido apenas pela fração
+$\frac{1}{2}$. No entanto, é importante estimular os alunos a pereceberem que
+a metade do sanduíche pode ser obtida por       $\frac{2}{4}$       do
+sanduíche.
+\item       É importante, ao final da atividade, observar para os alunos que
+uma mesma parte do retângulo (metade do retângulo) está sendo descrita por
+frações com numeradores e denominadores diferentes (isto é, por frações
+equivalentes) que, por expressarem uma mesma quantidade, são frações iguais. Assim,       $\frac{1}{2}$,       $\frac{2}{4}$,
+$\frac{4}{8}$, etc. são respostas válidas para o item b) desta atividade.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A turma de Rita vai fazer um piquenique. A professora comprou pães para a turma preparar sanduíches. Cada colega de Rita preparou um sanduíche e partiu-o em partes iguais. Veja como alguns dos colegas repartiram o seu sanduiche:
+
+
+\begin{center}
+\begin{tabular}{cccc}
+\begin{tikzpicture}
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (20,20);
+\draw (0,0) -- (20,20);
+\node[below] at (10,0){(A)};
+\end{tikzpicture}
+&
+\begin{tikzpicture}
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (20,20);
+\draw (0,20/3) -- (20,20/3);
+\draw (0,40/3) -- (20,40/3);
+\node[below] at (10,0){(B)};
+\end{tikzpicture}
+&
+\begin{tikzpicture}
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (20,20);
+\draw (0,0) -- (20,20);
+\draw (20,0) -- (0,20);
+\node[below] at (10,0){(C)};
+\end{tikzpicture}
+&
+\begin{tikzpicture}
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (20,20);
+\draw (10,0) -- (10,20);
+\draw (0,10) -- (20,10);
+\node[below] at (10,0){(D)};
+\end{tikzpicture}
+\end{tabular}
+\end{center}
+
+
+\begin{enumerate} %s
+  \item     Nessas repartições, que fração do sanduíche pode representar cada uma das partes em que o sanduíche foi repartido?
+  \item     Em quais dessas repartições é possível comer metade do sanduíche repartido sem parti-lo ainda mais? Justifique sua resposta!
+  \item     Para cada uma das repartições que você deu como resposta no item b), expresse, por meio de frações, a metade do sanduíche.
+\end{enumerate} %s
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item       Em a):       $\frac{1}{2}$. Em b):       $\frac{1}{3}$. Em c):
+$\frac{1}{4}$. Em d):       $\frac{1}{4}$.
+\item       É possível comer metade do sanduíche apenas nas repartições a),
+c) e d) pois, para elas, a quantidade de partes iguais em que o sanduíche foi
+dividido é um número par.
+\item       Em a):       $\frac{1}{2}$. Em c):       $\frac{2}{4}$. Em d):
+$\frac{2}{4}$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

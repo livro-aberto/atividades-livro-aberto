@@ -1,0 +1,135 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao03/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Quantidades de pizzas na reta}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+    \item Recordar a reta numérica, associando quantidades inteiras aos números naturais. Em particular, objetiva-se que a unidade seja associada ao número 1.
+    \item Representar frações na reta numérica.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+    \item Recomenda-se que o professor inicie a atividade relembrando com os alunos como é construída a reta numérica e como se posicionam os números naturais nela, enfatizando que uma vez escolhidos os pontos que vão representar 0 e 1 (tipicamente, com o ponto que representa 1 à direita do ponto que representa 0), todos os demais números naturais têm suas posições estabelecidas por meio de justaposições de segmentos iguais ao segmento cujas extremidades são os pontos que representam 0 e 1.
+    \item Espera-se que os alunos, a partir de tal revisão, não tenham dificuldade para resolver o item a). A novidade está no item b), no qual os alunos são solicitados a representar frações na reta numérica. Nesse item, o objetivo é que os alunos concluam que, na reta numérica, assim como o ponto correspondente ao 2 fica determinado pela justaposição de dois segmentos unitários e que o ponto correspondente ao 3 fica determinado pela justaposição de três segmentos unitários, o ponto correspondente a $\frac{1}{2}$ é o ponto médio do segmento unitário. De forma análoga, considerando equipartições do segmento unitário e a justaposição dessas partes, são determinados, por exemplo, os pontos correpondentes às fraçoes $\frac{1}{4}$ e $\frac{3}{4}$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Use a reta numérica para fazer o que é pedido nos itens a seguir.
+\vspace{.2cm}
+
+\begin{center}
+\begin{tikzpicture}[x=20mm,y=10mm]
+\draw[->] (-1,0) -- (6,0) ; %edit here for the axis
+\foreach \x in  {0,1,...,5} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt)
+node[below] {$\x$};
+
+\foreach \x in  {0.25,0.5,...,4.75} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,2pt) -- (0pt,-2pt);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate} %s
+\item    Marque os pontos que representam as quantidades de pizza nos casos (A), (B) e (C) a seguir.
+  
+\begin{center}
+\begin{tabular}{>{\centering\arraybackslash}m{.2\textwidth} >{\centering\arraybackslash}m{.35\textwidth} >{\centering\arraybackslash}m{.35\textwidth}}
+(A)
+
+\includegraphics[width=55pt, keepaspectratio]{pizza.png}  & (B)
+
+\includegraphics[width=55pt, keepaspectratio]{pizza.png} \includegraphics[width=55pt, keepaspectratio]{pizza.png} & (C)
+
+\begin{tabular}{cc}
+\includegraphics[width=55pt, keepaspectratio]{pizza.png}&
+\includegraphics[width=55pt, keepaspectratio]{pizza.png}\\
+\includegraphics[width=55pt, keepaspectratio]{pizza.png} & 
+\includegraphics[width=55pt, keepaspectratio]{pizza.png}
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\item  E agora, que pontos na reta numérica representam as quantidades de pizza dos casos (D), (E), (F) e (G)? 
+\end{enumerate} 
+
+\begin{center}
+\begin{tabular}{ccccccc}
+(D)&\quad\quad\quad & (E) &\quad\quad\quad&  (F) &\quad\quad\quad&  (G) \\
+ \includegraphics[width=55pt, keepaspectratio]{ativ2_fig_b_meia_pizza.png} & & \includegraphics[width=55pt, keepaspectratio]{ativ2_fig_b_quarto_pizza.png} & &\includegraphics[width=55pt, keepaspectratio]{ativ2_fig_b_tres_quartos_pizza.png} & &\includegraphics[width=55pt, keepaspectratio]{pizza.png}\includegraphics[width=55pt, keepaspectratio]{ativ2_fig_b_meia_pizza.png}
+\end{tabular}
+\end{center}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item\adjustbox{valign=t}
+{
+
+\begin{tikzpicture}[x=10mm,y=10mm]
+\draw[->] (-1,0) -- (6,0) ; %edit here for the axis
+\foreach \x in  {0,1,...,5} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt)
+node[below] {$\x$};
+\foreach \x in {1,2,4}
+\fill[common] (\x,0) circle (3pt);
+\node at (1,9pt) {(A)};
+\node at (2,9pt) {(B)};
+\node at (4,9pt) {(C)};
+\end{tikzpicture}
+}
+
+\item\adjustbox{valign=t}
+{
+\begin{tikzpicture}[x=25mm,y=25mm]
+\draw[->] (-1/4,0) -- (2.5,0) ; %edit here for the axis
+\foreach \x in  {0,0.25,...,2} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);
+\foreach \x in  {0,1,2}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+
+\foreach \x in {1,3}
+\fill[common] (\x/2,0) circle (3pt) node[below, black] {$\frac{\x}{2}$};
+
+\foreach \x in {1,3}
+\fill[common] (\x/4,0) circle (3pt) node[below, black] {$\frac{\x}{4}$};
+
+\node at (.5,9pt) {(D)};
+\node at (.25,9pt) {(E)};
+\node at (.75,9pt) {(F)};
+\node at (1.5,9pt) {(G)};
+\end{tikzpicture}
+}
+\end{enumerate}
+
+
+\end{solucao}
+\fi
+
+\end{document}

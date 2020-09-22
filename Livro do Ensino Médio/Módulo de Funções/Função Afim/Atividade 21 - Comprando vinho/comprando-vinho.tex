@@ -1,0 +1,104 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Comprando vinho}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Compreender função afim por partes.
+\end{enumerate}
+
+\tcblower
+\begin{itemize}
+\item Chame atenção para o significado das bolas “abertas”{}e ”fechadas”, representadas na figura da solução, respectivamente pelas bolas brancas e pretas.
+\item A experiência tem mostrado que os estudantes apresentam dificuldade em perceber que a representação gráfica que ilustra a situação da atividade inicia a partir do ponto $(0,5)$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Em uma vinícola podemos comprar vinho por litro. Neste caso, o vinho é colocado em garrafões com capacidade de \(5\) litros. O vinho é vendido a R\$ \(10,00\) por litro e cada garrafão é vendido a R\$ \(5,00\).
+\begin{enumerate}
+\item {} 
+Calcule o preço que um cliente deverá pagar por \(2\) litros, por \(5\) litros e por \(7\) litros. Explique seus cálculos.
+
+\item {} 
+Determine uma expressão para o preço \(p\) (em reais) em função do volume \(x\) (expresso em litros) de vinho adquirido. Considere \(x\) compreendido entre \(0\) e \(15\).
+
+\item {} 
+Trace a curva que representa a função \(p\) no plano cartesiano. Utilize a escala de \(1\) cm para \(1\) litro no eixo das abscissas e \(1\) cm para \(10\) reais nas ordenadas.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item R\$ $25{,}00$ por $2$ litros, R\$ $55{,}00$ por $5$ litros e R\$ $80{,}00$ pelos $7$ litros
+
+\item 
+\begin{align*}
+p(x)&=10x+5,\text{ se }x\in(0,5]\\
+p(x)&=10x+10,\text{ se }x\in (5,10]\\
+p(x)&=10x+15, \text{ se }x\in(10,15]
+\end{align*}
+\clearpage
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.35]
+\tikzstyle{ponto}=[circle, minimum size=7pt, inner sep=0, draw=black, fill=black, shift only, label={}]
+\draw [help lines, secundario!20] (0,0) grid (38,34);
+\draw [thick, <->] (38,0) -- (0,0) -- (0, 34);
+\node [below] at (34.5,-0.5) {quantidade (litros)};
+\node [above, rotate=90] at (-1, 28) { pre\c{c}o (reais)};
+\node [below] at (0,0) {0};
+\node [below] at (10,0) {5};
+\node [below] at (20,0) {10};
+\node [below] at (30,0) {15};
+\node [left] at (0,1) {5};
+\node [left] at (0,11) {55};
+\node [left] at (0,12) {60};
+\node [left] at (0,22) {110};
+\node [left] at (0,23) {115};
+\node [left] at (0,33) {165};	
+\draw [thick, dashed] (10,0) -- (10,11) -- (0,11);
+\draw [thick, dashed] (0,12) -- (10,12) ;
+\draw [thick, dashed] (20,0) -- (20,22) -- (0,22);
+\draw [thick, dashed] (0,23) -- (20,23) ;
+\draw [thick, dashed] (30,0) -- (30,33) -- (0,33);
+\node [ponto, color=primario] at (10,11) {};
+\node [ponto, color=primario] at (20,22) {};
+\node [ponto, color=primario] at (30,33) {};
+\draw [very thick, color=primario] (0,1) -- (10,11);
+\node [ponto, draw=primario, fill=white] at (0,1) {};
+\draw [very thick, color=primario] (10,12) -- (20,22);
+\node [ponto, draw=primario, fill=white] at (10,12) {};
+\draw [very thick, color=primario] (20,23) -- (30,33);
+\node [ponto, draw=primario, fill=white] at (20,23) {};
+\end{tikzpicture}
+}
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

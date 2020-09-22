@@ -17,7 +17,7 @@
 
 \ifdefined\prof
 \begin{objetivos}
-\item 
+\item \textbf{EM13MAT406}: Construir e interpretar tabelas e gráficos de frequências com base em dados obtidos em pesquisas por amostras estatísticas, incluindo ou não o uso de softwares que interrelacionem estatística, geometria e álgebra.
 \end{objetivos}
 
 \begin{goals}
@@ -48,15 +48,15 @@ Suponha a seguinte distribuição de frequências de salários medidos em salár
 \thead
 Intervalo de classe & Frequência absoluta & Frequência relativa \\
 \hline
-{[} 2,0 ; 3,0 {[} & 12 & 0,06 \\ 
+${[} 2{,}0 ; 3{,}0 {[}$ & $12$ & $0{,}06$ \\ 
 \hline
-{[} 3,0 ; 5,0 {[} & 40 & 0,20 \\
+${[} 3{,}0 ; 5{,}0 {[}$ & $40$ & $0{,}20$ \\
 \hline
-{[} 5,0 ; 7,0 {[} & 80 & 0,40 \\
+${[} 5{,}0 ; 7{,}0 {[}$ & $80$ & $0{,}40$ \\
 \hline
-{[} 7,0 ; 10,0 {[} & 48 & 0,24 \\
+${[} 7{,}0 ; 10{,}0 {[}$ & $48$ & $0{,}24$ \\
 \hline
-{[} 10,0 ; 15,0 {[} & 20 & 0,10 \\
+${[} 10{,}0 ; 15{,}0 {[}$ & $20$ & $0{,}10$ \\
 \hline
 \end{tabu}
 \end{table}
@@ -81,15 +81,15 @@ Construa um histograma adequado para esses dados.
 \thead
 Intervalo de classe & Frequência absoluta & Amplitude &  Dens. de freq. absoluta \\
 \hline
-{[} 2,0 ; 3,0 {[} & 12 & 1 & 12 \\ 
+${[} 2{,}0 ; 3{,}0 {[}$ & $12$ & $1$ & $12$ \\ 
 \hline
-{[} 3,0 ; 5,0 {[} & 40 & 2 & 20 \\
+${[} 3{,}0 ; 5{,}0 {[}$ & $40$ & $2$ & $20$ \\
 \hline
-{[} 5,0 ; 7,0 {[} & 80 & 2 & 40 \\
+${[} 5{,}0 ; 7{,}0 {[}$ & $80$ & $2$ & $40$ \\
 \hline
-{[} 7,0 ; 10,0 {[} & 48 & 3 & 16 \\
+${[} 7{,}0 ; 10{,}0 {[}$ & $48$ & $3$ & $16$ \\
 \hline
-{[} 10,0 ; 15,0 {[} & 20 & 5 & 4 \\
+${[} 10{,}0 ; 15{,}0 {[}$ & $20$ & $5$ & $4$ \\
 \hline
 \end{tabu}
 }
@@ -109,7 +109,7 @@ Intervalo de classe & Frequência absoluta & Amplitude &  Dens. de freq. absolut
 \foreach \x/\z in {0/0,2/2,3/3,5/5,7/7,10/10,15/15} \draw (\x+1,-0.2) -- (\x+1,-0.4) node [below, scale=1.2] {\z }; 
 
 \foreach \x/\y/\z in {3/4/12,4/6/40,6/8/80,8/11/48,11/16/20}
-\draw [fill=primario] (\x,0) rectangle (\y,\z/4) node [above, scale=1.2] at (\x/2+\y/2,\z/4)  {(\z)}
+\draw [fill=primario!80] (\x,0) rectangle (\y,\z/4) node [above, scale=1.2] at (\x/2+\y/2,\z/4)  {(\z)}
 ;
 
 \foreach \x/\y/\z in {4/6/0.161,6/8/0.323,8/11/0.290,11/16/0.202}
@@ -135,7 +135,7 @@ Intervalo de classe & Frequência absoluta & Amplitude &  Dens. de freq. absolut
 
 
 \foreach \x/\y/\z in {3/4/12,4/6/20,6/8/40,8/11/16,11/16/4}
-\draw [fill=primario] (\x,0) rectangle (\y,\z/2);
+\draw [fill=primario!80] (\x,0) rectangle (\y,\z/2);
 \end{tikzpicture}
 
 

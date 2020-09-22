@@ -1,0 +1,139 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Identificar num conjunto de grandezas distintas e apresentadas em um quadro, duas grandezas que atendem as especificações da situação problema.
+\item Perceber a relação da razão entre as grandezas com a taxa de variação da função linear.
+\item Aplicar os conceitos de função linear com o intuito de resolver a situação problema.
+\end{enumerate}
+
+\tcblower
+\begin{enumerate}
+\item No item d), explore com seus alunos o motivo pelo qual o resultado é o mesmo em ambos os casos.
+\item Utilize o fato que a atividade anterior também aborda o conceito de função linear e faça um comparativo com os gráficos das duas atividades.
+\item Se possível, consulte seu diretor ou responsável direto, como anda a troca dos filtros dos bebedouros da sua escola. Caso consiga o manual dos fabricantes, simule a mesma atividade com os dados da realidade de sua escola.
+\item Conduza seus estudantes a perceber a diferença entre a resposta do item e) que é uma razão: $9$ litros/dia, e as respostas dadas aos dois itens anteriores em que tratam do consumo em litros para cada intervalo de tempo.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Há \(1\) ano você adquiriu um purificador de água com capacidade de refrigeração, e deseja saber quanto tempo falta para realizar a troca do filtro interno. No manual do fabricante do seu purificador, você encontra o seguinte quadro:
+
+%\centering
+\setlength\tabulinesep{1mm}
+\begin{longtabu} to \textwidth{|c|c|c|c|c|c|}
+\hline\endfirsthead
+%\thead
+\cellcolor{\currentcolor!80}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{FIT}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{FLAT}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{PLUS}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{SLIM}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{STAR}}}\\
+\hline
+\makecell{Dimensões \\ Altura \\ Largura \\ Profundidade} &\makecell{ 27cm \\ 29cm \\ 36cm} & \makecell{29cm \\ 36cm \\36cm} & \makecell{40cm \\ 30cm \\ 45cm} & \makecell{36cm \\ 25cm \\ 41cm} & \makecell{40cm \\ 30cm \\ 36cm}\\
+\hline
+Peso bruto & 13kg & 12kg &14kg & 13kg & 13kg \\
+\hline
+\parbox{2cm}{\centering Capacidade de refrigeração com ambiente a $32^{\circ}$C e água a $27^{\circ}$C} & \parbox{2cm}{\centering 1,1 litros/hora (atende até 15 pessoas)} & \parbox{2cm}{\centering 1,5 litros/hora (atende até 10 pessoas)} & \parbox{2cm}{\centering 4,4 litros/hora (atende até 30 pessoas)} & \parbox{2cm}{\centering 1,5 litros/hora (atende até 10 pessoas)} & \parbox{2cm}{\centering 2,2 litros/hora (atende até 15 pessoas)}\\ 
+\hline 
+\parbox{2cm}{\centering Capacidade de armazenamento de águal gelada} & 1,2 litros & 1.5 litros & 2 litros & 1.5 litros & 2 litros \\
+\hline
+\makecell{Gás \\ refrigerante} & R134a & R134a & R134a & R134a & R134a \\
+\hline
+Carga de gás & 36g & 32g & 32g & 32g & 36g \\
+\hline
+Tensão & \parbox{2cm}{\centering 127V ou 220V-60Hz} & \parbox{2cm}{\centering 127V ou 220V-60Hz} & \parbox{2cm}{\centering 127V ou 220V-60Hz} &  \parbox{2cm}{\centering 127V ou 220V-60Hz} &  \parbox{2cm}{\centering 127V ou 220V-60Hz} \\
+\hline 
+Potência & 100W & 100W & 100W & 100W & 100W \\
+\hline
+Pressão nominal & \multicolumn{5}{c|}{0,196MPa (30 metros de coluna de água)} \\
+\hline
+\parbox{3cm}{\centering Temperatura min/max de rede hidráulica} & \multicolumn{5}{c|}{0,29MPa a 0,392MPa (3 a 40 metros de coluna de água)}\\
+\hline
+\parbox{3cm}{\centering Temperatura min/max de trabalho}&\multicolumn{5}{c|}{$5^{\circ}$C a $42^{\circ}$C}\\
+\hline
+\parbox{2cm}{\centering Vazão elemento filtrante} & \multicolumn{5}{c|}{4.000 litros} \\
+\hline
+\parbox{2cm}{\centering Vazão máxima recomendada} & \multicolumn{5}{c|}{0,75 litros/minuto} \\
+\hline
+\parbox{2cm}{\centering Volume interno do aparelho} & 1,6 litros & 2 litros & 2,5 litros & 2 litros & 2,5 litros \\
+\hline
+\parbox{2cm}{\centering Volume de referência para ensio de particulado} &\multicolumn{5}{c|}{4.000 litros}\\
+\hline
+\end{longtabu}
+\begin{enumerate}
+\item Quais informações do quadro são relevantes para responder à sua dúvida?
+
+\item Explique com suas palavras o significado da vazão 0,75 litros/minuto.
+
+\item Para calcular a vida útil do seu filtro interno, é necessário estimar a quantidade de água consumida diariamente na sua casa. Suponha, então, que você observou que o purificador é acionado ao longo de um dia o equivalente ao tempo total de 12 minutos. Quantos litros de água são consumidos em um dia, nessas condições? (assuma que o purificador foi regulado para funcionar com a vazão máxima recomendada pelo fabricante)
+
+\item Assumindo que o consumo estimado no item anterior seja o mesmo para todos os dias, qual foi o consumo de água do purificador ao final do primeiro dia de uso? E entre o 10º e o 11º dias de uso?
+
+\item Qual o aumento do consumo de água observado para cada dia de uso do purificador?
+
+\item Calcule a vida útil do filtro interno do seu aparelho e, supondo que você tenha utilizado o seu purificador todos os dias desde a instalação, determine em quanto tempo você deverá solicitar a troca do seu filtro interno.
+
+\item Com base nas informações que você possui, encontre uma expressão matemática que relacione o consumo de água do purificador em função do tempo de uso em dias e represente-a graficamente.
+\end{enumerate}
+
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item Vida útil do elemento filtrante e vazão máxima recomendada.
+\item A cada minuto sai 0,75 litro de água do purificador.
+\item $0,75\times12=9$ litros.
+\item $9$ litros em ambos os casos.
+\item $9$ litros.
+\item A vida útil do filtro interno, nas condições descritas, será de aproximadamente 14 meses e meio. A troca do filtro interno deverá ser realizada daqui a dois meses e meio.
+\item $f(t)=9t$.
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}[yscale=.5]
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]   
+\draw[thick,->](-3,0)--(3,0)node[ right]{$t$};
+\draw[thick,->](0,-2)--(0,10)node[right]{$f(t)$};
+\draw[lightgray!50](-3,-2) grid[xstep=.2,ystep=.2](3,10);
+\draw[gray](-3,-2) grid(3,10);
+\foreach \x in { -3, -2,-1}
+\node at  (\x ,-.3)  {\x};
+\foreach \x in {3, 2,1}
+\node at  (\x ,-.3)  {\x};
+\foreach \x in { -2,-1}
+\node at  (-.3 ,\x)  {\x};
+\foreach \x in {1, 2, 3, ..., 10}
+\node at  (-.3 ,\x)  {\x};
+\draw[domain=-.2:1.1, primario,very thick, samples=100]plot(\x,9*\x);
+\end{tikzpicture}
+\end{figure}
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

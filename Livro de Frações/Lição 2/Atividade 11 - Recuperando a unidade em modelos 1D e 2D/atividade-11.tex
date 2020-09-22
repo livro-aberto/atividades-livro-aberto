@@ -1,0 +1,259 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Recuperando a unidade em modelos 1D e 2D}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+    \item       Recompor a unidade a partir de uma fração dada em modelo contínuo e em linguagem simbólica, incluindo o caso de frações maiores que a unidade.
+    \item       Relacionar a fração correspondente à parte apresentada à quantidade necessária dessas partes para compor a unidade. Assim, por exemplo, para compor a unidade a partir de       $\frac{2}{3}$ da unidade, basta repartir esta fração em 2 partes iguais (para recuperar a fração unitária       $\frac{1}{3}$) e, então, justapor 3 cópias de uma destas partes.
+
+
+\end{enumerate}
+\tcblower
+
+  \begin{itemize} %d
+    \item Recomenda-se que a atividade seja discutida em grupos de 3 a 5 alunos e respondida individualmente.
+    %\item A exemplo das Atividades 5 e 7 da Lição 1, é importante ter em mente que existem várias soluções para cada item.
+ \item A exemplo das Atividades 5 e 7 da Lição 1, é importante ter em mente que a forma da unidade pode variar pois a unidade pode ser representada de várias maneiras.
+    \item Estimule os alunos a reconhecer (e a fazer) mais do que uma representação para a unidade em cada item.
+    \item Caso seja necessário fazer alguma partição, não se espera nem se recomenda que os alunos usem alguma medida. Não se espera precisão, uma partição coerente será suficiente. 
+\end{itemize} %d
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{center}
+  \begin{longtable}{|m{0.2\textwidth}|m{0.2\textwidth}|m{0.5\textwidth}|}
+    \hline
+     \centering Fração da unidade  & \centering  Figura correspondente à fração da unidade  & \centering Desenhe aqui a unidade  \tabularnewline
+    \hline 
+    \endhead
+     \centering $\dfrac{1}{2}$  &\centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}
+ &  \\
+    \hline
+     \centering $\dfrac{4}{2}$  &   \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}
+                                   &  \\
+    \hline
+     \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}
+                                   &  \\
+    \hline
+     \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}
+                                   &  \\
+    \hline
+     \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}} &  \\
+    \hline
+      \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}} &  \\
+    \hline
+      \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,1);
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,1);
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,1);
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering\begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,1);
+                                   \end{tikzpicture}}   &  \\
+    \hline
+        \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering \begin{tikzpicture}
+                                      \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                     \end{tikzpicture} } &  \\
+     \hline
+     \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering \begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \end{tikzpicture} } &  \\
+     \hline
+       \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering \begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \end{tikzpicture} } &  \\
+    \hline
+      \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\centering \begin{tikzpicture}
+                                    \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \end{tikzpicture} } &  \\
+    \hline
+  \end{longtable}
+\end{center}
+
+\ifdefined\prof
+
+\begin{solucao}
+\begin{center}
+  \begin{longtable}{|m{0.2\textwidth}|m{0.3\textwidth}|c|}
+    \hline
+     \centering Fração da unidade  & \centering  Figura correspondente à fração da unidade  & Unidade \\
+    \hline 
+     \centering $\dfrac{1}{2}$ & \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}
+        &\parbox[c][1.1cm][c]{24mm}{\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (24,6);
+ \end{tikzpicture}} \\
+    \hline
+     \centering $\dfrac{4}{2}$ &   \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}
+                                   & \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (6,6);
+                                   \end{tikzpicture}} \\
+    \hline
+     \centering $\dfrac{3}{2}$   &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}
+                                   & \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (8,6);
+                                   \end{tikzpicture}}  \\
+    \hline
+     \centering $\dfrac{2}{3}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (12,6);
+                                  \end{tikzpicture}
+                                  & \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (18,6);
+\end{tikzpicture}} \\
+\hline
+\centering $\dfrac{1}{2}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3,  ] (0,0) arc (0:180:6) -- cycle;
+\end{tikzpicture}
+& \parbox[c][1.3cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3] (0,0) circle (6);
+\end{tikzpicture}}
+\\
+\hline
+\centering $\dfrac{4}{2}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3,  ] (0,0) arc (0:180:6) -- cycle;
+\end{tikzpicture}
+& \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3] (-6,6) arc (90:180:6) -- (-6,0)-- cycle;
+\end{tikzpicture}}
+\\
+\hline
+\centering $\dfrac{3}{2}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3,  ] (0,0) arc (0:180:6) -- cycle;
+\end{tikzpicture}
+&
+\parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3,  ] (0,0) -- (60:6) arc (60:180:6) -- cycle;
+\end{tikzpicture}}
+\\
+\hline
+\centering $\dfrac{2}{3}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3,  ] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture} & \parbox[c][1.3cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3] (0:6) arc (0:270:6) -- (0,0) -- cycle;
+\end{tikzpicture}} \\
+    \hline
+\centering $\dfrac{1}{2}$ & \centering \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (12,1);
+                                  \end{tikzpicture}
+& \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (24,1);
+                                   \end{tikzpicture}} \\
+    \hline
+    \centering $\dfrac{4}{2}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (12,1);
+                                  \end{tikzpicture}
+& \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (6,1);
+                                   \end{tikzpicture}} \\
+    \hline
+      \centering $\dfrac{3}{2}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (12,1);                 \end{tikzpicture}                                                                                            & \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0,0) rectangle (8,1);
+                                   \end{tikzpicture}} \\
+    \hline
+\centering $\dfrac{2}{3}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (12,1);
+\end{tikzpicture} & \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3,  ] (0,0) rectangle (18,1);
+                                   \end{tikzpicture}}  \\
+    \hline
+        \centering $\dfrac{1}{2}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                      \draw[fill=common, fill opacity=.3,  ] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                    \end{tikzpicture}                                                                                            & \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+%\draw[fill=common, fill opacity=.3] (0:4) -- (60:4) -- (120:4) -- (180:4) -- (240:4) -- (300:4) -- cycle;
+%\draw[fill=common, fill opacity=.3, shift={(-6,{2*sqrt(3)})}] (180:4) -- (0:4) -- (300:4) -- (240:4)--cycle;
+%\draw[fill=common, fill opacity=.3, shift={(-6,{-2*sqrt(3)})}] (180:4) -- (0:4) -- (60:4) -- (120:4)--cycle;
+                                    \draw[fill=common, fill opacity=.3] (-10,-3.42) -- (240:4) -- (300:4) -- (0:4) -- (60:4) -- (120:4) --+ (-8,0) -- (-8,0) -- cycle;
+                                    \draw [dashed, gray] (180:8) -- (180:4) -- (240:4);
+\draw [dashed, gray] (180:4) -- (120:4);
+                                  \end{tikzpicture}}\\
+
+%                                      ou \begin{tikzpicture}[x=1mm,y=1mm]
+%                                     \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+%                                     \draw[fill=common, fill opacity=.3, shift={(8,0)} ] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+%                                     \end{tikzpicture}
+     \hline
+     \centering $\dfrac{4}{2}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3,  ] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \end{tikzpicture} & \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                   \draw[fill=common, fill opacity=.3] (180:4) -- (0:4) -- (60:4) -- (120:4)--cycle;
+\end{tikzpicture}}  \\
+\hline
+\centering $\dfrac{3}{2}$ &  \centering  \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3,  ] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+\end{tikzpicture}
+& \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+\draw[fill=common, fill opacity=.3] (0,0) -- (0:4) -- (60:4) -- (120:4)-- (180:4) -- (240:4) -- cycle;
+%\draw[fill=common, fill opacity=.3] (240:4)  -- (300:4)-- (0:4)-- (0,0) --cycle;
+%\draw[ ] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+%\draw (0,0) -- (120:4);
+\end{tikzpicture}} \\
+    \hline
+      \centering $\dfrac{2}{3}$ &  \centering \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3,  ] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle; \end{tikzpicture}                                         &  \parbox[c][1.1cm][c]{24mm}{\centering \begin{tikzpicture}[x=1mm,y=1mm]
+%\draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4) -- (240:4) -- (300:4) -- cycle;
+%\draw[fill=common, fill opacity=.3, shift={(-6,{-2*sqrt(3)})}] (180:4) -- (0:4) -- (60:4) -- (120:4)--cycle;
+%\draw[ ] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+\end{tikzpicture}}  \\
+    \hline
+  \end{longtable}
+\end{center}
+
+\end{solucao}
+\fi
+
+\end{document}

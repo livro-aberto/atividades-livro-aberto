@@ -1,0 +1,97 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: A menor fração maior do que zero}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Perceber a propriedade de densidade das frações ao obter frações
+arbitrariamente próximas de       $0$       e arbitrariamente próximas de
+$1$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Recomenda-se que, para facilitar a logística de condução desta
+atividade, que ela seja feita com as perguntas sendo propostas uma a uma por
+você para a turma, de modo que a resposta de uma pergunta dada por um aluno seja
+então usada como referência para a pergunta subsequente. Outra possibilidade é
+dividir a turma em grupos de 3 a 5 alunos. Cada grupo responde a primeira
+pergunta e então passa sua resposta para um outro grupo que deve então responder
+a próxima questão tendo como referência a resposta recebida e assim
+sucessivamente.
+    \item       Caso seja viável, recomenda-se, na discussão da atividade, o uso
+de um software (o GeoGebra, por exemplo) para marcar na reta numérica as
+sucessivas frações dadas pelos alunos. O recurso de ampliação e redução pode ser
+usado visualizar as frações quando estas se acumulam em       $0$       e em
+  $1$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{enumerate}
+ \item Escreva uma fração que seja menor do que 1 e maior do que 0.
+ \item Existe uma fração maior do que 0 e menor do que a fração que você escreveu no item a)? Em caso afirmativo, escreva uma tal fração.
+ \item Existe uma fração menor do que a fração que você escreveu no item b)? Em caso afirmativo, escreva uma tal fração.
+ \item Dada uma fração menor do que 1 e maior do que 0, é sempre possível determinar uma outra fração menor ainda? Em caso afirmativo, explique como tal fração pode ser obtida.
+ \item Existe uma fração menor do que 1 e que seja maior do que a fração que você escreveu no item a)? Em caso afirmativo, escreva uma tal fração.
+ \item Existe uma fração menor do que 1 e que seja maior do que a fração que você escreveu no item e)? Em caso afirmativo, escreva uma tal fração.
+ \item Dada uma fração menor do que 1, é sempre possível determinar uma outra fração menor do que 1 e que seja maior do que a fração dada? Em caso afirmativo, explique como tal fração pode ser obtida.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate} %s
+    \item             $\dfrac{1}{2}$, por exemplo.
+    \item       Sim,       $\dfrac{1}{3}$.
+    \item       Sim,       $\dfrac{1}{4}$.
+    \item       Sim:       $\dfrac{1}{5} < \dfrac{1}{4}$,       $\dfrac{1}{6} <
+\dfrac{1}{5}$,       $\dfrac{1}{7} < \dfrac{1}{6}$, etc. Mais geralmente, dada uma
+fração, basta considerar a fração de mesmo numerador e denominador maior do que
+o denominador da fração dada. Esta segunda fração será sempre menor do que a
+fração dada.
+    \item       Sim,       $\dfrac{2}{3}$. Enquanto que para       $\dfrac{1}{2}$,
+é necessário       $\dfrac{1}{2}$       para completar a unidade, para
+$\dfrac{2}{3}$       é necessário       $\dfrac{1}{3}$       que é menor que
+$\dfrac{1}{2}$, logo       $\dfrac{3}{4} > \dfrac{1}{2}$.
+    \item       Sim,       $\dfrac{3}{4}$. Enquanto que para       $\dfrac{2}{3}$,
+é necessário       $\dfrac{1}{3}$       para completar a unidade, para
+$\dfrac{3}{4}$       é necessário       $\dfrac{1}{4}$       que é menor que
+$\dfrac{1}{3}$, logo       $\dfrac{3}{4} > \dfrac{2}{3}$.
+    \item       Sim,       $\dfrac{4}{5} > \dfrac{3}{4}$,       $\dfrac{5}{6} >
+\dfrac{4}{5}$,       $\dfrac{6}{7} > \dfrac{5}{6}$, etc.
+\end{enumerate} %s
+
+  Mais geralmente, as frações cujo numerador é um número natural e o denominador
+é o sucessor do numerador formam uma sucessão crescente de frações menores do
+que   $1$.
+
+
+\end{solucao}
+\fi
+
+\end{document}

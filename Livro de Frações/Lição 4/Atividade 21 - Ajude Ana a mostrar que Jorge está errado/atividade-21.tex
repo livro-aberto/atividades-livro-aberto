@@ -1,0 +1,61 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Ajude Ana a mostrar que Jorge está errado}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Perceber que mesmo se       $n < p$       e       $m < q$, pode
+ocorrer que       $\dfrac{n}{m} \geq \dfrac{p}{q}$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Esta é uma atividade que pode ser desenvolvida individualmente.
+Contudo, é fundamental que os alunos sejam estimulados a explicar o raciocínio
+realizado.
+\item       O tipo de situação descrita na atividade é um equívoco comum
+entre os alunos, isto é, eles equivocamente acham que se       $n < p$       e
+$m < q$, então necessariamente       $\dfrac{n}{m} < \dfrac{p}{q}$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Jorge e Ana estão comparando as frações $\dfrac{2}{3}$ e $\dfrac{6}{10}$. Jorge afirma que
+$\dfrac{2}{3} < \dfrac{6}{10}$ porque $2 < 6$ e $3 < 10$. Ana diz que $\dfrac{2}{3} > \dfrac{6}{10}$. Use desenhos, palavras ou apenas números para ajudar Ana a explicar a Jorge porque ele está errado.
+
+\ifdefined\prof
+\begin{solucao}
+
+Tem-se que   $\dfrac{2}{3} = \dfrac{10 \times 2}{10 \times 3} = \dfrac{20}{30}$
+e
+$\dfrac{6}{10} = \dfrac{3 \times 6}{3 \times 10} = \dfrac{18}{30}$.
+Como   $\dfrac{20}{30} > \dfrac{18}{30}$  , segue-se que   $\dfrac{2}{3} >
+\dfrac{6}{10}$.
+\end{solucao}
+\fi
+
+\end{document}

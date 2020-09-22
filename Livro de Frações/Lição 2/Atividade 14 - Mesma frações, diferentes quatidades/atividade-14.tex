@@ -1,0 +1,69 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Mesma fração, diferentes quantidades}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+    \item       Perceber que uma mesma fração (no caso, $\frac{1}{2}$) de unidades diferentes pode resultar em quantidades diferentes.
+
+\end{enumerate}
+\tcblower
+
+  \begin{itemize} %s
+    \item       Esta é uma atividade que o aluno pode fazer individualmente, mas é essencial que seja discutida com toda a turma.
+    \item       Como fechamento da atividade, é importante enfatizar que  uma mesma fração de unidades diferentes pode resultar em quantidades diferentes. Sugere-se ressaltar aos estudantes que, no contexto ``frações de'', é fundamental saber a que o ``de'' se refere, isto é, qual é a unidade que está sendo considerada. Neste sentido, esta atividade está fortemente relacionada com a Atividade 8.
+\end{itemize} %s
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+(NAEP, 1992) Pense cuidadosamente nesta questão. Escreva uma resposta completa. Você pode usar desenhos, palavras e números para explicar sua resposta. Certifique-se de mostrar todo o seu raciocínio.
+
+José comeu $\frac{1}{2}$ de uma pizza. Ella comeu $\frac{1}{2}$ de uma outra pizza. José disse que ele comeu mais pizza do que Ella, mas Ella diz que eles comeram a mesma quantidade. Use palavras, figuras ou números para mostrar que José pode estar certo.
+%\vspace*{-.5cm}
+
+\ifdefined\prof
+
+\begin{solucao}
+
+  José está certo se a pizza da qual comeu metade for maior do que a pizza da qual Ella comeu metade, como ilustra a figura a seguir.
+  \begin{center}
+   \begin{tikzpicture}[x=1mm,y=1mm]
+    \draw (0,0) circle (4);
+    \draw[fill=attention] (90:4) arc (90:270:4) --  cycle;
+    \draw[fill=common, fill opacity=.3] (90:4) arc (90:-90:4) --  cycle;
+    \node at (0,8) {Pizza de Ella};
+    \begin{scope}[shift={(30,0)}]
+    \draw (0,0) circle (8);
+    \draw[fill=attention] (90:8) arc (90:270:8) --  cycle;
+    \draw[fill=common, fill opacity=.3] (90:8) arc (90:-90:8) --  cycle;
+    \node at (0,12) {Pizza de José};
+    \end{scope}
+   \end{tikzpicture}
+
+  \end{center}
+
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,93 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Numerador da 1\textsuperscript{a} com o denominador da 2\textsuperscript{a}}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+    \item       Verificar que se       $a \cdot d = b \cdot c$, com       $b
+\not = 0$       e       $d \not = 0$, então as frações       $\dfrac{a}{b}$
+e       $\dfrac{c}{d}$       são iguais (equivalentes).
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+    \item       Esta é uma atividade que pode ser desenvolvida individualmente.
+Contudo, é fundamental que os alunos sejam estimulados a explicar o raciocínio
+realizado.
+    \item       Note que para as frações usadas no exemplo e no item a), os
+numeradores e denominadores de uma fração não são múltiplos inteiros dos
+numeradores e denominadores da outra fração.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Dadas duas frações, se o produto do numerador da primeira fração pelo denominador da segunda fração for igual ao produto do denominador da primeira fração pelo numerador da segunda fração, então as frações são iguais.
+
+Vamos ver um exemplo: para as frações $\dfrac{14}{6}$ e $\dfrac{21}{9}$, note que  $14 \times 9 = 126 = 6 \times 21$. Vamos agora usar este fato de que $14 \times 9 = 6 \times 21$
+para concluir que $\dfrac{14}{6} = \dfrac{21}{9}$:
+
+$$\dfrac{14}{6} = \dfrac{9 \times 14}{9 \times 6} = \dfrac{14 \times 9}{9 \times 6} = \dfrac{6 \times 21}{9 \times 6} = \dfrac{6 \times 21}{6 \times 9} = \dfrac{21}{9}.$$
+
+\begin{enumerate}
+ \item Use o procedimento do exemplo para mostrar que $\dfrac{2}{8} = \dfrac{5}{20}$.
+ \item Verdadeirou ou falso? Se duas frações são iguais, então o produto do numerador da primeira fração pelo denominador da segunda fração é igual ao produto do denominador da primeira fração pelo numerador da segunda fração. Justifique sua resposta.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item       Para as frações       $\dfrac{2}{8}$       e
+$\dfrac{5}{20}$, tem-se que        $2 \times 20 = 40 = 8 \times 5$. Agora,
+$$\dfrac{2}{8} = \dfrac{20 \times 2}{20 \times 8} = \dfrac{2 \times 20}{20 \times
+8} = \dfrac{8 \times 5}{20 \times 8} = \dfrac{8 \times 5}{8 \times 20} =
+\dfrac{5}{20}.$$
+\item       A afirmação é verdadeira.
+
+Ao se multiplicar o numerador e o denominador da primeira fração pelo
+denominador da segunda fração obtém-se uma fração de igual valor cujo numerador
+é o produto do numerador da primeira fração pelo denominador da segunda fração e
+cujo denominador é o produto do numerador da primeira fração pelo denominador da
+segunda fração.
+
+Do mesmo modo, ao se multiplicar o numerador e o denominador da segunda fração
+pelo denominador da primeira fração obtém-se uma fração de igual valor cujo
+numerador é igual ao denominador da primeira fração multiplicado pelo numerador
+da segunda fração e cujo denominador é o produto do denominadora da primeira
+fração pelo denominador da segunda fração.
+
+Como as frações iniciais são iguais, estas novas frações também são iguais e
+têm o mesmo denominador. Portanto, seus numeradores devem ser iguais, isto é, o
+produto do numerador da primeira fração pelo denominador da segunda fração é
+igual ao produto do denominador da primeira fração pelo numerador da segunda
+fração.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

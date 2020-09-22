@@ -29,6 +29,7 @@
 \usepackage{tasks}
 \usetikzlibrary{arrows,calc,shapes}
 \usepackage{xurl}
+\usepackage{siunitx}
 
 \RequirePackage{fontspec}
 \newfontfamily{\boxtitlefont}[Path=../../../../Fontes/]{Exo2-Light.otf}[BoldFont=Exo2-Medium.otf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
@@ -85,9 +86,16 @@
 
 \setlist[enumerate,2]{label=\roman*),ref=\alph*)}
 
-\newtcolorbox{objetivos}[1]{colback=penaqua!20!white,colbacktitle=penaqua!20!white,
-colframe=penaqua!20!white, left =2mm, right=2mm, boxrule=0pt, top=1mm, arc=3mm, toptitle=2mm, coltitle=black, fonttitle=\boxtitlefont\bfseries, arc is angular = northwest, sharp corners = northeast, sharp corners = southwest, arc is angular = southeast, subtitle style={coltitle=black,fonttitle=\boxtitlefont\bfseries},
-title=\large Habilidades,before upper={\boxtitlefont}}
+\newenvironment{objetivos}
+{\setlist[itemize,1]{wide, label=,left=0mm}
+\begin{itemize}
+  \begin{tcolorbox}[colback=penaqua!20!white,colbacktitle=penaqua!20!white,
+  colframe=penaqua!20!white, left =2mm, right=2mm, boxrule=0pt, top=1mm, arc=3mm, toptitle=2mm, coltitle=black, fonttitle=\boxtitlefont\bfseries, arc is angular = northwest, sharp corners = northeast, sharp corners = southwest, arc is angular = southeast, subtitle style={coltitle=black,fonttitle=\boxtitlefont\bfseries},title=\large Habilidades,before upper={\boxtitlefont}]
+}
+{
+  \end{tcolorbox}
+\end{itemize}
+}
 
 \definecolor{session1}{RGB}{0,94,176}
 \definecolor{session2}{RGB}{75,173,49}
@@ -102,8 +110,13 @@ title=\large Habilidades,before upper={\boxtitlefont}}
 
 \renewcommand{\thead}{\rowfont{\bfseries\color{white}}\rowcolor{primario!80}}
 \newcommand{\sthead}{\rowfont{\bfseries}}
-
 \newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
+\newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
 
 \definecolor{primario}{RGB}{0,165,157} %esverdeado
 \definecolor{secundario}{RGB}{73,85,93} %acinzentado escuro
@@ -173,7 +186,7 @@ before upper={\tcbsubtitle{\boxtitlefont Objetivos específicos}
 \vspace{-1.5em}\setlength\parskip{.5em}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
-before lower ={\tcbsubtitle{\boxtitlefont Observações e recomendações}\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}\vspace{-.5em}\setlength\parskip{.5em}},
+before lower ={\tcbsubtitle{\boxtitlefont Observações e recomendações}\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}\vspace{-1.5em}\setlength\parskip{.5em}},
     subtitle style = {
       frame empty,
       fontupper = \bfseries\large,

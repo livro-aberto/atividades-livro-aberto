@@ -1,0 +1,280 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Quadradinhos de numeradores}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Reconhecer que, para cada       $0 \leq i \leq 3$, as frações
+$\dfrac{i}{3}$,       $\dfrac{2 \times i}{2 \times 3 }$,       $\dfrac{3 \times
+i}{3 \times 3}$       e       $\dfrac{4 \times i}{4 \times 3}$       são iguais a
+partir da observação das representações destas frações na reta numérica.\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Recomenda-se que, nesta atividade, os alunos trabalhem
+individualmente ou em duplas. No entanto, é fundamental que os alunos sejam
+estimulados a explicar o raciocínio realizado.
+\item       Nas retas numéricas apresentadas, as origens estão alinhadas e
+as unidades correspondem a segmentos unitários congruentes, o que garante que
+uma fração associada a um determinado ponto em uma reta seja a mesma fração nos
+pontos correspondentes nas demais retas.
+\item       Caso seus alunos não percebam, aponte para o fato de que as
+segunda, terceira e quarta retas numéricas são obtidas por meio de subdivisões
+dos terços da primeira reta numérica em duas, três e quatro partes iguais,
+respectivamente. Para resolver o item c) desta atividade, se faz necessário
+dividir cada terço em cinco partes iguais.
+\item       É importante, ao final da atividade, observar para os alunos
+que, nesta atividade, cada ponto marcado na reta numérica está sendo descrito
+por frações com numeradores e denominadores diferentes (isto é, por frações
+equivalentes) mas que, não obstante, por corresponderem ao mesmo ponto da reta
+numérica, estas frações são iguais.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{enumerate} %d
+\item     Preencha os quadradinhos     $\square$ com numeradores adequados de modo que cada fração corresponda a sua respectiva marca em cada reta numérica.    \mbox{} \newline
+
+\begin{center}
+\begin{tikzpicture}[x=45mm,y=45mm]
+\draw (0,0) -- (3,0);
+\foreach \x in {0,...,3}{
+\draw (\x,-3pt) -- (\x, 3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\foreach \x in {0,.333,...,3}{
+\draw (\x,-2pt) -- (\x, 2pt);
+\node[below] at (\x,-2 pt) {$\dfrac{\square}{3}$};
+\draw[dotted] (\x,-30pt) -- (\x, -60pt);
+}
+
+\fill[common] (1+1/3,0) circle (2pt);
+
+\begin{scope}[shift={(0,-75pt)}]
+\draw (0,0) -- (3,0);
+\foreach \x in {0,...,3}{
+\draw (\x,-3pt) -- (\x, 3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\foreach \x in {0,.333,...,3}{
+\draw (\x,-2pt) -- (\x, 2pt);
+\node[below] at (\x,-2 pt) {$\dfrac{\square}{6}$};
+\draw[dotted] (\x,-30pt) -- (\x, -60pt);
+}
+
+\foreach \x in {0,.333,...,6}{
+\draw (\x/2,-2pt) -- (\x/2, 2pt);}
+
+
+\fill[common] (1+1/3,0) circle (2pt);
+
+\end{scope}
+
+
+\begin{scope}[shift={(0,-150pt)}]
+\draw (0,0) -- (3,0);
+\foreach \x in {0,...,3}{
+\draw (\x,-3pt) -- (\x, 3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\foreach \x in {0,.333,...,3}{
+\draw (\x,-2pt) -- (\x, 2pt);
+\node[below] at (\x,-2 pt) {$\dfrac{\square}{9}$};
+\draw[dotted] (\x,-30pt) -- (\x, -60pt);
+}
+
+\foreach \x in {0,.333,...,9}{
+\draw (\x/3,-2pt) -- (\x/3, 2pt);}
+
+
+
+\fill[common] (1+1/3,0) circle (2pt);
+
+\end{scope}
+
+\begin{scope}[shift={(0,-225pt)}]
+\draw (0,0) -- (3,0);
+\foreach \x in {0,...,3}{
+\draw (\x,-3pt) -- (\x, 3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\foreach \x in {0,.333,...,3}{
+\draw (\x,-2pt) -- (\x, 2pt);
+\node[below] at (\x,-2 pt) {$\dfrac{\square}{12}$};
+%\draw[dotted] (\x,-30pt) -- (\x, -60pt);
+}
+
+\foreach \x in {0,.333,...,12}{
+\draw (\x/4,-2pt) -- (\x/4, 2pt);}
+
+\fill[common] (1+1/3,0) circle (2pt);
+
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\item     Escreva quatro frações com numeradores diferentes (consequentemente com denominadores também diferentes) que correspondam ao ponto azul em destaque na figura.
+\item     Determine uma fração de denominador     $15$ que corresponda ao ponto azul em destaque. Justifique sua resposta usando uma reta numérica!
+\end{enumerate} %d
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\noindent a)
+
+ \noindent 
+
+ \begin{center}\begin{tikzpicture}[x=45mm,y=45mm]
+  \draw (0,0) -- (3,0);
+  \foreach \x in {0,...,3}{ \draw (\x,-3pt) -- (\x, 3pt);  \node[above] at (\x,3pt) {\x}; }
+
+  \foreach \x in {0,1,...,9}{
+  \draw (\x/3,-2pt) -- (\x/3, 2pt);
+  \node[below] at (\x/3,-2 pt) {$\dfrac{\x}{3}$};
+  \draw[dotted] (\x/3,-35pt) -- (\x/3, -60pt);
+  }
+
+  \fill[common] (1+1/3,0) circle (2pt);
+
+  \begin{scope}[shift={(0,-80pt)}]
+  \draw (0,0) -- (3,0);
+  \foreach \x in {0,...,3}{
+  \draw (\x,-3pt) -- (\x, 3pt);
+  \node[above] at (\x,3pt) {\x};
+  }
+
+  \foreach \x in {0,2,...,18}{
+  \draw (\x/6,-2pt) -- (\x/6, 2pt);
+  \node[below] at (\x/6,-2 pt) { $\dfrac{\x}{6}$ };
+  \draw[dotted] (\x/6,-35pt) -- (\x/6, -60pt);
+  }
+
+  \foreach \x in {0,.333,...,6}{
+  \draw (\x/2,-2pt) -- (\x/2, 2pt);}
+
+
+  \fill[common] (1+1/3,0) circle (2pt);
+
+  \end{scope}
+
+
+  \begin{scope}[shift={(0,-160pt)}]
+  \draw (0,0) -- (3,0);
+  \foreach \x in {0,...,3}{
+  \draw (\x,-3pt) -- (\x, 3pt);
+  \node[above] at (\x,3pt) {\x};}
+
+  \foreach \x in {0,3,...,27}{
+  \draw (\x/9,-2pt) -- (\x/9, 2pt);
+  \node[below] at (\x/9,-2 pt) {$\dfrac{\x}{9}$};
+  \draw[dotted] (\x/9,-35pt) -- (\x/9, -60pt);
+  }
+
+  \foreach \x in {0,.333,...,9}{
+  \draw (\x/3,-2pt) -- (\x/3, 2pt);}
+
+
+
+  \fill[common] (1+1/3,0) circle (2pt);
+
+  \end{scope}
+
+  \begin{scope}[shift={(0,-240pt)}]
+  \draw (0,0) -- (3,0);
+  \foreach \x in {0,...,3}{
+  \draw (\x,-3pt) -- (\x, 3pt);
+  \node[above] at (\x,3pt) {\x};}
+
+  \foreach \x in {0,4,...,36}{
+  \draw (\x/12,-2pt) -- (\x/12, 2pt);
+  \node[below] at (\x/12,-2 pt) {$\dfrac{\x}{12}$};
+  %\draw[dotted] (\x,-30pt) -- (\x, -60pt);
+  }
+
+  \foreach \x in {0,.333,...,12}{
+  \draw (\x/4,-2pt) -- (\x/4, 2pt);}
+
+  \fill[common] (1+1/3,0) circle (2pt);
+
+  \end{scope}
+ \end{tikzpicture}
+
+ \end{center}
+
+\noindent b) $\dfrac{4}{3} = \dfrac{8}{6} = \dfrac{12}{9} = \dfrac{16}{12}$.
+
+\noindent c) No item b) foi estabelecido que o ponto azul corresponde a fração
+$\dfrac{4}{3}$       pois, ao se justapor 4 segmentos que são       $\dfrac{1}{3}$
+      do segmento unitário (que está, aqui, servindo como unidade) a partir da
+origem       $0$, este ponto é a outra extremidade desta justaposição. Agora, ao
+se subdividir estes 4 segmentos que são       $\dfrac{1}{3}$       do segmento
+unitário em 5 partes iguais, obtêm-se 20 segmentos justapostos que são
+$\dfrac{1}{15}$       do segmento unitário. Sendo o ponto azul extremo desta
+justaposição, segue-se que ele corresponde a fração       $\dfrac{20}{15}$.
+
+
+
+\noindent 
+\begin{center}
+\begin{tikzpicture}[x=45mm,y=45mm]
+  \draw (0,0) -- (3,0);
+  \foreach \x in {0,...,3}{ \draw (\x,-3pt) -- (\x, 3pt);  \node[above] at (\x,3pt) {\x}; }
+
+  \foreach \x in {0,1,...,9}{
+  \draw (\x/3,-2pt) -- (\x/3, 2pt);
+  \node[below] at (\x/3,-2 pt) {$\dfrac{\x}{3}$};
+  \draw[dotted] (\x/3,-35pt) -- (\x/3, -60pt);
+  }
+
+  \fill[common] (1+1/3,0) circle (2pt);
+
+  \begin{scope}[shift={(0,-80pt)}]
+  \draw (0,0) -- (3,0);
+  \foreach \x in {0,...,3}{
+  \draw (\x,-3pt) -- (\x, 3pt);
+  \node[above] at (\x,3pt) {\x};
+  }
+
+  \foreach \x in {0,5,...,45}{
+  \node[below] at (\x/15,-2 pt) { $\dfrac{\x}{15}$ };
+  %\draw[dotted] (\x/15,-35pt) -- (\x/15, -60pt);
+  }
+
+  \foreach \x in {0,1,...,45}{
+  \draw (\x/15,-2pt) -- (\x/15, 2pt);}
+
+
+  \fill[common] (1+1/3,0) circle (2pt);
+
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\end{solucao}
+\fi
+
+\end{document}

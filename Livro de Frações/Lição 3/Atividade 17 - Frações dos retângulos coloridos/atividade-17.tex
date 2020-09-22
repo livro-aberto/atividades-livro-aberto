@@ -1,0 +1,150 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao03/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Frações dos retângulos coloridos}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Relacionar a representação de frações unitárias em modelo de área retangular com a representação dessas frações na reta numérica.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item  Cada aluno deve receber o material para o desenvolvimento da atividade, que consiste em uma folha, disponível para reprodução no final do livro. Será necessário traçar uma reta. Distribua uma folha para isso ou oriente os alunos a fazê-lo no caderno, usando em ambos os casos a maior dimensão do papel.
+\item Recomenda-se que os alunos manuseiem o material a ser reproduzido. É importante que reconheçam que todos os retângulos coloridos são iguais (congruentes), o que pode ser constatado pela sobreposição. O retângulo representa a unidade. Além disso, é importante que percebam que cada um dos retângulos coloridos (ou a unidade) tem uma equipartição indicada, representando frações unitárias diferentes. Por exemplo, cada parte do retângulo vermelho representa       $\dfrac{1}{5}$       da unidade.
+\item       Algumas das frações indicadas para serem representadas na reta numérica são maiores que uma unidade. Nesses casos, oriente seus alunos a fazer a justaposição das partes dos retângulos correspondentes. Por exemplo, para representar       $\dfrac{12}{7}$       será necessário justapor um retângulo a cinco partes do retângulo azul.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Você recebeu uma folha com 11 retângulos coloridos de mesmo tamanho. Cada retângulo está dividido em uma determinada quantidade de partes iguais.
+  
+\begin{enumerate}
+\item Complete os retângulos escrevendo em cada uma das partes a fração correspondente, como no exemplo: o retângulo laranja está dividido em duas partes iguais, então cada parte é $\dfrac{1}{2}$.
+
+\begin{center}
+\begin{tikzpicture}[scale=.5, rotate=90]
+\draw[fill=gray] (0,0) rectangle (60,12);
+
+
+\begin{scope}[yshift=-40pt]
+\draw[fill=light] (0,0) rectangle (60,12);
+\draw (30,0) -- (30,12);
+\node at (15,6) {{\small $\dfrac{1}{2}$}};
+\node at (45,6) {{\small $\dfrac{1}{2}$}};
+
+
+   \begin{scope}[yshift=-40pt]
+\draw[fill=pink] (0,0) rectangle (60,12);
+\foreach \x in {1,2} \draw (\x*60/3,0) -- (\x*60/3,12);
+
+
+      \begin{scope}[yshift=-40pt]
+\draw[fill=special] (0,0) rectangle (60,12);
+\foreach \x in {1,2,3} \draw (\x*60/4,0) -- (\x*60/4,12);
+
+
+   \begin{scope}[yshift=-40pt]
+\draw[fill=attention] (0,0) rectangle (60,12);
+\foreach \x in {1,...,4} \draw (\x*60/5,0) -- (\x*60/5,12);
+
+
+   \begin{scope}[yshift=-40pt]
+\draw[fill=common] (0,0) rectangle (60,12);
+\foreach \x in {1,...,5} \draw (\x*60/6,0) -- (\x*60/6,12);
+
+
+    \begin{scope}[yshift=-40pt]
+\draw[fill=CornflowerBlue] (0,0) rectangle (60,12);
+\foreach \x in {1,...,6} \draw (\x*60/7,0) -- (\x*60/7,12);
+
+
+   \begin{scope}[yshift=-40pt]
+\draw[fill=dark] (0,0) rectangle (60,12);
+\foreach \x in {1,...,7} \draw (\x*60/8,0) -- (\x*60/8,12);
+
+
+   \begin{scope}[yshift=-40pt]
+\draw[fill=Fuchsia] (0,0) rectangle (60,12);'
+\foreach \x in {1,...,8} \draw (\x*60/9,0) -- (\x*60/9,12);
+
+
+ \begin{scope}[yshift=-40pt]
+ \draw[fill=NavyBlue] (0,0) rectangle (60,12);
+ \foreach \x in {1,...,9} \draw (\x*60/10,0) -- (\x*60/10,12);
+
+
+\begin{scope}[yshift=-40pt]
+    \draw[fill=BlueViolet] (0,0) rectangle (60,12);
+\foreach \x in {1,...,15} \draw (\x*60/16,0) -- (\x*60/16,12);
+\end{scope}\end{scope}\end{scope}\end{scope}\end{scope}\end{scope}\end{scope}\end{scope}\end{scope}\end{scope}
+    \end{tikzpicture}
+ \end{center}
+ 
+\item  Recorte os retângulos da folha que você recebeu e use-os para representar os números a seguir em uma reta numérica construída por você.
+
+  \begin{center}
+$0$, $1$, $\dfrac{1}{2}$, $\dfrac{1}{3}$, $\dfrac{1}{4}$, $\dfrac{3}{4}$, $\dfrac{3}{5}$, $\dfrac{5}{6}$, $\dfrac{7}{6}$, $\dfrac{6}{7}$,  $\dfrac{10}{7}$,  $\dfrac{12}{7}$,  $\dfrac{10}{8}$,  $\dfrac{12}{8}$, $\dfrac{10}{9}$, $\dfrac{12}{9}$, $\dfrac{10}{10}$, $\dfrac{20}{16}$
+  \end{center}
+
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Da esquerda para a direita as frações são 1, $\dfrac{1}{2}$, $\dfrac{1}{3}$, $\dfrac{1}{4}$, $\dfrac{1}{5}$, $\dfrac{1}{6}$, $\dfrac{1}{7}$, $\dfrac{1}{8}$, $\dfrac{1}{9}$, $\dfrac{1}{10}$ e $\dfrac{1}{16}$.
+
+
+\item \mbox{ }
+
+\begin{center}\begin{tikzpicture}[x=37mm,y=35mm]
+\draw[->] (-.1,0) -- (2.1,0);
+\foreach \x in {0,1,2} {\draw (\x,-3pt) -- (\x,3 pt); \node at (\x,10pt) {\x};}
+%\node at (60,-20pt) {1};
+\foreach \x in {2,3,4} {\fill[common] (1/\x,0) circle (2 pt);\node at (1/\x,-10pt) {$\dfrac{1}{\x}$};}
+\fill[common] (.75,0) circle (2 pt);\node at (.75,-10pt) {$\dfrac{3}{4}$};
+\fill[common] (.6,0) circle (2 pt);\node at (.6,-10pt) {$\dfrac{3}{5}$};
+\fill[common] (5/6,0) circle (2 pt);\node at (5/6,-10pt) {$\dfrac{5}{6}$};
+\fill[common] (7/6,0) circle (2 pt);\node at (7/6,-10pt) {$\dfrac{7}{6}$};
+\fill[common] (6/7,0) circle (2 pt);\node at (6/7,10pt) {$\dfrac{6}{7}$};
+\fill[common] (10/7,0) circle (2 pt);\node at (10/7,10pt) {$\dfrac{10}{7}$};
+\fill[common] (12/7,0) circle (2 pt);\node at (12/7,10pt) {$\dfrac{12}{7}$};
+\fill[common] (10/8,0) circle (2 pt);\node at (10/8,-10pt) {$\dfrac{10}{8}$};
+\fill[common] (12/8,0) circle (2 pt);\node at (12/8,-10pt) {$\dfrac{12}{8}$};
+\fill[common] (10/9,0) circle (2 pt);\node at (10/9,10pt) {$\dfrac{10}{9}$};
+\fill[common] (12/9,0) circle (2 pt);\node at (12/9,-10pt) {$\dfrac{12}{9}$};
+\fill[common] (1,0) circle (2 pt);\node at (1,-10pt) {$\dfrac{10}{10}$};
+\fill[common] (20/16,0) circle (2 pt);\node at (20/16,10pt) {$\dfrac{20}{16}$};
+\end{tikzpicture}
+\end{center}
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

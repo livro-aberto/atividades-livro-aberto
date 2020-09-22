@@ -1,0 +1,84 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Existe fração entre $\frac{3}{5}$ e $\frac{4}{5}$?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Perceber a propriedade de densidßade das frações ao obter frações
+que estão entre duas frações diferentes quaisquer, mesmo no caso de numeradores
+consecutivos e denominadores iguais. Isto é, que dadas duas frações
+$\dfrac{a}{b}$       e       $\dfrac{c}{d}$       diferentes (suponha
+$\dfrac{a}{b}<\dfrac{c}{d}$), sempre é possível determinar uma terceira fração
+  $\dfrac{p}{q}$       tal que       $\dfrac{a}{b}<\dfrac{p}{q}<\dfrac{c}{d}$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Recomenda-se que, nesta atividade, os alunos trabalhem
+individualmente ou em duplas. No entanto, é fundamental que os alunos sejam
+estimulados a explicar o raciocínio realizado.
+    \item       Caso seja viável, recomenda-se, na discussão da atividade, o uso
+de um software (o GeoGebra, por exemplo) para marcar na reta numérica as
+sucessivas frações dadas pelos alunos.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Fabrício acredita que não existem frações entre $\dfrac{3}{5}$ e $\dfrac{4}{5}$ (isto é, maiores de que $\dfrac{3}{5}$ e menores do que $\dfrac{4}{5}$) porque $3 < 4$ e não existe número natural entre $3$ e $4$. Fabrício continua: ``Pelo mesmo motivo, não existem frações entre $\dfrac{11}{10}$ e $\dfrac{12}{10}$ e entre $\dfrac{19}{20}$ e $\dfrac{20}{20}$!''. Você concorda com as afirmações e argumentos de Fabrício? Se você acha que Fabrício está errado, determine:
+
+\begin{enumerate}
+\item  Uma fração entre $\dfrac{3}{5}$ e $\dfrac{4}{5}$;
+
+\item  Duas frações entre $\dfrac{11}{10}$ e $\dfrac{12}{10}$;
+
+\item  Uma fração entre $\dfrac{19}{20}$ e $\dfrac{20}{20}$.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+    \item       Note que       $\dfrac{3}{5} = \dfrac{2 \times 3}{2 \times 5} =
+\dfrac{6}{10}$       e       $\dfrac{4}{5} = \dfrac{2 \times 4}{2 \times 5} =
+\dfrac{8}{10}$. Portanto,       $\dfrac{7}{10}$       é tal que       $\dfrac{3}{5}
+< \dfrac{7}{10} < \dfrac{4}{5}$.
+    \item       Note que       $\dfrac{11}{10} = \dfrac{3 \times 11}{3 \times 10}
+= \dfrac{33}{30}$       e       $\dfrac{12}{10} = \dfrac{3 \times 12}{3 \times 10}
+= \dfrac{36}{30}$. Portanto,       $\dfrac{34}{30}$       e       $\dfrac{35}{30}$
+     são tais que       $\dfrac{11}{10} < \dfrac{34}{30} < \dfrac{35}{30} <
+\dfrac{36}{30}$.
+    \item       Note que       $\dfrac{19}{20} = \dfrac{4 \times 19}{4 \times 20}
+= \dfrac{76}{80}$       e       $\dfrac{20}{20} = \dfrac{4 \times 20}{4 \times 20}
+= \dfrac{80}{80}$. Portanto,       $\dfrac{77}{80}$,       $\dfrac{78}{80}$       e
+      $\dfrac{79}{80}$       são tais que       $\dfrac{19}{20} < \dfrac{77}{80} <
+\dfrac{78}{80} < \dfrac{79}{80} < \dfrac{80}{80}$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

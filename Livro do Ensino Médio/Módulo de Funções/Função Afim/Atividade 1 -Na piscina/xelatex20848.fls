@@ -1,0 +1,5 @@
+PWD X:/GitHub/atividades-livro-aberto/Livro do Ensino Médio/Módulo de Funções/Função Afim/Atividade 1 -Na piscina
+INPUT x:/texlive/2020/texmf.cnf
+INPUT x:/texlive/2020/texmf-dist/web2c/texmf.cnf
+INPUT x:/texlive/2020/texmf-var/web2c/xetex/xelatex.fmt
+INPUT piscina.tex

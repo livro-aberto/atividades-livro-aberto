@@ -1,0 +1,101 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao01/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Qual é a unidade dessas figuras?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+\item Relacionar uma fração unitária à unidade correspondente por recomposição. Por exemplo, reconhecer que é necessário reunir cinco quintas partes para recompor a unidade.
+
+\end{enumerate}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+
+\begin{enumerate}[label=\alph*)]
+\item O triângulo cinza é um terço de uma das figuras coloridas. Qual é essa figura? Explique. 
+\item O triângulo cinza é um quarto de alguma dessas figuras? Qual ou quais?
+\item Agora é a sua vez: desenhe uma unidade da qual o triângulo cinza seja um quinto.  
+\item Desafio: Que fração o triângulo cinza é do retângulo laranja? 
+\end{enumerate}
+
+\begin{center}  
+\begin{tabular}[c]{ccc}
+
+\begin{tikzpicture}[scale=20]
+\fill [cbgray] (60:0) -- (120:1) -- (180:1) -- cycle;
+\end{tikzpicture}
+  &
+%losango
+\begin{tikzpicture}[scale=20,rotate=90]
+\fill [cbpink] (60:0) -- (120:1) -- (180:1) -- ++(300:1) -- cycle;
+\end{tikzpicture}
+  &
+%estrela de  seis pontas
+\begin{tikzpicture}[scale=20]
+\fill [cbpurple] (0,0) -- (60:1) -- (120:1) -- cycle;
+\fill [cbpurple,shift={(.5,1.71/6)}] (60:0) -- (120:1) -- (180:1) -- cycle;
+\end{tikzpicture}
+    \\
+%paralelogramo
+\begin{tikzpicture}[scale=20]
+\fill [cbgreen]  (120:1) -- ++(180:1) -- ++(240:1) -- ++(360:2) -- ++(60:1) -- cycle;
+\end{tikzpicture}
+  &
+%retângulo
+\begin{tikzpicture}[scale=20]
+\fill [cborange] (0,0) -- (1,0) -- (1,1.732/2) -- (0,1.732/2) -- cycle;
+\end{tikzpicture}
+  &
+    %trapézio:
+\begin{tikzpicture}[scale=20]
+\fill [cbpink] (60:0) -- (120:1) -- ++(180:1) -- +(240:1) -- cycle;
+\end{tikzpicture}
+  \\
+  %hexágono
+\begin{tikzpicture}[scale=20]
+\fill [cbolive] (60:0) -- (120:1) -- ++(180:1) -- ++(240:1) -- ++(300:1) -- ++(360:1) -- cycle;
+\end{tikzpicture}
+&
+%Bandeirinha
+\begin{tikzpicture}[scale=20,xscale=-1]
+\filldraw [cbyellow]  (120:1) -- ++(180:1) -- ++(240:1) -- ++(360:2) -- ++(60:1) -- cycle;
+\fill [cbyellow,yscale=-1]  (120:1) -- ++(180:1) -- ++(240:1) -- ++(360:2) -- ++(60:1) -- cycle;
+\end{tikzpicture}
+&
+%Triângulo ampliado
+\begin{tikzpicture}[scale=40]
+\fill [cbbrown] (60:0) -- (120:1) -- (180:1) -- cycle;
+\end{tikzpicture}
+\end{tabular}
+\end{center}
+
+\ifdefined\prof
+
+\begin{solucao}
+
+
+
+\end{solucao}
+\fi
+
+\end{document}

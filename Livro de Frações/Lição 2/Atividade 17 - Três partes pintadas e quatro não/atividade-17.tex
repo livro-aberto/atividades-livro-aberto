@@ -1,0 +1,70 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Três partes pintadas e quatro não}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+    \item Perceber que, se uma unidade foi equiparticionada em $n + m$ partes iguais, das quais $n$ foram pintadas, então $\frac{n}{m}$ {\bf não especifica} a fração da unidade que foi pintada.
+
+\end{enumerate}
+\tcblower
+
+\begin{itemize} %s
+    \item       Esta é uma atividade que o aluno pode fazer individualmente, mas é essencial que seja discutida com toda a turma.
+    \item       O tipo de situação descrita na atividade destaca um equívoco comum entre os alunos. Assim, esta atividade é uma oportunidade para reforçar os papéis do denominador e do numerador na notação simbólica matemática para frações: o denominador especifica o número de partes iguais em que a unidade foi dividida e o numerador especifica o número de cópias que foram tomadas de uma destas partes.
+      \item Considere perguntar aos alunos que fração a parte vermelha é da parte azul.
+
+\end{itemize} %s
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A figura a seguir tem 3 partes pintadas de vermelho e 4 partes pintadas de azul. É correto afirmar que a parte pintada de vermelho corresponde a $\frac{3}{4}$ da figura? Explique.
+\begin{center}
+\begin{tikzpicture}[scale=3.5]%[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[fill=attention] (0.,3.) -- (3.,3.) -- (3.,0.) -- (0.,0.) -- cycle;
+\fill[common, fill opacity=.3] (3,0) rectangle (7,3);
+\draw (1.,3.)-- (1.,0.);
+\draw (2.,0.)-- (2.,3.);
+\draw (3.,3.)-- (3.,0.);
+\draw (4.,0.)-- (4.,3.);
+\draw (5.,3.)-- (5.,0.);
+\draw (6.,0.)-- (6.,3.);
+\draw (7.,3.)-- (7.,0.);
+\draw (0.,3.)-- (7.,3.);
+\draw (7.,3.)-- (7.,0.);
+\draw (7.,0.)-- (0.,0.);
+\draw (0.,0.)-- (0.,3.);
+\end{tikzpicture}
+\end{center}
+
+\ifdefined\prof
+
+\begin{solucao}
+
+A parte pintada de vermelho   {\bf não}   corresponde a   $\frac{3}{4}$ da figura. Ela corresponde a $\frac{3}{7}$ da figura, pois a figura foi dividida em   $7$ partes iguais das quais $3$ foram pintadas.
+
+\end{solucao}
+\fi
+
+\end{document}

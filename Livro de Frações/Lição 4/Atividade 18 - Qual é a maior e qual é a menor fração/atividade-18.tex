@@ -1,0 +1,87 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Qual é a maior e qual é a menor fração?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Comparar mais do que duas frações (no caso, três) usando frações
+equivalentes.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Esta é uma atividade que pode ser desenvolvida individualmente.
+Contudo, é fundamental que os alunos sejam estimulados a explicar o raciocínio
+realizado.
+\item       Sugere-se que seja observado para os alunos que o procedimento
+descrito nesta atividade para ordenar três frações pode ser aplicado para um
+número arbitrário de frações.
+\item       Esta atividade foi concebida para ser resolvida usando a notação
+de fração, sem o uso do recurso de modelos de frações uma vez que, neste
+estágio, espera-se que o aluno já tenha o domínio desta técnica de manipulação
+aritmética.
+\item       Observe que a ordenação poderia ser feita comparando-se duas
+frações por vez. A solução indicada reduz a ordenação à ordenação de números
+naturais (os numeradores das frações iguais às frações dadas e todas de mesmo
+denominador).
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+O objetivo desta atividade é determinar qual é a maior e qual é a menor fração entre
+as frações $\dfrac{11}{6}$, $\dfrac{28}{15}$ e $\dfrac{37}{20}$.
+
+\begin{enumerate} %s
+  \item     Determine três frações de mesmo denominador que sejam iguais às frações     $\dfrac{11}{6}$,     $\dfrac{28}{15}$ e     $\dfrac{37}{20}$.
+  \item     Usando as frações do item a), determine qual é a maior e qual é a menor fração entre as frações     $\dfrac{11}{6}$,     $\dfrac{28}{15}$ e     $\dfrac{37}{20}$.
+\end{enumerate} %s
+
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item             $60$       é um múltiplo comum de       $6$,       $20$
+   e       $15$      :       $60 = 10 \times 6$,       $60 = 4 \times 15$
+e       $60 = 3 \times 20$. Portanto,       
+
+\begin{align*}
+\dfrac{11}{6} &= \dfrac{10 \times11}{10 \times 6} = \dfrac{110}{60},\\
+\dfrac{28}{15} &= \dfrac{4\times 28}{4 \times 15} = \dfrac{112}{60} \quad {\rm  e}\\
+\dfrac{37}{20} &= \dfrac{3 \times 37}{3 \times 20} = \dfrac{111}{60}.\\
+\end{align*}
+\mbox{} \newline
+    \item       Tem-se que       $\dfrac{110}{60} < \dfrac{111}{60} <
+\dfrac{112}{60}$. Logo,
+
+  $$\dfrac{11}{6} < \dfrac{37}{20} < \dfrac{28}{15}.$$
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

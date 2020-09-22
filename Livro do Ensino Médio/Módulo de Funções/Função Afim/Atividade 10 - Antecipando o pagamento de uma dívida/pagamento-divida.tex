@@ -1,0 +1,152 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Antecipando o pagamento de uma dívida}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Relacionar função afim de domínio discreto com progressões aritméticas.
+\item Perceber nas sequências apresentadas que a diferença entre termos consecutivos é constante, e portanto elas formam uma P.A.
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Questione seus estudantes sobre o fato de, apesar da variação ser sempre de \textit{250} reais, em um caso a primeira função (valor a pagar) é decrescente e a segunda função (desconto) é crescente, relacionando com as expressões obtidas no item f).
+\item No item d) espera-se que a resposta seja em forma de porcentagem. Caso julgue necessário, aproveite o momento para fazer uma rápida revisão sobre o assunto.
+\item Possivelmente os estudantes não estão familizarizados com alguns dos termos apresentados nessa atividade: \textit{\textbf{antecipação de uma dívida, desconto comercial, tempo de antecipação}}. Antes de iniciar a atividade esclareça para eles o significado de cada um desses termos.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+O cliente de um banco foi à sua agência de relacionamento para negociar a antecipação de uma dívida no valor de \(R\$ 5.000,00\), que venceria no prazo de 8 meses. Lá, foi informado pelo gerente que a modalidade praticada era a de desconto comercial, no qual o valor a ser descontado é calculado a partir do valor da dívida e é proporcional ao tempo de antecipação. Para o caso em questão, o gerente gerou a seguinte quadro:
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|l|c|c|c|c|c|}
+\hline
+\thead
+Antecipação (meses) & 0 & 1 & 2 & 3 & 4 \\
+\hline
+Valor a pagar (R\$) & 5.000 & 4.750 & 4.500 & 4.250 & 4.000 \\
+\hline
+\end{tabu}
+\end{table}
+
+\begin{enumerate}
+\item {} 
+Observando o padrão de desconto, complete a tabela até o 8º mês de antecipação.
+
+\item {} 
+Descreva a variação sofrida pelo valor a pagar à medida que aumenta o tempo de antecipação. O que se pode afirmar sobre a variação observada no valor a pagar entre dois meses consecutivos?
+
+\item {} 
+Descreva a variação sofrida pelo valor do desconto à medida que aumenta o tempo de antecipação. O que se pode afirmar sobre a variação observada no valor de desconto entre dois meses consecutivos?
+
+\item {} 
+Qual é, então, a taxa mensal de desconto comercial praticada pelo banco?
+
+\item {} 
+No plano cartesiano a seguir estão representados os pares ordenados \((n,D(n))\) em que \(n\) é o tempo de antecipação e \(D(n)\) o valor do desconto correspondente. Represente nele os pontos que correspondem aos pares ordenados \((n,V(n))\) em que \(V(n)\) é o valor a pagar no tempo \(n\).
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=2, scale=.5]
+\draw [help lines, ystep=.5] (0,0) grid (9,11);
+\draw [-{>[length=2mm,width=3mm]},thick] (0,0) -- (9,0);
+\draw [-{>[length=2mm,width=3mm]},thick] (0,0) -- (0,11);
+\foreach \x in {1,...,8}
+{
+\node [below,scale=.75] at (\x,0) {\x};
+};
+\node [below,left,scale=.75] at (0,0) {0};
+
+\foreach \x/\y in {1/500,2/1000,3/1500,4/2000,5/2500,6/3000,7/3500,8/4000,9/4500,10/5000}
+{
+\node [left,scale=.75] at (0,\x) {\y};
+};
+
+\foreach \x in {0,1,2,3,4,5,6,7,8}{
+	\node [fill, circle, inner sep=1pt] at (\x,\x*.5) {};
+	}
+
+\end{tikzpicture}
+\end{figure}
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|l|c|c|c|c|}
+\hline
+\thead
+Antecipação (meses) & 5 & 6 & 7 & 8 \\
+\hline
+Valor a pagar (R\$) & 3.750 & 3.500 & 3.250 & 3.000 \\
+\hline
+\end{tabu}
+}
+
+\item A medida que o tempo aumenta, o valor a pagar diminui. Entre dois meses consecutivos a variação do valor a pagar é de R\$ $250,00$.
+
+\item A medida que o tempo aumenta, o valor do desconto aumenta. Entre dois meses consecutivos a variação do desconto é de R\$ $250,00$.
+
+\item $5\%$ do valor da dívida.
+
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[xscale=2, scale=.5]
+\draw [help lines, ystep=.5] (0,0) grid (9,11);
+\draw [-{>[length=2mm,width=3mm]},thick] (0,0) -- (9,0);
+\draw [-{>[length=2mm,width=3mm]},thick] (0,0) -- (0,11);
+\foreach \x in {1,...,8}
+{
+\node [below,scale=.75] at (\x,0) {\x};
+};
+\node [below,left,scale=.75] at (0,0) {0};
+
+\foreach \x/\y in {1/500,2/1000,3/1500,4/2000,5/2500,6/3000,7/3500,8/4000,9/4500,10/5000}
+{
+\node [left,scale=.75] at (0,\x) {\y};
+};
+
+\foreach \x in {0,1,2,3,4,5,6,7,8}{
+	\node [fill, circle, inner sep=1pt] at (\x,\x*.5) {};
+	\node [fill, circle, inner sep=1pt] at (\x,10-\x*.5) {};
+};
+
+\end{tikzpicture}
+}
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

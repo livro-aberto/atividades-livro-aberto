@@ -1,0 +1,84 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Três de cinco partes pintadas}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+    \item Diferenciar ``a divisão da unidade em cinco partes quaisquer'' da ``divisão da unidade em cinco partes iguais''.
+
+\end{enumerate}
+\tcblower
+
+\begin{itemize} %s
+    \item       Esta é uma atividade que o aluno pode fazer individualmente, mas é essencial que seja discutida com toda a turma.
+    \item       No final da atividade, é importante salientar que o fato de  uma figura estar divida em 5 partes e 3 delas estarem pintadas de vermelho,       {\bf não necessariamente implica}       que a região pintada é       $\frac{3}{5}$ da figura.
+    \item       O tipo de situação descrita na atividade é um equívoco comum entre os alunos, isto é, eles equivocadamente contam partes sem o cuidado de verificar se as partes nas quais a unidade está dividida correspondem a uma mesma quantidade.
+\end{itemize} %s
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Miguel disse para Alice que a parte pintada de vermelho na figura a seguir corresponde a $\frac{3}{5}$ da figura, pois ela está dividida em 5 partes e 3 partes estão pintadas. Você concorda com a afirmação e com a justificativa de Miguel? Explique!
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+%\fill[fill=attention,fill opacity=0.1] (0.,5.) -- (9.,5.) -- (9.,-5.) -- (0.,-5.) -- cycle;
+\filldraw[fill=attention,fill opacity=1.0] (0,0) rectangle (9,5);
+\filldraw[fill=common, fill opacity=.3] (0,-5) rectangle (9,0);
+%\draw   (0.,5.)-- (9.,5.);
+%\draw   (9.,5.)-- (9.,-5.);
+
+%\draw   (0.,-5.)-- (0.,5.);
+%\draw   (0.,5.)-- (0.,0.);
+%\draw   (0.,0.)-- (9.,0.);
+%\draw   (9.,0.)-- (9.,5.);
+%\draw   (9.,5.)-- (0.,5.);
+%\draw   (0.,5.)-- (9.,5.);
+%\draw   (9.,0.)-- (0.,0.);
+%\draw   (0.,0.)-- (0.,5.);
+%\draw   (9.,5.)-- (9.,0.);
+\draw   (3.,0.)-- (3.,5.);
+\draw   (6.,5.)-- (6.,0.);
+\draw   (4.5,-5.)-- (4.5,0.);
+\draw   (0.,-5.)-- (9.,-5.);
+%\draw   (9.,-5.)-- (9.,0.);
+%\draw   (9.,0.)-- (0.,0.);
+%\draw   (0.,0.)-- (0.,-5.);
+% \begin{scriptsize}
+% %\draw[color=ffqqqq] (4.725943121127749,2.6736730506884316) node {$pol2$};
+% \end{scriptsize}
+\draw   (9.,-5.)-- (0.,-5.);
+\end{tikzpicture}
+\end{center}
+
+\ifdefined\prof
+
+\begin{solucao}
+
+Miguel está equivocado: a região pintada da figura   {\bf não}   corresponde a   $\frac{3}{5}$ da figura porque a figura não está dividida em 5 partes ``iguais'', ou seja, a figura não está ``dividida em partes iguais'' em 5 partes para que as 3 partes pintadas correspondam a   $\frac{3}{5}$ da mesma. Outra justificativa possível é: a parte pintada é formada por 3 partes iguais,porém,  justapondo-se 5 cópias de uma destas partes, não é possível recompor a figura inteira, logo, a parte pintada não é $\frac{3}{5}$ da figura.
+
+
+\end{solucao}
+\fi
+
+\end{document}

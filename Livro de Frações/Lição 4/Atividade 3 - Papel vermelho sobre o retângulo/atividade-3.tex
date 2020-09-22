@@ -1,0 +1,97 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Reconhecer que as frações       $\frac{3}{4}$       e
+$\frac{12 \times 3}{12 \times 4}$       são iguais a partir da observação das
+representações destas frações em modelos de área sem a contagem um a um das
+partes que compõem as subdivisões destas representações.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Recomenda-se que, nesta atividade, os alunos trabalhem
+individualmente ou em duplas. No entanto, é fundamental que os alunos sejam
+estimulados a explicar o raciocínio realizado.
+\item       O propósito de encobrir as divisões do retângulo é para evitar
+que os alunos façam a contagem das partes uma a uma e que, assim, sejam
+estimulados a perceber a estrutura multiplicativa       $12 \times 3$       e
+$12 \times 4$       na divisão do retângulo.
+\item       É importante, ao final da atividade, observar para os alunos que
+uma mesma parte do retângulo (a área da região pintada de azul) está sendo
+descrita por frações com numeradores e denominadores diferentes (isto é, por
+frações equivalentes), mas que, não obstante, por expressarem uma mesma
+quantidade, estas frações são iguais. 
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\textit{(Garcez, 2013)}
+
+\begin{enumerate} %s
+  \item     O retângulo desenhado a seguir está dividido em     $4$ partes iguais, das quais     $3$ estão pintadas de azul. Que fração do retângulo está pintada de azul?
+  \begin{center}
+\begin{tikzpicture}[scale=.8]
+\draw[fill=common] (0,0) rectangle (30,30);
+\draw (30,0) rectangle (40,30);
+\draw  (10,0)-- (10,30);
+\draw  (20,0)-- (20,30);
+\end{tikzpicture}
+\end{center}
+
+\item     O retângulo do item anterior foi dividido com o acréscimo de onze linhas horizontais igualmente espaçadas e ele está parcialmente coberto com um papel vermelho que impede a visualização dos retângulos menores que compõem a nova equipartição. Com essa nova divisão, em quantas partes ficou dividido o retângulo inicial? Quantas dessas partes estão pintadas de azul? Que fração do retângulo está pintada de azul?     \mbox{} \newline
+\end{enumerate} %s
+
+\begin{center}
+\begin{tikzpicture}[scale=.8]
+\draw[fill=common] (0,0) rectangle (30,30);
+\draw (30,0) rectangle (40,30);
+\draw  (10,0)-- (10,30);
+\draw  (20,0)-- (20,30);
+\foreach \x in {1,...,11}{
+\draw (0,\x*30/12) -- (40,\x*30/12);}
+\fill[attention] (5,-10) rectangle (55,29);
+\end{tikzpicture}
+\end{center}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item             $\frac{3}{4}$.
+\item       Com a nova divisão, o retângulo inicial ficou dividido em       $12
+\times 4 = 48$ retângulos menores, dos quais       $12 \times 3 = 36$       estão
+pintados de azul. Assim, a fração do retângulo inicial que está pintada de azul é
+$\frac{12 \times 3}{12 \times 4} = \frac{36}{48}$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

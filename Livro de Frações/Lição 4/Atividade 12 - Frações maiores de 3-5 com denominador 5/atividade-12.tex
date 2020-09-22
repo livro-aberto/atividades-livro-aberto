@@ -1,0 +1,102 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao04/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Frações maiores que $\frac{3}{5}$ com denominador $5$}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Reconhecer que, dada uma fração       $p = \frac{n}{d}$, existe
+um quantidade finita de frações da forma       $\frac{k}{d}$       que são
+menores do que       $p$       e uma quantidade infinita de frações da forma
+$\frac{k}{d}$       que são maiores do que       $p$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Recomenda-se que, nesta atividade, os alunos trabalhem
+individualmente ou em duplas. No entanto, é fundamental que os alunos sejam
+estimulados a explicar o raciocínio realizado.
+\item       Alguns alunos podem ainda necessitar de apoio de material
+concreto para responder à questão.
+\item       Recomenda-se que, na discussão da atividade, uma reta numérica
+com quintos marcados seja usada como uma contrapartida visual para as respostas
+das perguntas.
+\end{itemize}
+
+\begin{center}\begin{tikzpicture}[x=23mm,y=23mm]
+\draw[->] (-0.1,0) -- (3.1,0);
+\foreach \x in {0,...,3}{ \draw (\x,-3pt) -- (\x, 3pt);  \node[above] at (\x,3pt) {\x}; }
+
+\foreach \x in {0,1,...,15}{
+\draw (\x/5,-2pt) -- (\x/5, 2pt);
+\node[below] at (\x/5,-2 pt) {$\frac{\x}{5}$};}
+
+\fill[common] (3/5,0) circle (2pt);
+\end{tikzpicture}
+\end{center}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{enumerate} %s
+  \item     Quantas são as frações com denominador igual a 5 que são menores do que $\frac{3}{5}$? Explique como você chegou à sua resposta.
+  \item     Quantas são as frações com denominador igual a 5 que são maiores do que $\frac{3}{5}$? Explique como você chegou à sua resposta.
+\end{enumerate} %s
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item       Três frações:       $\frac{0}{5}$,       $\frac{1}{5}$       e
+$\frac{2}{5}$. Justificativa:       $\frac{3}{5}$       são três
+``cópias''       de       $\frac{1}{5}$. Qualquer outra fração de denominador
+$5$       também é composta por uma quantidade inteira de       ``cópias''
+de       $\frac{1}{5}$, quantidade esta determinada pelo numerador de fração.
+Para se ter então uma fração de denominador       $5$       menor do que
+$\frac{3}{5}$, devemos ter menos do que       $3$             ``cópias''
+de       $\frac{1}{5}$      :       $2$             ``cópias''      ,       $1$
+   ``cópia''       ou       $0$             ``cópia''. Assim, as
+frações de denominador       $5$       menor do que       $\frac{3}{5}$
+são       $\frac{0}{5}$,       $\frac{1}{5}$       e       $\frac{2}{5}$.
+\item       Infinitas frações       $\frac{4}{5}$,       $\frac{5}{5}$,
+$\frac{6}{5}$,       $\frac{7}{5}$, etc. Justificativa:       $\frac{3}{5}$
+são três       ``cópias''       de       $\frac{1}{5}$. Qualquer outra fração
+de denominador       $5$       também é composta por uma quantidade inteira de
+``cópias''       de       $\frac{1}{5}$, quantidade esta determinada pelo
+numerador de fração. Para se ter então uma fração de denominador       $5$
+maior do que       $\frac{3}{5}$, devemos ter mais do que       $3$
+``cópias''       de       $\frac{1}{5}$      :       $4$             ``cópias''
+,       $5$             ``cópias''      ,       $6$             ``cópias''
+,       $7$             ``cópias''      , etc. Assim, as frações de
+denominador       $5$       maiores do que       $\frac{3}{5}$       são
+$\frac{4}{5}$,       $\frac{5}{5}$,       $\frac{6}{5}$,       $\frac{7}{5}$,
+etc.
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

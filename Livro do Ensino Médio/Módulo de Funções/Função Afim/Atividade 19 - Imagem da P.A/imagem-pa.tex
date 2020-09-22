@@ -1,0 +1,90 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Imagem da P.A.}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Deduzir que as funções afins preservam progressões aritméticas.
+\item Reconhecer a relação entre as razões das P.A. e a taxa de variação das funções afins.
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Verifique se as conjecturas do item (e) estão formuladas de maneira precisa, mesmo que sejam textuais.
+\item Como a demonstração desse fato é simples, conduza os estudantes para a justificativa/demonstração.
+\end{itemize}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Considere as funções afins $f,g$ definidas por $f(x)=3x+1$ e $g(x)=-5x+2$.
+\begin{enumerate}
+\item Complete a tabela abaixo com as imagens pedidas
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|>{$}c<{$}|*{9}{c|}}
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{x}} & & & & & & & & & \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{f(x)}} & & & & & & & & & \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{g(x)}} & & & & & & & & & \\
+\hline
+\end{tabu}
+\end{table}
+\item Qual a razão da P.A. da primeira linha da tabela?
+\item As imagens pela função $f$ formam tabém uma P.A.? Caso positivo, qual a razão?
+\item E as imagens pela função $g$? Caso positivo, qual a razão?
+\item Faça uma conjectura sobre o que acontece com as imagens de uma P.A. por uma função afim.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|>{$}c<{$}|*{9}{c|}}
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{x}} & 2 & 5 & 8 & 11 & 14 & 17 & 20 & 23 & 26 \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{f(x)}} & 7 & 16 & 25 & 34 & 43 & 52 & 61 & 70 & 79 \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{g(x)}} & -8 & -23 & -38 & -53 & -68 & -83 & -98 & -113 & -128 \\
+\hline
+\end{tabu}
+}
+
+\item Razão $3$.
+\item Sim, uma P.A. de razão $9$.
+\item Sim, uma P.A. de razão $-15$.
+\item As imagens de uma P.A. por uma função afim também formam uma P.A..
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

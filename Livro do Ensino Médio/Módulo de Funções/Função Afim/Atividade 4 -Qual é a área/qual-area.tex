@@ -1,0 +1,200 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Em um círculo dado, reconhecer a relação de dependência entre a medida do ângulo central e a medida da área do setor circular.
+
+\item Inferir que a medida da área do setor é diretamente proporcional a medida do ângulo central.
+
+\item Determinar a medida da área do setor circular dada a medida do ângulo central e vice-versa.
+
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Nos dois primeiros itens procure incentivar os alunos a resolver o problema utilizando apenas processos mentais, ou ao menos na hora de discutir a solução, utilize argumentações que valorizem a estimativa, tais como:
+
+\begin{enumerate}
+\item Como $\frac{1}{4}$ de $20$ é $5$, e $14$ é um valor um pouco menor que $34$ de $20$ então o setor circular de área $14$ tem que ser menor do que $34$ do círculo.
+
+\item Ao analisar as opções descartamos a opção “2” por ser uma região menor que $34$ da área do círculo, descartamos também a opção “3” por se tratar de um valor entre $15$ e $20$ mais próximo de $15$, logo a resposta correta está representada pela opção “1”.
+\end{enumerate}
+
+\item Nos itens c) e d), discuta com a turma a importância de ter sido apresentado a medida do ângulo.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Caso tenha disponibilidade, sugerimos o uso da construção GeoGebra disponível \href{https://www.geogebra.org/m/Xjjym4e7}{neste link}, que é a versão eletrônica dessa atividade.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=100bp]{{codigo-qual-area}.png}
+\end{figure}
+
+
+
+\begin{enumerate}
+\item {}
+Cada círculo representado a seguir tem área total \(20\). Um   dos setores circulares destacados em verde nesses círculos tem área \(14\). Qual é esse setor?
+
+\begin{figure}[H]
+\centering
+
+  \begin{tikzpicture}
+    \draw(0,0)circle(1);
+    \draw[fill=\currentcolor!80] (1,0)--(0,0) --(210:1) arc (210:0:1);
+    \node at(-1,1){1)};
+\end{tikzpicture}\quad\quad\quad
+ \begin{tikzpicture}
+    \draw(0,0)circle(1);
+    \draw[fill=\currentcolor!80] (1,0)--(0,0) --(250:1) arc (250:0:1);
+    \node at(-1,1){2)};
+ \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+    \draw(0,0)circle(1);
+    \draw[fill=\currentcolor!80] (1,0)--(0,0) --(270:1) arc (270:0:1);
+    \node at(-1,1){3)};
+ \end{tikzpicture}
+\end{figure}
+
+\item{}
+Agora, um dos setores circulares em verde tem área \(18\). Qual é esse setor?
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}
+  \draw(0,0)circle(1);
+  \draw[fill=\currentcolor!80] (1,0)--(0,0) --(330:1) arc (330:0:1);
+  \node at(-1,1){1)};
+ \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+  \draw(0,0)circle(1);
+  \draw[fill=\currentcolor!80] (1,0)--(0,0) --(250:1) arc (250:0:1);
+  \node at(-1,1){2)};
+ \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+  \draw(0,0)circle(1);
+  \draw[fill=\currentcolor!80] (1,0)--(0,0) --(300:1) arc (300:0:1);
+  \node at(-1,1){3)};
+\end{tikzpicture}
+
+\end{figure}
+
+ \item{}
+Explique a estratégia matemática que você utilizou para resolver os itens anteriores? Dentre os setores circulares apresentados a seguir, um deles tem área \(7\). Aplique sua estratégia para determinar qual é esse setor.
+
+\begin{figure}[H]
+\centering
+
+
+ \begin{tikzpicture}
+
+   \draw(0,0)circle(1);
+   \draw[fill=\currentcolor!80] (1,0)--(0,0) --(110:1) arc (110:0:1);
+   \node at(-1,1){1)};
+ \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+        \draw(0,0)circle(1);\draw[fill=\currentcolor!80] (1,0)--(0,0) --(126:1) arc (126:0:1);\node at((-1,1){2)};
+         \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+        \draw(0,0)circle(1);
+        \draw[fill=\currentcolor!80] (1,0)--(0,0) --(142:1) arc (142:0:1);
+        \node at(-1,1){2)};
+      \end{tikzpicture}
+ \end{figure}
+      
+\item{}
+Possivelmente você encontrou alguma dificuldade para determinar a resposta correta no item anterior. Que tal acrescentarmos uma informação a mais para ajudar na decisão?
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}
+  \draw(0,0)circle(1);
+  \draw[fill=\currentcolor!80] (1,0)--(0,0) --(110:1) arc (110:0:1);
+  \node at(-1,1){1};
+  \draw[atento] (.2,0) arc (0:110:.2);
+  \node at(.5,.35){\small $ 110^\circ$};
+   \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+        \draw(0,0)circle(1);
+        \draw[fill=\currentcolor!80] (1,0)--(0,0) --(126:1) arc (126:0:1);
+        \node at(-1,1){2)};\draw[atento] (.2,0) arc (0:126:.2);
+        \node at(.5,.35){\small $126^\circ$};
+ \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+        \draw(0,0)circle(1);
+        \draw[fill=\currentcolor!80] (1,0)--(0,0) --(142:1) arc (142:0:1);
+        \node at(-1,1){23)};
+        \draw[atento] (.2,0) arc (0:142:.2);
+        \node at(.5,.35){\small $ 142^\circ$};
+ \end{tikzpicture}
+ \end{figure}
+
+\item{}
+E agora? Como você usou a medida do ângulo que determina o setor circular para ajudar no cálculo da área? Vamos fazer mais uma vez! Um dos setores apresentados a seguir tem área \(4\). Determine esse setor.
+
+\begin{figure}[H]
+\centering
+
+
+ \begin{tikzpicture}
+\draw(0,0)circle(1);\draw[fill=\currentcolor!80] (1,0)--(0,0) --(72:1) arc (72:0:1);\node at(-1,1){1}; \draw[atento] (.2,0) arc (0:72:.2);\node at(.55,.22){\small $ 72^\circ$}; \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+\draw(0,0)circle(1);\draw[fill=\currentcolor!80] (1,0)--(0,0) --(60:1) arc (60:0:1);\node at(-1,1){2)};\draw[atento] (.2,0) arc (0:60:.2);\node at(.55,.25){\small $ 60^\circ$}; \end{tikzpicture}\quad\quad\quad
+      \begin{tikzpicture}
+\draw(0,0)circle(1);\draw[fill=\currentcolor!80] (1,0)--(0,0) --(45:1) arc (45:0:1);\node at(-1,1){3)};\draw[atento] (.2,0) arc (0:45:.2);\node at(.55,.25){\small $ 45^\circ$};
+ \end{tikzpicture}%\label{fig-setor5}
+\end{figure}
+
+\item{}
+Determine a função que relaciona a área do setor circular com o seu ângulo central, especificando seu domínio.
+
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+\begin{enumerate}
+\item 2)
+\item 1)
+\item Uma possível resposta seria: sendo a área total do círculo igual a $20$, então $14$ do círculo equivale a uma área 5. No entanto, como as áreas destacadas nos itens apresentados estão muito próximas esse critério não nos permite concluir com exatidão qual seria a resposta correta, que no caso é o item 2).
+\item 2)
+\item Fazendo uma regra de três, item 1).
+\item $S:[0,360]\rightarrow\R$ em que $S(x)=\frac{x}{18}$
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao02}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Três quintos, três meios ou três?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{goals}
+\begin{enumerate}
+
+    \item       Perceber a importância da unidade na representação de quantidades.
+
+\end{enumerate}
+\tcblower
+
+\begin{itemize} %s
+    \item       Esta é uma atividade que o aluno pode fazer individualmente, mas é essencial que seja discutida com toda a turma.
+    \item       No final da atividade, é importante enfatizar para seus alunos a propriedade matemática que esta atividade quer destacar, ou seja, que uma mesma quantidade pode ser expressa por frações diferentes dependendo da unidade escolhida. Observe para eles que, no contexto       ``frações de'', é fundamental saber a que o       ``de''     se refere, isto é, qual é a unidade que está sendo considerada. Neste sentido, esta atividade está fortemente relacionada com as Atividades 8 e 13.
+\end{itemize} %s
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Júlia, Davi e Laura estavam estudando a figura a seguir.
+\begin{center}
+\begin{tikzpicture}[scale=4]
+%\fill(1.,3.) -- (6.,3.) -- (6.,0.02) -- (1.,0.) -- cycle;
+\fill[attention] (1.,3.) -- (4.,3.) -- (4.,0.012) -- (1.,0.) -- cycle;
+\fill[common, fill opacity=.3] (4,0) rectangle (6,3);
+%\fill[line width=0.pt,color=black,fill=black,fill opacity=1.0] (4.,3.) -- (4.,0.012) -- (6.,0.04) -- (6.,3.) -- cycle;
+\draw (1.,3.)-- (1.,0.);
+\draw (2.,0.)-- (2.,3.);
+\draw (3.,3.)-- (3.,0.);
+\draw (4.,0.)-- (4.,3.);
+\draw (5.,3.)-- (5.,0.);
+\draw (6.,0.)-- (6.,3.);
+\draw (1.,3.)-- (6.,3.);
+\draw (6.,3.)-- (6.,0.02);
+\draw (6.,0.02)-- (1.,0.);
+\draw (1.,0.)-- (1.,3.);
+\end{tikzpicture}
+\end{center}
+Júlia disse: ``A parte em vermelho representa $\frac{3}{5}$.''. Davi retrucou: ``Não, não! A parte em vermelho representa $\frac{3}{2}$!''. Laura, então acrescentou: ``Eu acho que a parte em vermelho representa $3$!''. Quem está certo? Júlia, Davi ou Laura? Explique!
+
+\ifdefined\prof
+
+\begin{solucao}
+
+  As afirmações de Júlia, Davi e Laura estão incompletas, pois eles não informaram a   {\bf unidade}. De fato, dependendo da escolha da unidade, cada um deles pode estar certo e os demais errados. Por exemplo, se a unidade for
+\begin{center}
+  \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3, scale=4] (0,0) rectangle (5,3);
+\end{tikzpicture}
+\end{center}
+então a parte pintada de vermelho em
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=attention, scale=4] (0,0) rectangle (3,3);
+ \draw[fill=common, fill opacity=.3, scale=4] (3,0) rectangle (5,3);
+ \foreach \x in {1,2,4} \draw[scale=4] (\x,0) -- (\x,3);
+\end{tikzpicture}
+\end{center}
+de fato corresponde a   $\frac{3}{5}$ desta unidade, de modo que, nesta situação, Júlia está certa e David e Laura estão errados. Contudo, se a unidade for
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3, scale=4] (0,0) rectangle (2,3);
+\end{tikzpicture}
+\end{center}
+então a parte pintada de vermelho em
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=attention, scale=4] (0,0) rectangle (3,3);
+ \draw[fill=common, fill opacity=.3, scale=4] (3,0) rectangle (5,3);
+ \foreach \x in {1,2,4} \draw[scale=4] (\x,0) -- (\x,3);
+\end{tikzpicture}
+\end{center}
+  corresponde a   $\frac{3}{2}$ desta unidade,  de modo que, nesta situação, David está certo e Júlia e Laura estão errados. Finalmente, se a unidade for
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3, scale=4] (0,0) rectangle (1,3);
+\end{tikzpicture}
+\end{center}
+então a parte pintada de vermelho em
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=attention, scale=4] (0,0) rectangle (3,3);
+ \draw[fill=common, fill opacity=.3, scale=4] (3,0) rectangle (5,3);
+ \foreach \x in {1,2,4} \draw[scale=4] (\x,0) -- (\x,3);
+\end{tikzpicture}
+\end{center}
+  corresponde a   $3$ desta unidade e, neste caso, Laura está certa e David e Júlia estão errados.
+
+\end{solucao}
+\fi
+
+\end{document}

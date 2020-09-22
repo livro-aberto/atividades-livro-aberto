@@ -1,0 +1,130 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Perceber com o auxílio da representação gráfica a relação entre taxa de variação média negativa e função linear decrescente.
+\end{enumerate}
+
+\tcblower
+
+É possível que os estudantes utilizem regra de três para responder as questões propostas no item a). A seguir iremos construir a representação gráfica da função linear, por isso é importante fazer a conexão da regra de três com sua interpretação geométrica, destacando o uso da semelhança de triângulos.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[yscale=.5]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0,    draw=black, fill=black, shift only]
+\draw[->, thick](-1,0)--(5,0);
+\draw[->, thick](0,-13)--(0,2);
+\draw[primario, thick](0,0)--(4,-12);
+\draw[dashed](0,-12)--(4,-12)--(4,0);
+\node[ponto]at (0,0){};
+\node[ponto]at (4,-12){};
+\node[above,rotate=90] at(-1,-10){Temperatura $^\circ$C};
+\node[above] at(5,0){Tempo (h)};
+\node[above] at(4,0){8};
+\node[left] at(0,-12){$-24$};
+\node[above] at(2,0){$t$};
+\node[left] at(0,-6){$f(t)$};
+\draw[dashed](2,0)--(2,-6)--(0,-6);
+\node[ponto]at (2,-6){};
+\end{tikzpicture}
+\end{figure}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Uma câmara frigorífica está programada para diminuir sua temperatura segundo uma taxa constante em \(^\circ C\) por hora. Na primeira observação constata-se que ela está a \(0^\circ C\). Após \(8\) horas, realiza-se uma nova observação e seu visor mostra a temperatura de \(-24^\circ C\) e também o seguinte gráfico para a evolução da temperatura em função do tempo.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[yscale=.75, xscale=1.25]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only]
+\draw(-3,-.05) grid(5,.05);
+\draw(-.05,-12) grid(.05,2);
+\draw[->, thick](-3,0)--(5,0);
+\draw[->, thick](0,-12)--(0,2);
+\draw[\currentcolor!80, thick](0,0)--(4,-12);
+\draw[dashed](0,-12)--(4,-12)--(4,0);
+\node[ponto]at (0,0){};
+\node[ponto]at (4,-12){};
+\node[above,rotate=90] at(-1,-10){Temperatura $^\circ$C};
+\node[above] at(4,0){Tempo (h)};
+\foreach\x in{-4, -2, 0, 2, 4, 6, 8}
+\node[below left] at (.5*\x, 0){\x};
+\foreach \y in{-24, -22, -20, ..., -2}
+\node[left]at(0,.5*\y){\y};
+\node[left]at(0,1){2};
+\node[left]at(0,2){4};
+\end{tikzpicture}
+\end{figure}
+\begin{enumerate}
+\item {} 
+Qual a temperatura da câmara \(1\) hora após a primeira observação? E \(5\) horas após a primeira observação? E \(t\) horas após a primeira observação?
+
+\item {} 
+Qual o valor da taxa (de variação média) constante segundo a qual a temperatura diminui?
+
+\item {} 
+Determine a função que relaciona temperatura e tempo nesse contexto, considerando para seu domínio o intervalo de números reais \([0,8]\). Ela é uma função crescente ou decrescente? Por que?
+
+\item {} 
+Como seria o gráfico se a temperatura, no mesmo intervalo de tempo, ao invés de diminuir, estivesse aumentando \(1,5^\circ C/h\)? Qual seria a expressão da função, nesse caso? Teríamos uma função crescente ou decrescente? Por que?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item Após 1 hora desde a primeira observaço, a temperatura será de $-3^{\circ}$ C. Após 5 horas, a temperatura será de $-15^{\circ}$, e $t$ horas após a primeira observação, a temperatura 'será de $-3t^{\circ}$ C
+
+\item $-3^{\circ}$ C/h
+
+\item $f:[0,8]\rightarrow\R, f(t)=-3t$ é uma função decrescente, pois à medida que o tempo aumenta, a temperatura correspendente diminui. Ou ainda, para quaisquer tempos $t_1$ e $t_2$ tais que $t_1<t_2$ tem-se que $-3t_1>-3t_2$, isto é $f(t_1)>f(t_2)$.
+
+\item A expressão da função é $f(t)=1{,}5\cdot t$. É uma função crescente, pois à medida que o tempo aumenta, a temperatura correspendente também aumenta.
+
+\begin{tikzpicture}
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
+\draw[->, thick](-1,0)--(6,0)node[above, xshift=-.5cm]{Tempo (h)};
+\draw[->, thick](0,-1)--(0,7)node[left,xshift=-.7cm, rotate=90]{Temperatura ($^\circ$C)};
+\draw[primario, domain=0:4.4]plot(\x, 1.5*\x);
+\node[below]at (1,0){1};
+\node[below]at (4,0){8};
+\node[left]at (0,1.5){1.5};
+\node[left]at (0,6){12};
+\draw[dashed](0,1.5)--(1,1.5)--(1,0);
+\draw[dashed](0,6)--(4,6)--(4,0);
+\end{tikzpicture}
+
+\item Quando a taxa de variação média de uma função linear é um número real \textit{positivo}, a função é \textit{crescente} e quando a taxa é um número real \textit{negativo}, a função é \textit{descrescente}.
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,184 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Na Piscina}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Reconhecer uma relação de proporcionalidade entre grandezas a partir da análise gráfica e da construção e análise dos dados em uma tabela;
+
+\item Conjecturar sobre a representação gráfica de grandezas diretamente proporcionais, associando-a a um conjunto de pontos colineares
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item Como primeira atividade do capítulo, priorize as ideias em detrimento do rigor matemático. Ajude seus estudantes a transcreverem suas ideias de maneira precisa, ainda que informais.
+No item (b), podem surgir respostas como: a primeira coluna aumenta de “uma em uma hora” enquanto a segunda aumenta de “200 em 200 litros”; a segunda coluna é obtida multiplicando a primeira por 200; tabela gerada pela função f(n)=200⋅n com domínio {0,1,2,3,4,5}. Apesar de não serem consequências diretas da definição, estão corretas e serão tratadas ao longo do capítulo.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Duas piscinas de 1000 litros cada estão sendo enchidas simultaneamente. A piscina 1 leva 5 horas para ficar completamente cheia e a piscina 2, 8 horas. A cada hora, o volume total de água em cada piscina foi sendo registrado em dois gráficos
+
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=1.5, every node/.style={scale=1}]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=\currentcolor!80, fill=\currentcolor!80, shift only]
+\begin{scope}[yscale=.5]
+\draw[lightgray](0,0)grid[xstep=.25,ystep=.25](6,10);
+\draw[gray](0,0)grid(6,10);
+\draw[thick, ->](0,0)--(6,0)node [below, shift={(-0.55,-0.2)}]{tempo(horas)};
+\draw[thick, ->](-0,0)--(0,10);
+\node[right, rotate=90]at (-.9,6){capacidade(litros)};
+\foreach \x in{0,1, 2, 3, 4, 5}
+\node[ponto]at(\x,2*\x){};
+\foreach\x in{0,1, 2, 3, 4, 5, 6}
+\node[below] at(\x, 0){ \x};
+\foreach\y in{100, 200, 300, ..., 1000}
+\node[left]at(0,.01*\y){ \y};
+\end{scope}
+\end{tikzpicture}
+\caption{Piscina 1}
+\label{piscina1}
+\end{figure}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=1.5, every node/.style={scale=1}]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=\currentcolor!80, fill=\currentcolor!80, shift only]
+\begin{scope}[yscale=.5]
+\draw[lightgray](0,0)grid[xstep=.25,ystep=.25](8,10);
+\draw[gray](0,0)grid(8,10);
+\draw[thick, ->](0,0)--(8,0)node [below, shift={(-0.55,-0.3)}]{tempo(horas)};
+\draw[thick, ->](-0,0)--(0,10);
+\node[right, rotate=90]at (-.9,6){ capacidade(litros)};
+\node[ponto]at(0,0){};
+\node[ponto]at(1,1.5){};
+\node[ponto]at(2,2){};
+\node[ponto]at(3,3){};
+\node[ponto]at(4,5){};
+\node[ponto]at(5,8){};
+\node[ponto]at(6,9){};
+\node[ponto]at(7,9.5){};
+\node[ponto]at(8,10){};
+\foreach\x in{0,1, 2, 3, 4, 5, 6, 7, 8}
+\node[below] at(\x, 0){\x};
+\foreach\y in{100, 200, 300, ..., 1000}
+\node[left]at(0,.01*\y){\y};
+\end{scope}
+\end{tikzpicture}
+\caption{Piscina 2}
+\label{piscina2}
+
+\end{figure}
+
+\begin{enumerate}
+\item {} 
+Construa uma tabela com os dados de cada gráfico.
+
+\item {} 
+As grandezas volume total de água e tempo de enchimento da piscina 1 são diretamente proporcionais? Explique.
+
+\item {} 
+As grandezas volume total de água e tempo de enchimento da piscina 2 são diretamente proporcionais? Explique.
+
+\end{enumerate}
+
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item Piscina 1
+
+\adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+(Tempo ($\rm{h}$) & volume (litros) \\
+\hline
+0 & 0 \\
+\hline
+1 & 200 \\
+\hline
+2 & 400 \\
+\hline
+3 & 600 \\
+\hline
+4 & 800 \\
+\hline
+5 & 1000 \\
+\hline
+\end{tabu}
+}
+
+\vspace{2em}
+
+Piscina 2
+
+\adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+(Tempo ($\rm{h}$) & volume (litros) \\
+\hline
+0 & 0 \\
+\hline
+1 & 150 \\
+\hline
+2 & 200 \\
+\hline
+3 & 300 \\
+\hline
+4 & 500 \\
+\hline
+5 & 800 \\
+\hline
+6 & 900 \\
+\hline 
+7 & 950 \\
+\hline
+8 & 1000 \\
+\hline
+\end{tabu}
+}
+
+\vspace{2em}
+
+
+\item Sim, pois para $k\in\{0,2,3,4,5\}$ tempo
+\[\begin{array}{ccc}
+x\quad &\overline{\quad \quad \quad}& \quad y \\
+k\cdot 1 \quad &\overline{\quad \quad \quad}& \quad k\cdot 200
+\end{array}\]
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

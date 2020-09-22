@@ -1,0 +1,118 @@
+
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \phantom{a}
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Perceber, a partir da taxa de variação média constante, que o gráfico de uma função linear está contido em uma reta.
+\end{enumerate}
+
+\tcblower
+
+\begin{itemize}
+\item No item d) é possível que os estudantes façam direto a “regra de três”; o que está correto. Contudo, peça para que justifiquem o procedimento usando alguma justificativa geométrica envolvendo os pontos do gráfico. A ideia é que, nesse item eles percebam os triângulos semelhantes que podem ser considerados para a solução.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=100bp]{{celular}.jpg}
+\end{figure}
+
+O tempo total de recarga da bateria (de \(0\%\) a \(100\%\)) de um determinado modelo de telefone celular é  de \(2\) horas e \(5\) minutos. Supondo que o carregamento ocorre segundo uma taxa constante:
+
+\begin{enumerate}
+\item {} 
+Faça uma tabela que forneça o percentual de carga na bateria a cada \(25\) minutos, a partir de zero.
+
+\item {} 
+Represente em um plano cartesiano os pontos da tabela do item anterior.
+
+\item {} 
+Descreva uma estratégia que permita, a partir da representação gráfica obtida no item anterior, determinar o percentual de carga na bateria após \(40\) minutos de carregamento.
+
+\item {} 
+Determine a função que modela o carregamento desse modelo de telefone, especificando seus domínio e conjunto imagem.
+
+\item {} 
+Qual é a taxa de carregamento desse modelo de telefone celular.
+\end{enumerate}
+
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+$t$(min) & Porcentagem de recarga \\
+\hline
+0 & 0 \\
+25 & 20 \\
+\hline
+50 & 40 \\
+\hline 
+75 & 60 \\
+\hline 
+100 & 80 \\
+\hline
+125 & 100 \\
+\hline
+\end{tabu}
+}
+
+
+\item\adjustbox{valign=t}
+{
+\begin{tikzpicture}
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]         
+\draw[->, thick](-1,0)--(6,0) node[above]{tempo(min)};
+\draw[->, thick](0,-1)--(0,6);
+\foreach \x/\y in{25/20, 50/40, 75/60, 100/80, 125/100}
+\node[ponto]at(.04*\x, .05*\y){};
+\foreach \x/\y in{25/20, 50/40, 75/60, 100/80, 125/100}
+\draw[dashed](.04*\x,0)--(.04*\x,.05*\y)--(0,.05*\y) node[left]{\y} node[below] at(.04*\x,0){\x};
+\node[ponto]at(0,0){};
+\node[below left]at(0,0){0};
+\end{tikzpicture}
+}
+
+\item A partir da representação dos pontos no plano cartesiano pode-se concluir, usando semelhança de triângulos, que se em 25 minutos a carga na bateria é de $20\%$ então em 40 minutos a carga será de $32\%$.
+
+\item $f(t)=\displaystyle\frac{45}{t}=0{,}8t$, com domínio sendo o conjunto ${0,1,2,...,125}$ e a imagem o conjunto ${0,1,2,...,100}$.
+
+\item A bateria carrega a uma taxa de 0{,}8\% a cada minuto, isto é, $0{,}8$/min.
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}
