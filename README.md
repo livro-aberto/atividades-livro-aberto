@@ -1,5 +1,5 @@
 # atividades-livro-aberto
-Atividades avulsas dos capítulos dos livros do Ensino Médio e de Frações.
+# Atividades avulsas dos capítulos dos livros do Ensino Médio e de Frações.
 
 Para editar os arquivos é necessário instalar as fontes presentes na pasta. 
 
@@ -7,7 +7,7 @@ Dentro das pasta Livro de Frações há pastas para cada lição. Já o livro do
 
 Todas as pastas de todos os capítulos contém os seguintes scripts em .bat:
 
-%%%%%%%%%%%%%%%%% SRIPTS %%%%%%%%%%%%%%%%%%%%
+# SCRIPTS 
 
 compile.bat #compila em xelatex todos os arquivos nos sub-diretórios.
 
@@ -17,23 +17,21 @@ delete-pdf.bat #deleta os .pdf e todos os sub-diretórios
 
 rename-professor # adiciona "-professor" ao final do nome
 
-%%%%%%%%%%%%%%%%% ARQUIVOS DO LATEX %%%%%%%%%%%%%%%%%%
+
+# ARQUIVOS DO LATEX
 
 Há dentro da pasta da pasta do Livro de Frações e do Livro do Ensino Médio os arquivos
 
-%%%% Ensino Médio %%%%
-base-ensino-medio.tex #arquivo de exemplo para construção de uma atividade 
+base-ensino-medio.tex (ou base-fracoes) #arquivo de exemplo para construção de uma atividade 
 
-modelo-ensino-medio.sty #pacote com os ambientes e pacotes usados nas atividades
+modelo-ensino-medio.sty (ou modelo-fracoes) #pacote com os ambientes e pacotes usados nas atividades
 
-%%%% Frações %%%%
 
-Analogamente temos os arquivos base-fracoes.tex e modelo-fracoes.sty
 
 
 Dentro dos arquivos dos modelos, há a seguinte linha:
 
-\newcommand*{\prof}{} %comente para gerar o arquivo do estudante, descomente para gerar o arquivo para o professor.
+\newcommand*{\prof}{} % comente para gerar o arquivo do estudante, descomente para gerar o arquivo para o professor.
 
 Com os scripts (apenas para windows no momento) é possível compilar todos os arquivos no caso de alterações no modelo ou se for necessário fazer alterações sitemáticas sem a necessidade de compilar cada arquivo manualmente
 
