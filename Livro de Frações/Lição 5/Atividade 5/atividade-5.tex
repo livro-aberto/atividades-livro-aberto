@@ -1,0 +1,110 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao05/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item       Encontrar uma subdivisão comum entre as quantidades que permita efetuar as operações;
+    \item       Perceber a não unicidade da subdivisão comum.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item       Como nas atividades anteriores e nas próximas desta lição, o uso obrigatório do MMC não é recomendado. Ao contrário, objetiva-se justamente provocar explicitamente a percepção de que       {\bf essa subdivisão não é única}. Assim, devem ser apresentadas diversas frações equivalentes às frações dadas na atividade, como por exemplo, as seguintes:
+
+  $$\frac{6}{10} \,{\rm e} \, \frac{7}{10}$$
+  $$\frac{12}{20} \,{\rm e} \, \frac{14}{20}$$
+  $$\frac{24}{40} \,{\rm e} \, \frac{28}{40}$$
+
+    \item       A partir dessas diferentes frações equivalentes, o professor deve procurar       {\bf articular com os estudantes a relação entre diferentes subdivisões com a sistematização de frações equivalentes.}       Deve-se retomar a reflexão iniciada na sessão       {\bf Organizando as Ideias}       de que escrever quantidades em relação a uma subdivisão comum corresponde a determinar frações equivalentes com um denominador comum.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Tendo como unidade um mesmo retângulo, as representações das frações $\frac{3}{5}$ e $\frac{7}{10}$ estão ilustradas nas figuras a seguir.
+
+\begin{center}
+\begin{tikzpicture}[scale=4]
+\fill[fill=common, fill opacity=.3] (0,0) rectangle (10,5);
+\fill[attention] (0,0) rectangle (6,5);
+\draw (0,0) rectangle (10,5);
+\foreach \x in {2,4,...,8} \draw (\x,0) -- (\x, 5);
+
+\begin{scope}[shift={(14,0)}]
+\fill[fill=common, fill opacity=.3] (8,2.5) rectangle (10,5);
+\fill[fill=common, fill opacity=.3] (6,0) rectangle (10,2.5);
+\fill[light] (0,0) rectangle (6,5);
+\fill[light] (6,2.5) rectangle (8,5);
+\draw (0,0) rectangle (10,5);
+\foreach \x in {2,4,...,8} \draw (\x,0) -- (\x, 5);
+\draw (0,2.5) -- (10, 2.5);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate} %s
+  \item     Determine uma subdivisão da unidade que permita expressar essas quantidades por frações com um mesmo denominador. Represente tal subdivisão nas figuras acima.
+  \item     Escreva frações iguais a     $\frac{3}{5}$     e a     $\frac{7}{10}$     a partir dessa subdivisão.
+  \item     Existe alguma outra subdivisão, diferente da que você usou para responder os itens a) e b), com a qual também seja possível responder ao item b)? Se sim, qual?
+  \item     Juntas, as regiões destacadas em vermelho e em bege determinam um região maior, menor ou igual a um retângulo? Explique.
+\end{enumerate} %s
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+ \item       Uma possível subdivisão comum é em 10 partes, portanto, igual a fração       $\frac{1}{10}$. Com essa subdivisão ambas as quantidades podem ser expressas por frações de denominador 10. Uma forma de observar tal fato é determinar, na primeira imagem, um segmento horizontal, de modo a dividir cada parte da partição já existente em duas partes iguais.
+
+    \begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm,scale=2]
+\fill[common,fill opacity=.3] (0,0) rectangle (10,5);
+\fill[attention] (0,0) rectangle (6,5);
+
+\draw (0,0) rectangle (10,5);
+\foreach \x in {2,4,...,8} \draw (\x,0) -- (\x, 5);
+\draw (0,2.5) -- (10,2.5);
+
+\begin{scope}[shift={(14,0)}]
+\fill[common,fill opacity=.3] (0,0) rectangle (10,5);
+\fill[light] (0,0) rectangle (6,5);
+\fill[light] (6,2.5) rectangle (8,5);
+\draw (0,0) rectangle (10,5);
+\foreach \x in {2,4,...,8} \draw (\x,0) -- (\x, 5);
+\draw (0,2.5) -- (10, 2.5);
+\end{scope}
+
+\end{tikzpicture}
+\end{center}
+
+    \item             $\frac{3}{5} = \frac{6}{10}$. A fração       $\frac{7}{10}$       já está escrita a partir de décimos.
+    \item       Sim, existem várias. Por exemplo,       $\frac{1}{10}$,       $\frac{1}{20}$       ou~$\frac{1}{70}$.
+    \item       Como       $\frac{3}{5}+\frac{7}{10} = \frac{6}{10} + \frac{7}{10} = \frac{13}{10} > 1$, juntas, as regiões destacadas em vermelho e em bege determinam um região maior do que a do retângulo dado.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

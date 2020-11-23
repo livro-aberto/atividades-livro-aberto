@@ -1,0 +1,65 @@
+\usetikzlibrary{arrows, petri,topaths}
+\usetikzlibrary{positioning}
+
+
+\begin{tikzpicture} [->,>=stealth',shorten >=1pt,auto,node  distance=3cm, semithick,every node/.style={sloped}]
+\tikzstyle{state}=[align=center, circle, draw,minimum size=1.5cm]
+
+\node [state] (A) {$=,=$};
+\node [state] (B) [above right of=A,] {$=,-$};
+\node [state] (C) [below right of=A,] {$=,$};
+\node [state] (D) [above right of=B,xshift=0.87867cm] {$=,$};
+\node [state] (E) [right of= B, ] {$-,-$};
+\node [state] (F) [below right of=B,xshift=0.87867cm] {$-,$};
+\node [state] (G) [right of=C] {$-,$};
+\node [state] (H) [below right of=C,xshift=0.87867cm] {};
+\node [state] (I) [above right of=D,xshift=0.87867cm] {};
+\node [state] (J) [right of=D] {$-,$};
+\node [state] (K) [right of=E] {$-,$};
+\node [state] (L) [right of=F] {};
+\node [state] (M) [right of=G] {};
+\node [state] (N) [right of=J] {};
+\node [state] (O) [right of=K] {};
+\node [scale=1.5] (P) [right of=I, xshift=-1.7cm]  {($+1,-1$)};
+\node [scale=1.5] (Q) [right of=L, xshift=-1.7cm]  {($+1,-1$)};
+\node [scale=1.5] (R) [ right of=M, xshift=-1.7cm]  {($+1,-1$)};
+\node [scale=1.5] (S) [ right of=N, xshift=-1.7cm]  {($+1,-1$)};
+\node [scale=1.5] (T) [ right of=O, xshift=-1.7cm]  {($+1,-1$)};
+\node [scale=1.5] (U) [ right of=H, xshift=-1.7cm]  {($+1,-1$)};
+
+\path (A) edge node [above] {I} node [below,scale=0.9] {pega um} (B)
+ (A) edge node [above] {I} node [below,scale=0.9] {pega dois} (C)
+(B) edge node [above] {II pega} (D)
+(B) edge node [above] {II pega} (E)
+(B) edge node [above] {II pega} (F)
+(C) edge node [above] {II pega} (G)
+(C) edge node [above] {II pega} (H)
+(D) edge node [above] {I pega} (I)
+(D) edge node [above] {I pega} (J)
+(E) edge node [above] {I pega} (K)
+(F) edge node [above] {I pega} (L)
+(G) edge node [above] {I pega} (M)
+(J) edge node [above] {II pega} (N)
+(K) edge node [above] {II pega} (O)
+;
+
+\node [above of=A,yshift=-2cm] {(A)};
+\node [above of=B,yshift=-2cm] {(B)};
+\node [above of=C,yshift=-2cm] {(C)};
+\node [above of=D,yshift=-2cm] {(D)};
+
+\node [below of=A,yshift=2cm] {$M_{\rm I}$};
+
+\node [below of=B,yshift=2cm] {$M_{\rm II}$};
+\node [below of=C,yshift=2cm] {$M_{\rm II}$};
+
+\node [below of=D,yshift=2cm] {$M_{\rm I}$};
+\node [below of=E,yshift=2cm] {$M_{\rm I}$};
+\node [below of=F,yshift=2cm] {$M_{\rm I}$};
+\node [below of=G,yshift=2cm] {$M_{\rm I}$};
+
+\node [below of=J,yshift=2cm] {$M_{\rm II}$};
+\node [below of=K,yshift=2cm] {$M_{\rm II}$};
+
+
+\end{tikzpicture}

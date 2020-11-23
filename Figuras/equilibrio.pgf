@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+
+\def\x{2/3}
+\def\y{2/3}
+
+\draw (0,0) rectangle (1,1);
+\draw [blue, thick] (0,0) -- (0,\x) -- (1,\x) -- (1,1);
+\draw [red, thick] (1,1) -- (\y,1) -- (\y,0) -- (0,0);
+
+
+\end{tikzpicture}

@@ -1,0 +1,85 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao05/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+    \item       Comparar, somar e subtrair frações a partir da determinação de um denominador comum com base no processo geométrico de subdivisão da unidade;
+    \item       Explorar as interpretações de juntar para a adição e de comparar para a subtração.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+    \item       Esta atividade retoma a noção de fração como parte de uma unidade em situações concretas, como nas atividades 2 a 6. Como naquelas atividades, a representação geométrica das frações deve servir como base para a determinação do denominador comum e para a realização da comparação e das operações de adição e de subtração. O próprio desenho do canteiro pode servir como representação geométrica para a determinação do denominador comum.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A família de Miguel reservou um determinado espaço retangular para fazer um canteiro em seu quintal. A família quer que o cateiro tenha rosas e verduras frescas. O pai de Miguel disse que precisa de $\frac{2}{3}$ do espaço inicialmente reservado, para cultivar rosas. A mãe disse que necessita de $\frac{1}{2}$ desse espaço, para plantar as verduras. Quando Miguel ouviu o diálogo dos pais, pensou nas seguintes questões:
+\begin{enumerate}
+  \item     Quem precisa de mais espaço, seu pai ou sua mãe?
+  \item     O espaço reservado inicialmente para o canteiro é suficiente para comportar os espaços de que o pai e a mãe de Miguel precisam?
+  \item     Caso o espaço seja suficiente, que fração do mesmo ficaria sem uso?
+  \item     Caso o espaço não seja suficiente, que fração do canteiro reservado inicialmente deverá ser acrescentada para que a família consiga fazer as plantações que deseja?
+\end{enumerate} %s
+
+
+Faça um desenho que ajude a explicar as suas respostas para as questões de Miguel. Não deixe de indicar a subdivisão da unidade que você empregou.
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item     Utilizando o mesmo denominador para fins de comparação temos, por exemplo, que as quantidades     $\frac{2}{3}$     e     $\frac{1}{2}$     são iguais a     $\frac{4}{6}$     e     $\frac{3}{6}$, respectivamente. Portanto a fração do canteiro solicitada pelo pai,     $\frac{2}{3}$, é maior do que a fração solicitada pela mãe.
+  \item     Juntando as espaços solicitados temos     $\frac{2}{3} + \frac{1}{2} = \frac{4}{6} + \frac{3}{6} = \frac{7}{6}$. Mas     $\frac{7}{6}>\frac{6}{6}=1$. O espaço reservado inicialmente para o canteiro não atende as solicitações do pai e da mãe de Miguel.
+  \newpage
+  \item     O espaço inicialmente reservado não é suficiente.
+  \item     Deve-se observar quanto excede um canteiro  $\frac{7}{6} – 1 = \frac{7}{6} - \frac{6}{6} = \frac{1}{6}$. É necessário aumentar $\frac{1}{6}$ do espaço inicialmente reservado para o canteiro.
+
+O denominador comum empregado foi 6. Cada retângulo com 6 divisões indica a fração de canteiro que tinha sido reservada inicialmente.
+
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm, scale=.6]
+ \draw[fill=attention] (0,0) rectangle (20,30);
+ \draw[fill=light] (20,0) rectangle (30,30);
+ \draw (0,15) -- (30,15);
+ \draw (10,0) -- (10,30);
+
+ \begin{scope}[xshift=40mm]
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (30,30);
+\draw[fill=light] (0,15) rectangle (10,30);
+\draw (0,15) -- (30,15);
+\draw (10,0) -- (10,30);
+\draw (20,0) -- (20,30);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

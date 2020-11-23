@@ -1,0 +1,105 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao05/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+    \item       Aprofundar a familiaridade dos alunos com a representação na reta;
+    \item       Explorar a propriedade de densidade dos pontos que representam frações na reta numérica ou, equivalentemente, do conjunto das frações, ou ainda, dos números racionais positivos.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+    \item       Caso os alunos tenham dificuldades em pensar sobre as soluções das tarefas propostas, o professor pode propor e explorar tarefas análogas com números naturais, empregando, por exemplo, a primeira figura.
+    \item O item b) visa especificamente dar continuidade à discussão sobre densidade dos números racionais na reta, que foi introduzida na lição 4. A partir da escrita de frações como $\frac{15}{12}$ e $\frac{22}{12}$       pode não ser difícil para os alunos observar os seis números       $\frac{16}{12}$,       $\frac{17}{12}$,       $\frac{18}{12}$,       $\frac{19}{12}$, $\frac{20}{12}$ e $\frac{21}{12}$. Uma estratégia para encontrar mais números é escrever, por exemplo,       $A$       e       $B$       como       $\frac{30}{24}$       e       $\frac{44}{24}$ e tomar       $\frac{n}{24}$, com       $n$       variando entre 30 e 44 está entre       $A$       e       $B$. A ideia é discutir com a turma que, como sempre podemos repetir esse processo, sempre podemos encontrar mais números entre       $A$       e       $B$. Daí, pode-se retomar a discussão sobre frações equivalentes e sobre densidade, que foi ensejada nos últimos 3 exercícios da lição 4.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Observando a reta, Miguel conseguiu determinar o tamanho do segmento azul entre os dois pontos $A = 3$ e $B = 7$ marcados da seguinte forma:
+
+\begin{center}
+\definecolor{DarkGreen}{rgb}{0.0, 0.5, 0.0}
+\begin{tikzpicture}[x=17mm,y=17mm]
+\draw[->] (-0.5,0) -- (7.5,0) ; %reta anterior
+\foreach \x in {0,...,7}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x}; }
+\draw[common, line width=0.4mm] (3,0) -- (7,0);
+\foreach \x in {3,7} \fill[common] (\x,0) circle (3 pt);
+\node[above] at (3,3pt) {$A$};
+\node[above] at (7,3pt) {$B$};
+\node[color=attention] at (5,-30pt) {{\Large 7}};
+\node[] at (5.2,-30pt) {{\Large $-$}};
+\node[color=DarkGreen] at (5.4,-30pt) {{\Large 3}};
+\node[] at (5.6,-30pt) {{\Large $=$}};
+\node[common] at (5.8,-30pt) {{\Large 4}};
+\draw[|-|, shift={(0,-30pt)},  color=DarkGreen, line width=0.4mm] (0,0)--(3,0);
+\draw[|-|, shift={(0,-45pt)}, color=attention, line width=0.4mm] (0,0)--(7,0);
+\end{tikzpicture}
+\end{center}
+
+Miguel calculou o tamanho do segmento azul fazendo a diferença entre o tamanho do segmento vermelho e o tamanho do segmento verde. Assim, concluiu que o tamanho do segmento AB é igual a 4.
+Usando um raciocínio parecido, e considerando $C = \frac{5}{4}$ e $D=\frac{11}{6}$, ajude Miguel a realizar as tarefas a seguir.
+
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.25,0) -- (2.25,0) ; %reta anterior
+\foreach \x in {0,1,2}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x}; }
+\draw[common, line width=0.4mm] (5/4,0) -- (11/6,0);
+\foreach \x in {5/4,11/6} \fill[common] (\x,0) circle (3 pt);
+\node[above] at (5/4,3pt) {$C$};
+\node[above] at (11/6,3pt) {$D$};
+\node[below] at (5/4,-3pt) {$\frac{5}{4}$};
+\node[below] at (11/6,-3pt) {$\frac{11}{6}$};
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+  \item     Escreva C e D a partir de uma mesma subdivisão da unidade (isto é, com o mesmo denominador).
+  \item     Determine seis frações que correspondam a pontos na reta numérica entre $C$ e $D$. \newline
+  Discuta com seus colegas se é possível determinar mais que seis valores e, se for possível, qual seria a estratégia para fazer isso.
+  \item     Calcule o tamanho do segmento     $CD$.
+  \item     Determine uma fração que, somada a     $\frac{5}{4}$     dê um resultado menor que     $\frac{11}{6}$. Justifique a sua resposta usando a reta.     $$ \dfrac{5}{4} +\dfrac{\text{\Large $\square$}}{\text{\Large $\square$}} = \dfrac{11}{6}.$$
+  \item     Encontre outras três possíveis respostas para o item anterior.
+  \item     Determine duas frações possíveis, que quando somadas a     $\frac{5}{4}$     tenham como resultado     $\frac{11}{6}$. Justifique a sua resposta usando a reta.     $$ \dfrac{5}{4} +\dfrac{\text{\Large $\square$}}{\text{\Large $\square$}} + \dfrac{\text{\Large $\square$}}{\text{\Large $\square$}} = \dfrac{11}{6}.$$
+\end{enumerate} %s
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+  \item         Por exemplo, $C=\frac{15}{12}$     e     $D=\frac{22}{12}$.
+  \item         $\frac{16}{12}$,     $\frac{17}{12}$,     $\frac{18}{12}$,     $\frac{19}{12}$,     $\frac{20}{12}$     e     $\frac{21}{12}$.
+
+  Se escrevermos as frações     $C$     e     $D $     com outro denominador comum pode ser mais fácil de observar mais que 6 frações. Por exemplo,     $C=\frac{30}{24}$     e     $D=\frac{44}{24}$     as frações a seguir estão entre     $C$     e     $D$ $$\frac{31}{24}, \frac{32}{24}, \frac{33}{24}, \frac{34}{24}, \frac{35}{24}, \frac{36}{24}, \frac{37}{24},$$
+  $$\frac{38}{24}, \frac{39}{24}, \frac{40}{24}, \frac{41}{24}, \frac{42}{24}\; {\rm e }\; \frac{43}{24}.$$
+  Note que conseguimos agora 13 frações entre     $C$     e     $D$. No entanto, se escrevermos     $C$     e     $D$     com o denominador 48 ainda podemos determinar mais valores. Note também que sempre podemos escolher um denominador maior de modo que encontremos mais valores.
+  \item     O tamanho do segmento     $CD$     é dado por
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

@@ -30,6 +30,7 @@
 \usetikzlibrary{arrows,calc,shapes}
 \usepackage{xurl}
 \usepackage{siunitx}
+\usepackage{mathtools}
 
 \RequirePackage{fontspec}
 \newfontfamily{\boxtitlefont}[Path=../../../../Fontes/]{Exo2-Light.otf}[BoldFont=Exo2-Medium.otf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
@@ -108,10 +109,20 @@
 \usetikzlibrary{intersections, arrows, arrows.meta}
 \RequirePackage{tkz-euclide}
 
-\renewcommand{\thead}{\rowfont{\bfseries\color{white}}\rowcolor{primario!80}}
-\newcommand{\sthead}{\rowfont{\bfseries}}
-\newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
+\renewcommand{\thead}{\rowfont{\bfseries \color{white}} \rowcolor{\currentcolor!80}}
+\newcommand{\tnumber}{\rowfont{\color{white}}\rowcolor{\currentcolor!80}}
+
+\newcommand{\tmat}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\bm{#1}}}
 \newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
+\newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
+\newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
+\newcommand{\tikzcolor}{\currentcolor!80}
+\newcommand{\sub}{\textsubscript}
+\newcommand{\super}{\textsuperscript}
+
+\newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{f}{>{$}c<{$}}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -186,7 +197,7 @@ before upper={\tcbsubtitle{\boxtitlefont Objetivos específicos}
 \vspace{-1.5em}\setlength\parskip{.5em}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
-before lower ={\tcbsubtitle{\boxtitlefont Observações e recomendações}\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}\vspace{-1.5em}\setlength\parskip{.5em}},
+before lower ={\tcbsubtitle{\boxtitlefont Observações e recomendações}\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}},
     subtitle style = {
       frame empty,
       fontupper = \bfseries\large,
@@ -199,6 +210,14 @@ before lower ={\tcbsubtitle{\boxtitlefont Observações e recomendações}\boxti
     break at=-\baselineskip/0pt
 }
 
+\newtcolorbox{reflection}{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=penaqua, borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm, 
+fonttitle=\bfseries\large\boxtitlefont,  % Should be 12 pt. Don't know how to set this.
+title=PARA REFLETIR, 
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+attach boxed title to top left={xshift=3mm , yshift=-2.5mm},
+underlay boxed title={
+\filldraw [draw=penaqua, fill=penaqua] ($(title.north west) + (0 mm,-2.50mm)$) -- ++(0.00mm,1.50mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ++(34.00mm,-5.00mm) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;}
+}
 
 
 

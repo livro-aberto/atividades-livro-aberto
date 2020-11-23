@@ -1,0 +1,7 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node [rectangle, draw, minimum height=3, minimum height=3] {
+\node [below left] (.5,.5) [rectangle, draw] {1};
+\node at (1.5,1.5) [circle, draw] {2100};
+}
+\end{tikzpicture}

@@ -1,0 +1,140 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao05/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+  \item      Entender o processo de determinação de um denominador comum entre duas frações com base na ideia de subdivisão da unidade da qual ambas sejam múltiplas inteiras, obtido a partir de um processo geométrico;
+  \item      Determinar a soma e a diferença de duas frações a partir dessa subdivisão da unidade.
+\end{enumerate}
+
+\tcblower
+
+\setlist[enumerate]{label=\alph*)}
+%Orientações e sugestões
+\begin{itemize}
+  \item      Esta atividade pode ser mais aproveitada pelos alunos se for realizada com apoio de materiais concretos. Sugerimos, caso seja possível, que os estudantes desenvolvam o material. Caso não seja possível, disponibilizamos uma página para reprodução no final dessa lição. Neste caso, o professor poderá disponibilizar aos alunos discos divididos em 12 partes, e pedir que eles marquem as frações     $\frac{1}{6}$,     $\frac{3}{4}$     e     $\frac{2}{3}$,     colorindo esses discos.
+
+
+   \item  A atividade tem início com a comparação de frações, o que já foi abordado na lição anterior. Procure retomar a discussão conduzida naquela lição.
+   \item  É importante chamar atenção para o fato de que escrever as frações a partir de um mesmo denominador corresponde a expressar as quantidades que elas representam como múltiplos inteiros de uma subdivisão comum da unidade, porque somar e subtrair frações de mesmo denominador os alunos já sabem fazer. Assim, toma-se como estratégia, para a adição e a subtração de frações, reescrevê-las em relação a um mesmo denominador, determinado a partir de uma subdivisão comum da unidade. O item a) visa especificamente ao reconhecimento concreto da fração unitária associada a esse denominador comum.
+   \item  No item b), o professor deverá explorar e evidenciar as articulações entre as diferentes estratégias dos alunos, sendo as principais:
+   \begin{enumerate}
+   \item  Multiplicar o numerador e o denominador por um mesmo número (algoritmo discutido na lição anterior).
+   \item  Observar a quantidade de fatias nas imagens acima que apresentam as frações consumidas.
+   \end{enumerate}
+   \item  Os itens d) a g) exploraram diferentes interpretações da adição da subtração, a saber:
+   \begin{enumerate}
+\item Subtração – completar;
+\item Adição – juntar;
+\item Subtração – retirar;
+\item Subtração – comparar.
+   \end{enumerate}
+
+   Em cada um desses itens, após as resoluções dos estudantes, recomendamos que o professor faça o registro simbólico no quadro e indique o resultado. Por exemplo, no item d), tem-se:
+$$\frac{3}{4} - \frac{2}{3} = \frac{9}{12} - \frac{8}{12}=\frac{1}{12}$$
+
+  \item   É interessante que o professor encoraje e traga para a discussão com a turma as diferentes estratégias que tiverem sido propostas pelos alunos, inclusive aquelas que não estiverem inteiramente corretas. O objetivo não é destacar soluções ``mais eficientes'' ou separar as ``certas'' das ``erradas'', e sim evidenciar como diferentes estratégias permitem obter os resultados a partir da determinação de uma subdivisão comum. Por exemplo, no caso do item d), um aluno pode sobrepor o desenho das fatias comidas por Bruno no desenho das comidas por Caio, e contar quantas fatias faltam para atingir a quantidade consumida por Caio.
+  \item  É importante que o professor apresente o registro das operações em notação de fração, com o objetivo de articular esse registro com as estratégias geométricas, baseadas na contagem direta das subdivisões comuns.
+
+Esta atividade possui folhas para reprodução ao final.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Amanda, Bruno e Caio pediram três pizzas do mesmo tamanho, mas com sabores diferentes. Todas as pizzas nessa pizzaria são servidas em {\bf 12 fatias} iguais. Amanda comeu $\frac{1}{6}$ de uma pizza, Bruno comeu $\frac{3}{4}$ de outra, e Caio comeu $\frac{2}{3}$ da pizza que pediu.
+
+\begin{center}
+\begin{tabular}{m{.3\textwidth}m{.3\textwidth}m{.3\textwidth}}
+
+\begin{tikzpicture}
+\fill[light, opacity = .8] (0,0) -- (30:20) arc (30:90:20) --cycle;
+\foreach \x in {0,60,120}{ \draw (\x:20) -- (\x:-20);}
+\foreach \x in {30,90,150}{ \draw[very thick, light] (\x:20) -- (\x:-20);}
+\draw[|-|] (30:25) arc (30:90:25);
+\node[] at (60:30) {$\dfrac{1}{6}$};
+\draw (0,0) circle (20);
+\end{tikzpicture}
+
+&
+\begin{tikzpicture}
+\fill[common, opacity = .8] (0,0) -- (-180:20) arc (-180:90:20) --cycle;
+\foreach \x in {0,30,60,120,150}{ \draw (\x:20) -- (\x:-20);}
+\foreach \x in {0,90}{ \draw[very thick, common] (\x:20) -- (\x:-20);}
+\draw[|-|] (0:25) arc (0:90:25);
+\node[] at (45:30) {$\dfrac{1}{4}$};
+\draw (0,0) circle (20);
+\end{tikzpicture}
+&
+\begin{tikzpicture}
+\fill[special, opacity = .8] (0,0) -- (-150:20) arc (-150:90:20) --cycle;
+\foreach \x in {0,30,60,90,120,150}{ \draw (\x:20) -- (\x:-20);}
+\foreach \x in {-30,90,210}{ \draw[very thick, special] (0,0) -- (\x:20);}
+\draw[|-|] (-30:25) arc (-30:90:25);
+\node[] at (30:30) {$\dfrac{1}{3}$};
+\draw (0,0) circle (20);
+\end{tikzpicture}
+\\
+ Fração de pizza consumida por Amanda $\frac{1}{6}$  & Fração de pizza consumida por Bruno $\frac{3}{4}$  & Fração de pizza consumida por Caio $\frac{2}{3}$
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item  Que fração de uma pizza cada fatia representa?
+ \item Complete os espaços (numeradores) a seguir registrando outra representação para a fração de uma pizza que cada uma das crianças comeu.\\ Amanda: $\frac{1}{6} =\frac{}{12}  \quad \quad$ Bruno: $\frac{3}{4} =\frac{}{12} \quad \quad$ Caio: $\frac{2}{3} =\frac{}{12}$
+ \item Quem comeu mais pizza? Quem comeu menos pizza?
+ \item Que quantidade de pizza Bruno comeu a mais do que Caio?
+ \item Que quantidade de pizza Amanda e Bruno comeram juntas?
+  \item Que fração de uma pizza Amanda comeu a menos do que Caio?
+  \item Quanto a mais de pizza Bruno consumiu, em relação a Amanda?
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item $\frac{1}{12}$ é a fração unitária de pizza comum, pois todas as quantidades consumidas podem ser indicadas as partir de múltiplos dessa fração de pizza.
+   \item Para cada quantidade é possível simplesmente contar a quantidade de fatias observando as imagens acima, uma vez que cada fatia corresponde a $\frac{1}{12}$ de uma pizza. Assim, obtemos como resposta as frações $\frac{2}{12}$, $\frac{9}{12}$ e $\frac{8}{12}$, que são iguais a $\frac{1}{6}$, $\frac{3}{4}$ e $\frac{2}{3}$, respectivamente.
+   \item  Observando as quantidades indicadas no item anterior quem comeu mais foi Bruno, $\frac{9}{12}$ de pizza. Quem comeu menos foi Amanda, $\frac{2}{12}$ da pizza.
+   \item  $\frac{9}{12} -  \frac{8}{12} = \frac{1}{12}$.
+   \item  $\frac{2}{12} +  \frac{9}{12} = \frac{11}{12}$.
+   \item  $\frac{8}{12} -  \frac{2}{12} = \frac{6}{12}$.
+   \item  $\frac{9}{12} -  \frac{2}{12} = \frac{7}{12}$
+\end{enumerate}
+
+\end{solucao}
+\clearpage
+
+\pagestyle{empty}
+\begin{center}
+\null\vfill
+\begin{tikzpicture}[scale=2]
+\foreach \x in {0,30,...,150}{ \draw (\x:20) -- (\x:-20);}
+\draw (0,0) circle (20);
+\end{tikzpicture}
+\vfill\null
+\end{center}
+\fi
+
+\end{document}

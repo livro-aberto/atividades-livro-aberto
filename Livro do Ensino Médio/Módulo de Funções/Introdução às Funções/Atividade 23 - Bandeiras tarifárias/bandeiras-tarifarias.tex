@@ -45,15 +45,35 @@
 
 Desde o ano de 2015, as contas de energia passaram a trazer uma novidade: o Sistema de Bandeiras Tarifárias, que apresenta as seguintes modalidades: verde, amarela e vermelha - as mesmas cores dos semáforos - e indicam se haverá ou não acréscimo no valor de energia a ser repassada ao consumidor final, em função das condições de geração de eletricidade. Cada modalidade apresenta as seguintes características:
 
-%adicionar bandeiras
 \begin{itemize}
-\item \textbf{Bandeira verde}: condições favoráveis de geração de energia. A tarifa não sofre nenhum acréscimo;
+\item[
+{\begin{tikzpicture}[scale=.5,remember picture, overlay, shift={(-1,-.75))}]
+      \draw [very thick] (0,-.25) -- (0,1);
+      \draw [fill=session2] (0,1) .. controls (.25,1.25) and (.75,.75) .. (1,1) -- (1,.5) .. controls (.75,.25) and (.25,.75) .. (0,.5) -- cycle;
+      \end{tikzpicture}}]
 
-\item \textbf{Bandeira amarela}: condições de geração menos favoráveis. A tarifa sobre acréscimo de R\$$0{,}01343$ para cada quilowatt-hora (kWh) consumidos;
+ \textbf{Bandeira verde}: condições favoráveis de geração de energia. A tarifa não sofre nenhum acréscimo;
 
-\item \textbf{Bandeira vermelha - patamar 1}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$$0{,}04169$ para cada quilowatt-hora (kWh) consumido.
+\item[{\begin{tikzpicture}[scale=.5,remember picture, overlay, shift={(-1,-.75))}]
+      \draw [very thick] (0,-.25) -- (0,1);
+      \draw [fill=box2!50!yellow] (0,1) .. controls (.25,1.25) and (.75,.75) .. (1,1) -- (1,.5) .. controls (.75,.25) and (.25,.75) .. (0,.5) -- cycle;
+      \end{tikzpicture}}]
 
-\item \textbf{Bandeira vermelha - patamar 2}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$$0{,}06243$ para cada quilowatt-hora (kWh) consumido.
+\textbf{Bandeira amarela}: condições de geração menos favoráveis. A tarifa sobre acréscimo de R\$$0{,}01343$ para cada quilowatt-hora (kWh) consumidos;
+
+\item[{\begin{tikzpicture}[scale=.5,remember picture, overlay, shift={(-1,-.75))}]
+      \draw [very thick] (0,-.25) -- (0,1);
+      \draw [fill=session3!50!red!90!white] (0,1) .. controls (.25,1.25) and (.75,.75) .. (1,1) -- (1,.5) .. controls (.75,.25) and (.25,.75) .. (0,.5) -- cycle;
+      \end{tikzpicture}}]
+
+\textbf{Bandeira vermelha - patamar 1}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$$0{,}04169$ para cada quilowatt-hora (kWh) consumido.
+
+\item[{\begin{tikzpicture}[scale=.5,remember picture, overlay, shift={(-1,-.75))}]
+      \draw [very thick] (0,-.25) -- (0,1);
+      \draw [fill=session3] (0,1) .. controls (.25,1.25) and (.75,.75) .. (1,1) -- (1,.5) .. controls (.75,.25) and (.25,.75) .. (0,.5) -- cycle;
+      \end{tikzpicture}}]
+
+\textbf{Bandeira vermelha - patamar 2}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$$0{,}06243$ para cada quilowatt-hora (kWh) consumido.
 \end{itemize}
 
 \flushright{\small
@@ -69,7 +89,7 @@ O sistema de coordenadas abaixo contém os gráficos para as funções que relac
 \begin{tikzpicture}[yscale=2.5,scale=.75, every node/.style={scale=.75}]
 
 \draw [->] (0,5) -- (11,5) node [below left, yshift=-.5cm] {consumo (kWh)};
-\draw [->] (0,5) -- (0,9) node [above left, , rotate=90, yshift=1.2cm] {Preço a pagar (R\$)};
+\draw [->] (0,5) -- (0,9) node [above left, , rotate=90, yshift=1.5cm] {Preço a pagar (R\$)};
 
 \foreach \x in {2,4,...,10} {\node [below] at (\x,5) {\x00};
 \draw [help lines] (\x,5) -- (\x,9);

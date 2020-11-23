@@ -1,4 +1,4 @@
-% \newcommand*{\prof}{}% comente para gerar o arquivo do estudante, descomente para gerar o arquivo para o professor.
+\newcommand*{\prof}{}% comente para gerar o arquivo do estudante, descomente para gerar o arquivo para o professor.
 
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
@@ -190,10 +190,10 @@ underlay boxed title={
 \filldraw [penaqua] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
 before upper={\tcbsubtitle{Objetivos específicos}
-\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}},
+\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}\vspace{-1.5em}\setlength\parskip{.5em}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
-before lower ={\tcbsubtitle{Discussões sobre o desenvolvimento da atividade}\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}},
+before lower ={\tcbsubtitle{Discussões sobre o desenvolvimento da atividade}\boxtitlefont\setlist[enumerate]{label=\alph*),wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}\vspace{-1.5em}\setlength\parskip{.5em}},
     subtitle style = {
       frame empty,
       fontupper = \bfseries\large,

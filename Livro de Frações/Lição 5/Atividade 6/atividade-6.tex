@@ -1,0 +1,135 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../modelo-fracoes}
+\graphicspath{{../../../Figuras/licao05/}}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{../../../Figuras/logo}       
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: }  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+ \item  Entender o processo de determinação de um denominador comum entre duas frações com base na ideia de equipartição da unidade da qual ambas sejam múltiplas inteiras, obtida a partir de um processo geométrico;
+  \item      Determinar a soma e a diferença de duas frações a partir dessa subdivisão da unidade e de frações equivalentes às frações originais.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+  \item     Esta atividade é continuação da \hyperref[chap5-ativ2]{atividade 2}. Busca-se aplicar a sistematização das ideias para retomar reflexões ensejadas naquela atividade. Buscar com o estudante a generalização por situações que não são tão imediatas, em que trabalhamos com pedaços de fita que não são múltiplos inteiros de outros pedaços (dobro, como no caso dos pedaços azul e amarelo, presente na \hyperref[chap5-ativ2]{atividade 2}).
+
+
+   \item  No item a), em primeiro lugar, os alunos devem perceber que a nova fita vermelha e azul formada é {\it menor} que a fita original. Para chegar a essa conclusão, diferentes estratégias podem ser empregadas - e a exploração dessas estratégias deve ser estimulada pelo professor. Por exemplo, os alunos podem observar concretamente que como cada pedaço vermelho (correspondente à fração $\frac{1}{3}$) é menor que cada pedaço azul (correspondente à fração $\frac{1}{2}$), então a nova fita vermelha e azul é menor que a fita original.
+  \item  A partir dessas explorações iniciais, explore com os alunos a discussão sobre diversas formas de saber qual fita tem o maior tamanho, e que, além disso, é possível determinar o tamanho da nova fita vermelha e azul em relação à original, somando-se as medidas dos dois pedaços (vermelho e azul) que a compõe. Para isso, algumas observações são fundamentais:
+  \begin{enumerate}
+    \item O tamanho da fita original será uma {\bf unidade}, associada ao número 1, em relação à qual os tamanhos das demais grandezas serão determinadas, e expressas como frações.
+    \item Como os pedaços vermelho e azul correspondem a subdivisões de tamanhos diferentes da unidade (tamanho da fita original), para determinar sua soma será preciso expressá-los como múltiplos inteiros de uma {\bf subdivisão comum}, que pode ser obtida dividindo-se o pedaço vermelho em duas partes iguais e o pedaço azul em três partes iguais.
+ \end{enumerate}
+
+
+\begin{center}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=.4]
+\fill[common, opacity=.3] (0,1) rectangle (12,3);
+\draw[fill=attention] (0.,1) rectangle (4,3.);
+\foreach \x in {4,8} \draw[dashed] (\x,1) -- (\x,3);
+\draw (2,1) -- (2,3);
+\draw[dashed] (4,1) rectangle (12,3);
+
+\fill[common, opacity=.3] (0,-2) rectangle (12,0);
+\draw[fill=common] (0.,-2) rectangle (6.,0.);
+\draw[dashed] (6,-2) -- (6,0);
+\draw (2,-2) -- (2,0);
+\draw (4,-2) -- (4,0);
+\draw[dashed](6,-2) rectangle (12,0);
+\end{tikzpicture}
+\end{center}
+
+
+Desta forma, cada pedaço de fita vermelha equivale a 2 pedaços iguais a $\frac{1}{6}$ da unidade, e cada pedaço de fita azul equivale a 3 pedaços iguais a $\frac{1}{6}$ da unidade, totalizando $\dfrac{5}{6}$ da unidade:
+$$\dfrac{1}{3} + \dfrac{1}{2} = \dfrac{2}{6} + \dfrac{3}{6} = \dfrac{5}{6}.$$
+
+\begin{center}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=.4]
+\fill[common, opacity=.3] (0,0) rectangle (12,2);
+\draw[fill=attention] (0,0) rectangle (4,2);
+\draw[fill=common] (4,0) rectangle (10,2);
+\draw[dashed] (10,0) rectangle (12,2);
+\foreach \x in {2,6,8} \draw (\x,0) -- (\x,2);
+\end{tikzpicture}
+\end{center}
+
+
+Essa subdivisão comum permite ainda determinar a diferença entre os tamanhos da fita original e da nova fita vermelha e azul, associando-se a unidade a 6 pedaços iguais a $\frac{1}{6}$ de uma fita original:
+
+$$ 1 - \dfrac{5}{6}=\dfrac{6}{6} - \dfrac{5}{6} = \dfrac{1}{6}.$$
+
+\begin{center}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=.4]
+
+% vermelho de cima
+\draw[fill=attention] (0,3) rectangle (12,5);
+\foreach \x in {2,4,...,10} \draw (\x,3) -- (\x,5);
+
+% amarelo e vermelho (debaixo)
+\fill[common, opacity=.3] (0,0) rectangle (12,2);
+\draw[fill=attention] (0,0) rectangle (4,2);
+\draw[fill=common] (4,0) rectangle (10,2);
+\draw[dashed] (10,0) rectangle (12,2);
+\foreach \x in {2,6,8} \draw (\x,0) -- (\x,2);
+\end{tikzpicture}
+\end{center}
+  \item Como observado anteriormente, essas construções podem ser feitas por meio de corte e colagem de materiais concretos.
+  \item O item b) deve ser desenvolvido de forma análoga ao item a).
+\end{itemize} %s
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Aqui retomamos a \hyperref[chap5-ativ2]{Atividade 2}, na qual a professora Estela comprou fitas de mesmo tamanho e as cortou em partes iguais: a vermelha em três pedaços; a azul em dois pedaços e a amarela em quatro pedaços.
+
+\begin{center}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=.5]
+\draw[fill=attention] (0.,1) rectangle (12.,3.);
+\foreach \x in {4,8} \draw[dashed] (\x,1) -- (\x,3);
+\draw[fill=common] (0.,-2) rectangle (12.,0.);
+\draw[dashed] (6,-2) -- (6,0);
+\draw[fill=light] (0.,-5) rectangle (12.,-3.);
+\foreach \x in {3,6,9} \draw[dashed] (\x,-5) -- (\x,-3);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+  \item  Agora, a professora Estela juntou um pedaço da fita vermelha com um pedaço da fita azul. Essa nova fita formada tem tamanho maior ou menor ou igual ao tamanho original de uma fita? A que fração de uma fita original corresponde a nova fita vermelha e azul? Qual é a diferença entre os tamanhos de uma fita original e da fita vermelha e azul?
+  \item  A professora formou então mais uma fita colorida, agora juntando (de forma intercalada) dois pedaços vermelhos e três pedaços amarelos. Essa nova fita vermelha e amarela é maior ou menor do que uma fita original? A que fração de uma fita original corresponde a nova fita vermelha e azul? Qual é a diferença entre os tamanhos da fita original e da fita vermelha e amarela?
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+   \item Um pedaço vermelho mais um pedaço azul corresponde a $\frac{1}{3} + \frac{1}{2} = \frac{2}{6}+ \frac{3}{6} = \frac{5}{6}$ de uma fita original. Daí, a nova fita formada é menor do que uma fita original, pois $\frac{5}{6}<\frac{6}{6}=1$. A diferença de tamanho será dada por $1- \frac{5}{6} = \frac{6}{6} - \frac{5}{6} = \frac{1}{6}$.
+   \item A nova fita vermelha e amarela é maior do que uma fita original, uma vez que equivale a $\frac{17}{12}>1$ da fita original.
+$\frac{1}{3}+\frac{1}{3}+\frac{1}{4}+\frac{1}{4}+\frac{1}{4} = \frac{4}{12}+\frac{4}{12}+\frac{3}{12}+\frac{3}{12}+\frac{3}{12} = \frac{17}{12}$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

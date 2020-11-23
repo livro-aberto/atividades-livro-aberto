@@ -1,0 +1,66 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Frequência de valores no intervalo centrado na média}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT316} Resolver e elaborar problemas, em diferentes contextos, que envolvem cálculo e
+interpretação das medidas de tendência central (média, moda, mediana) e das de dispersão
+(amplitude, variância e desvio padrão).
+\item \textbf{EM13MAT408} Construir e interpretar tabelas e gráficos de frequências, com base em dados obtidos em pesquisas por amostras estatísticas, incluindo ou não o uso de softwares que interrelacionem estatística, geometria e álgebra.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Calcular a frequência relativa de dados que caem no intervalo centrado na média mais ou menos dois desvios padrões.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Esta atividade será útil no final da próxima seção que trata da construção do boxplot e seus resultados serão retomados adiante. Além disso, será útil na verificação da afirmação feita na atividade anterior de que quando não há valores atípicos, a grande maioria dos dados situa-se entre a média mais ou menos dois desvios padrões.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Para os conjuntos de dados considerados na atividade \hyperref[\detokenize{PE104-5:ativ-aproxima-dpa-usando-r}]{Aproximação para o Valor do Desvio Padrão Amostral}, calcule a frequência absoluta de dados que estão no intervalo \([\bar{x}-2\cdot s,\bar{x}+2\cdot s]\) e comente sobre os resultados obtidos.
+
+\ifdefined\prof
+\begin{solucao}
+
+No caso dos dados da atividade \hyperref[\detokenize{PE104-0:ativ-notas-de-artes}]{Notas de Arte} temos $\bar{x}=5{,}93$ e $s=1{,}96$ tal que os limites deste intervalo são, respectivamente, $2{,}01$ e $9{,}85$. Portanto, das $35$ notas podemos ver que $32$ observações caem dentro destes limites, ou equivalentemente, cerca de $91\%$ das observações.
+
+No caso dos dados da ativdade \hyperref[\detokenize{PE104-0:ativ-maratona-de-ny}]{A Maratona}, categoria mulheres, temos $\bar{x}=171{,}91$ e $s=11{,}13$ tal que os limites deste intervalo são, respectivamente, $149{,}65$ e $194{,}17$. Portanto, dos $100$ tempos podemos ver que $96$ caem dentro destes limites, ou equivalentemente, $96\%$ dos tempos.
+
+No caso dos dados da atividade \hyperref[\detokenize{PE104-2:ativ-maratona-categoria-homens}]{Categoria  homens na maratona}, temos $\bar{x}=150{,}69$ e $s=7{,}70$ tal que os limites deste intervalo são, respectivamente, $135{,}29$ e $166{,}09$. Portanto, dos $100$ tempos podemos ver que $90$ caem dentro destes limites, ou equivalentemente, $90\%$ dos tempos.
+
+No caso dos dados da atividade \hyperref[\detokenize{PE104-3:ativ-estrategia-de-investimento}]{Estratégia de Investimento}, para a companhia $A$, temos $\bar{x}=61{,}5$ e $s=4{,}5765$ tal que os limites deste intervalo são, aproximadamente, $52{,}3$ e $70{,}7$. Portanto, das $10$ cotações podemos ver que todas caem dentro destes limites, ou equivalentemente, $100\%$ das cotações.
+
+No caso dos dados da atividade \hyperref[\detokenize{PE104-3:ativ-estrategia-de-investimento}]{Estratégia de Investimento}, para a companhia $B$, temos $\bar{x}=61{,}5$ e $s=18{,}3136$ tal que os limites deste intervalo são, aproximadamente, $24{,}9$ e $98{,}1$. Portanto, das $10$ cotações podemos ver que todas caem dentro destes limites, ou equivalentemente, $100\%$ das cotações.
+
+Observe que para os cinco conjuntos considerados nessa atividade, de fato, a maior parte dos dados ($90\%$ ou mais) situa-se entre os limites de uma média mais ou menos $2$ desvios padrões.
+
+\end{solucao}
+\fi
+
+\end{document}

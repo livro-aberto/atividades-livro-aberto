@@ -1,0 +1,152 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Comparação de conjuntos de dados}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT409} Interpretar e comparar conjuntos de dados estatísticos por meio de diferentes diagramas e gráficos, como o histograma, o de caixa (box-plot), o de ramos e folhas, reconhecendo os mais eficientes para sua análise.
+\item \textbf{EM13MAT202} Planejar e executar pesquisa amostral usando dados coletados ou de diferentes fontes sobre questões relevantes atuais, incluindo ou não, apoio de recursos tecnológicos, e comunicar os resultados por meio de relatório contendo gráficos e interpretação das medidas de tendência central e das de dispersão.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Comparar diferentes distribuições de uma mesma variável quando separada por grupos.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Nesta atividade serão coletados dados de uma mesma variável que possa ser separada em grupos, com o intuito de comparar as suas medidas de posição e dispersão. Sugerem-se algumas opções, dependendo do tamanho da turma e do contexto escolar, podem até ser escolhidas variáveis distintas para grupos pequenos de alunos, por exemplo, um grupo trabalha com as médias de Matemática, outro grupo trabalha com alturas, etc.
+
+Uma vez coletados os dados, serão calculadas suas medidas de posição e dispersão e comparadas, tentando orientar os estudantes a comentar as observações e não apenas fazer os cálculos. Para a realização dos cálculos deve ser usado suporte tecnológico: calculadoras, aplicativos, etc.
+
+O intuito é dar uma perspectiva para os estudantes da forma em que a estatística é utilizada na ciência para responder perguntas como:
+
+\begin{itemize}
+\item Uma determinada espécie vegetal cresce melhor perto de uma fonte de água ou longe da mesmo? Na sombra de uma árvore ou recebendo luz direta do sol?
+\item As meninas são mais altas que os meninos numa certa idade? Acontece o mesmo em todas as idades?
+\end{itemize}
+
+De forma ideal, pode ser formulada primeiro a pergunta, e depois coletados os dados, apelando a informações encontradas num artigo científico ou numa publicação de jornal, com o intuito de tentar contrastar uma afirmação dada num texto com dados coletados diretamente.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Para realizar esta atividade será necessário coletar dois conjuntos de dados da mesma natureza, correspondentes a grupos distintos, os quais queremos comparar. Por exemplo:
+\begin{itemize}
+\item {} 
+alturas de homens e mulheres;
+
+\item {} 
+alturas de alunos de 1º e de 9º ano do Ensino Fundamental;
+
+\item {} 
+notas de disciplinas distintas;
+
+\item {} 
+notas de turmas distintas na mesma disciplina;
+
+\item {} 
+medições de produtos naturais: comprimento das folhas de vegetais (alface, rúcula, etc) comprados em lojas distintas, altura de árvores ou plantas similares locais da cidade distintos;
+
+\end{itemize}
+
+entre outros que podem ser escolhidos dependendo da região e dos recursos disponíveis na escola.
+
+No seu caderno ou em uma planilha eletrônica, registre os dados coletados, como indicado no modelo de tabela a seguir, lembrando que quanto mais dados você coletar com os critérios definidos, os resultados do experimento terão maior chance de refletir a realidade.
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|c|c|}
+\hline
+\tmcol{2}{|c|}{Variável: altura em cm} \\
+\hline
+\tcolor{Turma A} & \tcolor{Turma B} \\
+\hline
+$155$ & $165$ \\
+\hline
+$168$ & $159$ \\
+\hline
+$\vdots$ & $\vdots$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Para calcular as medidas de posição e dispersão, utilize de forma cuidadosa as  fórmulas apresentadas. De forma alternativa, você pode digitar os dados no \href{https://ggbm.at/KbYqnQ6Q}{Aplicativo de medidas de posição e dispersão do Livro Aberto} e obter as medidas resumo dos dados.
+
+\begin{table}[H]
+\centering
+\caption{Registre os seus resultados}
+\begin{tabular}{|l|c|c|}
+\hline
+\tcolor{Nome da categoria} & \tcolor{Grupo A} & \tcolor{Grupo B} \\
+\hline
+Mínimo (\(x_{(1)}\)) & & \\
+\hline
+Máximo  (\(x_{(n)}\)) & & \\
+\hline
+Média & & \\
+\hline
+$Q_1 $& & \\
+\hline
+Mediana & & \\
+\hline
+$Q_3$ & & \\
+\hline
+Amplitude amostral ($R$) & & \\
+\hline
+Dist. entre quartis ($DQ$) & & \\
+\hline
+Desvio médio absoluto ($DM$) & & \\
+\hline
+Variância amostral (\(s^2\)) & & \\
+\hline
+Desvio padrão amostral (\(s\)) & & \\
+\hline
+\end{tabular}
+\end{table}
+
+Sugere-se a construção dos histogramas para comparar os dois grupos. Você pode usar o GeoGebra para esta construção.
+\begin{enumerate}
+\item {} 
+Discuta as suas observações com a turma. Lembre-se de interpretar as medidas de dispersão e não apenas as de posição, que informação adicional oferecem?
+
+\item {} 
+Analisando os dois conjuntos de dados obtidos, que medida de posição você julga mais adequada para resumir a informação do conjunto? Por quê?
+
+\item Os resultados que você obteve parecem refletir a realidade? Existe algum resultado científico que suporte estas observações? Consulte professores de outras áreas sobre suas conclusões.
+
+\end{enumerate}
+
+\ifdefined\prof
+% \begin{solucao}
+
+% \begin{enumerate}
+% \item
+% \end{enumerate}
+
+% \end{solucao}
+\fi
+
+\end{document}

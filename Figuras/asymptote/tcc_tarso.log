@@ -1,0 +1,404 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.27)  10 NOV 2020 16:07
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**NUL \scrollmode
+(./NUL
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-07-17>)
+
+*
+(Please type a command or say `\end')
+*\documentclass[12pt]{article}
+
+*\usepackage{ifluatex}\ifluatex
+(x:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(x:/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count164
+\c@section=\count165
+\c@subsection=\count166
+\c@subsubsection=\count167
+\c@paragraph=\count168
+\c@subparagraph=\count169
+\c@figure=\count170
+\c@table=\count171
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(x:/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+
+(x:/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+*\ifx\pdfpagewidth\undefined\let\pdfpagewidth\paperwidth\fi
+
+*\ifx\pdfpageheight\undefined\let\pdfpageheight\paperheight\fi\else
+
+*\let\paperwidthsave\paperwidth\let\paperwidth\undefined
+
+*\usepackage{graphicx}
+
+*\let\paperwidth\paperwidthsave\fi
+(x:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(x:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(x:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(x:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(x:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 105.
+
+(x:/texlive/2020/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\usepackage{pstricks}
+
+*
+(x:/texlive/2020/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2020/06/11 v0.70 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(x:/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(x:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(x:/texlive/2020/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+(x:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(x:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(x:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
+)
+\XKV@depth=\count172
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)))
+(x:/texlive/2020/texmf-dist/tex/generic/pstricks/pstricks.tex
+(x:/texlive/2020/texmf-dist/tex/generic/pstricks/pst-fp.tex
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count173
+\pstFP@xia=\count174
+\pstFP@xib=\count175
+\pstFP@xfa=\count176
+\pstFP@xfb=\count177
+\pstFP@rega=\count178
+\pstFP@regb=\count179
+\pstFP@regs=\count180
+\pstFP@times=\count181
+)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen137
+\pgfutil@tempdimb=\dimen138
+
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
+) (x:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks21
+)) (x:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Loading pgffor.code.tex
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+\pgf@x=\dimen139
+\pgf@xa=\dimen140
+\pgf@xb=\dimen141
+\pgf@xc=\dimen142
+\pgf@y=\dimen143
+\pgf@ya=\dimen144
+\pgf@yb=\dimen145
+\pgf@yc=\dimen146
+\c@pgf@counta=\count182
+\c@pgf@countb=\count183
+\c@pgf@countc=\count184
+\c@pgf@countd=\count185
+\pgfutil@tempcnta=\count186
+\pgfutil@tempcntb=\count187
+)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen147
+\pgfmath@count=\count188
+\pgfmath@box=\box45
+\pgfmath@toks=\toks22
+\pgfmath@stack@operand=\toks23
+\pgfmath@stack@operation=\toks24
+)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)))
+(x:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count189
+))
+\pgffor@iter=\dimen148
+\pgffor@skip=\dimen149
+\pgffor@stack=\toks25
+\pgffor@toks=\toks26
+)
+\psLoopIndex=\count190
+
+`PSTricks' v2.97  <2019/05/11> (tvz,hv)
+\pst@dima=\dimen150
+\pst@dimb=\dimen151
+\pst@dimc=\dimen152
+\pst@dimd=\dimen153
+\pst@dimg=\dimen154
+\pst@dimh=\dimen155
+\pst@dimm=\dimen156
+\pst@dimn=\dimen157
+\pst@dimo=\dimen158
+\pst@dimp=\dimen159
+\pst@hbox=\box46
+\pst@ibox=\box47
+\pst@boxg=\box48
+\pst@cnta=\count191
+\pst@cntb=\count192
+\pst@cntc=\count193
+\pst@cntd=\count194
+\pst@cntg=\count195
+\pst@cnth=\count196
+\pst@cntm=\count197
+\pst@cntn=\count198
+\pst@cnto=\count199
+\pst@cntp=\count266
+\@zero=\count267
+\pst@toks=\toks27
+(x:/texlive/2020/texmf-dist/tex/xelatex/xetex-pstricks/pstricks.con
+(x:/texlive/2020/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg))
+\psunit=\dimen160
+\psxunit=\dimen161
+\psyunit=\dimen162
+\pst@C@@rType=\count268
+\pslinewidth=\dimen163
+\psk@startLW=\dimen164
+\psk@endLW=\dimen165
+\pst@customdefs=\toks28
+\pslinearc=\dimen166
+\pst@symbolStep=\dimen167
+\pst@symbolWidth=\dimen168
+\pst@symbolLinewidth=\dimen169
+\everypsbox=\toks29
+\psframesep=\dimen170
+\pslabelsep=\dimen171
+\sh@wgridXunit=\dimen172
+\sh@wgridYunit=\dimen173
+\pst@shift=\dimen174
+
+(x:/texlive/2020/texmf-dist/tex/xelatex/xetex-pstricks/pstricks.con
+(x:/texlive/2020/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg
+Using PSTricks configuration for XeTeX+xdvipdfmx
+)))
+File: pstricks.tex 2019/05/11 v2.97 `PSTricks' (tvz,hv)
+ (x:/texlive/2020/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2019/05/11 v2.97 `PST-fp' (hv)
+
+>>> Loading XeTeX special macros
+(x:/texlive/2020/texmf-dist/tex/generic/pstricks/pstricks-xetex.def))
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\usepackage{pst-text}
+
+*
+(x:/texlive/2020/texmf-dist/tex/latex/pst-text/pst-text.sty
+Package: pst-text 2018/12/28 package wrapper for pst-text.tex (hv)
+
+(x:/texlive/2020/texmf-dist/tex/generic/pst-text/pst-text.tex
+ v1.01, 2018/12/22(tvz,hv))
+File: pst-text.tex 2018/12/22 1.01 `pst-text' (tvz)
+)
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\newbox\ASYbox
+\ASYbox=\box49
+
+*\newdimen\ASYdimen
+\ASYdimen=\dimen175
+
+*\def\ASYprefix{}
+
+*\long\def\ASYbase#1#2{\leavevmode\setbox\ASYbox=\hbox{#1}%\ASYdimen=\ht\ASYbox
+%
+
+*\setbox\ASYbox=\hbox{#2}\lower\ASYdimen\box\ASYbox}
+
+*\usepackage{graphicx}
+
+*\begin{document}
+(x:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-06-29 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count269
+\l__pdf_internal_box=\box50
+\g__pdf_backend_object_int=\count270
+\g__pdf_backend_annotation_int=\count271
+)
+No file tcc_tarso.aux.
+\openout1 = `tcc_tarso.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 0.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 0
+.
+(x:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+
+*\makeatletter%
+
+*\let\ASYencoding\f@encoding%
+
+*\let\ASYfamily\f@family%
+
+*\let\ASYseries\f@series%
+
+*\let\ASYshape\f@shape%
+
+*\makeatother%
+
+*\fontsize{12}{14.4}\selectfont%
+
+*
+(Please type a command or say `\end')
+*\usefont{\ASYencoding}{\ASYfamily}{\ASYseries}{\ASYshape}%
+
+*
+(Please type a command or say `\end')
+*\setbox\ASYbox=\hbox{$g$}
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 0.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 0.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 0.
+
+*
+(Please type a command or say `\end')
+*\immediate\write16{>dim(\the\wd\ASYbox)dim}
+>dim(6.05688pt)dim
+
+*\immediate\write16{>dim(\the\ht\ASYbox)dim}
+>dim(5.16667pt)dim
+
+*\immediate\write16{>dim(\the\dp\ASYbox)dim}
+>dim(2.33331pt)dim
+
+*\fontsize{12}{14.4}\selectfont%
+
+*
+(Please type a command or say `\end')
+*\usefont{\ASYencoding}{\ASYfamily}{\ASYseries}{\ASYshape}%
+
+*
+(Please type a command or say `\end')
+*\setbox\ASYbox=\hbox{$G$}
+
+*
+(Please type a command or say `\end')
+*\immediate\write16{>dim(\the\wd\ASYbox)dim}
+>dim(9.26825pt)dim
+
+*\immediate\write16{>dim(\the\ht\ASYbox)dim}
+>dim(8.2pt)dim
+
+*\immediate\write16{>dim(\the\dp\ASYbox)dim}
+>dim(0.0pt)dim
+
+*\fontsize{12}{14.4}\selectfont%
+
+*
+(Please type a command or say `\end')
+*\usefont{\ASYencoding}{\ASYfamily}{\ASYseries}{\ASYshape}%
+
+*
+(Please type a command or say `\end')
+*\setbox\ASYbox=\hbox{$m$}
+
+*
+(Please type a command or say `\end')
+*\immediate\write16{>dim(\the\wd\ASYbox)dim}
+>dim(10.27766pt)dim
+
+*\immediate\write16{>dim(\the\ht\ASYbox)dim}
+>dim(5.16667pt)dim
+
+*\immediate\write16{>dim(\the\dp\ASYbox)dim}
+>dim(0.0pt)dim
+
+*\fontsize{12}{14.4}\selectfont%
+
+*
+(Please type a command or say `\end')
+*\usefont{\ASYencoding}{\ASYfamily}{\ASYseries}{\ASYshape}%
+
+*
+(Please type a command or say `\end')
+*\setbox\ASYbox=\hbox{g=10}
+
+*
+(Please type a command or say `\end')

@@ -1,0 +1,37 @@
+\usetikzlibrary{arrows,%
+                petri,%
+                topaths}
+
+
+\begin{tikzpicture} [->,>=stealth',shorten >=1pt,auto,node distance=2.5cm, semithick,every node/.style={sloped}]
+\tikzstyle{state}=[align=center, circle, draw]
+
+
+\node [state, scale=1.5] 					(A)										 {Pega uma\\carta\\$M_0$};
+\node [state,scale=2.5] 	(B)		 [above right of=A]	 {$M_{\rm II}$};
+\node [state,scale=2.5] 	(C)		 [below right of=A]	 {$M_{\rm II}$};
+\node [state,scale=2.5] 	(D)		 [right of=B]			 {$M_{\rm I}$};
+\node [state,scale=2.5] 	(E)		 [right of=C]			 {$M_{\rm I}$};
+\node [scale=2]					(F)		 [above right of=C, xshift=1.3cm]  {(+1,-1)};
+\node [scale=2] 				(G)		 [above right of=D, yshift=-0.7cm, xshift=1.5cm] {($-1,+1$)};
+\node [scale=2] 				(H)		 [below right of=D, yshift=0.7cm, xshift=1.5cm] {($-2,+2$)};
+\node [scale=2] 				(I)		 [above right of=E, yshift=-0.7cm, xshift=1.5cm] {($-1,+1$)};
+\node [scale=2] 				(J)		 [below right of=E, yshift=0.7cm, xshift=1.5cm] {($+2,-2$)};
+
+
+  \tikzstyle{LabelStyle}=[sloped]
+
+
+\path (A) edge node [scale=2, pos=.65] {As} (B) 
+(A) edge node [scale=2,, below] {Dois} (C)
+(B) edge node [scale=1.7] {II diz As} (D)
+(C) edge node [scale=1.7, above] {II diz Dois} (F)
+(C) edge node [scale=1.7, below] {II diz As} (E)
+(D) edge node [scale=1.7,above] {I Acredita} (G)
+(E) edge node [scale=1.7,above] {I Acredita} (I)
+(D) edge node [scale=1.7,below] {I Cobre} (H)
+(E) edge node [scale=1.7,below] {I Cobre} (J)
+
+
+;
+\end{tikzpicture}

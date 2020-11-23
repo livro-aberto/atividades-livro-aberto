@@ -1,0 +1,142 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Modalidades da maratona de Nova Iorque 2017}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT316} Resolver e elaborar problemas, em diferentes contextos, que envolvem cálculo e interpretação das medidas de tendência central (média, moda, mediana) e das de dispersão (amplitude, variância e desvio padrão).
+\item \textbf{EM13MAT409} Interpretar e comparar conjuntos de dados estatísticos por meio de diferentes diagramas e gráficos, como o histograma, o de caixa (box-plot), o de ramos e folhas, reconhecendo os mais eficientes para sua análise.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Comparar diferentes conjuntos de dados, considerando a mesma variável.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Nesta atividade retomaremos as quatro categorais da maratona de Nova Iorque para usar o boxplot como esquema gráfico para auxiliar na comparação dos resultados para as diferentes categorias, a saber, homens, mulheres, cadeira de rodas e triciclo de mão. Os dados estão disponíveis no \href{https://ggbm.at/ZhqKD9Nz}{link} \url{https://ggbm.at/ZhqKD9Nz}.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Na \hyperref[\detokenize{PE104-7:fig-boxplotsmaratona}]{figura \ref{\detokenize{PE104-7:fig-boxplotsmaratona}}} e na \hyperref[medidas-resumo]{tabela \ref{medidas-resumo}} a seguir apresentam-se 
+
+\begin{enumerate}
+\item os boxplots dos 100 melhores tempos para na maratona de Nova Iorque no ano de 2017 para as categorias homens e mulheres e os boxplots dos concluintes nas categorias cadeira de rodas (51 ao todo) e triciclo de mão (69 ao todo) e
+\item 
+as medidas resumo calculadas pelo GeoGebra para as quatro categorias.
+\end{enumerate}
+
+Para construir os quatro gráficos na mesma escala, todos os tempos foram convertidos para horas.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=400bp]{{boxplots_maratona}.png}
+\caption{Boxplots para os 100 melhores tempos das categorias homens e mulheres e dos melhores tempos das categorias cadeira de rodas e triciclo de mão da maratona de Nova Iorque/2017}\label{\detokenize{PE104-7:fig-boxplotsmaratona}}\label{\detokenize{PE104-7:id1}}\end{figure}
+
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{2.5pt}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\tcolor{}& $\tmat{n}$ & \tcolor{Média} & $\tmat{\sigma}$ & $\tmat{s}$ & \tcolor{Min} & $\tmat{Q_1}$ & \tcolor{Mediana} & $\tmat{Q_3}$ & \tcolor{Max} \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Corrida homens}} & 100 & 2.5116 & 0.1277 & 0.1383 & 2.1814 & 2.4729 & 2.55 & 2.6111 & 2.6389 \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Corrida mulheres}} & 100 & 2.8698 & 0.1858 & 1.867 & 2.4481 & 2.7718 & 2.9493 & 2.9982 & 3.0858 \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Triciclo de mão}} & 69 & 2.7338 & 1.3679 & 1.3779 & 1.48 & 1.7764 & 3.3797 & 3.0946 & 9.4206 \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Cadeira de rodas}} & 51 & 2.5855 & 1.4069 & 1.4209 & 1.6225 & 1.8025 & 2.0978 & 2.6794 & 7.8081 \\
+\hline
+\end{tabular}
+\caption{Medidas resumo para as quatro categorias da maratona de Nova Iorque/2017}
+\label{medidas-resumo}
+\end{table}
+
+\begin{enumerate}
+\item {} 
+Qual das modalidades apresentou maior dispersão?
+
+\item {} 
+Qual(ais) modalidade(s) apresentaram valores atípicos?
+
+\item {} 
+Como você avalia, em relação à simetria, cada uma das distribuições?
+
+\item {} 
+Faça uma análise comparativa das distribuições das modalidades homens e mulheres, usando a \hyperref[\detokenize{PE104-7:fig-boxplothm}]{figura \ref{\detokenize{PE104-7:fig-boxplothm}}}.
+
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=400bp]{{bphm_1}.png}
+\caption{Boxplot dos 100 melhores tempos para homens e mulheres na maratona de Nova Iorque/2017}\label{\detokenize{PE104-7:fig-boxplothm}}\label{\detokenize{PE104-7:id3}}\end{figure}
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item {} 
+Faça uma análise comparativa das distribuições das modalidades cadeira de rodas e triciclo de mão.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Considerando a amplitude amostral é fácil perceber que a maior dispersão ocorre na categoria triciclo de mão. O mesmo vale se considerarmos a distância entre quartis. Pela \hyperref[medidas-resumo]{tabela \href{medidas-resumo}} podemos ver que esta resposta também valerá se considerarmos o desvio padrão.
+
+\item Pela \hyperref[\detokenize{PE104-7:id1}]{figura \ref{\detokenize{PE104-7:id1}}}m podemos ver que a única categoria que não apresentou valores atípicos foi a categoria das mulheres, pois não há pontos destacados no boxplot correspondente às mulheres.
+
+\item Considerando as categorias “cadeira de rodas”{} e “triciclo de mão”, vemos que
+\begin{align*}
+Q_1-\text{Min}&<<\text{Max}-Q_3;\\
+\text{Mediana}-Q_1&<Q_3-\text{Mediana e}\\ 
+\text{Mediana}-\text{Min}&<<\text{Max}-\text{mediana},\\
+\end{align*}
+em que o símbolo $<<$ é usado para indicar “bem menor do que”.
+
+Logo, conclui-se que nestas categorias tem-se assimetria à direita acentuada. Observe, que nestes dois casos tem-se que a mediana é menor do que a média. Reveja os histogramas construídos na ativ-comparacao-de-diferentes-grupos.
+
+Considerando as categorias “homens”{} e “mulheres”, vemos que
+\begin{align*}
+Q_1-\text{Min}&>>\text{Max}-Q_3;\\
+\text{Mediana}-Q_1&>Q_3-\text{Mediana e}\\ 
+\text{Mediana}-\text{Min}&>>\text{Max}-\text{mediana},\\
+\end{align*}
+em que o símbolo $>>$ é usado para indicar “bem maior do que”. Logo, conclui-se que nestas categorias tem-se assimetria à esquerda acentuada. Observe, que nestes dois casos tem-se que a mediana é maior do que a média. Reveja os histogramas construídos na atividade \hyperref[\detokenize{PE104-5:ativ-compara-categorias}]{Comparação de conjutos de dados}.
+
+\item Podemos perceber que ambas as categorias apresentam distribuições com assimetria à esquerda, mas na categoria mulheres não há valores atípicos. Também podemos perceber que a dispersão na categoria mulheres é maior do que na categoria homens, considerando a amplitude, a distância entre quartis e também o desvio padrão. Por esta razão, a categoria mulheres não apresentou valores atípicos. Já para a categoria homens, por ter apresentado menos dispersão, apresentou vários valores atípicos pequenos, que certamente, devem se referir aos tempos dos atletas profissionais. Reveja os histogramas construídos na \hyperref[\detokenize{PE104-5:ativ-compara-categorias}]{Comparação de conjutos de dados}.
+
+\item Considerando as categorias “cadeira de rodas”{} e “triciclo de mão”{} vemos que na primeira, 51 completaram a maratona e, na segunda, 69 completaram a maratona. Quanto à amplitude, vemos que ela foi maior na cetegoria “triciclo de mão”, valendo o mesmo para a distância entre quartis e para o desvio padrão. Possivelmente, esta diferença nas dispersões das duas categorias esteja sendo acarretada pelo maior valor atípico da categoria “triciclo de mão”, a saber, $9{,}5206$h. Já foi observado que ambas as categorias apresentam distribuições com assimetria à direita de modo que a mediana é menor do que a média. Reveja os histogramas construídos na \hyperref[\detokenize{PE104-5:ativ-compara-categorias}]{Comparação de conjutos de dados}.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,33 @@
+\usetikzlibrary{arrows, petri,topaths}
+\usetikzlibrary{positioning}
+
+
+\begin{tikzpicture} [->,>=stealth',shorten >=1pt,auto,node  distance=3cm, semithick,every node/.style={sloped}]
+\tikzstyle{state}=[align=center, circle, draw,minimum size=1.5cm]
+
+\node [state] (A) {$=,=$};
+\node [state] (B) [above right of=A, xshift=2cm, yshift=-0.5cm] {$=,-$};
+\node [state] (C) [below right of=A, xshift=2cm, yshift=0.5cm] {$=,$};
+
+\node [scale=1.3] (P) [right of=B, xshift=-1.3cm]  {($-1,+1$)};
+\node [scale=1.3] (Q) [right of=C, xshift=-1.3cm]  {($-1,+1$)};
+
+
+\path (A) edge node [above] {I} node [below,scale=0.9] {pega um} (B)
+ (A) edge node [above] {I} node [below,scale=0.9] {pega dois} (C)
+
+;
+
+\node [above of=A,yshift=-2cm] {(I)};
+\node [above of=B,yshift=-2cm] {(II)};
+\node [above of=C,yshift=-2cm] {(III)};
+
+\node [below of=A,yshift=2cm] {$M_{\rm A}$};
+
+\node [below of=B,yshift=2cm] {$M_{\rm B}$};
+\node [below of=C,yshift=2cm] {$M_{\rm B}$};
+
+
+
+
+\end{tikzpicture}

@@ -1,0 +1,93 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Inflação anual}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT316} Estudar o efeito de uma transformação simples numa
+distribuição de dados: adição (posição) e multiplicação (escala).
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{itemize}
+\item Comparar diferentes conjuntos de dados que apresentam a mesma variância, mas suas médias são diferentes.
+
+\item Perceber a necessidade de definir uma medida que avalie a magnitude da variância (desvio padrão) em relação à média.
+\end{itemize}
+
+\tcblower
+
+%Orientações e sugestões
+Nesta atividade são apresentados dois conjuntos de dados cujas variâncias são iguais, mas cujas médias são distintas. Pretende-se na discussão, levar à definição de coeficiente de variação, uma medida útil para avaliar a magnitude da variância. Como o dado observado é a inflação anual de um país, a atividade começa com um pequeno texto introdutório sobre inflação.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A seguir são apresentados dados sobre as inflações anuais em dois países. Antes de trabalhar com os dados, vamos tentar explicar o que é \index{inflação}inflação. De uma maneira bem simples, pode-se dizer que a inflação é o aumento contínuo nos preços de produtos e serviços. Esse aumento costuma ser avaliado de forma mensal, gerando os índices de inflação, que refletem a variação nos preços.
+
+A inflação pode ser medida de várias formas. O índice oficial de inflação no Brasil é o IPCA (Índice de Preços ao Consumidor Amplo), que mede a variação mensal de preços de produtos considerando o consumo de famílias com renda mensal entre 1 e 40 salários mínimos. O IBGE (Instituto Brasileiro de Geografia e Estatística) é o orgão responsável pela medição e divulgação do IPCA. Veja neste
+\href{https://www.youtube.com/watch?v=JVcDZOlIMBk}{link}, um vídeo produzido pelo IBGE, explicando o IPCA.
+
+Foram observadas as inflações anuais de dois países $A$ e $B$ para os anos de 2011 a 2015, conforme tabela a seguir.
+
+\begin{table}[H]
+\centering
+\caption{Inflação anual}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\tcolor{País} & \tcolor{2011} & \tcolor{2012} & \tcolor{2013} & \tcolor{2014} & \tcolor{2015} & \tcolor{Soma} \\
+\hline
+$A$ & $2{,}00\%$ & $1{,}80\%$ & $2{,}10\%$ & $2{,}20\%$ & $1{,}90\%$ & $10{,}00\%$ \\
+\hline
+$B$ & $0{,}01$\% & $-0{,}19\%$ & $-0{,}09\%$ & $0{,}21\%$ & $0{,}11\%$ & $0{,},05\%$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item {} 
+Calcule as médias das inflações anuais dos dois países. Há diferenças entre elas?
+
+\item {} 
+Calcule as variâncias das inflações anuais dos dois países, sabendo que para o país $A$, \(\displaystyle{\sum^5_{i=1}}x^2_i=20,1\)  (\% \(^2\) ) e para o país $B$,  \(\displaystyle{\sum^5_{i=1}}x^2_i=0,1005\)  (\% \(^2\) ). Há diferença entre elas?
+
+\item {} 
+Qual dos países apresenta maior variação inflacionária quando comparada à média inflacionária?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item No país $A$, a inflação média anual, considerando estes 5 anos, é $\bar{x}=\frac{10}{5}=2{,}00\%$. No país $B$, a inflação média anual, considerando estes 5 anos, é $\bar{x}=0{,}055=0{,}01\%$. Logo, as inflações anuais médias dos dois países são bem diferentes.
+
+\item Usando a fórmula simplificada para o cálculo da variância, temos, para o país $A$, $s^2=\frac{1}{5-1}(20,1-5\cdot2^2)=0{,}025(\%^2)$. Para o país $B$, temos $s^2=\frac{1}{5-1}(0{,}1005-5\cdot0{,}012)=0{,}025(\%^2)$. Logo, as variâncias destes dois conjuntos de inflações anuais são iguais e, consequentemente, os desvios padrões também são iguais.
+
+\item Verifique que os cinco desvios da média produzidos pelos dados dos dois países são idênticos, levando à mesma variância (mesmo desvio padrão). No entanto, a média no país $A$ ($2\%$) é bem maior do que no país $B$, indicando uma variação relativa à média menos forte do que no país $B$. A seguir, será definido o coeficiente de variação, que avalia essa propriedade de dispersão relativa à média. Observe que o desvio padrão para os dois países é $\sqrt{0{,}025}\approx0{,}16\%$ de modo que no país A o desvio padrão corresponde a $8\%$ da média $(\frac{0{,}16}{2}=0{,}08)$, enquanto que no país B, corresponde a $1.600\%$ da média $(\frac{0{,}16}{0{,}01}=16)$, ou seja, a flutuação em torno da média é muito mais forte no país $B$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

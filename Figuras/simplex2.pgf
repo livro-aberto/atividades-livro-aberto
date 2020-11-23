@@ -1,0 +1,36 @@
+\begin{tikzpicture}[scale=3]
+\tikzstyle{ponto}=[circle, fill, inner sep=1.5pt]
+
+%s3
+\coordinate (a) at (90:1);
+%s1
+\coordinate (b) at (-30:1);
+%s2
+\coordinate (c) at (210:1); 
+
+
+
+%s1
+\draw [dashed, shift={(-30:-.05)}] {(60:1)} -- (60:-1) node [above, pos=.9, rotate=60] {$\sigma_1$} ;
+%s2
+\draw [dashed, shift={(210:.1)}] (120:1) -- (120:-1) node [above, pos=.1, rotate=-60] {$\sigma_2$};
+%s3
+\draw  [dashed, shift={(90:-.05)}] [dashed] (180:1) -- (180:-1) node [above, pos=.725] {$\sigma_3$};
+
+\node [ponto,shift={(-.25,0)}, label=above:{$\sigma$}] at (90:-.05) {};
+
+\draw  [dashed, shift={(90:1)}] [dashed] (180:1) -- (180:-1)  node [, above, pos=.1] {$\sigma_3=1$};
+
+\draw  [dashed, shift={(270:.5)}] [dashed] (180:1.25) -- (180:-1.25)  node [, above, pos=.95 ] {$\sigma_3=0$};
+
+
+\node [above] at (a) {$s_3$};
+\node [below right] at (b) {$s_1$};
+\node [below left] at (c) {$s_2$};
+
+\node [ponto] at (a) {};
+\node [ponto] at (b) {};
+\node [ponto] at (c) {};
+
+\draw [thick] (a) -- (b) -- (c) -- cycle;
+\end{tikzpicture}

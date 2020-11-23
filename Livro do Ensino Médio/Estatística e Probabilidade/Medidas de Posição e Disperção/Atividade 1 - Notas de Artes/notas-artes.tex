@@ -1,0 +1,257 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Notas de Artes}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+\begin{objetivos}
+\item \textbf{EM13MAT316} Resolver e elaborar problemas, em diferentes contextos, que envolvem cálculo e interpretação das medidas de tendência central (média, moda, mediana) e das de dispersão (amplitude, variância e desvio padrão).
+\end{objetivos}
+
+\begin{goals}
+\begin{enumerate}
+\item Estudar o efeito de uma transformação simples numa distribuição de dados: adição (posição) ou multiplicação (escala).
+\end{enumerate}
+
+\tcblower
+
+Esta atividade tem como objetivo principal levar o aluno a perceber efeitos que certas transformações simples nos dados (adição e multiplicação) acarretam em uma distribuição de frequências e, consequentemente, levá-lo a avaliar possíveis mudanças nas medidas de posição e dispersão que serão tratadas neste capítulo. Como ela é uma atividade introdutória, essas propriedades não serão totalmente exploradas na atividade, mas ao longo da capítulo ela será retomada. Os dados desta atividade podem ser obtidos neste \href{https://www.geogebra.org/m/TNh7dPCf}{link} , e sugere-se o uso do GeoGebra ou uma planilha para realizar as transformações indicadas, embora não seja necessário para a realização da atividade. No item \titem{e)} não há uma resposta certa, mas ele deverá ser explorado futuramente com o objetivo de avaliar os efeitos em uma distribuição quando somamos um valor constante a todos os dados e quando multiplicamos um valor constante a todos os dados.
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Ao final de um trimestre, um professor de Artes registrou as seguintes notas de seus 35 alunos, listadas no quadro a seguir, em ordem crescente.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+0,8 & 20 & 2,0 & 2,5 & 2,5 & 3,5 & 4,5 \\
+\hline
+5,0 & 5,4 & 5,5 & 5,5 & 5,5 & 6,0 & 6,0 \\
+\hline
+6,0 & 6,0 & 6,3 & 6,5 & 6,8 & 6,8 & 7,0 \\
+\hline
+7,0 & 7,0 & 7,0 & 7,3 & 7,3 & 7,5 & 7,5 \\
+\hline
+7,5 & 7,5 & 7,8 & 8,0 & 8,0 & 8,0 & 8,0 \\
+\hline
+\end{tabular}
+\end{table}
+
+Este professor verificou que a média da turma foi aproximadamente $5{,}93$ (soma das notas \(S=207,5\)). Como a participação da turma foi muito boa ao longo do trimestre, o professor resolveu dar uma bonificação na nota de cada aluno desta turma, pensando em duas possibilidades:
+
+\begin{itemize}
+\item {} 
+acrescentar um ponto para cada aluno da turma;
+
+\item {} 
+aumentar em $20\%$ a nota de cada aluno da turma.
+\end{itemize}
+
+
+A \hyperref[tabela-notas1]{tabela \ref{tabela-notas1}} contém os intervalos de classe considerados na construção do histograma das notas sem bonificação, ilustrado na \hyperref[figura-notas1]{figura \ref{figura-notas1}}
+
+\begin{table}[H]
+\centering
+\caption{Distribuição de frequências das notas antes de bonificação}
+\label{tabela-notas1}
+\begin{tabular}{|l|c|}
+\hline
+\tcolor{Intervalo} & \tcolor{Frequência absoluta} \\
+\hline
+${[}0{,}2{[}$ & $1$ \\
+\hline
+${[}2{,}4{[}$ & $5$ \\
+\hline
+${[}4{,}6{[}$ & $6$ \\ 
+\hline
+${[}6{,}8{]}$ & $23$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
+\begin{scope}[x=10, y = 5]
+\matrix[column sep=0.5cm, row sep=0.5cm]{
+	\foreach \ye in {0,5,...,25}{
+		\draw [help lines, lightgray] (-0,\ye) -- (10,\ye);
+		\draw (0,\ye) -- (-0.4,\ye);
+		\node [left] at (-0.4,\ye) {\ye} ;
+	}
+	\draw (-0.5,0) -- (10,0);
+	\draw (0,0) -- (0,25);
+	\foreach \xl/ \xr/\y in {0/2/1,2/4/5,4/6/6,6/8/23}{
+	\draw [fill=\currentcolor!80] (\xl,0) rectangle (\xr,\y);
+	%\node [right, rotate=270] at ($(\xl,0)!0.5!(\xr,0)$) {$\xl$  a $\xr$};
+	}
+	\foreach \x in {0,2,...,10}{
+		\draw (\x,0) -- (\x,-0.4);
+		\node [below] at (\x,-0.4) {\x};
+	}
+\node [rotate=90] at (-4,12.5) {Frequencia absoluta};
+\node [below] at (5,-4) {Notas};
+%	\filldraw[fill=destacado] (5.5,0) -- (5.4,-3) -- (5.6,-3) -- cycle;
+%	\node [below] at (5.5,-3) {mÃ©dia};
+
+\\};
+\end{scope}
+
+\end{tikzpicture}
+\caption{Histograma das notas de Artes sem bonificação}\label{\detokenize{PE104-0:fig-histograma-notas-sem-bonificacao}}\label{figura-notas1}\end{figure}
+
+Os dois histogramas a seguir, na \hyperref[figura-notas2]{figura \ref{figura-notas2}} correspondem às notas, após usar cada uma das possibilidades consideradas pelo professor, mantendo quatro intervalos de classe, conforme as \hyperref[tabela-notas2]{tabelas \ref{tabela-notas2} e \ref{tabela-notas3}} .
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}
+\begin{scope}[x=10, y = 5]
+
+
+	\foreach \ye in {0,5,...,25}{
+		\draw [help lines, lightgray] (-0,\ye) -- (10,\ye);
+		\draw (0,\ye) -- (-0.4,\ye);
+		\node [left] at (-0.4,\ye) {\ye} ;
+	}
+	\draw (-0.5,0) -- (10,0);
+	\draw (0,0) -- (0,25);
+	\foreach \xl/ \xr/\y in {0/2/1,2/4/5,4/6/6,6/8/23}{
+	\draw [fill=\currentcolor!80] (1.2*\xl,0) rectangle (1.2*\xr,\y);
+	%\node [right, rotate=270] at ($(\xl,0)!0.5!(\xr,0)$) {$\xl$  a $\xr$};
+	}
+	\foreach \x in {0,2,...,10}{
+		\draw (\x,0) -- (\x,-0.4);
+		\node [below] at (\x,-0.4) {\x};
+	}
+\node [rotate=90] at (-4,12.5) {Frequencia absoluta};
+\node [below] at (5,-4) {($\quad$)};
+%	\filldraw[fill=destacado] (5.5,0) -- (5.4,-3) -- (5.6,-3) -- cycle;
+%	\node [below] at (5.5,-3) {mÃ©dia};
+
+\end{scope}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}
+\begin{scope}[x=10, y = 5]
+
+
+
+	\foreach \ye in {0,5,...,25}{
+		\draw [help lines, lightgray] (-0,\ye) -- (10,\ye);
+		\draw (0,\ye) -- (-0.4,\ye);
+		\node [left] at (-0.4,\ye) {\ye} ;
+	}
+	\draw (-0.5,0) -- (10,0);
+	\draw (0,0) -- (0,25);
+	\foreach \xl/ \xr/\y in {0/2/1,2/4/5,4/6/6,6/8/23}{
+	\draw [fill=\currentcolor!80] (\xl+1,0) rectangle (\xr+1,\y);
+	%\node [right, rotate=270] at ($(\xl,0)!0.5!(\xr,0)$) {$\xl$  a $\xr$};
+	}
+	\foreach \x in {0,2,...,10}{
+		\draw (\x,0) -- (\x,-0.4);
+		\node [below] at (\x,-0.4) {\x};
+	}
+\node [rotate=90] at (-4,12.5) {Frequencia absoluta};
+\node [below] at (5,-4) {($\quad$)};
+
+%	\filldraw[fill=destacado] (5.5,0) -- (5.4,-3) -- (5.6,-3) -- cycle;
+%	\node [below] at (5.5,-3) {mÃ©dia};
+
+\end{scope}
+\end{tikzpicture}
+\end{minipage}
+
+\caption{Histogramas das notas de Artes com bonificação}\label{\detokenize{PE104-0:fig-histogramas-notas-aleteradas}}
+\label{figura-notas2}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Distribuição de frequências das notas após acréscimo de 1 ponto a cada nota}
+\label{tabela-notas2}
+\begin{tabular}{|l|c|}
+\hline
+\tcolor{Intervalo} & \tcolor{Frequência absoluta} \\
+\hline
+${[}1;3{[}$ & $1$ \\
+\hline
+${[}3;5{[}$ & $5$ \\
+\hline
+${[}5;7{[}$ & $6$ \\
+\hline
+${[}7;9{]}$ & $23$ \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+\caption{Distribuição de frequências das notas após aumento de 20\% sobre a nota}
+\label{tabela-notas3}
+\begin{tabular}{|l|c|}
+\hline
+\tcolor{Intervalo} & \tcolor{Frequência absoluta} \\
+\hline
+${[}0 ; 2{,}4{[}$ & $1$ \\
+\hline
+${[}2{,}4 ; 4{,}8{[}$ & $5$ \\
+\hline
+${[}4{,}8 ; 7{,}2{[}$ & $6$ \\ 
+\hline
+${[}7{,}2 ; 9{,}6{]}$ & $23$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item {} 
+Compare os histogramas das notas com bonificação com o histograma original. O que mudou em cada um deles em relação ao original?
+
+
+\item {} 
+Considerando os \hyperref[\detokenize{figura-notas2}]{Histogramas das notas de Artes com bonificação}, identifique qual deles corresponde ao  acréscimo de $1{,}0$ ponto, assinalando (a) e qual deles corresponde ao aumento de $20\%$ das notas originais, assinalando (b).
+
+\item {} 
+Dada a informação inicial de que a média da turma foi $5{,}93$, de quanto será a média se o professor acrescentar um ponto a cada aluno? E se ele aumentar em $20\%$ a nota de cada aluno?
+
+\item {} 
+Se você fosse um aluno desta turma, que possibilidade de bonificação você escolheria? Para que notas é melhor cada uma das estratégias?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+\begin{enumerate}
+\item Analisando o primeiro histograma apresentado com o original, percebe-se que o primeiro apresenta uma pequena alteração com intervalos de classe mais largos, ou seja de comprimento $2{,}4$ (os comprimentos originais dos intervalos são iguais a $2$). Já, o segundo, mantém intervalos de classe com mesmo comprimento aos do original, apresentando um deslocamento dos intervalos em uma unidade para à direita.
+
+\item Com o acréscimo de 1 ponto a cada nota, a nota maior que é $8{,}0$ passa a ser $9{,}0$; já com o aumento de $20\%$ sobre a nota de cada um, a nota maior passa a ser $9{,}6$. Portanto, analisando os dois histogramas dados, conclui-se que o primeiro corresponde ao aumento de $20\%$ na nota de cada um e, o segundo, ao acréscimo de 1 ponto na nota de cada um.
+
+\item Observe que se todos os alunos tiverem o acréscimo de $1$ ponto, a soma total das notas será acrescida de $35$ pontos (pois são $35$ alunos). Ao dividir o total por $35$, perceba que a nova média será alterada exatamente pelo acréscimo de $1$ ponto, passando a ser $6{,}93$. Ou seja, a nova média é dada por $\dfrac{207{,}5+35}{35}\approx5{,}93+1$. Já no caso do aumento de $20\%$ sobre a nota de cada aluno, teremos que a nova soma total de notas será dada pela soma original acrescida de $20\%$ tal que a média será dada por $\dfrac{S+0{,}2\cdot S}{35}=\dfrac{1{,}2\cdot S}{35}=1{,}2\times \underbrace{\frac{S}{35}}_{\mathclap{\approx5{,}9\text{ média original}}}=1{,}2\times5{,}93\approx7{,}12$, em que $S=207{,}5$.
+
+\item Não há uma resposta certa para este item. Se cada aluno olhar o seu ponto de vista particular, para alguns será melhor ganhar um ponto e para outros será melhor ter um aumento de $20\%$ sobre a nota. Mais especificamente, para quem tiver obtido nota $5{,}0$ será indiferente; para quem tiver obtido nota inferior a $5{,}0$ será melhor ganhar um ponto e, para os restantes, será melhor o acréscimo de $20\%$ sobre a nota.
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}
