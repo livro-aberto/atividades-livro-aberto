@@ -1,0 +1,68 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Lei de Moore}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Resolver um problema contextualizado aplicando a noção de logaritmo.
+\end{enumerate}
+
+\tcblower
+
+Em seguida indica-se aos alunos o exercício sobre a Lei de Moore. Ao apresentar a solução deve-se aproveitar a oportunidade para utilizar a notação de base 10 omitindo a base.
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Na computação, a Lei de Moore estima como os computadores progridem. Ela prevê que a capacidade computacional dobra a cada 1,5 ano. Para simplificar nossos cálculos, vamos aproximá-la\footnote{Em 5 anos há $3,\overline{3}$ períodos de $1,5$ anos, então o crescimento seria de $2^{3,\overline{3}} = 10,07$, com duas casas decimais.} por um crescimento de 10 vezes a cada 5 anos. Supondo que as previsões de Moore estejam corretas, utilize a notação de logaritmo para representar quantos quinquênios serão necessários para:
+\begin{enumerate}
+\item a capacidade computacional aumentar 100 vezes,
+\item a capacidade computacional aumentar 1000 vezes.
+\end{enumerate}
+Qual seria a sua estimativa para a quantidade de quinquênios necessários para a que capacidade computacional aumente 1100 vezes?
+
+\ifdefined\prof
+\begin{solucao}
+
+Suponhamos que hoje a capacidade computacional seja representada pela constante c. Após 5 anos, teremos $10c$. Após 10 anos, teremos $10 \times (10c) = c \times 10^2$. Após $t$ quinquênios , teremos $c \times 10^t$
+\begin{enumerate} 
+\item Queremos chegar a 100 vezes o que é hoje, ou seja, queremos
+$$
+t = \log 100 = \log_{10} 100  = 2.
+$$
+\item Queremos chegar a 1000 vezes o que é hoje, ou seja, queremos
+$$
+t = \log 1000 = \log_{10} 1000  = 3.
+$$
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

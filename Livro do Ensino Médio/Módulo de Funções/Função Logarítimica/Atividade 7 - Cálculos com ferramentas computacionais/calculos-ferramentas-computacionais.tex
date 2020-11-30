@@ -1,0 +1,66 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Cálculos com ferramentas computacionais}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Encontrar o valor dos logaritmos em bases distintas através de tabelas e/ou de aplicativos.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+No applet do geogebra, mova os controles deslizantes das variáveis “a” e “b” e encontre um valor aproximado (com até duas casas decimais) para:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\log_{1,41} 4$;
+\item $\log_{2,71} 4$;
+\item $\log_2 5$;
+\item $\log_4 7$;
+\item $\log_{2,71} 9$;
+\item $\log_3 7$.
+\end{enumerate}
+\end{multicols}
+
+\ifdefined\prof
+\begin{solucao}
+
+	\begin{enumerate}
+	\item $\log_{1,41} 4 \approx 4,03$;
+	\item $\log_{2,71} 4 \approx 1,39$;
+	\item $\log_{2} 5 \approx 2,32$;
+	\item $\log_{4} 7 \approx 1,4$;
+	\item $\log_{2,71} 9 \approx 2,2$;
+	\item $\log_{3} 7 \approx 1,77$.
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

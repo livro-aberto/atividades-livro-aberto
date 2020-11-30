@@ -1,0 +1,71 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Bactérias no leite}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Desenvolver raciocínios informais sobre o número de vezes que uma operação de multiplicação é aplicada.
+\item Reconhecer questões em que as incógnitas encontram-se em expoentes.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Uma população de uma determinada bactéria contamina um copo de leite à temperatura ambiente. Suponha que o leite seja considerado impróprio para o consumo se a população do copo for maior ou igual a $16.200$ indivíduos. A população de bactérias tem, inicialmente, $200$ indivíduos e sua população triplica a cada hora até atingir $40.000$ indivíduos. Em quanto tempo a população atingirá $16.200$ indivíduos?
+
+\ifdefined\prof
+\begin{solucao}
+
+A evolução do número de bactérias pode ser tabelado
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|l|l|}
+\hline
+\thead
+Tempo (horas) & Evolução das Bactérias & População \\
+\hline
+$0$ & $200$ & $200$ \\
+\hline
+$1$ & $200\times3$ & $600$ \\
+\hline
+$2$ & $200\times3^2$ & $1.800$ \\
+\hline
+$3$ & $200\times3^3$ & $5.400$ \\
+\hline
+$4$ & $200\times3^4$ & $16.200$ \\
+\hline
+\end{tabu}
+\end{table}
+A população atinge 16.200 indivíduos após 4 horas.
+
+\end{solucao}
+\fi
+
+\end{document}

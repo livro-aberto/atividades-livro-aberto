@@ -1,0 +1,58 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Logaritmos com mudança de base}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar a propriedade da mudança de base em aproximações manuais.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Determine o valor dos logaritmos abaixo, sabendo que $\log 2 = 0{,}301$, $\log 3 = 0{,}477$ e $\log 7 = 0{,}845$:
+\begin{enumerate}
+\item $\log_3 7$;
+\item $\log_7 21$;
+\item $\log_9 16$.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+	\item  $\log_3 7=\dfrac{\log 7}{\log 3} = \dfrac{0{,}845}{0{,}477} \approx 1{,}7715;$
+	\item  $\log_7 21=\dfrac{\log 3 + \log 7}{\log 7} = \dfrac{0{,}477 + 0{,}845}{0{,}845} \approx 1{,}5645;$
+	\item  $\log_9 16=\dfrac{\log 16}{\log 9} =\dfrac{4\log 2}{2\log 3} = \frac{2*0{,}301}{0{,}477} \approx 1{,}262.$
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

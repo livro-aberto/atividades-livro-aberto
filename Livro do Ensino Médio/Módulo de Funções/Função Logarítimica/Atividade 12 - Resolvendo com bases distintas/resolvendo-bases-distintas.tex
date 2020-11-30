@@ -1,0 +1,66 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Resolvendo com bases distintas}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Investigar a aplicação de logaritmos em diferentes bases na solução de problemas.
+\item Observar que a propriedade da mudança de base surge naturalmente dessa investigação.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Sugere-se a que os estudantes desenvolvam a atividade para que experimentem o surgimento da propriedade e reforcem a técnica utilizada na solução do exemplo.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Vamos supor que um grupo de $10$ pessoas tenha chegado à cidade de São Paulo portando uma nova variedade de uma doença extremamente infecciosa. Suponha que a taxa de crescimento da doença é de $100\%$ ao dia sem que nenhuma medida contenção seja aplicada. Vamos calcular quantos dias levará para que a doença ultrapasse $2000$ pessoas utilizando logaritmos em base $10$ e em base $2$. Utilize as aproximações $\log 2 = 0{,}3$ e $\log_2 10 = 3{,}33$.
+
+\ifdefined\prof
+\begin{solucao}
+
+	Calculando com base $10$:
+	\begin{align*} &10 \times 2^t = 2000\\
+	\Rightarrow& t\log 2 = \log 200\\
+	\Rightarrow& t = \frac{\log 200}{\log 2}\\
+	& = \frac{\log 2 + 2}{\log 2}= \frac{2{,}3}{0{,}3} \approx 7{,}\overline{6}.
+	\end{align*}
+	Calculando com base $2$:
+	\begin{align*} &10 \times 2^t = 2000\\
+	\Rightarrow& t\log_{2} 2 = \log_{2} 200\\
+	\Rightarrow& t = \log_{2} 200  = 1+2\log_2 10 \approx 7{,}66.
+	\end{align*}
+
+\end{solucao}
+\fi
+
+\end{document}

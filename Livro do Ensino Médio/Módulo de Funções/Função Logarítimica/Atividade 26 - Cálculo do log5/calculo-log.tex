@@ -1,0 +1,62 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Cálculo $\log_2 5$}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Calcular logaritmos manualmente através do método da bissecção, que têm sua importância como método computacional também em outros contextos.
+\item Praticar o método da bissecção, aplicando-o no cálculo de logaritmos.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item O cálculo manual pode ser uma oportunidade para fixar o método da bissecção e poderia ser complementado com atividades práticas interdisciplinares de computação com a implementação do método em alguma linguagem.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Utilize o método da bissecção para calcular $\log_2 5$ com erro menor do que $0,25$. 
+
+\ifdefined\prof
+\begin{solucao}
+
+Calcular $\log_2 5$ significa encontrar o expoente ao qual deve-se elevar $2$ para obter $5$, ou seja, é o número tal que $2^{\log_2 5} = 5$. Assim buscamos expoentes de $2$ que levem a resultados cada vez mais próximos de 5.
+
+Como $2^2 = 4 <5<8 =2^3$, tomamos $i=2$ e $s=3$ como aproximações iniciais.
+
+	Verificamos, então, se o ponto médio $(2+3)/2=5/2$ é uma aproximação superior ou inferior. Isso é feito comparando $2^5=32$ com $5^2=25$. Como $2^5 > 5^2$ temos que $2^{5/2} > 5$ e $5/2 > \log_2 5$, pois a função exponencial $2^x$ cresce, conforme crescem os valores de $x$. Então tomamos $s=5/2=2,5$, enquanto mantemos $i=2$. A aproximação seguinte é, então, $(2+5/2)/2 = 9/4 = 2,25$.
+
+	Como $\log_2 5 \in (2, 5/2)$ e $2,25$ está a uma distância menor do que 0,25 de qualquer ponto do intervalo, temos que 2,25 é uma aproximação com o erro menor do que o pedido.
+
+\end{solucao}
+\fi
+
+\end{document}

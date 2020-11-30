@@ -1,0 +1,66 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Cálculos sem a calculadora}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Praticar a definição de logaritmo e o seu cálculo através do conceito propriamente dito.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Calcule exatamente ou encontre um número natural que aproxime, com erro menor do que 1, os seguintes logaritmos (justificando as suas respostas):
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\log_2 8$;
+\item $\log_{1/2} 32$;
+\item $\log 1000$;
+\item $\log_2 10$;
+\item $\log 113$;
+\item $\log_3 30 $.
+\end{enumerate}
+\end{multicols}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+	\item $\log_2 8 = 3$ pois $2^3 = 8$;
+	\item $\log_{1/2} 32 = -5$ pois $(1/2)^{-5} = 2^5 = 32$;
+	\item $\log 1000= 3$ pois $10^3 = 1000$;
+	\item Como $2^3=8 <10 <2^4 =16$, temos $\log_2 10$ pode ser aproximado por 3 ou 4 com erro menor do que 1;
+	\item Como $10 ^2 = 100 < 113 < 10^3 = 1000$, temos $\log 113$ pode ser aproximado por 2 ou 3 com erro menor do que 1;
+	\item Como $3^3= 27 <30 <3^4 =81$, temos $\log_3 30$ pode ser aproximado por 3 ou 4 com erro menor do que 1.
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

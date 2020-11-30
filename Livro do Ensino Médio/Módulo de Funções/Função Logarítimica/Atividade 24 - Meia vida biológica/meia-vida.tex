@@ -1,0 +1,72 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Meia vida biológica}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Resolver questões contextualizadas envolvendo o contexto de decaimento.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Na farmácia e na medicina utiliza-se a meia vida como meio para aproximar a concentração plasmática de um fármaco em um organismo após a administração. A resolução da questão é análoga às resoluções envolvendo o decaimento radioativo e a adaptação das técnicas conhecidas entre contextos diferentes é fundamental, uma vez que a exploração de todos os contextos específicos possíveis não é viável.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A meia vida de um fármaco é o tempo necessário para a concentração plasmática dele cair pela metade em um organismo. Esse conceito serve para estimarmos qual a concentração de determinado medicamento no organismo. O antibiótico Amoxicilina tem meia vida biológica de $61{,}3$ minutos. Vejamos a seguinte situação: um paciente de $75$ Kg recebe uma dose do medicamento de $500$ mg. Uma pessoa com esse peso tem cerca de 5 litros de sangue (a quantidade exata pode variar de pessoa para pessoa). Supondo que o medicamento foi completamente dissolvido e distribuído uniformemente no sangue, teríamos a concentração plasmática do medicamento igual a $\frac{500}{5000}= 0{,}1$ mg/ml. Escreva uma função exponencial de base $e$ para descrever concentração plasmática (em mg/ml) após $t$ minutos. Utilize a função encontrada para determinar quanto tempo levará para a concentração cair abaixo de $0{,}005$ mg/ml. 
+
+
+
+\ifdefined\prof
+\begin{solucao}
+
+Como a concentração cai pela metade a cada $61{,}3$ minutos, poderíamos escrever a seguinte função para a concentração
+$$
+Q(t)=0{,}1(1/2)^{t/61{,}3},
+$$
+que pode ser escrita na base $e$ como
+\begin{align*}
+Q(t)=&0{,}1e^{(t/61{,}3)\ln{(1/2)}}\\
+\approx &0{,}1e^{-t\frac{0{,}693}{61{,}3}} = 0{,}1e^{-0{,}0113t}.
+\end{align*}
+Assim o tempo necessário para a concentração cair abaixo de 0,005 pode ser calculado resolvendo:
+\begin{align*}
+&0{,}005 = 0{,}1e^{-0{,}0113t}\\
+\Rightarrow &e^{-0{,}0113t} = 0{,}05\\
+\Rightarrow &t = \frac{-\ln 0{,}05}{0{,}0113} \approx 265{,}1.
+\end{align*}
+E seria necessário mais de 265min e 10s para a concentração cair abaixo de $0{,}005$ mg/ml.
+
+\end{solucao}
+\fi
+
+\end{document}

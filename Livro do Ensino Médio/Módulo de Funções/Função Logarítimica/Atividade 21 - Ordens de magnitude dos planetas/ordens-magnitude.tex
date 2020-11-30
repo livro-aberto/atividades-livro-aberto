@@ -1,0 +1,93 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Ordens de magnitude dos planetas}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Reconhecer a inadequação de gráficos em escala linear para dados de magnitudes muito distintas.
+\item  Compreender corretamente a magnitude de dados em um gráfico em escala logarítmica.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item A atividade "Ordens de magnitude dos planetas" pode ser realizada como uma discussão em grupo e pretende que seja discutida a interpretação correta dos dados nessa escala.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{figure}[H]
+\centering
+
+
+\resizebox{.7\textwidth}{!}{
+\begin{tikzpicture}[background rectangle/.style={fill=black}, show background rectangle]
+\draw[fill=yellow] (0,0) circle [radius=6.963];
+\draw[fill=gray] (7.2,0) circle [radius=0.024];
+\draw[fill=pink] (7.5,0) circle [radius=0.0605];
+\draw[fill=blue!60!white] (7.8,0) circle [radius=0.0637];
+\draw[fill=red] (8.1,0) circle [radius=0.034];
+\draw[fill=olive!40!orange] (9,0) circle [radius=0.69911];
+\draw[fill=olive!20!orange] (10.4,0) circle [radius=0.58232];
+\draw[fill=blue!30!white] (11.4,0) circle [radius=0.253];
+\draw[fill=blue] (12,0) circle [radius=0.246];
+\draw[color=white, very thick](-7.2,1)--(-7.5,1)node[color=white,left,font=\large\bfseries]{100};  
+\draw[color=white, very thick](-7.2,5)--(-7.5,5)node[color=white,left,font=\large\bfseries]{500};     
+\draw[color=white, very thick](-7.2,0)--(-7.5,0)node[color=white,left,font=\large\bfseries]{0};
+\draw[color=white, very thick](-7.2,0)--(-7.2,7);
+\end{tikzpicture}}
+
+\caption{O sol e os planetas em escala linear (em milhares de quilômetros).}\label{log_planetas}
+\end{figure}
+
+Observado as circunferências e a escala logarítmica da \hyperref[log_planetas]{figura \ref{log_planetas}}, qual é a melhor aproximação na comparação dos tamanhos de Vênus (rosa) e de Saturno (laranja).
+\begin{enumerate}
+\item O diâmetro de Saturno é o dobro do diâmetro de Vênus.
+\item O diâmetro de Saturno é dez vezes o diâmetro de Vênus.
+\item O diâmetro de Saturno é três vezes o diâmetro de Vênus.
+\item O diâmetro de Saturno é cem vezes o diâmetro de Vênus.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item A observação do gráfico pode ser difícil de traduzir em termos numéricos diretamente e é possível tentar responder a questão de duas maneiras:
+\begin{itemize}
+\item O raio de Vênus está na parte superior ($\log 5 \approx 0{,}7$) do intervalo $[0; 10]$, o que indica que o raio está no intervalo $[5; 10]$, e o raio de Saturno está na parte superior do intervalo $[10; 100]$, o que indica que o raio está no intervalo [$50; 100]$. Desse modo a razão $r$ entre os raios de Saturno e Vênus estaria entre $50/10=5$ e $100/5=20$. Tomando o valor médio do intervalo $[5; 20]$ como aproximação, que é $12{,}5$, a resposta $10$ seria a melhor das opções.
+\item A distância linear (na escala logarítmica) entre os raios de Vênus e Saturno é de aproximadamente 1, o que se traduz em um aumento de 10 vezes na escala logarítmica.
+\end{itemize}
+O raio Saturno é de $58.232$ Km e o de Vênus é de $6.051{,}8$ Km e $10$ vezes é, de fato, a melhor aproximação.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

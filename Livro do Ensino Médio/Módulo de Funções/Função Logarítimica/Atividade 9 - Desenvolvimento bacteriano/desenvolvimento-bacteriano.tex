@@ -1,0 +1,67 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Desenvolvimento bacteriano}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Observar padrões nos valores dos logaritmos quando os logaritmandos são multiplicados por um número natural.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item  A atividade \textit{"Desenvolvimento bacteriano"} busca destacar a propriedade do produto. Recomenda-se que, ao resolver os exercícios com os estudantes, seja ressaltado que no item b) dobramos o logaritmando e a resposta aumentou em 1, no item c) o logaritmando é multiplicado por 32 e a resposta aumenta em 5, que é $\log_2 32$; e no item d) o logaritmando é multiplicado novamente por 32 e a resposta aumenta em 5 (que é o logaritmo de 32 em base 2).
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Uma espécie de bactéria dobra a população a cada dia e uma cultura tem 100 indivíduos inicialmente. Sabendo que $2^5=32$ e $2^6=64$, vamos estimar quantos dias levará para que a população: 
+\begin{enumerate}
+\item Chegue a 3200?
+\item Chegue a 6400?
+\item Chegue a 204800?
+\item Chegue a 6553600?
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+	A população após $n$ meses é $P(n) = 100 \times 2^n$, assim,
+	\begin{enumerate}[label = \alph*)]
+	\item $3200 = P(n) = 100 \times 2^n \Rightarrow 2^n = 32 \Rightarrow n=5$.
+	\item $6400 = P(n) = 100 \times 2^n \Rightarrow 2^n = 64 \Rightarrow n=6$.
+	\item $204800 = P(n) = 100 \times 2^n \Rightarrow 2^n = 2048 = 32 \times 64 \Rightarrow n=5+6=11$.
+	\item $6553600 = P(n) = 100 \times 2^n \Rightarrow 2^n = 65536 = 2048 \times 32 \Rightarrow n=11+5=16$.
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

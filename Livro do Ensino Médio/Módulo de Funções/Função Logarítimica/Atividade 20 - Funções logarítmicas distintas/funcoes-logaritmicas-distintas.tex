@@ -1,0 +1,66 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Funções logarítmicas distintas}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Analisar e estabelecer relações entre as representações de funções exponencial e logarítmica.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Por fim é proposta outra atividade no GeoGebra, que pretende mostrar que trocar de base é o mesmo que multiplicar a função logarítmica por uma constante, que é ressaltada na observação seguinte. Não havendo a possibilidade de usar o \textit{applet}, essa atividade poderia ser deixada de lado e a conclusão poderia ser reforçada como interpretação da equação $\log_a x = \log_a b \log_b x$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+No \textit{applet} do GeoGebra, disponível através do atalho abaixo, podemos mover a barra com o valor $a$, alterando o gráfico da função $h(x) = a \log_2 x$. Qual o valor de $a$ para que o gráfico de $h(x)$ coincida com o gráfico de $f(x) = \log_{1{,}2} x$?
+
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.3\linewidth]{QRcode_mult_constante.png}
+
+\url{https://www.geogebra.org/calculator/qyuzhbmp}
+\end{figure}
+
+\textbf{Desafio:} aplique o Teorema da mudança de base em $g(x)= \log_2 x$, utilizando a base $1{,}2$ para encontrar algebricamente o valor de $a$.
+
+\ifdefined\prof
+\begin{solucao}
+
+$a = 3{,}8$, que é uma aproximação muito boa para $$\log_{1{,}2}2 \approx 3{,}8017840169239,$$ que é a resposta do desafio.
+
+\end{solucao}
+\fi
+
+\end{document}

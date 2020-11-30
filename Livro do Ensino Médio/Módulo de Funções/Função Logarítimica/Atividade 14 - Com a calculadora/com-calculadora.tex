@@ -1,0 +1,58 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Com a calculadora}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar a propriedade da mudança de base em cálculos com a calculadora.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Utilize uma calculadora ou aplicativo de celular para calcular:
+\begin{enumerate}
+\item $\log_2 375$;
+\item $\log_7 698$;
+\item $\log_{2{,}71} 166$.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+	\begin{enumerate}
+	\item $\log_2 375=\dfrac{\log 375}{\log 2} = \dfrac{2{,}57403126772}{0{,}47712125471} \approx 5{,}39492056215;$
+	\item $\log_7 698 =\dfrac{\log 698}{\log 7} = \dfrac{2{,}84385542262}{0{,}84509804001} \approx 3{,}36511894238;$
+	\item $\log_{2{,}71} 166 = \dfrac{\log 166}{\log 2{,}71} = \dfrac{2{,}22010808804}{0{,}43296929087} \approx 5{,}12763407205.$
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

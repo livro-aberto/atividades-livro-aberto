@@ -1,0 +1,60 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Base $e$}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Utilizar logaritmos em base $e$.
+
+\item Aplicar a função logarítmica natural para reescrever funções exponenciais.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Escreva as seguintes funções exponenciais utilizando a base $e$, como no exemplo acima, utilizando aproximações com três casas decimais de precisão para os logaritmos naturais.
+\begin{enumerate}
+\item $f(x)=3^x$;
+\item $g(x)=10^x$;
+\item $f(x)=75^x$.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+	\begin{enumerate}
+\item $3^x = e^{\ln 3^x} = e^{x\ln 3} \approx e^{1{,}098 x}$;
+\item $10^x = e^{\ln 10^x} = e^{x\ln 10} \approx e^{2{,}302 x}$;
+\item $75^x = e^{\ln 75^x} = e^{x\ln 75} \approx e^{4{,}317 x}$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

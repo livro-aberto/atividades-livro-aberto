@@ -1,0 +1,70 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Economizando para uma viagem}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+
+\item \textbf{EM13MAT303} Interpretar e comparar situações que envolvam juros simples com as que envolvem juros compostos, por meio de representações gráficas ou de análise de planilhas, destacando o crescimento linear ou exponencial de cada caso.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Reconhecer questões em que as incógnitas encontram-se em expoentes.
+\item Desenvolver a interpretação e a comparação de situações que envolvam juros simples com as que envolvem juros compostos.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Rebeca recebeu de sua avó paterna uma herança em dinheiro no valor de R\$ $40.000{,}00$. Ela pretende utilizar esse dinheiro para conhecer a Inglaterra e o pacote de viagens que ela deseja custa R\$ $44.000{,}00$. Aplicando o valor da herança a juro de $1\%$ ao mês, quantos meses levará Rebeca para conseguir o valor desejado e realizar seu sonho?
+
+\ifdefined\prof
+\begin{solucao}
+
+Calculando os montantes mês a mês, vemos que Rebeca precisará esperar 10 meses.
+	\begin{table}[H]
+	\centering
+
+	\begin{tabu} to \textwidth{|c|l|l|}
+	\hline
+	\thead
+	$0$ & $40.000$ & $40.000$ \\
+	\hline
+	$1$ & $40.000\times1{,}01$ & $40.400$ \\
+	\hline
+	$\vdots$ & $\vdots$ & $\vdots$ \\
+	\hline
+	$9$ & $40.000\times(1{,}01)^9$ & $43.720$ \\
+	\hline
+	$10$ & $40.000\times(1{,}01)^{10}$ & $44.160$ \\
+	\hline
+	\end{tabu}
+	\end{table}
+
+\end{solucao}
+\fi
+
+\end{document}

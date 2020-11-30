@@ -1,0 +1,86 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Dívida no cartão}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Observar situações práticas em que a incógnita está no expoente.
+\item Desenvolver raciocínios informais sobre o número de vezes que uma operação de multiplicação é aplicada.
+\end{enumerate}
+
+%Orientações e sugestões
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Um pessoa tem uma dívida de R\$ $10.000{,}00$ no cartão de crédito, que cobra juros de 10\% ao mês. Se essa dívida não for amortizada, em quantos meses ela ultrapassará R\$ $15.000{,}00$? E R\$ $20.000{,}00$? E R\$ $25.000{,}00$?
+
+\ifdefined\prof
+\begin{solucao}
+
+Podemos utilizar a tabela para calcular o montante em cada mês a partir de R$\$10.000{,}00$.
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Mês & Montante (R\$) \\
+\hline
+0 & $10.000$\\
+\hline
+1 & $11.000$\\
+\hline
+2 & $12.100$\\
+\hline 
+3 & $13.310$\\
+\hline
+4 & $14.640$\\
+\hline
+5 & $16.100$\\
+\hline
+6 & $17.710$\\
+\hline
+7 & $19.480$\\
+\hline
+8 & $21.430$\\
+\hline
+9 & $23.570$\\
+\hline
+10 & $25.930$\\
+\hline
+\end{tabu}
+\end{table}
+
+Assim, atingimos R$\$15.000{,}00$, R$\$20.000{,}00$ e R$\$25.000{,}00$ em, respectivamente 5, 8 e 10 meses.
+
+\end{solucao}
+\fi
+
+\end{document}

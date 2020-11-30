@@ -1,0 +1,72 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Criando a própria escala}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT305} Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Criar uma ferramenta para avaliar o custo benefício de um produto utilizando funções logarítmicas.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Vamos desenvolver a nossa própria escala para compararmos preços distintos? Isso precisará ser feito em etapas:
+\begin{enumerate}
+\item escolha uma categoria de produto, como automóveis, televisores, motocicletas, videogames, $\ldots$;
+\item escolha dois produtos dentro da categoria, A e B, com preços $a$ e $b$, significativamente distintos, que tenham o mesmo custo-benefício para você;
+\item determine um percentual $0 < p <1$, que o produto mais caro é melhor do que o produto mais barato para você (o que é subjetivo e não precisa estar diretamente ligado aos preços dos produtos);
+\item escreva a sua própria função de valor relativo percentual através da expressão
+$$
+v(x)=p\log_{b/a} \left( \frac{x}{a} \right),
+$$
+de modo que $v(b) = p$ e $v(a)=a$, ou seja, $v(x)$ tenta estimar a diferença percentual no valor relativo do produto B com o produto A (para você);
+\item encontre três produtos $C$, $D$ e $E$, na mesma categoria dos anteriores, anote os preços deles $c$, $d$ e $e$, e determine os percentuais $p_c$, $p_d$ e $p_e$ que eles são melhores ou piores do que o produto A (o que é subjetivo);
+\item calcule $v(c)$, $v(d)$ e $v(e)$ e observe se os valores concordam com os percentuais que você estimou;
+\item  $p_c, p_d, p_e$ são maiores, menores ou iguais a $v(c), v(d), v(e)$, respectivamente? o que essa informação diz sobre o custo benefício dos produtos?  
+\item você acha que os resultados obtidos condizem com as suas percepções ou a fórmula apresentou grandes distorções?
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+	\item automóveis;
+	\item carro A 1.0 – R$\$ 40.000{,}00$ e carro B 1.3 – R$\$60.000{,}00$;
+	\item devido aos opcionais adicionados e o motor mais potente, considero o carro B 30$\%$ melhor;
+	\item $v(x) = 0{,}3\log_{3/2}\left(x/40000\right)$;
+	\item carro C 1.0 - R$\$ 48.000{,}00$, $p_c=10\%$; carro D 1.5 - R$\$ 65.000{,}00$, $p_d=35\%$; carro E 1.3 - R$\$ 50.000{,}00$, $p_e=25\%$;
+	\item $v(c) = 0{,}3\log_{3/2}\left(48/40\right) \approx 13{,}48\%$; $v(d) = 0{,}3\log_{3/2}\left(65/40\right) \approx 35{,}92\%$ e $v(e) = 0{,}3\log_{3/2}\left(45/40\right) \approx 16{,}51\%$;
+	\item $p_c = 10\% < 13{,}48\% = v(c)$, assim consideramos o carro $10\%$ melhor, mas seu valor relativo de compra é $13{,}48\%$ maior, desse modo seu custo relativo é maior do que o aumento no preço e sua aquisição não parece ser muito recomendável; $p_d = 35\% < 35{,}92\% = v(c)$, assim consideramos o carro é $35\%$ melhor e seu valor relativo de compra é $35{,}92\%$ maior, desse modo seu custo benefício é similar ao dos carros A e B; $p_e = 25\% > 16{,}51\% = v(e)$, assim consideramos o carro $25\%$ melhor, mas seu valor relativo de compra é $16{,}51\%$ maior, desse modo seu custo relativo é melhor do que os anteriores e sua aquisição parece mais recomendável;
+	\item a fórmula parece adequar os valores de modo a permitir comparar custo-benefício de produtos com preços bastante distintos. 
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

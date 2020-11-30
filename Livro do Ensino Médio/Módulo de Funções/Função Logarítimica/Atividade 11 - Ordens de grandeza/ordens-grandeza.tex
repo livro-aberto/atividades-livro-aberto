@@ -1,0 +1,61 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Ordens de grandeza}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT313}  Resolver e elaborar problemas que envolvem edições em que se discuta o emprego de algarismos significativos e algarismos duvidosos, utilizando, quando necessário, a notação científica. 
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar a propriedade do logaritmo da potência para encontrar aproximações inteiras de logaritmos.
+\item Explorar o conceito de erro nas aproximações dos logaritmos.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Encontre potências de $10$ consecutivas que limitem os logaritmandos abaixo superiormente e inferiormente e use-as para encontrar a parte inteira de:
+\begin{enumerate}
+\item $\log 6{,}7$;
+\item $\log 23$;
+\item $\log 179{,}28$;
+\item $\log 8341$.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+	\item Como $10^0=1 < 6{,}7 <10 =10^1$ e $f(t)=10^t$ é crescente, temos $0 < \log 6{,}7 < 1$ e sua parte inteira (e sua ordem de grandeza) é $0$.
+	\item Como $10^1=10 < 23 <100 =10^2$ e $f(t)=10^t$ é crescente, temos $1 < \log 23 < 2$ e sua parte inteira (e sua ordem de grandeza) é $1$.
+	\item Como $10^2=100 < 179{,}28 <1000 =10^3$ e $f(t)=10^t$ é crescente, temos $2 < \log 179{,}28 < 3$ e sua parte inteira (e sua ordem de grandeza) é $2$.
+	\item Como $10^3=1000 < 8341 <10000 =10^4$ e $f(t)=10^t$ é crescente, temos $3 < \log 8341 < 4$ e sua parte inteira (e sua ordem de grandeza) é $3$.
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

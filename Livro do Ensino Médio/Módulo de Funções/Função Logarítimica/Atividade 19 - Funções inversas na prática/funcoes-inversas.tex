@@ -1,0 +1,128 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Funções inversas na prática}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Analisar e estabelecer relações entre as
+representações de funções exponencial e
+logarítmica.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item A troca nos papeis de $x$ e $y$ como argumentos das funções pode causar dificuldade e pode ser necessário relembrar que uma função age sobre seu argumento, independente das variáveis que sejam utilizadas.
+
+	A atividade propõem colocar a "mão na massa" na exponencial e no logaritmo, observando a ação da inversão explicitada na observação anterior.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Complete a tabela abaixo calculando a exponencial do logaritmo e o logaritmo da exponencial.
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+$\bm{x}$ & $\bm{y=2^x}$ & $\bm{{\log_2 x}}$ \\
+\hline
+$1$ & & \\
+\hline
+$2$ & & \\
+\hline
+$3$ & & \\
+\hline
+$4$ & & \\
+\hline
+\end{tabu}
+\hspace{2em}
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+$\bm{y}$ & $\bm{x=3^y}$ & $\bm{{\log_3 x}}$ \tabularnewline
+\hline
+$-1$ & & \\
+\hline
+$1$ & & \\
+\hline
+$0$ & & \\
+\hline
+$2$ & & \\
+\hline
+\end{tabu}
+
+\end{table}
+
+
+\ifdefined\prof
+\begin{solucao}
+
+
+\begin{table}[H]
+	\centering
+	
+	\begin{tabu} to \textwidth{|c|c|c|}
+	\hline
+	\thead
+	$\bm{x}$ & $\bm{y=2^x}$ & $\bm{{\log_2 x}}$ \\
+	\hline
+	$1$ & $2$ & $1$ \\
+	\hline
+	$2$ & $4$ & $2$ \\
+	\hline
+	$3$ & $8$ & $3$ \\
+	\hline
+	$4$ & $16$ & $4$ \\
+	\hline
+	\end{tabu}
+	\hspace{2em}
+	\begin{tabu} to \textwidth{|c|c|c|}
+	\hline
+	\thead
+	$\bm{y}$ & $\bm{x=3^y}$ & $\bm{{\log_3 x}}$ \tabularnewline
+	\hline
+	$-1$ & $1/3$ & $-1$ \\
+	\hline
+	$1$ & $3$ & $1$ \\
+	\hline
+	$0$ & $1$ & $0$ \\
+	\hline
+	$2$ & $9$ & $2$ \\
+	\hline
+	\end{tabu}
+	\end{table}
+
+\end{solucao}
+\fi
+
+\end{document}
