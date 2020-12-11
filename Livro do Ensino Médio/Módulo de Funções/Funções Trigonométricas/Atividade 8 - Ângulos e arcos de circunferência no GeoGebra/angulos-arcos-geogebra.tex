@@ -1,0 +1,74 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Ângulos e Arcos de Circunferência no GeoGebra}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Apresentar ao aluno a definição de radiano, levando-o a relacionar essa nova unidade de medida de ângulos com a medida do comprimento do arco de qualquer circunferência delimitado por ele.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+No caso em que o raio da circunferência for $1$, o aluno perceberá que a medida do ângulo em radianos será exatamente a medida do comprimento do arco da circunferência unitária delimitado por ele.
+
+Você poderá encontrar essa construção pronta no link \url{https://www.geogebra.org/m/xfqkgymy}. Recomenda-se, no entanto, que incentive seus alunos a construir. O passo a passo poderá ser acessado abrindo-se o PROTOCOLO da construção no menu principal, submenu EXIBIR.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Abra o GeoGebra e crie um controle deslizante a variando de $0$ a $10$. Crie o ponto $A$ e construa uma circunferência de centro $A$ com raio $a$. Tome um ponto $B$ sobre a circunferência e construa o segmento $AB$, cujo comprimento ficará registrado na janela da álgebra. Agora, crie um ponto $C$ sobre a circunferência e construa o (menor) arco circular de centro $A$ e extremidades $C$ e $B$, cujo comprimento ficará indicado na Janela da Álgebra.
+
+\begin{enumerate}
+\item Usando o GeoGebra, determine a razão $k$ entre o comprimento do arco $BC$ e o raio da circunferência. Movimente o controle deslizante do parâmetro $a$. O que você observa em relação ao valor de $k$?
+\item Altere a medida do comprimento do arco $BC$ movendo o ponto $C$ ao longo da circunferência. Qual o intervalo de variação da razão $k$?
+\item Movimente $C$ de forma que o comprimento do arco $BC$ fique igual ao comprimento do raio da circunferência. Qual o valor da razão $k$ nesse caso? Movimente o controle deslizante novamente e registre o que você observa.
+\item Construa e meça o ângulo central ${B\hat{A}C}$ e modifique a unidade de medida para \textit{“radianos}”. Movimente o ponto $C$ sobre a circunferência. O que você pode observar em relação ao valor de $k$ e a medida do ângulo central da circunferência em radianos?
+\item Movimente o controle deslizante a e observe o valor da razão $k$.
+\item Reproduza a atividade, agora com uma circunferência que tenha um raio fixo e igual a $1$. Comente como ficam os valores de $k$ e do ângulo ${B\hat{A}C}$.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item O valor de $k$ não se altera. 
+\item $k$ variará de $0$ (quando o $C$ estiver sobre $B$) até aproximadamente $6{,}28$ (quando ele estiver próximo de completar uma volta em torno de $B$).
+\item A razão $k$ independe da medida a do raio da
+circunferência.
+\item Os valores são iguais.
+\item O valor da razão $k$ independe da medida a do raio da
+circunferência.
+\item A medida $k$ será exatamente igual à medida do comprimento do arco $BC$ e também igual à medida do ângulo $B\hat{A}C$ na unidade “radianos”.
+\end{enumerate}
+
+
+\end{solucao}
+\fi
+
+\end{document}

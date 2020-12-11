@@ -1,0 +1,114 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Uso de óculos e sexo de estudandes}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Reconhecer que a probabilidade de um evento pode se alterar, conhecendo-se uma informação parcial do fenômeno sob investigação.
+\item Aplicar a definição de probabilidade condicional para reconhecer eventos independentes e eventos dependentes.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Nesta atividade uma tabela de dupla entrada será fornecida para verificar uma possível relação entre usar óculos e sexo de um estudante do Ensino Médio. Recomenda-se construir esta mesma tabela com os dados dos alunos de sua turma e responder aos itens, usando esses dados.
+
+Como sugestão de discussão, sugere-se uma pesquisa na internet para investigar a proporção de jovens que usa óculos. Por exemplo, em 21 de maio de 2018, foi publicada a seguinte reportagem "\href{https://www.dn.pt/sociedade/interior/miopia-aumenta-nos-jovens-e-a-culpa-e-da-falta-de-sol-e-dos-computadores-5656709.html}{Miopia aumenta nos jovens e a culpa é da falta de sol e dos computadores}”
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Na tabela a seguir estão os dados de uma turma de segundo ano do Ensino Médio com 40 alunos quanto ao gênero e se ele usa ou não óculos.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|l|c|c|c|}
+\hline
+\thead
+gênero & usa óculos & não usa óculos & total \\
+\hline
+feminino & $6$ & $16$ & $22$ \\ 
+\hline
+masculino & $5$ & $13$ & $18$ \\
+\hline
+total & $11$ & $29$ & $40$ \\
+\hline
+\end{tabu}
+\end{table}
+
+Se um estudante desta turma é sorteado, pede-se determinar a probabilidade de que ele
+\begin{enumerate}
+\item {} 
+use óculos;
+
+\item {} 
+use óculos, sabendo que é do gênero feminino;
+
+\item {} 
+use óculos, sabendo que é do gênero masculino;
+
+\item {} 
+seja do gênero feminino;
+
+\item {} 
+seja do gênero feminino, sabendo que usa óculos;
+
+\item {} 
+seja do gênero feminino, sabendo que não usa óculos.
+
+\item {} 
+Analisando os dados da tabela e as respostas obtidas, há razões para supor que gênero é independente de uso de óculos ou não? Por quê?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+Defina os seguintes eventos
+
+\begin{itemize}
+\item $M$: “estudante do gênero masculino”, 
+\item $F$: “estudante do sexo feminino”,
+\item $O$: “estudante usa óculos”{} e 
+\item $\overline{O}$: “estudante não usa óculos”.
+\end{itemize}
+
+\begin{enumerate}
+\item $P(O)=\frac{11}{40}=0{,}275$
+\item Há $22$ alunos do gênero feminino e 6 usam óculos. Assim, a probabilidade é $\frac{6}{22}\approx0{,}273$.
+\item Há $18$ alunos do gênero masculino e $5$ usam óculos. Assim, a probabilidade é $\frac{5}{18}\approx0{,}278$.
+\item $P(F)=\frac{22}{40}=0{,}55$
+\item Há $11$ alunos que usam óculos e 6 são do gênero feminino. Assim, a probabilidade é $\frac{6}{11}\approx0{,}545$.
+\item Há $29$ alunos que não usam óculos e $16$ são do gênero feminino. Assim, a probabilidade é $\frac{16}{29}\approx0{,}552$.
+\item Sem discriminar por gênero, a probabilidade de usar óculos é $0{,}275$. Discriminando por sexo, observa-se que a probabilidade de uma menina usar óculos é $0{,}272$ e de um menino usar óculos é $0{,}278$. Sem discriminar por uso de óculos, a probabilidade de ser uma menina é $0{,}55$. Discriminando por uso de óculos, observa-se que a probabilidade de ser uma menina entre os alunos que usam óculos é $0{,}545$ e a probabilidade de ser uma menina entre os que não usam óculos é $0{,}552$, ou seja, ambas aproximadamente iguais a probabilidade de ser uma menina sem levar em conta o uso de óculos. Portanto, independentemente, de sexo, a probabilidade de usar óculos é aproximadamente $0{,}275$ e independentemente de uso de óculos, a probabilidade de ser uma menina é aproximadamente $0{,}55$. Como estamos lidando com uma amostra da população, probabilidades gerais, por exemplo “uso de óculos”{} e probabilidades parciais “uso de óculos segundo o sexo”{} aproximadamente iguais revelam a independência no sentido estatístico dos eventos considerados.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

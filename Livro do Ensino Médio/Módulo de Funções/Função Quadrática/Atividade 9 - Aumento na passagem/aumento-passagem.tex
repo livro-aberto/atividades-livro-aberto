@@ -1,0 +1,388 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Aumento na Passagem}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+Prezado colega esta atividade tem como objetivo aplicar o conceito de otimização em função quadrática num contexto econômico, chamando atenção para o aluno de:
+
+\begin{enumerate}
+\item As vantagens e desvantagens de se trabalhar num plano cartesiano cujos eixos estão em escalas distintas.
+\item Guiá-lo para uma modelagem algébrica da situação.
+Identificar se a relação encontrada é uma função quadrática e se o gráfico apresentado é de uma parábola.
+\item Fazer uma discussão a respeito do domínio e da imagem da função levando em consideração a modelagem da situação.
+\item Reforçar a utilização da passagem da forma polinomial para a forma canônica, apontando assim de maneira direta o faturamento máximo e o aumento que irá gerar o faturamento máximo.
+\item Apresentar em que pontos a parábola intersecta os eixos coordenados, levando-os a fazer inferências sobre a utilização das coordenadas desses pontos no contexto do problema.
+\end{enumerate}
+\tcblower
+
+%Orientações e sugestões
+Sugerimos que o professor além de fazer a atividade antes de aplicá-la, leia com atenção as respostas das atividades, nela o colega encontrará sugestões que o auxiliarão na condução dessa atividade na sua sala de aula.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Uma empresa de transporte rodoviário, faz o trajeto entre duas cidades brasileiras diariamente, e transporta mensalmente, uma média de \(1200\) passageiros. O custo individual da passagem cobrado pela empresa, é atualmente de R\$$40,00$, porém seus diretores estudam um aumento desse valor. Para isso contratam uma outra empresa para realizar uma pesquisa de mercado, a pesquisa realizada por essa empresa, estima que a cada R\$$1,00$ de aumento no preço da passagem, \(10\) passageiros deixarão de viajar pela transportadora. De posse desta informação, os diretores desejam saber qual é o preço de passagem, em reais, que vai maximizar o faturamento dessa transportadora. Para isso vamos responder os itens a seguir:
+\begin{enumerate}
+\item Se aumentarmos em R\$$2,00$ a passagem qual será seu novo preço? Qual a nova quantidade de passageiros? Qual será o novo faturamento em reais? E se o aumento fosse de R\$$12,00$?
+
+\item Preencha a tabela a seguir, seguindo o padrão que modela a situação.
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{2.5pt}
+\begin{tabular}{|f|f|f|f|}
+\hline
+\tcolor{Aumento em reais} & \tcolor{Novo preço} & \tcolor{Nova quantidade de passageiros} & \tcolor{Faturamento em reais} \\
+\hline 0 & 40 + 1 . 0 = 40 & 1 200 - 10 . 0 = 1 200 & 40 . 1200 = 48 000 \\
+\hline
+10 & 40 + 1 . 10 = 50 & 1 200 - 10 . 10 = 1 100 & 50 . 1 100 = 55 000 \\
+\hline
+20 & 40 + 1 . 20 = 60 & 1 200 - 10 . 20 = 1 000 & 60 . 1 000 = 60 000 \\
+\hline
+30 & & & \\
+\hline
+40 & & & \\
+\hline
+50 & & & \\
+\hline
+60 & & & \\
+\hline
+70 & & & \\
+\hline
+80 & & & \\
+\hline
+90 & & & \\
+\hline
+100 & & & \\
+\hline
+110 & & & \\
+\hline
+130 & & & \\
+\hline
+\end{tabular}
+\end{table}
+
+\item {} 
+Escolha um dos planos cartesianos a seguir, para representar os pontos da tabela acima e os represente no plano escolhido.
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5, every node/.style={scale=2.75}, xscale=1.25]
+
+\draw [help lines, secundario!30, step=2] (-1,-1) grid (13,13);
+\draw [help lines, dotted, secundario!70, step=.25] (-1,-1) grid (13,13);
+\draw [->] (-1,0) -- (13,0);
+\draw [->] (0,-1) -- (0,13);
+\foreach \y in {1,2,3,...,12} \node [left,scale=.3] at (0,\y) {\y0};
+\foreach \x in  {1,2,3,...,12} \node [below,scale=.3] at (\x,-0.01) {\x0};
+\node [below left,scale=.3] at (0,0) {0};
+
+\end{tikzpicture}
+\caption{Gráfico A}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5, every node/.style={scale=2.75}, xscale=1.25]
+
+\draw [help lines, secundario!30, step=2] (-1,-1) grid (13,8);
+\draw [help lines, dotted, secundario!70, step=.25] (-1,-1) grid (13,8);
+\draw [->] (-1,0) -- (13,0);
+\draw [->] (0,-1) -- (0,8);
+\foreach \y in {1,2,3,...,7} \node [left,scale=.3] at (0,\y) {\y0 000};        \foreach \x in  {1,2,3,...,12} \node [below,scale=.3] at (\x,-0.01) {\x0};
+\node [below left, scale=.3] at (0,0) {0};
+
+\end{tikzpicture}
+\caption{Gráfico B}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5, every node/.style={scale=2.75}, xscale=1.25]
+
+\draw [help lines, secundario!30, step=2] (-1,-1) grid (14,14);
+\draw [help lines, dotted, secundario!70, step=.25] (-1,-1) grid (14,14);
+\draw [->] (-1,0) -- (14,0);
+\draw [->] (0,-1) -- (0,14);
+\foreach \y in {1,2,3,...,13} \node [left,scale=.3] at (0,\y) {\y};
+\foreach \x in  {1,2,3,...,13} \node [below,scale=.3] at (\x,-0.01) {\x};
+\node [below left,scale=.3] at (0,0) {0};
+
+\end{tikzpicture}
+\caption{Gráfico C}
+\end{figure}
+\item {} 
+Qual “gráfico” você escolheu? Justifique sua escolha.
+
+\item {} 
+A escala no “gráfico” escolhido é a mesma nos dois eixos? Quais os “gráficos” do item “b” possuem a mesma escala nos dois eixos?
+
+\item {} 
+Quais as vantagens e desvantagens em ambos os casos (eixos em escalas distintas e eixos em mesma escala)?
+
+\item {} 
+Explique o motivo do valor \(130\) estar na tabela e não estar no gráfico. Justifique levando em consideração o valor de sua imagem dentro do conceito da atividade.
+
+\item {} 
+Podemos afirmar que os pontos obtidos, são pontos de uma parábola? Justifique sua resposta.
+
+\item {} 
+Ao representarmos por \(x\) o aumento, em reais pretendido , exiba uma expressão algébrica que represente o novo preço da passagem (já com o aumento de \(x\) reais).
+
+\item {} 
+Ao representarmos por \(x\) o aumento, em reais pretendido , exiba uma expressão algébrica que represente a nova quantidade mensal de passageiros (já com o aumento de \(x\) reais).
+
+\item {} 
+Ao representarmos por \(x\) o aumento, em reais pretendido , exiba uma expressão algébrica que represente o faturamento da empresa em função de \(x\), dado por \(F(x)\).
+
+\item {} 
+Se representarmos expressão obtida no item anterior por uma função \(F:A\to B\), onde \(A\) é seu domínio e \(B\) é sua imagem, podemos afirmar que \(F\) é uma função quadrática? Justifique sua resposta
+
+\item {} 
+Apresente os conjuntos \(A\) (domínio de \(F\)) e \(B\) (imagem \(F\)) que satisfazem os valores possíveis na situação apresentada.
+
+\item {} 
+Em que ponto o gráfico corta o eixo das ordenadas? E o que esse valor representa na situação?
+
+\item {} 
+Em que ponto o gráfico corta o eixo das abscissas? O que esse ponto representa na situação?
+
+\item {} 
+E se o domínio fosse o \(\mathbb{R}\), qual seria o outro ponto de intersecção com o eixo das abscissas? Por que ele não é considerado na situação?
+
+\item {} 
+Utilize o processo de completar quadrados  e apresente a função \(F\) em sua forma canônica.
+
+\item {} 
+Enfim, qual é o aumento no preço de passagem, em reais, que vai maximizar o faturamento dessa transportadora?
+
+\item {} 
+Qual é o valor desse faturamento máximo? Este valor aparece tabela e no gráfico?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Novo preço será de \(40+2=42\) reais; A nova quantidade de passageiros será de \(1.200-10 \times 2=1.200-20=1.180\) passageiros; O novo faturamento será de \(42 \times 1180=49.560\) reais. No caso do aumento ser de doze reais teremos na ordem: R\$ $52{,}00$ de novo preço; \(1080\) passageiros; E  R\$ $56.160{,}00$ de faturamento.
+
+
+\item \adjustbox{valign=t}
+{
+\setlength\tabcolsep{2.5pt}
+\begin{tabular}{|f|f|f|f|}
+\hline
+$\tcolor{Aumento em reais}$ & $\tcolor{Novo preço}$ & $\tcolor{Nova quantidade de passageiros}$ & $\tcolor{Faturamento em reais}$ \tabularnewline
+\hline 
+0 & 40 & 1.200 & 48.000 \tabularnewline
+\hline
+10 & 50 & 1.100 & 55.000 \tabularnewline
+\hline
+20 & 60 & 1.000 & 60.000 \tabularnewline
+\hline
+30 & 70 & 900 & 63.000 \tabularnewline
+\hline
+40 & 80 & 800 & 64.000 \tabularnewline
+\hline
+50 & 90 & 700 & 63.000 \tabularnewline
+\hline
+60 & 100 & 600 & 60.000 \tabularnewline
+\hline
+70 & 110 & 500 & 55.000 \tabularnewline
+\hline
+80 & 120 & 400 & 48.000 \tabularnewline
+\hline
+90 & 130 & 300 & 39.000 \tabularnewline
+\hline
+100 & 140 & 200 & 28.000 \tabularnewline
+\hline
+110 & 150 & 100 & 15.000 \tabularnewline
+\hline 
+120 & 160 & 0 & 0 \tabularnewline
+\hline
+130 & 170 & -100 & -17.000 \tabularnewline
+\hline
+\end{tabular}
+}
+
+
+
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[every node/.style={scale=3}, scale=.75]
+\draw [help lines, secundario!30, dashed] (0,0) grid (13,9);
+\draw [->] (-1,0) -- (13,0);
+\draw [->] (0,-1) -- (0,9);
+\foreach \y in {1,2,3,...,7} \node [left,scale=.3] at (0,\y) {\y0 000};
+\foreach \x in  {1,2,3,...,12} \node [below,scale=.3] at (\x,-0.01) {\x0};
+\node [below left,scale=.3] at (0,0) {0};
+\node [ponto, color=primario, scale=2] at (0,4.7) {};
+\node [ponto, color=primario, scale=2] at (1,5.5) {};
+\node [ponto, color=primario, scale=2] at (2,6) {};
+\node [ponto, color=primario, scale=2] at (3,6.3) {};
+\node [ponto, color=primario, scale=2] at (4,6.5) {};
+\node [ponto, color=primario, scale=2] at (5,6.3) {};
+\node [ponto, color=primario, scale=2] at (6,6) {};
+\node [ponto, color=primario, scale=2] at (7,5.5) {};
+\node [ponto, color=primario, scale=2] at (8,4.7) {};
+\node [ponto, color=primario, scale=2] at (9,3.8) {};
+\node [ponto, color=primario, scale=2] at (10,2.7) {};
+\node [ponto, color=primario, scale=2] at (11,1.5) {};
+\node [ponto, color=primario, scale=2] at (12,0.05) {};
+\node [below, align = center, scale=.3] at (6,-1) {Gr\'afico B};
+\node [below left , align = center,scale=.3] at (0,9) {Faturamento \\ em Reais};
+\node [below right , align = center,scale=.3] at (13,0) {Aumento \\ em Reais};
+\end{tikzpicture}
+}
+
+
+\item {} 
+O gráfico B, pois nos outros, os valores do eixo das ordenadas não atendiam.
+
+\item {} 
+Não. Gráfico A e gráfico C.
+
+\item {} 
+\textbf{Escalas distintas}: (\textit{Vantagens}) Podemos visualizar melhor o comportamento do gráfico pois ele passa a ficar visível num espaço menor, além de traça-lo com mais facilidade.
+
+\textbf{Escalas distintas}: (\textit{Desvantagens}) Não podemos analisá-lo geometricamente de maneira satisfatória, as variações entre os eixos são muito discrepantes, e isso pode levar a interpretações equivocadas.
+
+\textbf{Escalas iguais}: (\textit{Vantagens}) Podemos analisá-lo tanto numericamente quanto geometricamente, inferindo com mais precisão.
+
+\textbf{Escalas iguais}: (\textit{Desvantagens}) Precisaríamos de muito espaço e/ou bastante compactação para desenharmos fielmente este gráfico. Note como ficaria:
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.6, every node/.style={scale=3}]
+
+\draw [help lines, secundario!20, step=.4] (-3,-5) grid (11,11);
+\draw [help lines, secundario!50, step=2] (-3,-5) grid (11,11);
+\draw [->] (-3,0) -- (11,0);
+\draw [ ->] (0,-5) -- (0,11);
+\draw [color=atento,domain=-5:11] plot (1.2,\x);
+\draw [color=atento,domain=-5:11] plot (-0.4,\x);
+\foreach \y in {-4,-2,2,4,6,8,10} \node [left, scale=.3] at (0,\y+0.15) {\y00};
+\foreach \x in  {-2,2,4,6,8,10} \node [below, scale=.3] at (\x,-0.01) {\x00};
+\node [below left, scale=.3] at (0.5,0) {0};
+\node [ponto, color=primario, scale=2] at (1.2,0) {};
+\node [ponto, color=primario, scale=2] at (-0.4,0) {};
+\node [above right, scale=.3] at (1.2,0) {B};
+\node [above left, scale=.3] at (-0.4,0) {A};
+\end{tikzpicture}
+\caption{Escala real}
+\end{figure}
+
+\item {} 
+A imagem de \(130\) é negativa, logo se a nova passagem for de \(130\) reais “haveria” um faturamento negativo, o que não é condizente para os dados apresentados no contexto.
+
+\item {} 
+Sim, por vários motivos: já vimos que o gráfico de toda função quadrática é uma parábola, e que as função quadráticas são as únicas funções em que as diferenças das imagens, geram uma Progressão aritmética:
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[every node/.style={scale=3}, scale=.75]
+
+\draw [-] (0,1) -- (0,13);
+% \node [below,scale=.3] at (2,0) {P.A.};
+\foreach \y in {1,2,...,13} \draw  (0,\y) -- (-0.7,\y);
+\foreach \y in {1,2,...,12} \draw [primario, ->] (-0.25,\y+0.2) -- (-0.25,\y+0.8);
+\foreach \y in {1,2,...,12} \draw [primario] (-0.4,\y+0.5) -- (-0.6,\y+0.5);
+\node [left,scale=.3] at (-0.75,1) {0};
+\node [left,scale=.3] at (-0.75,2) {15 000};
+\node [left,scale=.3] at (-0.75,3) {28 000};
+\node [left,scale=.3] at (-0.75,4) {39 000};
+\node [left,scale=.3] at (-0.75,5) {45 000};
+\node [left,scale=.3] at (-0.75,6) {55 000};
+\node [left,scale=.3] at (-0.75,7) {60 000};
+\node [left,scale=.3] at (-0.75,8) {63 000};
+\node [left,scale=.3] at (-0.75,9) {64 000};
+\node [left,scale=.3] at (-0.75,10) {63 000};
+\node [left,scale=.3] at (-0.75,11) {60 000};
+\node [left,scale=.3] at (-0.75,12) {55 000};
+\node [left,scale=.3] at (-0.75,13) {48 000};
+\node [left,scale=.3] at (1.75,1.5) {-15 000};
+\node [left,scale=.3] at (1.75,2.5) {-13 000};
+\node [left,scale=.3] at (1.75,3.5) {-11 000};
+\node [left,scale=.3] at (1.5,4.5) {-9 000};
+\node [left,scale=.3] at (1.5,5.5) {-7 000};
+\node [left,scale=.3] at (1.5,6.5) {-5 000};
+\node [left,scale=.3] at (1.5,7.5) {-3 000};
+\node [left,scale=.3] at (1.5,8.5) {-1 000};
+\node [left,scale=.3] at (1.5,9.5) {1 000};
+\node [left,scale=.3] at (1.5,10.5) {3 000};
+\node [left,scale=.3] at (1.5,11.5) {5 000};
+\node [left,scale=.3] at (1.5,12.5) {7 000};
+\end{tikzpicture}
+\caption{Progressão aritmética}
+\end{figure}
+
+\item {} 
+\(40+x\).
+
+\item {} 
+\(1 200 - 10x\).
+
+\item {} 
+\(F(x)=(40+x).(1200-10x)\) ou \(F(x)=-10x^2+800x+48.000\).
+
+\item {} 
+Sim. Ou pela justificativa dada no item ‘f’ ou pelo fato da função quadrática ser uma função do polinômio de grau 2, e a função em questão, apresenta \(a=-10\) ; \(b=800\) e \(c=48.000\) coeficientes do polinômio do segundo grau.
+
+\item {} 
+\(A\) é o conjunto dos números naturais de \(0\) a \(120\); \(B\) é o conjunto dos números naturais contidos no intervalo:\([0,64.000]\) que são imagens dos elementos do conjunto \(A\).
+
+\item {} 
+R\$ \(48.000{,}00\) que representa o faturamento atual, inicial ou seja, o faturamento sem aumento no valor da passagem.
+
+\item {} 
+No ponto \((120,0)\), representa que se o aumento for de R\$ \(120,00\), não haverá faturamento, ou seja, a empresa faturaria zero reais.
+
+\item {} 
+O ponto seria \((-40,0)\), ele é desconsiderado pois sua abscissa é negativa, e não cabe na situação utilizar “aumentos negativos”.
+
+\item {} 
+\(F(x)=-10x^2+800x+48.000\iff F(x)=-10(x^2-80x)+48.000\iff F(x)=-10(x^2-80x+1.600-1.600)+48.000\iff F(x)=-10(x-40)^2+16.000+48.000
+\iff F(x)=-10(x-40)^2+64.000\).
+
+\item {} 
+R\$ \(40{,}00\).
+
+\item {} 
+R\$ \(6400{,}00\). Sim, em ambos.
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

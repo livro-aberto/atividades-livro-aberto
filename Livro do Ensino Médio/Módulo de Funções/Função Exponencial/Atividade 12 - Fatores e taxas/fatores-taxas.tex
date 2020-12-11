@@ -1,0 +1,197 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Fatores e taxas}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT304} Resolver e elaborar problemas com funções exponenciais nos quais é necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como o da Matemática Financeira e o do crescimento de seres vivos microscópicos, entre outros. 
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Identificar, a partir da expressão exponencial seus principais elementos e reconhecer nela o crescimento ou decaimento.
+
+\item Esboçar gráficos de exponenciais discretas.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Até esse momento estamos considerando apenas domínio natural, portanto os gráficos deverão ser esboçados apenas com pontos.
+
+\item Estimule os estudantes a escrever a variação percentual na representação decimal e com o símbolo de porcentagem.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Classifique dentre os modelos dados abaixo os que apresentam crescimento exponencial ou decaimento exponencial. Identifique o que se pede nas colunas da tabela.
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|>{\centering}m{.2\textwidth}|c|c|>{\centering}m{.1\textwidth}|>{\centering}m{.2\textwidth}|>{\centering}m{.15\textwidth}|}
+\hline
+\thead
+Modelo & Valor inicial & Fator & Taxa percentual & Crescimento ou decaimento? & Esboço do gráfico 
+\tabularnewline 
+\hline
+$y(z)=3(1{,}7)^{z}$ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
+\tabularnewline 
+\hline
+$p(r)=10(0{,}2)^{r}$ & & & &  & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
+\tabularnewline 
+\hline
+$s(t)=2\cdot \left(\dfrac{1}{2}\right)^{t}$ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
+\tabularnewline 
+\hline
+$M(x)=5\cdot 3^{x}$ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
+\tabularnewline 
+\hline
+$F(y)=0,2\cdot 7^{y} $ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
+\tabularnewline 
+\hline
+\end{tabu}
+\end{table}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{table}[H]
+\centering
+\setlength\tabulinesep{3.5pt}
+
+\begin{tabu} to \linewidth{|c|c|c|>{\centering}m{.2\linewidth}|>{\centering}e{.2\textwidth}|}
+\hline
+\thead
+Valor inicial & Fator & Taxa percentual & Crescimento ou decaimento? & Esboço do gráfico 
+\tabularnewline 
+\hline
+$3$ & $1{,}7$ & $0{,}7=70\%$ & Crescimento & 
+
+%Figura 1
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/3]
+\draw [thick] (0,6cm) -- (0,0) -- (6cm,0);
+\draw [domain=0:1.3, densely dashed, \currentcolor!80] 
+plot (\x,{3*(1.7)^(\x)}) 
+
+node at (0,3) [fill, circle, inner sep=1pt, label=left:{$3$}, overlay] {}; 
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+$10$ & $0{,}2$ & $-0{,}8=-80\%$ & Decaimento & 
+
+%Figura 2
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/5]
+\draw [thick] (0,11cm) -- (0,0) -- (11cm,0);
+\draw [very thick, domain=0:11, densely dashed, \currentcolor!80] 
+plot (\x,{10*(0.2)^(\x)}) 
+
+node at (0,10) [fill, circle, inner sep=1pt, label=left:{$10$}, overlay] {}; 
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+$2$ & $0{,}5$ & $-0{,}5=-50\%$ & Decaimento & 
+
+%Figura 3
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/2]
+\draw [thick] (0,5cm) -- (0,0) -- (5cm,0);
+\draw [very thick, domain=0:5, \currentcolor!80, densely dashed] 
+plot (\x,{2*(1/2)^(\x)}) 
+
+node at (0,2) [fill, circle, inner sep=1pt, label=left:{$2$}, overlay] {};
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+$5$ & $3$ & $2=200\%$ & Crescimento & 
+
+%Figura 4
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/5]
+\draw [thick] (0,11cm) -- (0,0) -- (11cm,0);
+\draw [very thick, domain=0:.715, densely dashed,\currentcolor!80] 
+plot (\x,{5*(3)^(\x)}) 
+
+node at (0,5) [fill, circle, inner sep=1pt, label=left:{$5$}, overlay] {}; 
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+$0{,}2$ & $7$ & $6=600\%$ & Crescimento & 
+
+%Figura 5
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/2]
+\draw [thick] (0,5cm) -- (0,0) -- (5cm,0);
+\draw [very thick, domain=0:1.65, densely dashed,\currentcolor!80] 
+plot (\x,{0.2*(7)^(\x)}) 
+
+node at (0,.2) [fill, circle, inner sep=1pt, label=left:{$0{,}2$}, overlay] {};  
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+\end{tabu}
+\end{table}
+
+\end{solucao}
+\fi
+
+\end{document}

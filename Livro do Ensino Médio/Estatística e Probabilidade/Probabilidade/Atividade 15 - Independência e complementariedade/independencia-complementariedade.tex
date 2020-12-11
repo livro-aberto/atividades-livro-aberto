@@ -1,0 +1,83 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Independência e complementariedade}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar o conceito de independência entre dois eventos para entender que o respectivos eventos complementares herdam essa a condição de eventos independentes.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Essa atividade é um exercício teórico de dedução muito simples que revela uma propriedade importante entre eventos independentes: dada uma coleção de eventos independentes, se para alguns eventos (ou todos) considerarmos os seus complementares em vez do próprio, a coleção continua independente. Com fins de simplificação e não tornar o processo complicado, consideraremos nesta atividade apenas o caso para dois eventos independentes. Mas, de fato, o resultado vale para quaisquer coleções de eventos independentes.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Sejam \(A\) e \(B\) dois eventos independentes.  Mostre que os pares de eventos a seguir também são independentes:
+\begin{enumerate}
+\item {} 
+\(\overline{A}\) e \(\overline{B}\);
+
+\item {} 
+\(A\) e \(\overline{B}\); e
+
+\item {} 
+\(\overline{A}\) e \(B\).
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Por hipótese temos que $P(A\cap B)=P(A)\cdot P(B)$, pois $A$ e $B$ são independentes. Queremos provar que $\overline{A}$ e $\overline{B}$ também são independentes, ou equivalentemente, que $P(\overline{A}\cap \overline{B})=P(\overline{A})\cdot P(\overline{B})$.
+Pelas Leis de De Morgan trabalhadas em atividade anterior, sabemos que $\overline{A}\cap \overline{B}=(\overline{A\cup B})$. Portanto, usando a propriedade do evento complementar, podemos escrever $P(\overline{A}\cap \overline{B})=1−P(A\cup B)$.
+
+Mas, 
+\begin{equation*}
+P(A\cup B)=P(A)+P(B)-P(A\cap B)=P(A)+P(B)-P(A)\cdot P(B)
+\end{equation*}
+ela independência entre $A$ e $B$. Assim,
+\begin{align*}
+P(\overline{A}\cap \overline{B})&=1-P(A)-P(B)+P(A)\cdot P(B)\\ 
+&=1-P(A)-P(B)\cdot(1−P(A))\\
+&=(1−P(A))\cdot(1-P(B))\\
+&=P(\overline{A})\cdot P(\overline{B})
+\end{align*}.
+Portanto, se $A$ e $B$ são independentes, então $\overline{A}$ e $\overline{B}$ também são independentes.
+
+\item Por hipótese temos que $P(A\cap B)=P(A)\cdot P(B)$, pois $A$ e $B$ são independentes. Queremos provar que $A$ e $\overline{B}$ também são independentes, ou equivalentemente, que $P(A\cap \overline{B})=P(A)\cdot P(\overline{B})$. Observe que podemos escrever $A=(A\cap B)\cup (A\cap\overline{B})$ com os dois eventos do lado direito sendo disjuntos. Assim, $P(A)=P(A\cap B)+P(A\cap \overline{B})$ implicando que $P(A\cap \overline{B})=P(A)-P(A\cap B)=P(A)-P(A)\cdot P(B)$ pela independedência de $A$ e $B$. Logo, $P(A\cap \overline{B})=P(A)\cdot(1−P(B))=P(A)\cdot P(\overline{B})$ e, portanto, se $A$ e $B$ são independentes, então $A$ e $\overline{B}$ também são.
+\item Idem ao item anterior, bastando trocar de posição as letras $A$ e $B$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

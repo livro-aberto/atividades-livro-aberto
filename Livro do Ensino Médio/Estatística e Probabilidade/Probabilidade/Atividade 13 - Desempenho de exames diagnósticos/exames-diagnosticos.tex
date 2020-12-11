@@ -1,0 +1,144 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Desempenho de exames diagnósticos}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Reconhecer uma probabilidade condicional.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Essa atividade envolve uma adaptação de uma questão do ENEM (2014).
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Testes diagnósticos para detectar uma doença não são infalíveis. Para analisar o desempenho de um desses testes, realizam-se estudos em populações, contendo pessoas sãs e portadoras da doença.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=200bp]{{amostras_sangue}.png}
+
+
+\caption{Amostras de sangue para realização de exame}
+\end{figure}
+
+
+Quatro situações distintas podem ocorrer
+\begin{enumerate}
+\item {} 
+a pessoa TEM a doença e o resultado do teste é POSITIVO.
+
+\item {} 
+a pessoa TEM a doença e o resultado do teste é NEGATIVO.
+
+\item {} 
+a pessoa NÃO TEM a doença e o resultado do teste é POSITIVO.
+
+\item {} 
+a pessoa NÃO TEM a doença e o resultado do teste é NEGATIVO.
+
+\end{enumerate}
+
+Observe que nas situações \titem{b)} e \titem{c)}, o teste falha, pois deveria ser positivo quando a pessoa tem a doença e, negativo, quando a pessoa não tem a doença. Já nas situações \titem{a)} e \titem{d)} o teste acerta o diagnóstico.
+
+Dois índices de desempenho para avaliação de um teste diagnóstico costumam ser usados: a sensibilidade e especificidade.
+
+A \textbf{sensibilidade} é definida como a probabilidade de o resultado do teste ser POSITIVO, dado que a pessoa examinada tem a doença. Já a \textbf{especificidade} é a probabilidade do teste ser NEGATIVO, dado que a pessoa examinada não tem a doença.
+
+
+O quadro a seguir refere-se a um teste diagnóstico para a doença \(X\), aplicado em uma amostra composta por duzentas pessoas, sendo 100 sadias e 100 portadoras da doença \(X\).
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|l|l|l|}
+\hline
+\thead
+Resultado do teste & doente & sadia \\
+\hline
+Positivo & 95 & 15 \\
+\hline
+Negativo & 5 & 85 \\
+\hline
+\end{tabu}
+\end{table}
+
+
+Uma pessoa entre as duzentas dessa amostra será sorteada.
+\begin{enumerate}
+\item {} 
+Qual a probabilidade de ela tenha a doença \(X\)?
+
+\item {} 
+Qual a probabilidade de que ela NÃO tenha a doença \(X\)?
+
+\item {} 
+Se o resultado do teste da pessoa sorteada foi positivo, calcule a probabilidade de que ela tenha a doença.
+
+\item {} 
+Se o resultado do teste da pessoa sorteada foi negativo, calcule a probabilidade de que ela tenha a doença.
+
+\item {} 
+Sabendo que a pessoa sorteada tem a doença, qual a probabilidade de seu teste ter resultado positivo?
+
+\item {} 
+Sabendo que a pessoa sorteada  NÃO tem a doença, qual a probabilidade de seu teste ter resultado negativo?
+
+\item {} 
+Determine uma estimativa da sensibilidade e da especificidade desse teste, usando a informação do quadro acima.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+Defina 
+\begin{itemize}
+\item $A$: o evento "a pessoa sorteada tem a doença $X$"{} e 
+\item $B$: o evento "o resultado do teste da pessoa sorteada foi positivo".
+\end{itemize}
+
+\begin{enumerate}
+\item Entre os duzentos indivíduos, $100$ têm a doença $X$, logo $P(A)=\frac{100}{200}=0{,}5$.
+\item $P(\overline{A})=1-0,5=0,5$.
+\item $P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{95}{110}\approx0{,}864$.
+\item $P(A|\overline{B})=\frac{5}{90}\approx0,056$.
+\item Entre as $100$ pessoas doentes, $95$ resultados foram positivos, logo $P(B|A)=0{,}95$.
+\item Entre as $100$ pessoas sadias, 85 resultados foram negativos, logo $P(\overline{B}|\overline{A})=0,85$.
+\item $0{,}95$ e $0{,}85$, respectivamente, conforme os itens \titem{c)} e \titem{d)}.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

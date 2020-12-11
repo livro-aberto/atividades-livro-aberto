@@ -1,0 +1,94 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Simulação do lançamento de um dado diferente}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar modelo probabilístico e usar tecnologia para realizar simulações de um fenômeno aleatório.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Nessa atividade será proposta a simulação de um dado diferente. Apesar das faces ocorrerem com probabilidades iguais, esse dados tem registrado em suas faces o número 1 em uma delas, o núermo 2 em duas delas e o número 3 em três delas. Discuta com seus alunos como adaptar a função de geração de números aleatórios para simular resultados de lançamentos desse dado. É fácil perceber, da atividade anterior que a probabilidade de 3 é 3/6, de 2 é 2/6 e, de 1, 1/6
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Um dado é equilibrado, mas suas faces foram pintadas de tal modo que há uma face 1, duas faces 2 e três faces 3.
+\begin{enumerate}
+\item {} 
+Determine as probabilidades de se obter face 1, face 2 e face 3 com esse dado.
+
+\item {} 
+Usando as funções de geração de números aleatórios, simule o lançamento desse dado 30 vezes e compare a frequência relativa de faces 2 obtidas com a probabilidade teórica da face 2 obtida no item anterior.
+
+\item {} 
+Repita o item anterior para 300, 600, 900 e 1800 lançamentos do dado equilibrado e registre o número de vezes que você obteve a face 2.
+
+\item {} 
+Complete a tabela a seguir e comente sobre os resultados que você obteve.
+
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Número de Observações & Frequência relativa de 2 \\
+\hline
+30 &\\
+\hline
+300 &\\
+\hline
+600 &\\
+\hline
+900 &\\
+\hline
+1800 &\\
+\hline
+\end{tabu}
+\end{table}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item A probabilidade de obter face 1 é dada por 16, de obter face 2 é dada por 26 e, de obter face 3 é dada por 36, pois o dado é equilibrado, mas há uma face 1, duas faces 2 e três faces 3.
+Você pode realizar a simulação usando a planilha do Geogebra e a função =NúmeroAleatório(1,6) na célula A1. Essa função retornará, com probabilidades iguais, um entre os números 1,2,3,4,5,6. Depois, arraste, copiando esta função para mais 29 células A2 até A30, obtendo as 30 simulações. Observe que nesse caso, você deverá atribuir apenas um número para a ocorrência da face 1, dois números para a face 2 e três números para a face 3. Se considerarmos os números 2 e 3 para a ocorrência de face 2, use a função =ContarSe(1<x<4,A1:A30). É claro que as respostas irão variar, dependendo da simulação. Mas, espera-se que o número de faces “2” obtidas oscile em torno de 10, pois a probabilidade de obter uma face “2” é 2/6 e estamos simulando 30 lançamentos.
+
+\item Idem ao item anterior, só que agora o número de células a ser considerado na planilha será 300, 600, 900 e 1800.
+
+\item No preenchimento da tabela você deverá perceber que a medida que o número de simulações é maior, a frequência relativa de faces 2 se aproxima da probabilidade teórica de obter uma face 2 (≈0,333). Se de fato o gerador de números aleatórios do programa que você está usando é bom, esse é o resultado esperado. Por exemplo, em uma simulação com o GeoGebra foram observadas as seguintes frequências relativas de faces 2 conforme o número de lançamentos
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

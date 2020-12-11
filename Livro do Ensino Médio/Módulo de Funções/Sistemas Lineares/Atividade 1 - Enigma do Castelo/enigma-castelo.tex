@@ -1,0 +1,96 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Enigma do Castelo}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Trabalhar o significado de um elemento ser, ou não, solução de uma equação.
+\item Introduzir o aluno à representação geométrica do conjunto solução de uma equação.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Deixe os alunos testarem valores livremente. A ideia é que a sequência dos itens faça o aluno chegar às conclusões esperadas.
+\item No item \titem{g)}, espera-se que os alunos consigam perceber, do ponto de vista intuitivo, que as soluções da equação $x^2+y^2=5$ formem uma circunferência de centro na origem e raio 5. Não se espera e nem se deseja que uma justificativa formal para esse fato seja realizada nesse momento. Caso os alunos disponham de celulares com o GeoGebra instalado, é interessante plotar a curva associada à referida equação no aplicativo, para contribuir com o convencimento dos alunos sobre o resultado conjecturado por eles.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Numa antiga série de TV chamada "Castelo Rá-tim-bum", para os personagens entrarem no castelo, eles precisavam responder a um enigma proposto pelo porteiro. O enigma proposto era "Diga $2$ números reais cuja soma dos quadrados seja igual a $25$".
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=150bp]{ratimbum.png}
+\end{figure}
+
+
+
+\begin{enumerate}
+\item {} 
+Os números $-3$ e $4$ são uma possível resposta para o enigma? E os números 5 e 3?
+
+\item {} 
+Você consegue outras respostas para o enigma formadas apenas por pares de números inteiros?
+
+\item {} 
+Ao responder ao enigma, se qualquer um dos dois números escolhidos for maior que $5$, esta resposta estará correta? E se um deles for menor que $-5$? Justifique.
+
+\item {}
+Escolhendo qualquer número entre $-5$ e $5$, é possível encontrar um segundo número de forma que, junto com o primeiro, eles formem uma solução para o enigma? Se sim, determine algumas dessas soluções.
+
+\item {}
+Estabelecendo uma ordem para os dois números escolhidos, chamemos o primeiro número de $x$ e o segundo de $y$. Qual a equação nas incógnitas $x$ e $y$ descreve o acerto do enigma?
+
+\item {}
+Marque suas respostas aos nos itens \titem{a}, \titem{b} e \titem{d} no plano cartesiano, associando ao primeiro número à coordenada $x$ e ao segundo número, a coordenada $y$. Se você preferir, pode usar o GeoGebra para isso!
+
+\item {}
+Discuta com os seus colegas se há algum padrão na disposição dos pontos marcados pelas possíveis respostas do enigma.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Sim. Não.
+\item $\{-5,0\},\{-5,0\},\{-4, -3\}, \{-4,3\}, \{4, -3\}, \{4, 3\}$. Note que ainda não estamos falando de pares ordenados, portanto, $\{0,5\}$ e $\{5,0\}$ são iguais.
+\item Não, pois se um dos números é maior que $5$, seu quadrado já é maior que $25$.  Não, raciocínio análogo.
+\item Sim, esse número pode não ser, necessariamente, inteiro.
+\item $x^2+y^2=25$.
+\item Ao dispor as soluções no plano cartesiano, se tem um círculo de raio $5$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,119 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Censo Educação Física}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar as regras básicas da probabilidade, usando a interpretação frequentista de probabilidade.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Aplicar as regras básicas da probabilidade para obter as regras da probabilidade do evento complementar e da probabilidade da união de dois eventos quaisquer.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Em uma escola de Ensino Médio há dois turnos: manhã e tarde. No turno da manhã há $450$ alunos e, no turno da tarde, $350$ alunos. Os professores de Educação Física realizaram um censo para saber se os alunos da escola praticavam algum tipo de atividade física regular fora do período escolar. A pergunta principal do questionário da pesquisa foi:
+
+\textbf{Qual é a sua atividade física principal fora do período escolar? Marque apenas uma opção.}
+
+
+\begin{center}\textbf{({ }) Não pratica  ({ }) Futebol ({ }) Outra}\end{center}
+
+Na \hyperref[frequenciaatividade]{tabela \ref{frequenciaatividade}} estão os resultados obtidos.
+\begin{quote}
+
+\end{quote}
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|c|}
+\hline
+\thead
+Atividade Física & Manhã & Tarde & Total \\
+\hline
+Não pratica & $140$ & $130$ & $270$ \\
+\hline
+Futebol & $160$ & $80$ & $240$ \\
+\hline
+Natação & $80$ & $70$ & $150$ \\
+\hline
+Outra atividade & $70$ & $70$ & $140$ \\
+\hline
+Total & $450$ & $350$ & $800$ \\
+\hline
+\end{tabu}
+\caption{Distribuição de frequências por atividade, segundo o turno.}
+\label{frequenciaatividade}
+\end{table}
+
+Um aluno desta escola será escolhido ao acaso.
+\begin{enumerate}
+\item {} 
+Considere os eventos  \(A\):{}”o aluno escolhido não pratica atividade física”, \(B\):”{} o aluno escolhido pratica Futebol como atividade física principal”, \(C\): ”o aluno escolhido pratica natação”{} e \(D:\):“o aluno pratica outro tipo de atividade física principal”. Determine a probabilidade de cada um desses eventos.
+
+\item {} 
+Observe que o espaço amostral nesse experimento corresponde à união dos eventos considerados no item anterior. Calcule a soma das probabilidades determinadas no item anterior. O resultado obtido é compatível com a segunda regra básica, a saber, \(P(S)=1\)? Por quê?
+
+\item {} 
+Qual é a probabilidade de que este aluno pratique algum tipo de atividade física regular fora do período escolar?
+
+\item {} 
+O que é mais provável: que o aluno escolhido seja do turno da manhã e jogue futebol ou que o aluno jogue futebol?
+
+\item {} 
+Qual é a probabilidade de que o aluno escolhido seja do turno da tarde \textbf{ou} pratique atividade física diferente de futebol, isto é, que o aluno escolhido tenha pelos menos uma dessas duas características?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item $P(A)=\dfrac{270}{800}=0{,}3375, P(B)=\dfrac{240}{800}=0{,}3, P(C)=\dfrac{150}{800}=0{,}1875$ e $P(D)=\dfrac{140}{800}=0{,}175$.
+
+\item De fato, $S=A\cup B\cup C\cup D$, com $A, B, C $ e $D$ dois a dois disjuntos. $1=P(S)=P(A\cup B\cup C \cup D)=P(A)+P(B)+P(C)+P(D)=0{,}3375$, o que era de se esperar em função das regras básicas da probabilidade.
+
+\item Observe que podemos usar a interpretação clássica de probabilidade, considerando cada aluno da escola igualmente provável de ser escolhido. Como queremos a probabilidade de que o aluno pratique algum tipo de atividade física regular fora do período escolar, devemos contar quantos são estes alunos. Uma maneira mais simples de contar estes alunos é calcular a diferença entre o total de alunos ($800$) e o número de alunos que \textbf{não} praticam atividade física ($270$), obtendo-se $530$. Logo, a probabilidade solicitada é dada por $\frac{530}{800}=0{,}6625$. É claro que também poderíamos somar os números de alunos que praticam cada um dos tipos de atividade física: $240+150+140=530$. Mas, observe que a contagem obtida pelo cálculo da diferença entre o total e o número de alunos que não praticam atividade física foi mais simples: $800−270=530$.
+
+\item  Sejam os eventos $B$: “jogar futebol”{} e $M$: “ser do turno da manhã”. Observe que $B\cap M\subset B$ tal que o número de elementos da interseção é menor ou igual ao número de elementos de $B$ de modo que o evento $B$ parece ser mais provável do que o evento $B\cap M$. Olhando os dados, temos que a probabilidade de que o aluno jogue futebol é dada por $P(B)=\frac{240}{800}=0{,}3$ e a probabilidade de jogar futebol e ser do turno da manhã é $P(B\cap M)=\frac{160}{800}=0{,}2$. Logo, é mais provável escolher um aluno que jogue futebol do que escolher um aluno do turna da manhã que jogue futebol. Essa é uma propriedade importante da probabilidade: se $A\subset B$, então $P(A)\leq P(B)$.
+
+\item Chamando de $E$ o evento “praticar outra atividade diferente de futebol”{} e $T$ o evento “ser do turno da tarde”, queremos calcular $P(E\cup T)$. Da tabela de dados temos que o total de alunos que praticam outra atividade diferente de futebol é $150+140=290$ e o total dos alunos do turno da tarde é $350$. No entanto, a soma $290+350=640$ é superior ao número de alunos que tem pelo menos uma dessas duas características. Isso ocorre pois nos dois totais considerados, estamos contando os alunos que têm simultaneamente as duas características. Logo, devemos subtrair de $640$ o valor $70+70=140$ que representa o total de alunos que pratica outra atividade e é ao mesmo tempo do turno da tarde. Portanto, podemos escrever que
+\begin{equation*}
+P(E\cup T)=P(E)+P(T)-P(E\cap T)=\frac{290}{800}+\frac{350}{800}-\frac{140}{800}=\frac{500}{800}=0{,}625
+\end{equation*}
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

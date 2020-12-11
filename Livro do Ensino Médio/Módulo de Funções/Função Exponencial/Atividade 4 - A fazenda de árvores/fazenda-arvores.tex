@@ -1,0 +1,116 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: A fazenda de árvores}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Comparar e analisar as representações, em plano cartesiano, das funções exponencial e logarítmica para identificar as características fundamentais (domínio, imagem, crescimento) de cada uma, com ou sem apoio de tecnologias digitais, estabelecendo relações entre elas.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Deduzir uma fórmula para o decaimento exponencial aproximado a partir dos dados de uma tabela;
+\item Fazer previsões a partir da expressão encontrada tanto para o problema direto quanto para o inverso.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+	\item Os dados dessa atividade ficam próximos da exponencial com fator $0{,}95$. Caso seja possível, use ferramentas tecnológicas para análise dos dados.
+	\item No item \titem{b)} os valores são pedidos de $5$ em $5$ anos. Verifique se algum estudante percebeu que basta multiplicar $(0,95)^{5}$, e caso positivo peça que ele compartilhe com a turma. Se não, conduza as discussões até essa conclusão.
+	\item No item \titem{c)} a pergunta é do tipo problema inverso. Não devemos esperar o uso de logaritmos na solução, mas que o estudante analise os resultados a partir dos dados que ele mesmo gerou no item anterior, fazendo, se necessário, novos cálculos. Algo como: $35$ anos $\rightarrow$ $16,61\%$, $40$ anos $\rightarrow$ $12,85\%$, então os $15\%$ deve estar em algum lugar no meio do caminho, etc.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Uma fazenda de árvores começou a colher um lote que havia sido plantada anos atrás. A tabela abaixo mostra o número de árvores remanescentes para cada um dos 8 anos de colheita 
+
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|d{.15\textwidth}|*{9}{c|}}
+\hline
+\tcolor{Ano} & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\hline
+\tcolor{Árvores remanescentes} & 10.000 & 9.502 & 9.026 & 8.574 & 8.145 & 7.737 & 7.350 & 6.982 & 6.634 \\
+\hline
+\end{tabu}
+\end{table}
+
+\begin{enumerate}
+
+\item {}
+Escreva uma expressão para função que relaciona as árvores remanescentes com o tempo decorrido.
+
+\item{}
+Analise os dados da tabela e faça uma previsão para os próximos anos mostrados na tabela a seguir.
+
+\item{}
+Os donos da fazenda querem parar a colheita quando sobrarem 15\% do número inicial de árvores do lote. Quando devem parar? 
+
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|d{.15\textwidth}|*{7}{>{\centering}m{3em}|}}
+\hline
+\tcolor{Ano} & 10 & 15 & 20 & 25 & 30 & 35 & 40 \\
+\hline
+\tcolor{Árvores remanescentes} & & & & & & & \\
+\hline
+\end{tabu}
+\end{table}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+
+	\item{}
+	$f(n)=10.000 \times 0,95^{n}$.
+
+	\item{}
+	\adjustbox{valign=t}
+	{
+	\begin{tabu} to \textwidth{|>{\centering}d{.15\textwidth}|*{7}{c|}}
+	\hline
+	\tcolor{Ano} & 10 & 15 & 20 & 25 & 30 & 35 & 40 \\
+	\hline
+	\tcolor{Árvores remanescentes} & 5.987 & 4.633 & 3.585 & 2.774 & 2.146 & 1.661 & 1.285 \\
+	\hline
+	\end{tabu}
+	}
+
+	\item{}
+	No trigésimo sexto ano.
+
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

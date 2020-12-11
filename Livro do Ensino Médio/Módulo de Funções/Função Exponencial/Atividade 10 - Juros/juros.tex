@@ -1,0 +1,78 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Juros}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT304} Resolver e elaborar problemas com funções exponenciais nos quais é necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como o da Matemática Financeira e o do crescimento de seres vivos microscópicos, entre outros. 
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Investigar o crescimento de uma movimentação financeira com uma dada taxa de capitalização composta. Relacionar taxa percentual $r$ e fator de crescimento $(1+r)$ / decaimento $(1 - r)$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Reforce com os estudantes a relação entre a taxa percentual e o fator de multiplicação. 
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Você acabou de adquirir um produto de R\$ $200$ e o pagamento proposto pela loja é da seguinte maneira: uma entrada de R\$ $100$ paga no ato da compra e mais uma parcela de  R\$ $110{,}25$ após 2 meses.
+
+\begin{enumerate}
+
+\item{}
+Considerando que a taxa percentual mensal de acréscimo será a mesma nos dois meses, qual é o valor dessa taxa na transação proposta?
+
+\item{}
+Com base na taxa percentual que você encontrou no item anterior, que valor deveria ser pago se a segunda parcela fosse apenas $1$ mês depois da compra?
+
+\item{}
+E se a segunda parcela fosse paga com $3$ meses de intervalo, qual seria o valor a pagar? 
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+
+\item{}
+$100(1+r)^2 =110,25 \iff r=0,05 = 5\%$ 
+
+\item{}
+$100(1+0,05)=105$
+
+\item{}
+$100(1+0,05)^3=115,76$
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

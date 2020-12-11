@@ -1,0 +1,84 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Na Geometria}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT508} Identificar e associar progressões geométricas (PG) a funções exponenciais de domínios discretos, para análise de propriedades, dedução de algumas fórmulas e resolução de problemas.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Identificar progressões geométricas em construções geométricas
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Esta atividade depende de conhecimentos sobre semelhanças de triângulos, arco capaz, relações métricas no triângulo retângulo.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{enumerate}
+
+\item{}
+Na figura abaixo, os ângulos indicados são retos e o segmento $AB$ mede $1$. Justifique a seguinte afirmação: “A sequência formada pelas medidas dos segmentos $AB$, $BC$, $CD$, $DE$, $EF$ e $FG$, nesta ordem, é uma progressão geométrica crescente.”
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=250bp]{imagem_na_geometria.png}
+\end{figure}
+
+\item{}
+Na figura abaixo, o arco $AC$ é uma semicircunferência e o segmento $BD$ é perpendicular ao diâmetro $AC$. Podemos afirmar que as medidas dos segmentos $AB$, $BD$ e $BC$ formam, nesta ordem, uma progressão geométrica? Porquê?
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=200bp]{imagem2_na_geometria.png}
+\end{figure}
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item {} Os ângulos $A\hat{B}C$, $B\hat{C}D$, $C\hat{D}E$, $D\hat{E}F$ e $E\hat{F}G$. Isso implica que os triângulos retângulos $ABC$, $BCD$, $CDE$, $DEF$ e $EFG$ são todos semelhantes. Assim,
+\[
+\dfrac{BC}{AB}=\dfrac{CD}{BC}=\dfrac{DE}{CD}=\dfrac{EF}{DE}=\dfrac{FG}{EF}
+\]
+E como $AB=1$ todas essas razões são iguais ao comprimento da hipotenusa $BC$ que é maior que $1$. Logo a PG é crescente.
+\item Considere o triângulo $ACD$. Por se tratar de um triângulo inscrito em uma semicircunferência, o ângulo $A\hat{D}C$ é reto, isto é, o triângulo é retângulo. Assim, $BD$ é altura e $AB$ e $BC$ são projeções dos catetos sobre a hipotenusa. Pela semelhança entre os triângulos $ABD$ e $BCD$ podemos afirmar que
+\[
+\dfrac{BD}{AB}=\dfrac{BC}{BD}
+\]
+isto é, que as medidas dos segmentos, $AB, BD$ e $BC$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

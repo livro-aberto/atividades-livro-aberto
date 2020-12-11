@@ -1,0 +1,684 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: O gráfico e a forma canônica}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Reconhecer que a variação dos valores de a acarretam na concavidade e na existência $(a=0)$ no gráfico de $f$.
+\item Reconhecer que a variação dos valores de $p$ acarretam translações horizontais no gráfico de $f$.
+\item Reconhecer que a variação dos valores de $q$ acarretam translações verticais no gráfico de $f$.
+\item Reconhecer que toda função real $f$ dada por $f(x)=a(x−p)^2+q$ pode ser obtida por translações do gráfico de $f(x)=ax^2$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Prezado colega, após o aluno ser instigado a desenvolver a forma canônica da expressão apresentada na atividade anterior, propomos uma análise mais criteriosa nos coeficientes $a, p$ e $q$, de $y=a(x−p)^2+q$ através das transformações ocorridas na curva. Para isso dispomos da atividade tanto no modelo textual (estático) quanto num modelo interativo disponível na plataforma do geogebra via link em destaque (a seguir no texto). Neste modelo interativo separamos a abordagem em quatro partes:
+
+\begin{enumerate}[label={Parte \arabic*:}]
+\item Análise dos valores de $a$.
+\item Análise dos valores de $p$.
+\item Análise dos valores de $q$.
+\item Análise dos valores de $a$, $p$ e $q$.
+\end{enumerate}
+
+Sugerimos ao colega que acesse antes os “links”, não só para testar a funcionalidade deles, mas para se apropriar das vantagens que a plataforma oferece. Caso seja da realidade de seus alunos, sugerimos também o acesso à atividade como tarefa de casa.
+
+Essa atividade é um boa referência para conduzirmos a conclusão de que \textbf{todas as parábolas são semelhantes}.
+\end{goals}
+
+\medskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Para melhor explorarmos essa atividade sugerimos a versão online, disponível nos links a seguir:
+\begin{itemize}
+\item {} 
+Parte 1: \href{https://ggbm.at/jdFEcyav}{Forma Canônica e o parâmetro ‘$a$’}
+
+\item {} 
+Parte 2: \href{https://ggbm.at/DmKxRtU9}{Forma Canônica e o parâmetro ‘$p$’}
+
+\item {} 
+Parte 3: \href{https://ggbm.at/Qcm5QFjH}{Forma Canônica e o parâmetro ‘$q$’}
+
+\item {} 
+Parte 4: \href{https://ggbm.at/jVJh78hz}{Forma Canônica}
+
+\end{itemize}
+
+Caso não seja possível, segue a atividade que corresponde à apresentada nos “links”:
+
+Na \hyperref[\detokenize{AF209-2:ativ-funcao-quadratica-investigando-x-a-2}]{\textit{Em busca de padrões em \(f(x)=x^2\)}}, você teve a oportunidade de explorar as propriedades do gráfico da função \(f:\mathbb{R}\to\mathbb{R}\) dada por \(f(x)=x^2\), já na atividade 3, você foi apresentado à um processo que o levou a transformar a relação quadrática dada na forma polinomial: \(f(x)=ax^2 + bx + c\) para forma canônica \(f(x)=a(x-p)^2+q\). O objetivo desta atividade é que você consiga perceber as mudanças ocorridas no gráfico da função \(f\) (dada em sua forma canônica) acarretadas pelas variações dos coeficientes \(a\), \(p\) e \(q\). Esperamos que além de você ter contato com novos conceitos, comprove e consolide os conceitos abordados nas atividades anteriores deste capítulo.
+
+\paragraph{Parte 1}
+
+Dada a função \(f:\mathbb{R}\to\mathbb{R}\), definida na sua forma canônica: \(f(x)=a(x-p)^2+q\), ao assumirmos \(p=q=0\) temos que \(f(x)=ax^2\), onde analisaremos as variações dos valores de \(a>0\), observando a figura a seguir:
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.7, every node/.style={overlay}]
+
+\draw [thin, help lines, dashed, secundario!40] (-8,-3.5) grid (8,13);
+\draw [->] (0,-3.5)--(0,13);
+\draw [->] (-8,0)--(8,0);
+\node [below] at (8,0) {$x$};
+\node [left] at (0,13) {$y$};
+\foreach \y in {-3,-2,-1,1,2,...,10,11,12} \node [left, scale=.75] at (0,\y) {\y};
+\foreach \x in {-7,-6,...,6,7} \node [below, scale=.75] at (\x+.2,0) {\x};
+
+%f(x)
+\draw [color=\currentcolor!80, domain=-7.8:7.8, thick, samples=1000] plot (\x,{ 0.05*((\x)^2)});
+\node [below, color=\currentcolor!80!] at (-7,1.5) {$f(x) = 0.05 x^2$};
+
+%g(x)
+\draw [color=terciario, domain=-7.8:7.8, thick, samples=1000] plot (\x,{ 0.15*((\x)^2)});
+\node [below, color=terciario!30!black] at (7,10) {$g(x) = 0.15 x^2$};
+
+%h(x)
+\draw [color=atento!60!black, domain=-4.6:4.6, thick, samples=1000] plot (\x,{ 0.5*((\x)^2)});
+\node [below, color=atento!60!black] at (-7,11) {$h(x) = 0.5 x^2$};
+
+%p(x)
+\draw [color=destacado,domain=-3.4:3.4, thick, samples=1000] plot (\x,{(\x)^2});
+\node [below, color=destacado!60!black] at (5,12.75) {$p(x) = x^2$};
+
+%t(x)
+\draw [color=secundario, domain=-1.6:1.6, thick, samples=1000] plot (\x,{5*((\x)^2)});
+\node [below, color=secundario] at (2.5,14) {$t(x)=5 x^2$};
+
+%q(x)
+\draw [color=yellow!80!black,domain=-2.45:2.45, thick, samples=1000] plot (\x,{2*((\x)^2)});
+\node [below, color=yellow!60!black] at (-3.5,13) {$q(x)=2x^2$};
+\end{tikzpicture}
+\end{figure}
+
+Note que os gráficos apresentados na figura acima apresentam apenas valores de \(a\) maiores que zero, e que a curva em questão é côncava, com base nessa afirmação responda:
+\begin{enumerate}
+\item {} 
+Quando o valor de \(a\) aumenta, a concavidade da curva fica mais aberta ou mais fechada?
+
+\item {} 
+Quando o valor de \(a\) se aproxima de zero, a concavidade da curva fica mais aberta ou mais fechada?
+
+\item {} 
+Tente explicar com suas palavras uma justificativa para as respostas dadas no item anterior.
+
+Observe as novas figuras a seguir que apresentam novos valores de \(a<0\).
+
+
+\begin{figure}[H]
+\centering
+
+\resizebox{.75\linewidth}{!}
+{
+\begin{tikzpicture}[scale=.75]
+
+\draw [thin, help lines, dashed, secundario!40] (-8,3.5) grid (8,-13);
+\draw [->] (0,3.5)--(0,-13);
+\draw [->] (-8,0)--(8,0);
+\node [above] at (8,0) {$x$};
+\node [left] at (0,-13) {$y$};
+\foreach \y in {3,2,1,-1,-2,...,-10,-11,-12} \node [left, scale=.75] at (0,\y) {\y};
+\foreach \x in {-7,-6,...,6,7} \node [above, scale=.75] at (\x+.2,0) {\x};
+\draw [color=\currentcolor!80, domain=-7.8:7.8, thick, samples=1000] plot (\x,{ -0.05*((\x)^2)});
+\node [above, color=\currentcolor!80!] at (6,-1) {$f(x) = -0.05 x^2$};
+\draw [color=terciario, domain=-7.8:7.8, thick, samples=1000] plot (\x,{ -0.15*((\x)^2)});
+\node [above, color=terciario!30!black] at (-7,-10) {$g(x) = -0.15 x^2$};
+\draw [color=atento!60!black, domain=-4.6:4.6, thick] plot (\x,{ -0.5*((\x)^2)});
+\node [above, color=atento!60!black] at (6,-11) {$h(x) = -0.5x^2$};
+\draw [color=destacado,domain=-3.4:3.4, thick, samples=1000] plot (\x,{-(\x)^2});
+\node [above, color=destacado!60!black] at (-4.8,-12) {$p(x) = -x^2$};
+\draw [color=secundario, domain=-1.6:1.6, thick, samples=1000] plot (\x,{-5*((\x)^2)});
+\node [above, color=secundario] at (-2.5,-13.5) {$t(x)=5x^2$};
+\draw [color=yellow!80!black,domain=-2.45:2.45, thick, samples=1000] plot (\x,{-2*((\x)^2)});
+\node [above, color=yellow!60!black] at (3.2,-13) {$q(x)=-2x^2$};
+\end{tikzpicture}
+}
+\end{figure}
+
+
+\item {} 
+Quando o valor de \(a\) diminui (fica “mais negativo”), a concavidade da curva fica mais aberta ou mais fechada?
+
+\item {} 
+Quando o valor de \(a\) se aproxima de zero, a concavidade da curva fica mais aberta ou mais fechada?
+
+A figura a seguir apresenta o gráfico da função \(f\) definida anteriormente para \(a=0\).
+\begin{center}\begin{tikzpicture}[scale=1.25]
+
+\draw [help lines,color = secundario!20, step=0.2] (-5.5,-3.5) grid (5.5,3);
+\draw [help lines,color = secundario!50] (-5.5,-3.5) grid (5.5,3);
+\draw [-,color=destacado] (-5.5,0) -- (5.5,0);
+\draw[-] (0,3)--(0,-3.4);
+\foreach \x in {-5,...,-1,1,2,...,5} \node [below] at (\x-.1,0) {\x};
+\foreach \y in {-3,-2,1,-1,2,3} \node [left] at (0,\y) {\y};
+\node [below left] (0,0) {0};
+\draw [fill=white] (-5,1) rectangle (-1.2,2.6);
+\node [below right] at (-5,2.5) {Fun\c{c}\~ao \textcolor{destacado}{$f(x)=0x^2$}};
+\node [below right] at (-3.8,1.7) {$a=0$};
+\end{tikzpicture}\end{center}
+\item {} 
+Com base no gráfico acima, comente cada uma das alternativas a seguir, que indicam o comportamento do gráfico quando \(a=0\).
+
+\begin{enumerate}
+\item A curva some, pois não é mais função.
+
+\item Não existe mais curva, o gráfico apresentado é uma reta representada pela função constante \(f:\mathbb{R}\to\mathbb{R}\) dado por \(f(x)=0\)
+
+\item A curva ainda existe mais fica invisível, pois a abertura de sua concavidade tende ao infinito.
+
+A curva se transforma numa reta que está sobreposta ao eixo das abscissas.
+\end{enumerate}
+
+\item {} 
+Você deve ter notado que quando o valor de \(a>0\) a concavidade da curva aponta para cima, e quando \(a<0\) a concavidade aponta para baixo. Com base neste fato, reescreva as falsas afirmações a seguir, tornando-as verdadeiras:
+
+\begin{enumerate}
+\item Quando \(a>0\) a, da esquerda para direita, a curva é decrescente e ao assumir o seu valor máximo passa a ser crescente.
+
+\item Quando \(a>0\) a, da esquerda para direita, a curva é crescente e ao assumir o seu valor mínimo passa a ser decrescente.
+
+\item Quando \(a<0\) a, da esquerda para direita, a curva é decrescente e ao assumir o seu valor máximo passa a ser crescente.
+
+\item Quando \(a<0\) a, da esquerda para direita, a curva é crescente e ao assumir o seu valor mínimo passa a ser decrescente.
+\end{enumerate}
+
+\end{enumerate}
+
+\needspace{5em}
+\paragraph{Parte 2}
+
+Dada a função \(g:\mathbb{R}\to\mathbb{R}\), definida na sua forma canônica: \(g(x)=a(x-p)^2+q\), tomemos \(a=1\) e \(q=0\) e analisaremos os valores de \(p\) na função \(f(x)=(x-p)^2\) observando a figura a seguir:
+\begin{figure}[H]
+\centering
+
+\resizebox{.7\linewidth}{!}
+{
+\begin{tikzpicture}[scale=.65]
+\draw [help lines, thin, dotted, secundario!40, dashed] (-8,-3.5) grid (9,13);
+\draw [->] (0,-3.5)--(0,13);
+\draw [->] (-8,0)--(9,0);
+\node [above,] at (8.5,0) {$x$};
+\node [right,] at (0.3,12.6) {$y$};
+\foreach \y in {-3,-2,-1,1,2,...,10,11,12} \node [left,] at (0,\y) {\y};
+\foreach \x in {-7,-6,...,7,8} \node [below,] at (\x+.2,0) {\x};
+\draw [color=\currentcolor!80, domain=-7.5:-0.5, samples=1000, thick] plot (\x,{( 4+(\x))^2});
+\node [below, color=\currentcolor!80!,] at (-5.8,-0.8) {$f(x) =(x+4)^2$};
+\draw [color=terciario, domain=-5.5:1.5, samples=1000, thick] plot (\x,{( 2+(\x))^2});
+\node [below, color=terciario!30!black] at (-2.5,-1.8) {$g(x) = (2+ x)^2$};
+\draw [color=atento, domain=-3.5:3.5, samples=1000, thick] plot (\x,{ (\x)^2});
+\node [below, color=atento!60!black,] at (1,-0.8) {$h(x) = x^2$};
+\draw [color=destacado, domain=-0.5:6.5, samples=1000, thick] plot (\x,{(-3+(\x))^2});
+\node [below, color=destacado!60!black,] at (3.8,-1.8) {$p(x) = (x-3)^2$};
+\draw [color=secundario, domain=1.5:8.5, samples=1000, thick] plot (\x,{(-5+(\x))^2});
+\node [below, color=secundario!50!black,] at (7,-0.8) {$t(x)=(x-5)^2$};
+\end{tikzpicture}
+}
+\caption{Variações de \(p\).}
+\end{figure}
+Variações de \(p\).
+
+Em cada um dos itens a seguir destaque as alternativas verdadeiras.
+\begin{enumerate}
+\item {} 
+Quando os valores de \(p\) aumentam a curva se desloca para
+
+({ }{ }{ }) direita.
+
+({ }{ }{ }) cima.
+
+({ }{ }{ }) esquerda.
+
+({ }{ }{ }) baixo.
+
+\item {} 
+Quando os valores de \(p\) diminuem a curva se desloca para
+
+({ }{ }{ }) direita.
+
+({ }{ }{ }) cima.
+
+({ }{ }{ }) esquerda.
+
+({ }{ }{ }) baixo.
+
+\item {} 
+Você deve ter notado que a curva tangencia o eixo das abscissas em um ponto, que é justamente o ponto em que a curva deixa de ser decrescente e passa a ser crescente. Qual é a relação dos valores de \(p\) com este ponto?
+
+({ }{ }{ }) O ponto de tangência em questão é \((-p,0)\).
+
+({ }{ }{ }) O ponto de tangência em questão é \((0,-p)\).
+
+({ }{ }{ }) O ponto de tangência em questão é \((0,p)\).
+
+({ }{ }{ }) O ponto de tangência em questão é \((p,0)\).
+
+\item {} 
+O movimento que a curva faz quando \(p\) varia, é uma
+
+({ }{ }{ }) translação vertical.
+
+({ }{ }{ }) translação horizontal.
+
+({ }{ }{ }) rotação em \(360^{\circ}\).
+
+({ }{ }{ }) rotação em \(180^{\circ}\).
+
+\end{enumerate}
+
+\clearpage
+
+\paragraph{Parte 3}
+
+Dada a função \(g:\mathbb{R}\to\mathbb{R}\), definida na sua forma canônica: \(g(x)=a(x-p)^2+q\), tomemos \(a=1\) e \(p=0\) e analisaremos os valores de \(q\) na função \(f(x)=x^2+q\) observando a figura a seguir:
+
+
+\begin{figure}[H]
+\centering
+
+\scalebox{.875}
+{
+\begin{tikzpicture}[scale=.7]
+\draw [ thin, help lines, dashed, secundario!40] (-5.5,-5.5) grid (5.5,9);
+\draw [->] (-5.5,0)--(5.5,0) node [above left] {$x$};
+\draw [->] (0,-5.5)--(0,9) node [below right] {$y$};
+\foreach \y in {-5,...,-1,1,2,...,8} \node [left] at (0,\y) {\y};
+\foreach \x in {-5,...,-1,1,2,...,5} \node [below] at (\x,0) {\x};
+\node [below left] at (0,0) {0};
+\draw [color=secundario, domain=-3.74165:3.74165, thick] plot (\x,{(((\x)^2)-5)});
+\node [color=secundario, below] at (0,-5.1) {$x^2-5$};
+\draw [color=\currentcolor!80, domain=-3.16227:3.16227, thick] plot (\x,{(((\x)^2)-1)});
+\node [color=\currentcolor!80, below] at (0,-1.2) {$x^2-1$};
+\draw [color=orange, domain=-3:3, thick] plot (\x,{(((\x)^2))});
+\node [above, color=orange,] at (0,0) {$x^2$};
+\draw [color=destacado, domain=-2.6457:2.6457, thick] plot (\x,{(((\x)^2)+2)});
+\node [below, color=destacado] at (0,1.8) {$x^2+2$};
+\draw [color=atento, domain=-2:2, thick] plot (\x,{(((\x)^2)+5)});
+\node [below, color=atento] at (0,4.8) {$x^2+5$};
+\end{tikzpicture}
+}
+
+\caption{Variação de \(q\)}
+\end{figure}
+
+\needspace{10em}
+Em cada um dos itens a seguir destaque as alternativas verdadeiras.
+\begin{enumerate}
+\item {} 
+Quando os valores de \(q\) aumentam a curva se desloca para
+
+({ }{ }{ }) direita.
+
+({ }{ }{ }) cima.
+
+({ }{ }{ }) esquerda.
+
+({ }{ }{ }) baixo.
+
+\item {} 
+Quando os valores de \(q\) diminuem a curva se desloca para
+
+({ }{ }{ }) direita.
+
+({ }{ }{ }) cima.
+
+({ }{ }{ }) esquerda.
+
+({ }{ }{ }) baixo.
+
+\item {} 
+Você deve ter notado que a curva intersecta o eixo das ordenadas em um ponto, que é justamente o ponto em que a curva deixa de ser decrescente e passa a ser crescente. Quais são relações dos valores de \(q\) com esse ponto?
+
+({ }{ }{ }) O ponto de intersecção é \((-q,0)\).
+
+({ }{ }{ }) O ponto de intersecção é \((q,0)\).
+
+({ }{ }{ }) O ponto de intersecção é \((0,-q)\).
+
+({ }{ }{ }) O ponto de intersecção é \((0,q)\).
+
+({ }{ }{ }) Na figura, \(q\) representa o maior valor que essa função atinge.
+
+({ }{ }{ }) Na figura, \(q\) representa o menor valor que essa função atinge.
+
+\item {} 
+O movimento que a curva faz quando \(q\) varia, é uma
+
+({ }{ }{ }) translação vertical.
+
+({ }{ }{ }) translação horizontal.
+
+({ }{ }{ }) rotação em \(360^{\circ}\).
+
+({ }{ }{ }) rotação em \(180^{\circ}\).
+
+\end{enumerate}
+\needspace{10em}
+
+\paragraph{Parte 4}
+
+Em cada uma das partes anteriores, estudamos as variações gráficas que cada um dos valores de \(a\), \(p\) e \(q\) fazem na curva. Para elucidarmos essas ideias, convidamos a variar esses valores juntos na função \(f:\mathbb{R}\to\mathbb{R}\), definida na sua forma canônica: \(f(x)=a(x-p)^2+q\).
+\begin{enumerate}
+\item {} 
+Observe as figuras a seguir, e note que em todas os valores de \(a\) são sempre iguais a \(1\), já os valores de \(p\) e \(q\) variam.
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=325bp]{{41}.jpg}
+\caption{(\(p=4\) e \(q=-3\))}\label{\detokenize{AF209-5:id9}}\end{figure}
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=325bp]{{411}.jpg}
+\caption{(\(p=3\) e \(q=0\))}\label{\detokenize{AF209-5:id10}}\end{figure}
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=325bp]{{412}.jpg}
+\caption{(\(p=-1\) e \(q=2\))}\label{\detokenize{AF209-5:id11}}\end{figure}
+
+\begin{enumerate}
+\item A variação de \(p\) faz com que o gráfico sofra que tipo de translação (vertical ou horizontal?
+
+\item A variação de \(q\) faz com que o gráfico sofra que tipo de translação (vertical ou horizontal?
+\end{enumerate}
+
+\item {} 
+As figuras a seguir mostram as variações obtidas no gráfico para os valores de \(a = 1\), (\(p =5\) e \(q =5\)); (\(p=-5\) e \(q=5\)); em seguida (\(p=5\) e \(q=-5\)) e por último (\(p=-5\) e \(q=-5\)). Já vimos anteriormente que existe um ponto no gráfico em que a função deixa de ser decrescente e passa a ser crescente, este ponto chamamos de \textbf{vértice} da curva.
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=325bp]{{42}.jpg}
+\caption{(\(p=5\) e \(q=5\))}\label{\detokenize{AF209-5:id12}}\end{figure}
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=325bp]{{43}.jpg}
+\caption{(\(p=-5\) e \(q=5\))}\label{\detokenize{AF209-5:id13}}\end{figure}
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=325bp]{{44}.jpg}
+\caption{(\(p=5\) e \(q=-5\))}\label{\detokenize{AF209-5:id14}}\end{figure}
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=325bp]{{45}.jpg}
+\caption{(\(p=-5\) e \(q=-5\))}\label{\detokenize{AF209-5:id15}}\end{figure}
+
+Exiba as coordenadas do vértice em função de \(p\) e \(q\).
+
+\item {} 
+Observe que ao mantermos os valores de $a=1$, $p=0$ e $q=0$, temos a curva $y=x^2$. Considerando uma função \(f\) de Domínio \(D\) e imagem \(I\) dada por $f(x)=y$, utilize a figura a seguir, e em seguida escolha a alternativa na qual os conjuntos \(D\) e \(I\) estão definidos na atividade.
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=.7, yscale=.7]
+\draw [very thin, help lines, dotted, secundario!70] (-5,-2.5) grid (5.5,9);
+\draw [->] (0,-2.5)--(0,9);
+\draw [->] (-5,0)--(5.5,0);
+\node [above] at (5,0) {$x$};
+\node [right] at (0.3,8.5) {$y$};
+\foreach \y in {,-2,-1,1,2,...,8} \node [left,scale=.75] at (0,\y) {\y};
+\foreach \x in {-5,-4,...,4,5} \node [below,scale=.75] at (\x+.2,0) {\x};
+\draw [color=\currentcolor!80,domain=-3:3, thick] plot (\x,{(\x)^2});
+\end{tikzpicture}
+
+\caption{$(a=1; p=q=0)$}
+\end{figure}
+({ }{ }{ }) \(D=[-5,5]\) e \(I=[0,5]\)
+
+({ }{ }{ }) \(D=[0,+\infty[\) e \(I=[0,+\infty[\)
+
+({ }{ }{ }) \(D=[0,5]\) e \(I=[-5,5]\)
+
+({ }{ }{ }) \(D=\mathbb{R}\) e \(I=[0,+\infty[\)
+
+({ }{ }{ }) \(D=\mathbb{R}\) e \(I=\mathbb{R}\)
+
+\item {} 
+Observe que ao mantermos os valores de \(a=-2\), \(p=3\) e \(q=-4\), temos que \(y=-2(x-3)^2 -4\). Considerando uma função \(f\) de Domínio \(D\) e imagem \(I\) dada por \(f(x)=y\), utilize a figura a seguir, e em seguida escolha a alternativa na qual os conjuntos \(D\) e \(I\) estão definidos na atividade.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=.75, yscale=.75]
+
+\draw [very thin, help lines, dotted, secundario!70] (-3.5,-8.5) grid (5.5,1.5);
+\draw [->] (0,-8.5)--(0,1.5);
+\draw [->] (-3.5,0)--(5.5,0);
+\node [above] at (5,0) {$x$};
+\node [right] at (0.3,1.5) {$y$};
+\foreach \y in {,-8,-7,...,-1,1} \node [left,scale=.75] at (0,\y) {\y};
+\foreach \x in {-3,-2,...,4,5} \node [below,scale=.75] at (\x+.2,0) {\x};
+\draw [color=\currentcolor!80,domain=--1.47:4.53, thick] plot (\x,{-2*(\x)^2-22+12*(\x)});
+\end{tikzpicture}
+\caption{$(a=-2, p=3,q=-4)$}
+
+\end{figure}
+({ }{ }{ }) \(D=[-4,3]\) e \(I=[-4,3]\)
+
+({ }{ }{ }) \(D=\mathbb{R}\) e \(I=]-\infty,-4]\)
+
+({ }{ }{ }) \(D=[-5,5]\) e \(I=[-5,5]\)
+
+({ }{ }{ }) \(D=[-4,3]\) e \(I=[-4,+\infty[\)
+
+({ }{ }{ }) \(D=\mathbb{R}\) e \(I=\mathbb{R}\)
+
+\clearpage
+\item {} 
+Em relação à função real \(f\) definida por \(f(x)=a(x-p)^2+q\) , caso \(a\) assuma apenas valores \textbf{positivos}, assinale quais das afirmações seguintes são verdadeiras:
+
+({ }{ }{ }) O valor de \(p\) representa o maior valor que \(f\) pode assumir.
+
+({ }{ }{ }) O valor de \(p\) representa o menor valor que \(f\) pode assumir.
+
+({ }{ }{ }) O valor de \(q\) representa o maior valor que \(f\) pode assumir.
+
+({ }{ }{ }) O valor de \(q\) representa o menor valor que \(f\) pode assumir.
+
+({ }{ }{ }) A função \(f\), não tem valor máximo, mas tem valor mínimo.
+
+({ }{ }{ }) A função \(f\), não tem valor mínimo, mas tem valor máximo.
+
+({ }{ }{ }) A função f, tem valores de máximo e mínimo.
+
+\item {} 
+Em relação à função real \(f\) definida por \(f(x)=a(x-p)^2+q\) , caso \(a\) assuma apenas valores \textbf{negativos}, assinale quais das afirmações seguintes são verdadeiras:
+
+({ }{ }{ }) O valor de \(p\) representa o maior valor que \(f\) pode assumir.
+
+({ }{ }{ }) O valor de \(p\) representa o menor valor que \(f\) pode assumir.
+
+({ }{ }{ }) O valor de \(q\) representa o maior valor que \(f\) pode assumir.
+
+({ }{ }{ }) O valor de \(q\) representa o menor valor que \(f\) pode assumir.
+
+({ }{ }{ }) A função \(f\), não tem valor máximo, mas tem valor mínimo.
+
+({ }{ }{ }) A função \(f\), não tem valor mínimo, mas tem valor máximo.
+
+({ }{ }{ }) A função f, tem valores de máximo e mínimo.
+
+\item {} 
+Ainda na função \(f\) ao assumirmos os valores de \(a=3\);  \(p=1\) e \(q=-2\), Assinale quais afirmações a seguir são verdadeiras.
+
+({ }{ }{ }) O vértice da curva é \(V=(3,1)\).
+
+({ }{ }{ }) O vértice da curva é \(V=(3,-2)\).
+
+({ }{ }{ }) O vértice da curva é \(V=(1,-2)\).
+
+({ }{ }{ }) O vértice da curva é \(V=(-2,1)\).
+
+({ }{ }{ }) \(-2\), é o maior valor que a função f pode assumir.
+
+({ }{ }{ }) \(3\), é o maior valor que a função f pode assumir.
+
+({ }{ }{ }) \(1\), é o maior valor que a função f pode assumir.
+
+({ }{ }{ }) \(-2\), é o menor valor que a função f pode assumir.
+
+({ }{ }{ }) \(3\), é o menor valor que a função f pode assumir.
+
+({ }{ }{ }) \(1\), é o menor valor que a função f pode assumir.
+
+({ }{ }{ }) A concavidade da curva está voltada para cima, pois \(a>0\).
+
+({ }{ }{ }) A concavidade da curva está voltada para cima, pois \(p>0\).
+
+({ }{ }{ }) A concavidade da curva está voltada para cima, pois \(q<0\).
+
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\textbf{Parte 1}
+\begin{enumerate}
+\item {} 
+Mais fechada.
+
+\item {} 
+Mais aberta.
+
+\item {} 
+\(a\) é o coeficiente que multiplica o \(x^2\), sendo \(0<a<1\) o valor resultante dessa multiplicação (imagem de \(f\)) é um número menor que \(x^2\), o que acarreta um crescimento (para \(x>0\)) mais lento de \(f\) o que leva a concavidade ser mais aberta. Já no caso \(a>1\) o resultado desse produto (imagem de \(f\)) é um valor maior que \(x^2\), o que acarreta um crescimento (para \(x>0\)) mais acelerado de \(f\), o que leva a concavidade ser mais fechada.
+
+\item {} 
+Mais fechada.
+
+\item {} 
+Mais aberta.
+
+\item {} 
+\begin{enumerate}
+\item A curva na verdade se transforma numa reta, no caso a função real constante \(f\) definida por \(f(x)=0\).
+
+\item Correto.
+
+\item Não há mais curva, e sim a reta \(y=0\).
+
+\item Correto.
+\end{enumerate}
+
+\item {} 
+\begin{enumerate}
+\item Quando $a>0a$, da esquerda para direita, a curva é decrescente e ao assumir o seu valor \textbf{mínimo} passa a ser crescente.
+
+\item Quando $a>0a$, da esquerda para direita, a curva é \textbf{decrescente} e ao assumir o seu valor mínimo passa a ser \textbf{crescente}.
+
+\item Quando$a>0a$, da esquerda para direita, a curva é \textbf{crescente} e ao assumir o seu valor máximo passa a ser \textbf{decrescente}.
+
+\item Quando $a>0a$, da esquerda para direita, a curva é crescente e ao assumir o seu valor \textbf{máximo} passa a ser decrescente.
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{Parte 2}
+\begin{enumerate}
+\item {} 
+Direita.
+
+\item {} 
+Esquerda.
+
+\item {} \begin{enumerate}
+\setcounter{enumi}{5}
+\item {} 
+; (F); (F) ; (V)
+
+\end{enumerate}
+
+\item {} 
+Translação Horizontal.
+
+\end{enumerate}
+
+\textbf{Parte 3}
+\begin{enumerate}
+\item {} 
+Cima.
+
+\item {} 
+Baixo.
+
+\item {} \begin{enumerate}
+\setcounter{enumi}{5}
+\item {} 
+; (F); (F); (V); (F) ; (V)
+
+\end{enumerate}
+
+\item {} 
+Translação Vertical.
+
+\end{enumerate}
+\clearpage
+\textbf{Parte 4}
+\begin{enumerate}
+\item {} 
+\begin{enumerate}
+\item Horizontal.
+\item Vertical.
+\end{enumerate}
+\item {} 
+\(V=(p,q)\)
+
+\item {} 
+\(D=\mathbb{R}\) e \(I=[0,+\infty[\)
+
+\item {} 
+\(D=\mathbb{R}\) e \(I=[-\infty,-4]\)
+
+\item {} 
+(F);(F);(F);(V);(V);(F);(F);(F);(F);(V);(F);(F);(V);(F)
+
+\item {} 
+(F);(F);(V);(F);(F);(F);(V);(F);(F);(V);(F);(F)
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

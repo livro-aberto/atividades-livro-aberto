@@ -1,0 +1,98 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Dieta Nutricional}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar sistemas lineares em contexto nutricional.
+ \item Resolver um sistema linear por escalonamento. 
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Neste exercício primeiro o aluno precisa escrever as equações que modelam o fenômeno (isso o aluno já está acostumado, pois já fez algumas modelagens nas atividades \textit{\hyperref[teatro]{Faturamento de um teatro}, \hyperref[clube]{Clube de Esportes}, \hyperref[mais_bolos]{Fazendo mais bolos}} e \textit{\hyperref[trafego]{Rede de Tráfego}} ) e, em seguida, deve escalonar o sistema obtido, seguindo os passos apresentados anteriormente.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Um nutricionista está elaborando uma dieta para um paciente que está com deficiência de vitamina C, cálcio e magnésio. Uma das refeições da dieta será composta por três alimentos com quantidades medidas em porções de $50$ g, de forma que os totais em miligramas (mg) dos nutrientes necessários sejam atingidos. A tabela abaixo contém as informações nutricionais dos três alimentos desta refeição:
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|c|e{3,5cm}|}
+\hline
+\tmcol{5}{|c|}{Miligramas de nutrientes por porção de 50g de alimento} \\
+\hline
+\tcolor{Nutriente} & \tcolor{Alimento 1 (mg)} & \tcolor{Alimento 2 (mg)} & \tcolor{Alimento 3 (mg)} & \tcolor{Total de  nutrientes  necessários (mg)} \\
+\hline
+Vitamina C & 10 & 10 & 20 & 100  \\
+\hline
+Cálcio & 50 & 40 & 10 & 300 \\
+\hline
+Magnésio & 30 & 10 & 40 & 200 \\
+\hline
+\end{tabu}
+\end{table}
+
+\begin{enumerate}
+\item{}
+Denote por $x_1$, $x_2$ e $x_3$ a quantidade de porções dos alimentos 1, 2 e 3 respectivamente que compõem uma refeição contendo exatamente a quantidade necessária de Vitamina C, Cálcio e Magnésio a serem ingeridas pelo paciente. Utilizando a tabela acima, escreva um sistema linear nas incógnitas $x_1$, $x_2$ e $x_3$ que represente essa situação;
+
+\item{}
+
+Escalone e resolva o sistema obtido no item \titem{a)}, classificando-o.
+
+\item{}
+Qual será o peso total de comida ingerida nesta refeição, considerando que ela contém apenas os alimentos 1, 2 e 3? 
+
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate}
+\item 
+$
+\left \{
+\begin{aligned}
+10x_1+10x_2+20x_3&=100\\
+50_x1+40_x2+10_x3&=300\\
+30x_1+10x_2+40x_3&=200
+\end{aligned}
+\right.  
+$
+\item $\displaystyle(x_1,x_2,x_3)=(\frac{25}{8},\frac{25}{8},\frac{15}{8})$.
+\item $\displaystyle\frac{1625}{4}$ gramas.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Retas no Plano Cartesiano}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Identificar equações de retas paralelas.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Professor, vale a pena estimular os alunos a construir as representações gráficas das três retas em um mesmo sistema de eixos, seja no papel, seja usando o GeoGebra.
+\item Essa atividade pode ser feita tanto no Geogebra quanto no papel. Se fizer no Geogebra, basta entrar com as equações das retas para que se faça a representação gráfica dela. Se fizer no papel, lembre que da Geometria Euclidiana Plana,  para determinar uma reta no plano, basta conhecer dois de seus pontos.  
+\item Na resolução do item \titem{b)} ajude seus alunos a encontrar soluções de uma das equações, levando-os a verificar que as mesmas também são solução para a outra.
+\item Na resolução do item \titem{c}) sugira que os alunos manipulem algebricamente a equação $2$ de forma que se chegue na equação $1$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Na última seção, vimos que o conjunto solução de uma equação linear em duas incógnitas é representado por uma reta no plano. Considere as equações lineares a seguir:
+\begin{align*}
+\mbox{Equação} \ 1: 2x+3y=1;   &   \ \ \ \  \mbox{Equação} \ 2: -6x - 9y = -3;\\
+\mbox{Equação}\ 3: 2x+3y=4;    & \ \ \ \ \mbox{Equação} \ 4: 3x + y = 5. \\
+\end{align*}
+\begin{enumerate}
+\item{} 
+Esboce a reta associada a Equação 1, em seguida, destaque 2 pontos dessa reta. Esses dois pontos são soluções da Equação? Justifique.
+
+\item{}
+Esboce a reta da Equação 2. Qual é a relação entre essa reta e a da Equação 1? Discuta com seus colegas o que isso significa com relação às soluções das Equações 1 e 2.
+
+\item{}
+Qual é a relação algébrica entre as Equações 1 e 2? Elabore exemplos de outras equações lineares que tenham a mesma relação.
+
+\item{}
+Esboce a reta da Equação 3. Qual é a relação entre as retas das Equações 1 e 3? Baseado nisso, diga se um ponto $(x_0,y_0)$ pode ser solução das Equações 1 e 3 simultaneamente? Justifique a sua resposta.
+
+\item{}
+Qual é a relação algébrica entre as Equações 1 e 3? Dê exemplos de outras equações que tenham a mesma relação.
+
+\item{}
+Trace a reta associada a Equação 4. Qual a relação dessa reta com as traçadas nos itens anteriores?
+
+\item{}
+Resolva o sistema formado pelas Equações 1 e 4 e relacione a solução com o que você observou no gráfico?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item As retas são iguais.
+\item São as mesmas retas. Isso significa que o conjunto solução das equações são iguais.
+\item A equação $2$ é a equação $1$ multiplicada por $-3.$
+\item São paralelas. Não, pois tal ponto estaria na interseção das retas.
+\item As equações diferem apenas no termo independente. Basta alterar a constante isolada, isto é, $2x+3y=k, k\in \mathbb{R}$.
+\item Concorrente
+\item O sistema possui solução única, que significa que as retas são concorrentes em um ponto
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

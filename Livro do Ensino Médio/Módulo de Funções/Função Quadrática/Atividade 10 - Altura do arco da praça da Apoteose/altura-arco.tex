@@ -1,0 +1,185 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Altura do arco da praça da Apoteose}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Relacionar, a partir de dados gráficos, qual a forma da função quadrática que melhor descreve a situação.
+
+\item {} 
+Associar situações concretas à forma da parábola e buscar soluções a partir da aplicação das ferramentas da função quadrática.
+
+\item {} 
+Inferir sobre a utilidade da função quadrática no cotidiano.
+
+\item {} 
+Distinguir em problemas concretos o papel de abscissa e ordenada para a representação gráfica da parábola.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Como um dos objetivos principais deste conjunto de atividades é trazer alguma sugestão de aplicação ou contextualização do tema, todos os enunciados apresentam um texto de motivação ou ambientação.
+
+Além disso, as atividades tem um apelo mais visual, no sentido de conectar a função quadrática à sua representação gráfica, a parábola. Sendo assim, em todos os casos apresentados, o estudante deve fazer a escolha do sistema de coordenadas cartesiana q      ue melhor se adequa à situação apresentada e, a partir daí usar os conteúdos estudados para responder as questões sobre a situação apresentada.
+
+Orientamos o professor a calcular o tempo das atividades levando em conta a possibilidade de um aluno não seguir o caminho que as respostas das atividades sugerem para que eles entendam as dificuldades que essas escolhas trazem. Isso será, certamente, tão importante quanto a resposta prevista em si.
+
+Para cada sugestão gráfica apresentada para desenvolver o problema, deixe que os alunos argumente o porquê de suas escolhas e peça para aqueles que escolheram a forma que sugerimos nas respostas argumente sobre sua escolha.
+
+Mesmo esse grupo de atividades sendo único, adicionamos à última atividade um texto sobre jogos eletrônicos e seus uso em sala de aula. Posto aqui, as orientações ficariam maiores do que o necessário e no tempo errado.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A passarela Professor Darcy Ribeiro \((\star 1922, \dagger 1997)\), mais conhecida como Sambódromo, fica na cidade do Rio de Janeiro e foi construida em 1984. Com projeto arquitetônico de Oscar Niemeyer \((\star 1907, \dagger 2012)\), ela foi concebida para ser o local fixo de uma das maiores festas populares do Brasil, o Carnaval. Ao final da passarela, encontra-se a praça da apoteose, com o museu do samba e um enorme arco cujo formato lembra o de uma parábola.
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=275bp]{{Apoteose_do_Tiro_com_Arco}.jpg}
+\caption{Foto de \href{https://commons.wikimedia.org/wiki/File:Apoteose\_do\_Tiro\_com\_Arco.jpg}{Jorge Mello} CC-BY-SA}\label{\detokenize{AF209-9:id3}}\end{figure}
+
+Em \(2011\), pela primeira vez desde a construção, a prefeitura providenciou a limpeza do arco.
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=150bp]{{02_15_gvg_rio_lavagem10}.jpg}
+\caption{\href{https://extra.globo.com/noticias/rio/banho-nos-arcos-do-sambodromo-1077277.html}{Banho nos arcos do Sambódromo}}\label{\detokenize{AF209-9:id4}}\end{figure}
+
+A empresa que foi contratada para fazer essa limpeza, precisou ter uma estimativa da altura do arco, com a finalidade de saber se seu equipamento seria suficiente para a tarefa, já que a altura máxima que o equipamento suportaria, seria de \(40\) m de altura. Uma busca rápida na internet não forneceu o resultado esperado, apenas que o comprimento da base é de \(50\) m. Sendo assim, a estimativa teve que ser feita através de cálculos. Admitindo por aproximação que o arco seja parabólico, faça o que se pede:
+\begin{enumerate}
+\item {} 
+Quantas informações concretas são fornecidas para esta parábola?
+
+\item {} 
+Caso você soubesse a função que descreve essa parábola, você seria capaz de  determinar a altura aproximada do arco?
+
+\item {} 
+Dentre as opções a seguir marque a que faz o rascunho do arco no plano cartesiano.
+
+
+\begin{multicols}{3}
+\begin{center}\begin{tikzpicture}[scale=.5]
+
+  \draw [help lines, secundario!30, step=.5] (-2,-1.5) grid (6,5);
+       \draw [, ->] (-2,0) -- (6,0) node [below left, scale=0.5] {$x$};
+       \draw [, ->] (0,-1.5) -- (0,5) node [below left, scale=0.3] {$y$};
+  \draw [color=\currentcolor!80,  , domain=-0.35:5.35] plot (\x,{-0.8*(\x)^2+4*(\x)});
+  \node [above, align=center] at (2.5,5) {Figura 1};
+\end{tikzpicture}\end{center}\begin{center}\begin{tikzpicture}
+[scale=.5]
+  \draw [help lines, secundario!30, step=.5] (-4,-1.5) grid (4,5);
+  \draw [, ->] (-4,0) -- (4,0) node [below left, scale=0.5] {$x$};
+       \draw [, ->] (0,-1.5) -- (0,5) node [below left, scale=0.3] {$y$};
+             \draw [color=\currentcolor!80,, domain=-3.15:3.15] plot (\x,{-0.4*(\x)^2+4});
+       \node [above, align=center] at (0,5) {Figura 2};
+\end{tikzpicture}\end{center}\begin{center}\begin{tikzpicture}
+[scale=.5]
+       \draw [help lines, secundario!30, step=.5] (-4,-5) grid (4,1.5);
+       \draw [, ->] (-4,0) -- (4,0) node [below left, scale=0.5] {$x$};
+       \draw [, ->] (0,-5) -- (0,1.5) node [below left, scale=0.3] {$y$};
+       \draw [color=\currentcolor!80, , domain=-3.5:3.5] plot (\x,{-0.4*(\x)^2});
+  \node [above, align=center] at (0,1.5) {Figura 3};
+\end{tikzpicture}\end{center}
+
+\end{multicols}
+
+
+\item {} 
+Para essa escolha, qual o significado dos valores de \(x\) e de \(y\)?
+
+\item {} 
+Que pontos do plano cartesiano são conhecidos, se juntarmos a escolha gráfica com os dados fornecidos sobre o arco?
+
+\item {} 
+Com base em sua escolha do rascunho gráfico mais adequado e considerando os pontos conhecidos da parábola, qual forma da função quadrática resulta em maior quantidade de informações conhecidas?
+
+\(\Box \; f(x)=ax^2+bx+c\)
+
+\(\Box \; f(x)=a(x-p)^2+q\)
+
+\(\Box \; f(x)=a(x-x_1)(x-x_2)\)
+
+\item {} 
+Quantos dados estão faltando para que seja conhecida a função que descreve esta parábola?
+
+\item {} 
+Com o auxílio da calculadora gráfica em: Estimando a parábola(\url{https://ggbm.at/VFR6nWHM}) obtenha a informação que falta para obter a função que descreve a parábola.
+
+\item {} 
+Qual a altura estimada para a altura do arco?
+
+\item {} 
+A empresa contratada para a limpeza do arco teve capacidade de concluir o serviço com o equipamento que possuia?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item {} 
+Apenas o comprimento da base, de \(50\) m.
+
+\item {} 
+Sim, seria a imagem do vértice.
+
+\item {} 
+Figura 2, pois a base do “arco” foi rascunhado sobre o eixo \(x\) e a altura procurada está sobre o eixo \(y\).
+
+\item {} 
+\(x\) pontos na base do arco e \(y\) medidas referentes às alturas de cada ponto da base do arco.
+
+\item {} 
+\((-25,0)\) e \((25,0)\).
+
+\item {} 
+\(f(x)=a(x-x_1)(x-x_2)\)
+
+\item {} 
+Apenas um, o \(a\).
+
+\item {} 
+\(a=-0\text{,}04\), portanto \(f(x)=-0\text{,}04(x+25)(x-25)\).
+
+\item {} 
+A altura aproximada do arco acontece para \(x=0\). Assim, \(f(0)=-0\text{,}04(0+25)(0-25)=-0\text{,}04 \dot (-625)=25\) m.
+
+\item {} 
+Sim.
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

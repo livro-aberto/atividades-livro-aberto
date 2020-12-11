@@ -1,0 +1,616 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Em busca de padrões em \(f(x)=x^2\)}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Inferir, através da análise das imagens da função $f:\R\to\R$ definida por $f(x)=x^2$, experimental e formalmente, as propriedades:
+
+\begin{enumerate}[leftmargin=2.5pt]
+\item de simetria axial em relação ao eixo vertical, ou seja, que $f(x)=f(−x)$, para todo $x$ real;
+
+\item de que $f$ possuí mínimo absoluto, ou seja, que $f(x)\geq0$, para todo x real.
+\end{enumerate}
+
+\item Inferir que os pontos do gráfico de f não podem ser conectados por segmentos de reta.
+
+\item Inferir que as variações das imagens geradas por elementos do domínio em progressão aritmética, estão também em progressão aritmética.
+
+\item Observar que o comportamento crescente ou descrescente de $f$ não é proporcional a $x$.
+
+\item Relacionar as constatações feitas sobre $f$ com possíveis gráficos, concluindo o que não pode ocorrer nesta representação.
+
+\item Representar o gráfico de $f$.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Esta atividade, mesmo não inserida em uma contextualização, representa uma excelente oportunidade de investigação através do experimento. Aqui o estudante terá a oportunidade de perceber, em um ambiente de pouca complexidade de conhecimento matemático, o que acontece ou não no comportamento da função quadrática. Sendo assim, recomendamos que:
+
+\begin{itemize}[itemsep=0pt]
+\item O professor faça a atividade antes de aplicá-la com os alunos, com a finalidade de conhecer o tempo de aplicação do mesmo.
+\item Ao final de cada item que o professor faça uma espécie de resumo para a turma das respostas dadas pelos alunos com ênfase na característica que aquele item procura revelar.
+\item Para o item \titem{c)}, será necessário o conhecimento da distância de um ponto a uma reta, que é o segmento gerado a partir do trajeto da projeção ortogonal do ponto na reta. Sem esse conhecimento a ideia de simetria não pode ser efetivada. Assim, investigue se os alunos tem essa noção antes de aplicar a atividade.
+\item A escolha, em alguns itens, por valores fracionários ou irracionais, prezam pelo fortalecimento da continuidade da função mesmo que a marcação desses pontos não seja feita.
+\item Recomendamos que o estudante seja estimulado a argumentar com os outros de sua turma sobre as razões que descartam cada gráfico do item \titem{i)} como candidato ao gráfico de $f$.
+\item Consideramos que os casos mais difíceis de serem descartados no item \titem{i)} sejam os Gráficos 2, 5 e 6. Portanto, leia as respostas destes em particular e perceba que eles foram gerados pelas seguintes equações
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+No capítulo anterior foi estudado o modelo matemático para funções afins. Lá, constatou-se que as funções afins são do tipo \(f(x)=ax+b\). Contudo, no \hyperref[\detokenize{AF209-0:sec-funcao-quadratica-movimento-com-velocidade-variavel-queda-vertical}]{Explorando: movimentos com velocidade variável} aparece o termo \(\alpha \cdot x^2\), com \(\alpha \in \mathbb{R}\) e \(\alpha \neq 0\). Isso revela uma situação nova em relação à função afim. A atividade que segue tem a finalidade de destacar algumas das características de funções como estas que apareceram na seção anterior. Para isso, passaremos a investigar a função real definida por \(f(x)=x^2\).
+
+Dada a função \(f: \mathbb{R} \to \mathbb{R}\) definida por \(f(x)=x^2\), faça o que se pede:
+\begin{enumerate}
+\item {} 
+Complete a tabela a seguir com os valores que faltam.
+
+\begin{table}[H]
+\setlength
+\tabulinesep{1mm}
+\centering
+\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\(\bm{x}\)} & \(-5\) & \(-3\) & & \(-1\) & & \(1\) & \(2\) & \(3\) & & \(\frac{10}{3}\) & \(\sqrt{123}\) \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{$\bm{f(x)}$} & & & \(4\) & & \(0\) & & & & \(25\) & & \\
+\hline
+\end{tabu}
+\end{table}
+
+
+\item {} 
+Em uma folha de papel ou similar, faça a figura do plano cartesiano conforme a indicada a seguir.
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[yscale=0.8, xscale=1.2, scale=.8]
+\draw [help lines, dashed, secundario!70] (0,0) grid (8,13);
+\draw [->] (0,3) -- (8.1,3);
+\draw [->] (4,0) -- (4,13.1);
+\node [above right] at (8,3) {$x$};
+\node [below right] at (4,13) {$y$};
+\draw [thick] (1,2.9) -- (1,3.1);
+\draw [thick] (2,2.9) -- (2,3.1);
+\draw [thick] (3,2.9) -- (3,3.1);
+\draw [thick] (5,2.9) -- (5,3.1);
+\draw [thick] (6,2.9) -- (6,3.1);
+\draw [thick] (7,2.9) -- (7,3.1);
+\draw [thick] (3.9,1) -- (4.1,1);
+\draw [thick] (3.9,2) -- (4.1,2);
+\draw [thick] (3.9,4) -- (4.1,4);
+\draw [thick] (3.9,5) -- (4.1,5);
+\draw [thick] (3.9,6) -- (4.1,6);
+\draw [thick] (3.9,7) -- (4.1,7);
+\draw [thick] (3.9,8) -- (4.1,8);
+\draw [thick] (3.9,9) -- (4.1,9);
+\draw [thick] (3.9,10) -- (4.1,10);
+\draw [thick] (3.9,11) -- (4.1,11);
+\draw [thick] (3.9,12) -- (4.1,12);
+\node [below,] at (1,3) {-3};
+\node [below,] at (2,3) {-2};
+\node [below,] at (3,3) {-1};
+\node [below,] at (5,3) {1};
+\node [below] at (6,3) {2};
+\node [below] at (7,3) {3};
+\node [left] at (4,1) {-2};
+\node [left] at (4,2) {-1};
+\node [left] at (4,4) {1};
+\node [left] at (4,5) {2};
+\node [left] at (4,6) {3};
+\node [left] at (4,7) {4};
+\node [left] at (4,8) {5};
+\node [left] at (4,9) {6};
+\node [left] at (4,10) {7};
+\node [left] at (4,11) {8};
+\node [left] at (4,12) {9};
+\node [below left] at (4,3) {0};
+\end{tikzpicture}
+\caption{Gráfico 1}
+\end{figure}
+Represente os pontos da tabela do item ‘a’ nesse plano cartesiano, desprezando as coordenadas cujo valor de \(x\) não aparece destacado no que você fez no papel.
+
+\item {} 
+Destaque os pares de pontos que estão a mesma distância do eixo \(y\).
+
+\item {} 
+Caso seja possível, forneça o ponto da função \(f\) que está a mesma distância do eixo \(y\) que cada um dos pontos de \(f\) já listados a seguir. {[}Mesma distância = equidistante{]}
+
+\begin{table}[H]
+\centering
+\setlength
+\tabulinesep{1mm}
+\setlength
+\tabcolsep{2.5pt}
+\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|}
+\hline
+\thead
+$\bm{(x,y) \in f}$ & $\bm{(7,49)}$ & $\bm{(-5,25)}$ & $\bm{\big(\frac{2}{5},\frac{4}{25}\big)}$ & $\bm{\big(-\frac{6}{7},\frac{36}{49}\big)}$ & $\bm{\big(\sqrt{3},3\big)}$ & $\bm{\big(\sqrt{\frac{1}{2}},\frac{1}{2}\big)}$ & $\bm{(- \pi , \pi^{2})}$ \\
+\hline
+\cellcolor{\currentcolor!80}\makecell{\textcolor{white}{\textbf{Ponto equidistante}} \\ \textcolor{white}{\textbf{do eixo} $\bm{y}$}} & & & & & & & \\
+\hline
+\end{tabu}
+\end{table}
+
+
+\item {} 
+De todos os pontos que podemos obter com a função \(f\), existe um que não tem correspondente equidistante do eixo \(y\). Que ponto é esse? Tente descrever as características que esse ponto tem em relação aos outros da função \(f\) ou em relação aos eixos coordenados.
+
+\item {} 
+Existe algum ponto da imagem de \(f\) que seja menor do que zero?
+
+\item {} 
+Considerando os pontos do domínio de \(f\) entre \(-4\) e \(0\), a melhor classificação para esta função é crescente ou decrescente? E entre \(0\) e \(4\)?
+
+\item {} 
+Considerando os elementos \(\{ 0; 1; 2; 3; 4; 5 \}\) do domínio de \(f\), pode-se afirmar que a razão em que as imagens variam é a mesma para cada unidade de variação do domínio?
+
+\item {} 
+Agora serão apresentados alguns gráficos e, para cada um deles, você deve afirmar com alguma justificativa, se é ou não o gráfico de \(f\). Para isso, use o que você experimentou nos itens da atividade até aqui.
+
+\begin{multicols}{2}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.35, every node/.style={scale=.75}]
+
+	\draw [help lines, dashed, thin, color=secundario!50] (-6,-2) grid  (6,10);	
+	\draw [very thick, ->] (-6,0) -- (6,0) node [above left] {$x$};
+	\draw [very thick, ->] (0,-2) -- (0,10) node [below right] {$y$};
+	\foreach \x in {-5,...,5}  \draw [thick] (\x,0.1) -- (\x,-0.1);
+	\foreach \y in {-1,...,9}  \draw [thick] (0.1,\y) -- (-0.1,\y);
+	\node [left] at (0,2) {2};
+	\node [left] at (0,4) {4};
+	\node [left] at (0,6) {6};
+	\node [left] at (0,8) {8};
+	\node [below] at (-5,0) {-5};
+	\node [below] at (-4,0) {-4};
+	\node [below] at (-3,0) {-3};
+	\node [below] at (-2,0) {-2};
+	\node [below] at (-1,0) {-1};
+	\node [below] at (1,0) {1};
+	\node [below] at (2,0) {2};
+	\node [below] at (3,0) {3};
+	\node [below] at (4,0) {4};
+	\node [below] at (5,0) {5};
+	\draw [very thick, domain=0:6, smooth] plot (\x,{sqrt(16*\x)});
+	\draw [very thick, domain=-6:0, smooth] plot (\x,{sqrt(-16*\x)});
+
+\end{tikzpicture}
+\caption{Gráfico 1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.35, every node/.style={scale=.75}]
+
+	\draw [help lines, dashed, thin, color=secundario!50] (-6,-2) grid  (6,10);	
+	\draw [very thick, ->] (-6,0) -- (6,0) node [above left] {$x$};
+	\draw [very thick, ->] (0,-2) -- (0,10) node [below right] {$y$};
+	\foreach \x in {-5,...,5}  \draw [thick] (\x,0.1) -- (\x,-0.1);
+	\foreach \y in {-1,...,9}  \draw [thick] (0.1,\y) -- (-0.1,\y);
+	\node [left] at (0,2) {2};
+	\node [left] at (0,4) {4};
+	\node [left] at (0,6) {6};
+	\node [left] at (0,8) {8};
+	\node [below] at (-5,0) {-5};
+	\node [below] at (-4,0) {-4};
+	\node [below] at (-3,0) {-3};
+	\node [below] at (-2,0) {-2};
+	\node [below] at (-1,0) {-1};
+	\node [below] at (1,0) {1};
+	\node [below] at (2,0) {2};
+	\node [below] at (3,0) {3};
+	\node [below] at (4,0) {4};
+	\node [below] at (5,0) {5};
+	\draw [very thick, domain=0:6] plot (\x,{sqrt(16*\x)});
+	\draw [very thick, domain=-6:0] plot (\x,{sqrt(-16*\x)});
+
+\end{tikzpicture}
+\caption{Gráfico 2}
+\end{figure}
+\end{multicols}
+\begin{multicols}{2}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.35, every node/.style={scale=.75}]
+	\draw [help lines, dashed, thin, color=secundario!50] (-6,-6) grid  (6,6);	
+	\draw [very thick, ->] (-6,0) -- (6,0) node [above left] {$x$};
+	\draw [very thick, ->] (0,-6) -- (0,6) node [below right] {$y$};
+	\foreach \x in {-5,...,5}  \draw [thick] (\x,0.1) -- (\x,-0.1);
+	\foreach \y in {-5,...,5}  \draw [thick] (0.1,\y) -- (-0.1,\y);
+	\node [left] at (0,-4) {4};
+	\node [left] at (0,-2) {-2};
+	\node [left] at (0,2) {2};
+	\node [left] at (0,4) {4};
+	\node [below] at (-5,0) {-5};
+	\node [below] at (-4,0) {-4};
+	\node [below] at (-3,0) {-3};
+	\node [below] at (-2,0) {-2};
+	\node [below] at (-1,0) {-1};
+	\node [below] at (1,0) {1};
+	\node [below] at (2,0) {2};
+	\node [below] at (3,0) {3};
+	\node [below] at (4,0) {4};
+	\node [below] at (5,0) {5};
+
+	\draw [very thick, domain=-3:3)] plot (\x,{(2)*(\x)});
+	\node [ponto] at (-2,-4) {};
+	\node [ponto] at (0,0) {};
+	\node [ponto] at (2,4) {};
+
+
+
+\end{tikzpicture}
+\caption{Gráfico 3}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.35, every node/.style={scale=.75}]
+
+	\draw [help lines, dashed, thin, color=secundario!50] (-6,-2) grid  (6,10);	
+	\draw [very thick, ->] (-6,0) -- (6,0) node [above left] {$x$};
+	\draw [very thick, ->] (0,-2) -- (0,10) node [below right] {$y$};
+	\foreach \x in {-5,...,5}  \draw [thick] (\x,0.1) -- (\x,-0.1);
+	\foreach \y in {-1,...,9}  \draw [thick] (0.1,\y) -- (-0.1,\y);
+	\node [left] at (0,2) {2};
+	\node [left] at (0,4) {4};
+	\node [left] at (0,6) {6};
+	\node [left] at (0,8) {8};
+	\node [below] at (-5,0) {-5};
+	\node [below] at (-4,0) {-4};
+	\node [below] at (-3,0) {-3};
+	\node [below] at (-2,0) {-2};
+	\node [below] at (-1,0) {-1};
+	\node [below] at (1,0) {1};
+	\node [below] at (2,0) {2};
+	\node [below] at (3,0) {3};
+	\node [below] at (4,0) {4};
+	\node [below] at (5,0) {5};
+
+	\draw [very thick, domain=-5:5] plot (\x,(abs(2*\x);
+
+	\node [ponto] at (-2,4) {};
+	\node [ponto] at (2,4) {};
+	\node [ponto] at (0,0) {};
+
+\end{tikzpicture}
+\caption{Gráfico 4}
+\end{figure}
+\end{multicols}
+\begin{multicols}{2}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.35, every node/.style={scale=.75}]
+
+	\draw [help lines, dashed, thin, color=secundario!50] (-6,-2) grid  (6,10);	
+	\draw [very thick, ->] (-6,0) -- (6,0) node [above left] {$x$};
+	\draw [very thick, ->] (0,-2) -- (0,10) node [below right] {$y$};
+	\foreach \x in {-5,...,5}  \draw [thick] (\x,0.1) -- (\x,-0.1);
+	\foreach \y in {-1,...,9}  \draw [thick] (0.1,\y) -- (-0.1,\y);
+	\node [left] at (0,2) {2};
+	\node [left] at (0,4) {4};
+	\node [left] at (0,6) {6};
+	\node [left] at (0,8) {8};
+	\node [below] at (-5,0) {-5};
+	\node [below] at (-4,0) {-4};
+	\node [below] at (-3,0) {-3};
+	\node [below] at (-2,0) {-2};
+	\node [below] at (-1,0) {-1};
+	\node [below] at (1,0) {1};
+	\node [below] at (2,0) {2};
+	\node [below] at (3,0) {3};
+	\node [below] at (4,0) {4};
+	\node [below] at (5,0) {5};
+
+	\draw [very thick, smooth] (0,0)	 to [out=160, in=300] (-1,1) to [out=110, in=290] (-3,6) to [out=110, in = 310] (-4,7.9) to [out=140, in=50] (-5,7.9);
+	\draw [very thick, xscale=-1, smooth] (0,0)	 to [out=160, in=300] (-1,1) to [out=110, in=290] (-3,6) to [out=110, in = 310] (-4,7.9) to [out=140, in=50] (-5,7.9);
+
+\end{tikzpicture}
+\caption{Gráfico 5}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.35, every node/.style={scale=.75}]
+
+	\draw [help lines, dashed, thin, color=secundario!50] (-6,-2) grid  (6,10);	
+	\draw [very thick, ->] (-6,0) -- (6,0) node [above left] {$x$}; 
+	\draw [very thick, ->] (0,-2) -- (0,10) node [below right] {$y$};
+	\foreach \x in {-5,...,5}  \draw [thick] (\x,0.1) -- (\x,-0.1);
+	\foreach \y in {-1,...,9}  \draw [thick] (0.1,\y) -- (-0.1,\y);
+	\node [left] at (0,2) {2};
+	\node [left] at (0,4) {4};
+	\node [left] at (0,6) {6};
+	\node [left] at (0,8) {8};
+	\node [below] at (-5,0) {-5};
+	\node [below] at (-4,0) {-4};
+	\node [below] at (-3,0) {-3};
+	\node [below] at (-2,0) {-2};
+	\node [below] at (-1,0) {-1};
+	\node [below] at (1,0) {1};
+	\node [below] at (2,0) {2};
+	\node [below] at (3,0) {3};
+	\node [below] at (4,0) {4};
+	\node [below] at (5,0) {5};
+	\draw [very thick,domain=-4:-1] plot (\x,{-3*\x-2}) to (0,0);
+	\draw [very thick,domain=4:1] plot (\x,{3*\x-2}) to (0,0);
+	\node [ponto] at (-1,1) {};
+	\node [ponto] at (0,0) {};
+	\node [ponto] at (1,1) {};
+	\node [ponto] at (-2,4) {};
+	\node [ponto] at (2,4) {};
+
+	
+\end{tikzpicture}
+\caption{Gráfico 6}
+\end{figure}
+\end{multicols}
+\begin{multicols}{2}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.35, every node/.style={scale=.75}]
+	\draw [help lines, dashed, thin, color=secundario!50] (-6,-6) grid  (6,6);	
+	\draw [very thick, ->] (-6,0) -- (6,0) node [above left] {$x$};
+	\draw [very thick, ->] (0,-6) -- (0,6) node [below right] {$y$};
+	\foreach \x in {-5,...,5}  \draw [thick] (\x,0.1) -- (\x,-0.1);
+	\foreach \y in {-5,...,5}  \draw [thick] (0.1,\y) -- (-0.1,\y);
+	\node [left] at (0,-4) {4};
+	\node [left] at (0,-2) {-2};
+	\node [left] at (0,2) {2};
+	\node [left] at (0,4) {4};
+	\node [below] at (-5,0) {-5};
+	\node [below] at (-4,0) {-4};
+	\node [below] at (-3,0) {-3};
+	\node [below] at (-2,0) {-2};
+	\node [below] at (-1,0) {-1};
+	\node [below] at (1,0) {1};
+	\node [below] at (2,0) {2};
+	\node [below] at (3,0) {3};
+	\node [below] at (4,0) {4};
+	\node [below] at (5,0) {5};
+
+	\draw [very thick, domain=-1.81712:1.81712)] plot (\x,{((\x)^3)});
+	\node [ponto] at (1,1) {};
+	\node [ponto] at (0,0) {};
+
+
+
+\end{tikzpicture}
+\caption{Gráfico 7}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.35, every node/.style={scale=.75}]
+
+	\draw [help lines, dashed, thin, color=secundario!50] (-6,-2) grid  (6,10);	
+	\draw [very thick, ->] (-6,0) -- (6,0) node [above left] {$x$}; 
+	\draw [very thick, ->] (0,-2) -- (0,10) node [below right] {$y$};
+	\foreach \x in {-5,...,5}  \draw [thick] (\x,0.1) -- (\x,-0.1);
+	\foreach \y in {-1,...,9}  \draw [thick] (0.1,\y) -- (-0.1,\y);
+	\node [left] at (0,2) {2};
+	\node [left] at (0,4) {4};
+	\node [left] at (0,6) {6};
+	\node [left] at (0,8) {8};
+	\node [below] at (-5,0) {-5};
+	\node [below] at (-4,0) {-4};
+	\node [below] at (-3,0) {-3};
+	\node [below] at (-2,0) {-2};
+	\node [below] at (-1,0) {-1};
+	\node [below] at (1,0) {1};
+	\node [below] at (2,0) {2};
+	\node [below] at (3,0) {3};
+	\node [below] at (4,0) {4};
+	\node [below] at (5,0) {5};
+	\draw [very thick] (0,4) ellipse (1.4 and 4);
+	
+\end{tikzpicture}
+\caption{Gráfico 8}
+\end{figure}
+\end{multicols}
+
+
+\item No mesmo papel em que você marcou alguns dos pontos da função \(f\), lá no item \titem{b)}, construa o gráfico que você acha que representa a função \(f\) e compare com o de seus colegas. Se houver discondâncias, tentem argumentar e aprimorar os gráficos uns dos outros com base nas argumentações.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item As posições referentes ao \(-2\) e ao \(5\) deste gabarito poderiam ter sido ocupadas, respectivamente, pelo \(2\) e pelo \(-5\).
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|*{12}{>$e{.05\linewidth}<$|}}
+\hline
+\tmat{x} & -5 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 5 & \dfrac{10}{3} & \sqrt{123} \tabularnewline
+\hline
+\tmat{f(x)} & 25 & 9 & 4 & 1 & 0 & 1 & 4 & 9 & 25 & \dfrac{100}{0} & 123 \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[every node/.style={scale=3},scale=.75]
+
+\draw [help lines, secundario!10, step=0.2] (0,0) grid (7,11);
+\draw [help lines, secundario!40] (0,0) grid (7,11);
+\draw [<->] (7.1,0) -- (0,0) -- (0, 11.1);
+\node [below,scale=.3] at (6.3,-0.5) {Tempo (s)};
+\node [left,scale=.3] at (-0.5, 10.7) {Dist\^ancia (m)};
+\node [below,scale=.3] at (0,0) {0};
+\node [below,scale=.3] at (1,0) {1};
+\node [below,scale=.3] at (2,0) {2};
+\node [below,scale=.3] at (3,0) {3};
+\node [below,scale=.3] at (4,0) {4};
+\node [below,scale=.3] at (5,0) {5};
+\node [below,scale=.3] at (6,0) {6};
+\node [left,scale=.3] at (0,1) {20};
+\node [left,scale=.3] at (0,2) {40};
+\node [left,scale=.3] at (0,3) {60};
+\node [left,scale=.3] at (0,4) {80};
+\node [left,scale=.3] at (0,5) {100};
+\node [left,scale=.3] at (0,6) {120};
+\node [left,scale=.3] at (0,7) {140};
+\node [left,scale=.3] at (0,8) {160};
+\node [left,scale=.3] at (0,9) {180};
+\node [left,scale=.3] at (0,10) {200};
+\end{tikzpicture}
+}
+
+\item \((-3,9)\) e \((3,9)\);
+
+\((-2,4)\) e \((2,4)\);
+
+\((-1,1)\) e \((1,1)\).
+
+\item 
+\adjustbox{valign=t}
+{
+\setlength\tabcolsep{2.5pt}
+\begin{tabular}{|>$e{.15\linewidth}<$|*{7}{f|}}
+\hline
+\tmat{(x,y)\in f} & (7,49) & (-5,25) & \bigg(\dfrac{2}{5},\dfrac{4}{25}\bigg) & \bigg(-\dfrac{6}{7},\dfrac{36}{49}\bigg) & (\sqrt{3},3) & \bigg(\sqrt\dfrac{1}{2}, \dfrac{1}{2}\bigg) & (-\pi,\pi^2) \tabularnewline
+\hline
+$\tcolor{Ponto Equidistante do eixo $y$}$ & (-7,49) & (5,25) & \bigg(-\dfrac{2}{5},\dfrac{4}{25}\bigg) & \bigg(\dfrac{6}{7},\dfrac{36}{49}\bigg) & (-\sqrt{3},3) & \bigg(-\sqrt\dfrac{1}{2}, \dfrac{1}{2}\bigg) & (\pi,\pi^2) \tabularnewline
+\hline 
+\end{tabular}
+}
+
+\item \((0,0)\); Esse ponto pertence ao eixo \(y\), logo dista zero deste eixo. Outra argumentação boa é que o zero é o único número simétrico de si mesmo.
+
+\item Não.
+
+\item Decrescente; Crescente.
+
+\item Não. \(\displaystyle\frac{f(5)-f(4)}{1} \neq \frac{f(4) - f(3)}{1} \neq \frac{f(3)-f(2)}{1} \neq \frac{f(2)-f(1)}{1} \neq \frac{f(1)-f(0)}{1}\).
+
+
+
+\item \adjustbox{valign=t}
+{
+\begin{tabular}{|e{.1\linewidth}|e{.8\linewidth}|}
+\hline
+Gráfico \(1\) & As imagens dos números no intervalo \([-2,2]-{0}\) não correspondem ao que foi calculado no item a. \tabularnewline
+\hline
+Gráfico \(2\) & As imagens de \({-1, 1}\) estão incorretas. Perceba ainda que, por exemplo, para \(x>2\) as variações nas imagens não aparentam ter o crescimento calculado no item h. \tabularnewline
+\hline
+Gráfico \(3\) & Conforme visto no capítulo de função afim, esse gráfico só pode corresponder a uma função real do tipo \(f(x)=ax+b\). Outra razão é o gráfico não ser simétrico em relação ao eixo y. \tabularnewline
+\hline
+Gráfico \(4\) & A parte crescente não satisfazer o teorema fundamental da proporcionalidade. \tabularnewline
+\hline
+Gráfico \(5\) & As imagens de \(-5\) e \(5\) parecem já ter aparecido para algum outro elemento do domínio no intervalo \([-5,5]\) e isso não ocorre. \tabularnewline
+\hline
+Gráfico \(6\) & A sessão Para saber mais do capítulo de função afim evidencia que um gráfico deste tipo, composto por vários segmentos de reta, apresenta, para intervalos diferentes do eixo \(x\), funções afins diferentes. \tabularnewline
+\hline
+Gráfico \(7\) & Existe nesse gráfico imagens que são negativas e isso não é possível, pois \(f(x) \geq 0\). \tabularnewline
+\hline
+Gráfico \(8\) & Todas as imagens se concentram de zero a oito, mas a imagem de \(f\) tem, por exemplo, os valores \(9\) e \(16\). \tabularnewline
+\hline
+\end{tabular}
+}
+\clearpage
+
+\item Resposta livre, mas as representações devem devem ficar o mais próxima possível desta:
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.75]
+\draw [thin,help lines, dotted, secundario!70] (0,0) grid (11.5,12.5);
+\draw [very thin,color=secundario!40] (0,11)--(12,11);
+\draw [very thin,color=secundario!40] (0,9)--(12,9);
+\draw [very thin,color=secundario!40] (0,7)--(12,7);
+\draw [very thin,color=secundario!40] (0,5)--(12,5);
+\draw [->] (0,3) -- (11.3,3);
+\draw [->] (6,1) -- (6,12.1);
+\node [above,scale=.25] at (11,3.2) {$x$};
+\node [below right,scale=.25] at (6,12) {$y$};
+\draw (1,2.9) -- (1,3.1);
+\draw (2,2.9) -- (2,3.1);
+\draw (4,2.9) -- (4,3.1);
+\draw (5,2.9) -- (5,3.1);
+\draw (6,2.9) -- (6,3.1);
+\draw (7,2.9) -- (7,3.1);
+\draw (8,2.9) -- (8,3.1);
+\draw (9,2.9) -- (9,3.1);
+\draw (10,2.9) -- (10,3.1);
+\draw (11,2.9) -- (11,3.1);
+\draw (5.9,4) -- (6.1,4);
+\draw (5.9,5) -- (6.1,5);
+\draw (5.9,6) -- (6.1,6);
+\draw (5.9,7) -- (6.1,7);
+\draw (5.9,8) -- (6.1,8);
+\draw (5.9,9) -- (6.1,9);
+\draw (5.9,10) -- (6.1,10);
+\draw (5.9,11) -- (6.1,11);
+\node [below,scale=.25] at (1,3) {-5};
+\node [below,scale=.25] at (2,3) {-4};
+\node [below,scale=.25] at (3,3) {-3};
+\node [below,scale=.25] at (4,3) {-2};
+\node [below,scale=.25] at (5,3) {-1};
+\node [below,scale=.25] at (7,3) {1};
+\node [below,scale=.25] at (8,3) {2};
+\node [below,scale=.25] at (9,3) {3};
+\node [below,scale=.25] at (10,3) {4};
+\node [below,scale=.25] at (11,3) {5};
+\node [left,scale=.25] at (6,4) {1};
+\node [left,scale=.25] at (6,5) {2};
+\node [left,scale=.25] at (6,6) {3};
+\node [left,scale=.25] at (6,7) {4};
+\node [left,scale=.25] at (6,8) {5};
+\node [left,scale=.25] at (6,9) {6};
+\node [left,scale=.25] at (6,10) {7};
+\node [left,scale=.25] at (6,11) {8};
+\draw [color=primario] (6,3) parabola (3,12);
+\draw [color=primario] (6,3) parabola (9,12);
+\end{tikzpicture}
+\end{figure}
+
+\end{enumerate}
+
+
+
+\end{solucao}
+\fi
+
+\end{document}

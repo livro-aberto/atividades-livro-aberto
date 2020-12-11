@@ -1,0 +1,174 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: As colônias}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT304} Resolver e elaborar problemas com funções exponenciais nos quais é necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como o da Matemática Financeira e o do crescimento de seres vivos microscópicos, entre outros. 
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+	\item Reconhecer situações em que uma quantidade aumenta ou diminui a uma taxa percentual constante por unidade da outra.
+	\item Expressar o crescimento/decaimento exponencial em termos de variação percentual e vice-versa.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+	\item Discuta com os estudantes a possibilidade exibir tabelas e gráficos com valores não necessariamente iguais a 6\% ou 10\% dos valores anteriores, mas que possam ser aproximados tentando retratar alguma coleta de dados real e que tenha levado os cientistas a escolher o modelo exponencial.
+	\item No item (g), se achar conveniente, apresente as expressões $(1+r)$ para crescimento e $(1-r)$ para decaimento, nas quais a taxa percentual $r$ é sempre considerada um número positivo.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Analise cada uma das situações abaixo e em seguida responda as perguntas para cada uma delas.
+
+ \textbf{(A)} Uma população de 100 coelhos é introduzida em uma reserva ecológica. Após um período de observação de 12 meses, os biólogos concluíram que essa colônia cresceu ao longo do ano seguindo uma taxa percentual aproximada de $6\%$ ao mês, isto é, a cada mês a população de coelhos na colônia estava aproximadamente $6\%$ maior em relação ao registro do mês anterior.
+
+
+ \textbf{(B)} Um laboratório está pesquisando a eficácia de um antibiótico e uma equipe de biomédicos o adiciona em uma colônia de bactérias com uma população de $950.000$ indivíduos. As células então começam a morrer de maneira que ao final de 12 horas, os pesquisadores afirmam que população da colônia diminuiu a uma taxa percentual de $10\%$ a cada hora.
+
+\begin{enumerate}
+
+\item{}
+Elabore uma tabela com os possíveis dados observados pelos pesquisadores em cada uma das situações.
+\item{}
+Descreva como você obteve os dados das tabelas anteriores.
+\item{}
+Pode-se afirmar que os dados tabelas apresentam crescimento e decaimento exponenciais? Em caso afirmativo, quais são os fatores em cada situação?
+\item{}
+Qual a relação do fator de crescimento/decaimento com a taxa percentual?
+\item{}
+Escreva uma expressão matemática para cada uma das situações que relacione o números de indivíduos nas colônias com o número de meses (ou horas) decorridos desde o início das observações.
+\item{}
+Com a ajuda de uma calculadora compare os valores gerados pela expressão matemática com as que você calculou no item \titem{a)}.
+\item{}
+Denotando por $P(t)$ a população no tempo $t$, $P_0$ seu valor inicial e $r$ a taxa percentual observada, generalize as expressões obtidas no item anterior.
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+	
+	\item{}
+	Os valores abaixo não são a única resposta correta, e podem variar dependendo da maneira como se procede os cálculos.
+
+	\begin{table}[H]
+	\centering
+	
+	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\hline
+	\tnumber
+	\bm{t}\text{ \textbf{(meses)}} & \bm{C}\text{ \textbf{coelhos}} \\
+	\hline
+	0 & 100 \\
+	\hline
+	1 & 106 \\
+	\hline
+	2 & 112 \\
+	\hline
+	3 & 119 \\
+	\hline
+	4 & 126 \\
+	\hline
+	5 & 133 \\
+	\hline 
+	6 & 141 \\
+	\hline
+	7 & 150 \\
+	\hline
+	8 & 159 \\
+	\hline
+	9 & 169 \\
+	\hline
+	10 & 179 \\
+	\hline
+	11 & 190 \\
+	\hline
+	12 & 201 \\
+	\hline
+	\end{tabu}
+	\hspace{1em}	
+	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\hline
+	\tnumber
+	\bm{t}\text{ \textbf{(meses)}} & \bm{B}\text{ \textbf{bactérias}} \\
+	\hline
+	0 & 950.000 \\
+	\hline
+	1 & 855.000 \\
+	\hline
+	2 & 769.500 \\
+	\hline
+	3 & 692.550 \\
+	\hline
+	4 & 623.295 \\
+	\hline 
+	5 & 560.965 \\
+	\hline
+	6 & 504.868 \\
+	\hline
+	7 & 454.382 \\
+	\hline
+	8 & 408.943 \\
+	\hline
+	9 & 368.049 \\
+	\hline
+	10 & 331.244 \\
+	\hline
+	11 & 298.120 \\
+	\hline
+	12 & 268.308 \\
+	\hline
+	\end{tabu}
+	\end{table}
+
+	\item{}
+	$100+6\%100 = 106$, $106+6\%106=112$, e assim sucessivamente.
+
+	$950.000-10\%950.000 = 855.000$, $855.000-10\%855.000 = 769.500$, e assim sucessivamente. 
+
+	\item{}
+	Sim. Basta fazer as divisões de cada valor pelo anterior e observar que os valores ficam próximos de constantes, em cada caso: $1,06$ no primeiro caso e $0,9$ no segundo caso.
+
+	\item{}
+	O fator será dado por $1$ mais a taxa percentual considerada positiva no caso de crescimento ($1+6\%$) e negativa para o decaimento ($1-10\%$).
+
+	\item{}
+	$C(t)=100\cdot1,06^{t}$, e $B(t)=950.000\cdot0,9^t$.
+
+	\item{}
+	---
+	\item{}
+	$P(t)=P_0\cdot(1+r)^t$.
+
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

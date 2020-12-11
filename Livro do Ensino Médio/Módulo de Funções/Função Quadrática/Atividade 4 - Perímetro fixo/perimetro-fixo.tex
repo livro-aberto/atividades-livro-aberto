@@ -1,0 +1,202 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Perímetro Fixo}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+Prezado colega esta atividade tem como objetivo aplicar o conceito de otimização em função quadrática num contexto geométrico, sem a utilização do gráfico da função nem muito menos da curva denominada parábola, para isso pretendemos:
+
+\begin{enumerate}
+\item explorar a situação através do uso, já corriqueiro, de preenchimento de um quadro.
+\item modelar a situação utilizando álgebra de maneira simples e guiada.
+\item apresentar e explorar a técnica de completar quadrados para passarmos a função quadrática encontrada da forma polinomial para a forma canônica, sem obrigatoriamente citar esses termos.
+\item utilizar a apresentação da forma canônica para identificarmos os valores de área máxima e os valores que maximizam essa área, convidando seu aluno à fazer inferências apenas aritméticas na forma encontrada.
+\end{enumerate}
+
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Imagine que você tenha um pedaço de barbante de \(12\) cm de comprimento e queira moldar um retângulo com ele e calcular sua área. A figura abaixo ajuda a ilustrar a situação.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=150bp]{{maos}.jpg}
+\end{figure}
+\begin{enumerate}
+\item {} 
+A situação em questão envolve quatro grandezas, aponte quais são.
+
+\item {} 
+Quais grandezas descritas acima variam e quais não variam?
+
+\item {} 
+Numa folha de papel ou similar, copie a tabela a seguir e complete-a.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Base & Altura & Área \\
+\hline
+$0$ & & \\
+\hline
+$2$ & & \\
+\hline
+$4$ & & \\
+\hline
+$6$ & & \\
+\hline
+\end{tabu}
+\end{table}
+
+
+\item {} 
+O que ocorreu com a área para os valores da base iguais a \(0\) e \(6\)?  Esses valores devem ser considerados em nossa análise da situação?
+
+\item {} 
+Quais as medidas da base do retângulo que apresentaram área máxima no quadro acima?
+
+\item {} 
+Assumindo a base do retângulo como \(x\), e sua altura como \(h(x)\), exiba uma expressão algébrica que representa a medida da altura desse retângulo em função de \(x\). A expressão \(h(x)\), encontrada pode ser considerada uma função afim? Com que domínios e imagens?
+
+\item {} 
+Assumindo a base do retângulo como \(x\), a altura \(h(x)\) encontrada no item anterior e sua área como \(A(x)\), exiba uma expressão que apresente a área deste retângulo em função de \(x\).
+
+\item {} 
+Verifique se a relação encontrada pode ser dada por \(A(x)=-(x^2-6x)\), caso contrário refaça os itens anteriores.
+
+\item {} 
+A expressão \(A(x)\), encontrada pode ser considerada uma função afim? Por quê?
+
+\item {} 
+Observe que a relação apresentada no item \titem{h)}, possui dentro do parênteses um binômio que pode ser parte de um trinômio quadrado perfeito, qual seria o terceiro termo que faria o binômio se transformar num trinômio quadrado perfeito?
+
+\item {} 
+Agora repita a relação: \(A(x)=-(x^2-6x+\Box -\Box)\) acrescentando e retirando o número encontrado no item anterior.
+
+\item {} 
+Ao fatorar a relação do item anterior podemos recair na forma: \(A(x)=a(x-p)^2+q\), quais os valores de a, p e q, que foram encontrados neste processo de fatoração?
+
+\item {} 
+Levando em consideração a forma apresentada no item anterior, e ao analisarmos apenas o termo \((x-p)^2\), Existe algum valor de \(x\) que torne a expressão negativa? e qual valor de \(x\) torna a expressão nula?
+
+\item {} 
+Ao analisarmos \(A(x)=-(x-3)^2+9\), existe algum valor de \(x\) que faça \(A(x)\) ser maior que \(9\)? Por quê?
+
+\item {} 
+Qual a área máxima do Retângulo?
+
+\item {} 
+Qual o valor de \(x\), que gera a área máxima?
+
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate}
+\item {} 
+No retângulo temos as medidas de: \textbf{perímetro}, \textbf{área}, \textbf{base} e \textbf{altura}.
+
+\item {} 
+O perímetro não varia, e a área, a base e a altura variam.
+
+\item {} 
+Segue o quadro preenchido:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\tcolor{Base} & \tcolor{Altura} & \tcolor{Área} \\
+\hline
+$0$ & $6$ & $0$ \\
+\hline
+$2$ & $4$ & $8$ \\
+\hline
+$4$ & $2$ & $8$ \\
+\hline
+$6$ & $0$ & $0$\\
+\hline
+\end{tabular}
+\end{table}
+
+\item {} 
+A área foi nula. Eles não devem ser considerados, pois não existem retângulos cujas medidas dos lados sejam nulas.
+
+\item {} 
+Considerando a base como \(x\) temos \(x=2\) ou \(x=4\).
+
+\item {} 
+\(h(x)=6-x\) . Sim, com: \(h:]0,6[\to]0,\infty[\).
+
+\item {} 
+\(A(x)=x(6-x) \to A(x)=-(x^2-6x)\).
+
+\item {} 
+Verificação.
+
+\item {} 
+Não por vários motivos, seguem alguns:
+
+\begin{enumerate}[label=\arabic*)]
+\item a função afim é sempre monótona (sempre crescente ou sempre decrescente), os valores da última coluna do quadro nos mostram que ora \(A(x)\) é crescente ora é decrescente.
+
+\item a função afim apresenta taxa de variação constante, já \(A(x)\) não apresenta, pois: \(\frac{5-0}{1-0}=5\) e \(\frac{8-5}{2-1}=3\).
+\end{enumerate}
+
+\item {} 
+\(9\).
+
+\item {} 
+\(A(x)=-(x^2-6x+9-9)\).
+
+\item {} 
+\(A(x)=-(x^2-6x+9-9)=-(x^2-6x+9)+9=-(x-3)^2+9\) , com \(a=-1\) ; \(p=3\) e \(q=9\).
+
+\item {} 
+Não existe. \(x=p\).
+
+\item {} 
+Não. Pois para quaisquer valores de \(x\), \((x-3)^2\) sempre será positivo, e consequentemente \(-(x-3)^2\) será sempre negativo, e se esse valor negativo for somado com \(9\) o resultado obrigatoriamente será menor que \(9\).
+
+\item {} 
+\(9cm^2\).
+
+\item {} 
+\(3cm\).
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,37 +1,42 @@
 % \newcommand*{\prof}{}% comente para gerar o arquivo do estudante, descomente para gerar o arquivo para o professor.
 
-\usepackage[brazil]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{enumerate}
-\usepackage{amsfonts,amssymb}
-%\usepackage[autostyle]{csquotes}
-\usepackage{graphicx}
-\usepackage{hyperref}% to use \url{..} or \hyperref[label_name]{''link text''}
-\usepackage{tikz}
-\usepackage{multicol}
+\RequirePackage[brazil]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{enumerate}
+\RequirePackage{amsfonts,amssymb}
+%\RequirePackage[autostyle]{csquotes}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}% to use \url{..} or \hyperref[label_name]{''link text''}
+\RequirePackage{tikz}
+\RequirePackage{multicol}
 % \tikzset{x=1mm,y=1mm}
-\usepackage{pgf,tikz}
-\usepackage{mathrsfs}
-\usepackage[most]{tcolorbox}
-\usepackage{framed}
-\usepackage{qrcode}
-\usepackage{marginnote}
-\usepackage{float}
-\usepackage{tabu}
-\usepackage{colortbl}
-\usepackage{adjustbox}
-\usepackage{enumitem}
-\usepackage{longtable}
-\usepackage{makecell}
-\usepackage{bm}
-\usepackage{ragged2e}
-\usepackage{cellspace}
-\usepackage{tasks}
+\RequirePackage{pgf,tikz}
+\RequirePackage{mathrsfs}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{framed}
+\RequirePackage{qrcode}
+\RequirePackage{marginnote}
+\RequirePackage{float}
+\RequirePackage{tabu}
+\RequirePackage{colortbl}
+\RequirePackage{adjustbox}
+\RequirePackage{enumitem}
+\RequirePackage{longtable}
+\RequirePackage{makecell}
+\RequirePackage{bm}
+\RequirePackage{ragged2e}
+\RequirePackage{cellspace}
+\RequirePackage{tasks}
 \usetikzlibrary{arrows,calc,shapes}
-\usepackage{xurl}
-\usepackage{siunitx}
-\usepackage{mathtools}
+\RequirePackage{xurl}
+\RequirePackage{siunitx}
+\RequirePackage{mathtools}
 \RequirePackage{pdfpages}
+\RequirePackage{caption}
+\RequirePackage{cancel}
+\RequirePackage{booktabs}
+\RequirePackage{wrapfig}
+\RequirePackage{needspace}
 
 \RequirePackage{fontspec}
 \newfontfamily{\boxtitlefont}[Path=../../../../Fontes/]{Exo2-Light.otf}[BoldFont=Exo2-Medium.otf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
@@ -40,13 +45,13 @@
 ]
 
 \renewcommand{\labelenumi}{\alph{enumi})}
-%usepackage{tabularx}
-%\usepackage[table]{xcolor}
-\usepackage{pdflscape}
-%\usepackage[toc,page]{appendix}
-\usepackage{amsthm}
+%RequirePackage{tabularx}
+%\RequirePackage[table]{xcolor}
+\RequirePackage{pdflscape}
+%\RequirePackage[toc,page]{appendix}
+\RequirePackage{amsthm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{geometry}
+\RequirePackage{geometry}
  \geometry{
  a4paper, 
  total={170mm,257mm},
@@ -80,7 +85,28 @@
   \medskip
 }
 
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\cotg}{cotg}
+\DeclareMathOperator{\cosec}{cosec}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\senh}{senh}
+\DeclareMathOperator{\tgh}{tgh}
+\DeclareMathOperator{\mdc}{mdc}
+\DeclareMathOperator{\mmc}{mmc}
+\DeclareMathOperator{\rad}{rad}
+% \DeclareMathOperator{\si}{Si}
+\DeclareMathOperator{\dirac}{\delta}
+\DeclareMathOperator{\mmu}{\mu}
+\renewcommand{\Im}{\operatorname{Im}}
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\CD}{CD}
 
+% \newcommand{\R}{\mathbb{R}}
+% \newcommand{\Q}{\mathbb{Q}}
+% \newcommand{\Z}{\mathbb{Z}}
+% \newcommand{\N}{\mathbb{N}}
 
 
 
@@ -123,12 +149,19 @@
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
-\newcolumntype{f}{>{$}c<{$}}
+\newcolumntype{f}{>$c<$}
+\newcolumntype{g}{>{\vspace{2.5pt}}>$c<$<{\vspace{2.5pt}}}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
+
+\newcommand{\fref}[1]{\hyperref[#1]{figura \ref{#1}}}
+\newcommand{\Fref}[1]{\hyperref[#1]{Figura \ref{#1}}}
+
+\newcommand{\tref}[1]{\hyperref[#1]{tabela \ref{#1}}}
+\newcommand{\Tref}[1]{\hyperref[#1]{Tabela \ref{#1}}}
 
 \definecolor{primario}{RGB}{0,165,157} %esverdeado
 \definecolor{secundario}{RGB}{73,85,93} %acinzentado escuro
@@ -211,6 +244,34 @@ before lower ={\tcbsubtitle{\boxtitlefont Observações e recomendações}\boxti
     break at=-\baselineskip/0pt
 }
 
+\newtcolorbox{sugestions}{blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=penaqua,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+title=\boxtitlefont Para o professor, 
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+underlay boxed title={
+\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+\filldraw [penaqua] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+}, 
+before upper={\tcbsubtitle{\boxtitlefont Observações e recomendações}
+\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+\vspace{-1.5em}\setlength\parskip{.5em}},
+% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+before lower ={\tcbsubtitle{\boxtitlefont }\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}},
+    subtitle style = {
+      frame empty,
+      fontupper = \bfseries\large,
+      colback = white,
+      coltext = penaqua,
+      arc = 8pt,
+      top=-10pt,
+    },
+    middle=10pt,
+    break at=-\baselineskip/0pt
+}
+
 \newtcolorbox{reflection}{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=penaqua, borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm, 
 fonttitle=\bfseries\large\boxtitlefont,  % Should be 12 pt. Don't know how to set this.
 title=PARA REFLETIR, 
@@ -223,8 +284,8 @@ underlay boxed title={
 
 
  %%%%%%%%%%%%%%%%%%%%%%%%para adicionar o número total de páginas %%e.g Página 1 de 2%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{fancyhdr}
-\usepackage{lastpage}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
 \pagestyle{fancy}
 \fancyhf{}
 

@@ -1,0 +1,61 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Seno e Cosseno no GeoGebra}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Construir trechos do gráfico das funções seno e cosseno, correspondentes a uma volta completa no círculo trigonométrico, em uma perspectiva dinâmica que correlacione a posição do ponto $(x,f(x))$ do gráfico com a posição do número x situado no círculo trigonométrico.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Abra uma tela no GeoGebra (versão smartphone Classic ou versão computador Classic). Siga os passos orientados a seguir.
+\begin{enumerate}
+\item Construa os pontos $A(0,0)$ e $B(1,0)$ e a circunferência de centro A que passa por B.
+\item Tome um ponto $C$ qualquer (ponto em objeto) na circunferência.
+\item Trace as perpendiculares por $C$ a $Ox$ e a $Oy$, que encontrarão os eixos respectivamente nos pontos $D$ e $E$ (automaticamente denominados pelo GeoGebra).
+\item Construa os segmentos $AD$ e $AE$ --- o GeoGebra os nomeará automaticamente por $h$ e $i$.
+\item Construa o arco circular de centro A e extremidades B e C, nessa ordem. O GeoGebra o denominará como d.
+\item Construa os pontos $F=(d,x(C))$ e $G=(d,y(C))$.
+\item Movimente o ponto C e observe o caminho percorrido por $F$ e por $G$.
+\item Habilite o rastro de $F$ e $G$ e movimente $C$.
+\item Descreva o caminho percorrido por $F$ e $G$.
+\end{enumerate}
+
+Obs.: a construção descrita está disponível no link \url{https://www.geogebra.org/m/ze5k6ur9}.
+
+\ifdefined\prof
+\begin{solucao}
+
+O gabarito aqui consiste exatamente na construção do gráfico das funções cosseno e seno, que serão os caminhos percorridos pelos pontos $F$ e $G$ respectivamente no item \titem{i)}
+\end{solucao}
+\fi
+
+\end{document}

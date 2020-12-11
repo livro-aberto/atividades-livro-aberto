@@ -1,0 +1,85 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Cara ou coroa?}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Comparar e analisar as representações, em plano cartesiano, das funções exponencial e logarítmica para identificar as características fundamentais (domínio, imagem, crescimento) de cada uma, com ou sem apoio de tecnologias digitais, estabelecendo relações entre elas.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+	\begin{enumerate}
+	\item Reconhecer o padrão de crescimento exponencial que aparece no experimento descrito;
+	\item Identificar o fator de crescimento e reconhecer o papel que ele desempenha na situação descrita.
+
+	\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+	\begin{itemize}
+	\item Estimule os estudantes a realizarem o experimento.
+	\end{itemize}
+	
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Na teoria das probabilidades, ao analisar as chances de um determinado evento acontecer, é comum considerarmos todas as possibilidades para assim podermos quantificar a probabilidade. O conjunto formado por todas essas possibilidades é chamado de \textbf{espaço amostral}.
+Você possui uma moeda, vai girá-la no ar e analisar qual face ficou voltada para cima quando ela cair. O espaço amostral desse experimento contém dois elementos: {cara (C), coroa (K)}. Responda.
+
+\begin{enumerate}
+
+\item{}
+Qual o espaço amostral para o experimento de lançar a mesma moeda 2 vezes?
+
+\item{}
+E três vezes?
+
+\item{}
+Explique a seguinte afirmação:
+
+\textit{“O tamanho do espaço amostral do lançamento de uma moeda várias vezes ao ar aumenta exponencialmente em relação a quantidade de lançamentos”}
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+
+	\item{}
+	$\{CC, CK, KC, KK\}$.
+
+	\item{}
+	$\{CCC, CCK, CKK, CKC, KKK, KKC, KCK, KCC\}$.
+
+	\item{}
+	Deve ser notado que o tamanho do espaço amostral do lançamento de uma moeda $n$ vezes ao ar é dado por $2^{n}$.
+
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

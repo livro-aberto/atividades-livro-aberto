@@ -1,0 +1,81 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Populações}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT403} Comparar e analisar as representações, em plano cartesiano, das funções exponencial e logarítmica para identificar as características fundamentais (domínio, imagem, crescimento) de cada uma, com ou sem apoio de tecnologias digitais, estabelecendo relações entre elas.
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Deduzir uma equação exponencial a partir da identificação do valor inicial e do fator de crescimento/decaimento;
+
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+	\item O site do Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio) apresenta uma classificação de acordo com o grau do risco de extinção de uma espécie. Ela pode ser acessada neste endereço: \url{https://www.icmbio.gov.br/ran/images/Arquivos/especies_ameacadas/categorias_criterios_iucn_2012.pdf}.\\ Pode ser um tema interessante a ser discutido também com o professor de Biologia.
+	\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Um grupo de biólogos está estudando uma espécie animal cuja população vem diminuindo ao longo dos anos. Depois de reunirem os dados percebem que a cada ano a quantidade de indivíduos reduz para aproximadamente $\dfrac{1}{3}$ da quantidade do ano anterior.
+
+\begin{enumerate}
+
+\item {}
+Escreva uma expressão matemática que relaciona o número de indivíduos dessa população ao longo dos anos, sabendo que no início das medições os cientistas tenham encontrado $300$ mil indivíduos.
+
+\item {}
+Admitindo que esse padrão se repita ao longo dos anos, em quanto tempo a população entrará em extinção?
+
+\item {}
+Como consequência, a população da espécie que é a principal presa da espécie estudada apresentou um crescimento que duplicava a cada 6 meses. Escreva uma expressão matemática que represente a variação anual do número de indivíduos dessa população de presas, que no início das medições contava com $5\times10^5$ indivíduos.
+
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate}
+
+	\item{}
+	$P(n)=300000 \times \left(\dfrac{1}{3}\right)^{n}$.
+
+	\item{}
+	Ao final do quinto ano.
+
+	\item{}
+	$p(n)=5 \times10^{5} \times 4^{n}$.
+
+	\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

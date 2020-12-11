@@ -1,0 +1,75 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Fábrica de Bolos}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Levar o aluno a desenvolver a capacidade de modelar fenômenos reais por meio de equações lineares de duas variáveis.
+\item Encontrar soluções condizentes com a realidade (o aluno deve ser capaz de saber que, nesse problema, só são admitidas soluções inteiras positivas
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item A abordagem a essa questão pode começar com tentativa  e erro e depois, com a condução do profesor, o aluno pode chegar a equação $15f+18c=684$ que relaciona as quantidades de bolos vendidos, onde $c$ representa a quantidade de bolos de chocolate e $f$ os de fubá;.
+\item Aproveite as diferentes respostas que os estudantes poderão encontrar. Todas elas estão corretas? Existiria mais de uma resposta correta? Note que esta última questão admite uma discussão numérica:
+$f=\frac{684-18c}{15}$ é inteiro. O numerador é múltiplo de $3$ pois $684$ e $18$ o são, logo, temos que $684 -18c$ é múltiplo de 5. Segue que $684-18c$ deve terminar em $0$ ou em $5$, o que equivale a dizer que $18c$ deve terminar em $4$ ou em $9$. Como $18c$ é par,  isso equivale a dizer que $18c$ deve terminar em $4$, isto é, $c$ termina com $3$ ou $8$. Isso possibilita refinar e determinar rapidamente as possibilidades de soluções inteiras: $c = 3, 8, 13, 18, 23, 28, 33, 38.$
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+A fábrica de bolos “Tia Tatá”{} produz e vende bolos de diversos tipos, mas os mais solicitados são o de fubá e o de chocolate, que custam $15$ reais e $18$ reais cada um, respectivamente. Em um determinado dia, a venda dos bolos de fubá e de chocolate gerou $684$ reais em caixa.
+
+\begin{enumerate}
+
+\item{}
+Quantos bolos de cada tipo podem ter sido vendidos nesse dia?
+
+\item{}
+Use a construção no GeoGebra disponível em \url{https://www.geogebra.org/classic/juvucjuh}, para movimentar o controle deslizante $k$ e checar a sua resposta dada no item \titem{a)}. Diga como você pode usar essa ferramenta para encontrar outras respostas para o item \titem{a)}.
+
+\item{}
+Seria possível que a venda de bolos de chocolate nesse dia fosse de $50$ bolos? Justifique.
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate}
+\item Denotando as possibilidades por pares do tipo $(c,f)$, onde $c$ é a quantidade de bolos de chocolate e $f$ a de fubá, temos as seguintes possibilidades $(3,42), (8,36), (13,30), \newline (18,24), (23,18), (28,12), \newline(33,6),(38,0)$;
+\item Atividade exploratória.
+\item Não, pois essa venda renderia R\$ $900{,}00$, o que excede os vencimentos do dia.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Distância segura entre os carros}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Relacionar a frenagem com a existência da desaceleração.
+\item Registrar que mesmo o texto indicando uma proporcionalidade, que a relação entre as grandezas discutidas na atividade não é uma função afim.
+\item Reforçar a ideia de que a função afim não modela a variação do deslocamento para movimentos acelerados.
+\end{enumerate}
+
+% \tcblower
+
+% %Orientações e sugestões
+% \begin{itemize}
+% \item 
+% \end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Uma noção importante sobre a direção defensiva trata do fato de que \textit{“Ao pisar no freio do veículo, ele não para instantaneamente. Entre o momento que o motorista observa um obstáculo à sua frente e decide acionar os freios até o instante que o carro realmente para, ele se desloca vários metros”} [\href{https://www.jcnet.com.br/noticias/geral/2013/02/367699-direcao-defensiva--saiba-como-a-velocidade-influi-na-frenagem-do-veiculo.html}{JCNET-2013}]. Esse fato gera a chamada \textbf{distância de frenagem}, que precisa ser conhecida, para a segurança de todo motorista.
+
+Como essa distância depende de muitos fatores, logo que um veículo é lançado, revistas especializadas tratam de divulgar tabelas com as relações entre as velocidades e as distâncias de frenagem para estes veículos. A análise experimental e cuidadosa de qualquer uma dessas tabelas revela que a distância percorrida por um veículo após o acionamento dos freios é proporcional ao quadrado da sua velocidade [\href{http://rpm.org.br/cdrpm/12/5.htm}{Avila}].
+
+No artigo [\href{https://www.jcnet.com.br/noticias/geral/2013/02/367699-direcao-defensiva--saiba-como-a-velocidade-influi-na-frenagem-do-veiculo.html}{JCNET-2013}] encontramos que um veículo a \(80\) Km/h, ao considerarmos os tempos de percepção, de reação e de parada, vai percorrer em média \(57\) metros em pista seca até parar totalmente, assim que o motorista observar o obstáculo e decidir frear.
+
+\begin{enumerate}
+\item {} 
+Considere que o tempo de reação entre a percepção do obstáculo e a pisada no freio para um motorista seja de um segundo. Nesse tempo, quantos metros o seu carro se desloca, se inicialmente está a 80Km/h? {[}Se necessário, utilize que \(\upsilon\)Km/h = \(( \upsilon \div 3\text{,}6 )\)m/s{]}.
+
+\item {} 
+A distância de \(57\)m descrita no texto considera duas distância juntas: a que o móvel percorre no segundo anterior ao acionamento do freio, e a distância de frenagem. Sendo assim, quanto é somente a distância de frenagem desse móvel a \(80\)Km/h e que percorreu um total de \(57\)m antes de parar?
+
+\item {} 
+Sendo \(k\) uma constante de proporcionalidade, exiba uma relação algébrica entre a distância de frenagem e a velocidade do móvel antes do acionamento do freio, descrita no segundo parágrafo do texto.
+
+\item {} 
+Para os valores considerados no item \titem{b)}, qual o valor da constante de proporcionalidade \(k\)?
+
+\item {} 
+A relação algébrica obtida no item \titem{c)} é uma função afim?
+
+Observe a figura a seguir. Ela exibe, na placa o número \(80\), referente a velocidade do carro antes de perceber o obstáculo e decidir freiar. Logo abaixo da placa há um Sol e uma nuvem de chuva. Isso é para indicar que a faixa vermelha revere-se a situação de frenagem com a pista seca, e a faixa azul a frenagem com pista molhada.
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=400bp]{{frenagem1}.jpg}
+\caption{Exemplo preenchido}\label{\detokenize{AF209-0:id127}}\end{figure}
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=200bp]{{frenagem2}.jpg}
+\caption{Significado das bandeiras nas figuras}\label{\detokenize{AF209-0:id128}}\end{figure}
+
+\item {} 
+Conforme o exemplo acima, determine todos os valores que estão faltando e que estão representados pelas letras de ‘a’ até ‘j’, observando a mudança nas placas de velocidade do carro antes de perceber o obstáculo e decidir freiar.
+
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=400bp]{{frenagem3}.jpg}
+\end{figure}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item $80\div3{,}6=2009\approx22$. Assim, o carro se desloca aproximadamente $22$ m nesse segundo.
+\item $57−22=35$ m.
+\item $D=kv2$
+\item $k=\frac{D}{v^2}\iff k=\frac{35}{80^2}\iff k=\frac{7}{1280}\implies k\approx0{,}0055$.
+\item Não.
+\item $a=25\text{ m}; b\approx45 \text{ m}; c=70 \text{ m}; f\approx28 \text{ m}; g=55 \text{ m}; h=83 \text{ m}.$ Os valores a serem preenchidos na faixa azul de pista molhada exigem uma outra relação de $D$ e $v$: $\frac{D}{v^2}=\frac{71}{80^2}\iff\frac{D}{v^2}=\frac{71}{6400}\implies D=0{,}01\cdot v^2$, aproximadamente. Assim, $d=81 \text{ m}; e=106 \text{ m}; i=100 \text{ m}; j=128 \text{ m}$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

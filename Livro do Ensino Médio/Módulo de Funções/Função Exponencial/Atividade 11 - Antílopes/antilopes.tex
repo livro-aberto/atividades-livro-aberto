@@ -1,0 +1,158 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Antílopes}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT304} Resolver e elaborar problemas com funções exponenciais nos quais é necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como o da Matemática Financeira e o do crescimento de seres vivos microscópicos, entre outros. 
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Comparar o crescimento exponencial e o crescimento de variação linear por meio de tabelas.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Atividade retirada de \textit{Sawalha, Yamamah, "The Effects Of Teaching Exponential Functions Using Authentic Problem Solving On Students’ Achievement
+And Attitude" (2018).Wayne State University Dissertations. 1959.}
+\url{https://digitalcommons.wayne.edu/oa_dissertations/1959}
+
+\item Para identificar os crescimentos exponenciais é necessário fazer alguns arredondamentos. A ideia é que o estudante identifique as tabelas que mais se aproximam dos modelos teóricos.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+As tabelas abaixo mostram os dados de três possíveis variações nas populações de antílopes em uma reserva. Baseando-se nos dados, responda às questões a seguir.
+\begin{multicols}{3}
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Ano & Antílopes \\
+\hline
+2017 & $1.000$ \\
+\hline
+2018 & $1.030$ \\
+\hline
+2019 & $1.061$ \\
+\hline
+2020 & $1.093$ \\
+\hline
+\end{tabu}
+
+\caption*{Tabela 1}
+\end{table}
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Ano & Antílopes \\
+\hline
+2017 & $1.000$ \\
+\hline
+2018 & $1.030$ \\
+\hline
+2019 & $1.060$ \\
+\hline
+2020 & $1.090$ \\
+\hline
+\end{tabu}
+
+\caption*{Tabela 2}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Ano & Antílopes \\
+\hline
+2017 & $1.000$ \\
+\hline
+2018 & $1.003$ \\
+\hline
+2019 & $1.006$ \\
+\hline
+2020 & $1.009$ \\
+\hline
+\end{tabu}
+
+\caption*{Tabela 3}
+\end{table}
+\end{multicols}
+
+
+
+\begin{enumerate}
+
+\item{}
+Que tabela mostra a população de antílopes crescendo a uma taxa de 3\% ao ano?
+
+\item{}
+Que tabela mostra a população de antílopes crescendo a uma taxa de 30 antílopes por ano?
+
+\item{}
+Descreva o crescimento da tabela remanescente.
+
+\item{}
+Alguma dessas variações é linear? E exponencial? Explique.
+
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate}
+
+\item{}
+Tabela $1$.
+
+\item{}
+Tabela $2$.
+
+\item{}
+$0,3\%$ ao ano ou $3$ antílopes por ano.
+
+\item{}
+Tabela $1$ é exponencial com fator $1,03$, tabela $2$ tem variação linear com taxa variação $30$ antílopes. A tabela $3$ pode ser considerada exponencial com fator $1,003$ ou linear com taxa de variação $3$ antílopes.
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

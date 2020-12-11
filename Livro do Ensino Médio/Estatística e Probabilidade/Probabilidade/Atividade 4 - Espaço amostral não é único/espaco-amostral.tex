@@ -1,0 +1,83 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Espaço amostral não é único!}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Reconhecer a não unicidade do espaço amostral.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Nesta atividade pretende-se discutir com o aluno a não unicidade do espaço amostral. Esta discussão é importante, pois dependendo da forma como o espaço amostral é especificado, pode-se ter eventos elementares que são equiprováveis ou não. Além disso, algumas representações do espaço amostral de um experimento poderão responder a mais perguntas do que outras. Por exemplo, no primeiro item, a discriminação de todas as sequências possíveis de ordem de nascimentos permite responder perguntas sobre o sexo do filho mais velho, etc. Já no segundo item, perguntas deste tipo nem sempre podem ser respondidas.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Considere as famílias com três filhos no bairro onde você mora. Suponha que deseja-se calcular probabilidades do tipo: “qual a probabilidade de que uma dessas famílias com três filhos tenha dois meninos e uma menina?”.
+\begin{enumerate}
+\item {} 
+Construa um espaço amostral adequado para calcular esta probabilidade, considerando as possíveis sequências de nascimentos dos três filhos na família.
+
+\item {} 
+Construa um outro espaço amostral, considerando a quantidade de meninas em cada casal de três filhos.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Usando $a$ para menina e $o$ para menino, pode-se identificar todas as possibilidades, construindo-se o seguinte diagrama, chamado diagrama de árvore.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1, every node/.style={scale=.9}]
+
+\draw (0,0) -- (30:3) node [right] {$a$} node [above, midway, rotate=30, scale=0.7] {};
+\draw (0,0) -- (-30:3) node [right] {$o$} node [below, midway, rotate=-30, scale=0.7] {};
+\draw (3.159807,1.5) -- ++(20:3) node [right] {$a$} node [above, midway, rotate=20, scale=0.7] {};
+\draw (3.159807,1.5) -- ++(-20:3) node [right] {$o$} node [below, midway, rotate=-20, scale=0.7] {};
+\draw (3.159807,-1.5) -- ++(20:3) node [right] {$a$} node [above, midway, rotate=20, scale=0.7] {};
+\draw (3.159807,-1.5) -- ++(-20:3) node [right] {$o$} node [below, midway, rotate=-20, scale=0.7] {};
+\end{tikzpicture}
+\caption{Diagrama de árvore: representação das oito possibilidades de nascimentos de três filhos}
+\end{figure}
+
+{\small$S=\{(a,a,a), (a,a,o), (a,o,a), (a,o,o), (o,a,a), (o,a,o), (o,o,a), (o,o,o)\}$} com, por exemplo, $(a,o,a)$ indicando que dos três filhos, o primeiro foi uma menina, o segundo foi um menino e, o terceiro, uma menina. Observe que neste caso, $\#(S)=8$ e, se as probabilidades de nascer um menino e de nascer uma menina são iguais, é natural usar a interpretação clássica de probabilidade, atribuindo probabilidades iguais a cada um dos 8 eventos elementares deste espaço amostral. Lembre que eventos elementares são os subconjuntos unitários do espaço amostral.
+
+\item Se formos pensar na quantidade de meninas do casal tem-se $S=\{0,1,2,3\}$. Observe que neste caso $\#(S)=4$, mas neste caso não será adequado atribuir probabilidades iguais aos eventos elmentares $\{0\}, \{1\}, \{2\}$ e $\{3\}$, pois claramente, os eventos $\{1\}$ e $\{2\}$ ocorrem com maior frequência e, portanto, com maior probabilidade. Veja as oito situações possíveis no item anterior e quantas delas correspondem a estes dois eventos elementares.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

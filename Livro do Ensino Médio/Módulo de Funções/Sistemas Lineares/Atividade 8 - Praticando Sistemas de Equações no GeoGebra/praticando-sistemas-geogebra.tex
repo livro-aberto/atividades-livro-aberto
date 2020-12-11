@@ -1,0 +1,77 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Praticando Sistemas de Equações no Geogebra}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Explorar o Geogebra como ferramenta para estudo de sistemas.
+\item Classificar os sistemas em função de seu conjunto solução. 
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Essa atividade foi pensada para ser realizada com o apoio do GeoGebra. São, portanto, sugestões de construções que poderão contribuir para que o aluno compreenda a ideia da solução de um sistema linear, além de sugerir ao estudante que  um sistema pode ser possível e determinado, possível e indeterminado ou impossível.
+\item No item $c)$ convém buscar junto aos alunos que estratégias adotariam para escrever esses sistemas. Por exemplo, o estudante pode, usando o GeoGebra, traçar duas retas quaisquer que passem por $(1,1)$ e registrar o sistema formado por essas duas retas ou ainda, algebricamente, pode tomar expressões como $x + 2y$ e $3x-y$, por exemplo, substituindo os valores $x=1$ e $y=1$ em cada uma dela.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Abra o GeoGebra no seu \emph{smartphone}, no aplicativo calculadora gráfica. No campo de entrada, digite as equações $x - 2y = 8$ (Equação 1) e em seguida, $ax+ by = c$ (Equação 2). O GeoGebra irá criar controles deslizantes para os coeficientes a, b e c da Equação 2. Nos itens a seguir, considere o sistema formado pelas equações 1 e 2 nas incógnitas $x$ e $y$.
+
+\begin{enumerate}
+\item{} 
+Qual figura está associada ao conjunto solução da Equação 1? E da Equação 2?
+
+\item{}
+Existem valores para os coeficientes $a$, $b$ e $c$ de forma que o sistema formando pelas Equações 1 e 2 possua uma única solução? E apenas duas soluções? E infinitas soluções?
+
+\item{}
+Insira o ponto $(2,-3)$ no campo de entrada. Ele é uma solução da Equação 1 (por quê?). Usando os controles deslizantes, obtenha valores para os coeficientes a, b e c de forma que esse ponto seja solução do sistema.
+
+\item{}
+Elabore um sistema com duas equações diferentes que tenha o ponto $(1, 1)$ como única solução. Construa as curvas correspondentes a essas equações no GeoGebra para realizar uma "prova real"{} do sistema que você elaborou.
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate}
+\item Retas.
+\item Para que o sistema tenha infinitas soluções, os valores para $a, b$ e $c$ deverão ser os mesmos associados à equação $x-2y=8$, ou seja, $a=1, b=-2$ e $c=8$. Não é possível que o sistema tenha duas soluções, pois não é possível que duas retas tenham exatamente  dois pontos em comum. Uma única solução será encontrada para $a\neq 1$ ou $b \neq -2$ ou $c \neq 8$. Cabe observar que para $c \neq 8$, se $a$ e $b$ forem respectivamente iguais a $1$ e $-2$, então o sistema não terá solução.
+\item $(2,-3)$ é solução da equação $1$. Há infinitos valores para $a, b$ e $c$ para os quais a reta dada pela equação $2$ passará por $(2,-3)$, entre eles, $a=1, b=1$ e $c=-1$.
+\item $x+2y=3$ e $3x-y=2$, formando um sistema.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

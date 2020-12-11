@@ -1,0 +1,96 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Construindo Retas no Plano}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Estudar equações equivalentes.
+\item Consolidar o significado geométrico de equações equivalente. 
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Nesse exercício, o objetivo é que o aluno perceba que é possível manipular a equação e escrever equações equivalentes a ela com os coeficientes que forem convenientes. Se possível, incentive seus alunos a plotar cada uma dessas equações com o GeoGebra, o que reforçará a ideia da equivalência entre elas, pois as suas representações ficarão sobrepostas quando construídas em um mesmo sistema de eixos
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Considere a reta $r$ cuja equação é $3x + 4y = 1$. Em cada item abaixo, encontre uma equação linear em $x$ e $y$ tal que ela:
+
+
+\begin{enumerate}
+\item{}
+Seja equivalente à equação do enunciado, com coeficiente de $x$ igual a $-1$;
+
+\item{}
+Seja equivalente à equação do enunciado, com coeficiente de $y$ igual a $2$;
+
+\item{}
+Seja equivalente à equação do enunciado, com coeficiente de $x$ igual a $\frac{1}{3}$;
+
+\item{}
+Seja equivalente à equação do enunciado, com termo independente igual a $5$;
+
+\item{}
+Represente uma reta paralela a $r$ e que passa pelo ponto $(2,5)$;
+
+\item{}
+Tenha o coeficiente do $x$ igual a $6$, represente uma reta paralela a $r$ e passe pelo ponto $(3,-7)$;
+
+\item{}
+Tenha coeficiente do $y$ igual a $9$, represente uma reta concorrente a $r$ e passe pelo ponto $(8,1)$.
+
+\item{}	
+Você consegue encontrar mais de uma equação linear que atenda o que foi pedido no item \titem{g)}? O mesmo é possível para os itens \titem{e)} e \titem{f)}? Por quê?
+
+\item{}
+Utilize o GeoGebra para plotar as retas correspondentes às equações obtidas por você nos itens \titem{e)}, \titem{f)} e \titem{g)} e confirmar se elas cumprem as propriedades pedidas nesses itens.
+\end{enumerate}
+
+\ifdefined\prof
+\clearpage
+\begin{solucao}
+
+\begin{enumerate}
+\item Multiplicando toda a equação por $-\dfrac{1}{3}$, encontramos $x-\dfrac{4}{3}y = -\dfrac{1}{3}$.
+\item Multiplicando toda a equação por $\dfrac{1}{2}$, encontramos $\dfrac{3}{2x} + 2y =\dfrac{1}{2}$.
+\item Multiplicando toda a equação por $\dfrac{1}{9}$, encontramos $\dfrac{1}{2}x + \dfrac{4}{9}y = \dfrac{1}{9}$.
+\item Multiplicando toda a equação por $-\frac{7}{4}$, encontramos $-\dfrac{21}{4}x - 7y = - \dfrac{7}{4}$.
+\item Multiplicando toda a equação por $5$, obtemos $15x + 20y = 5$.
+\item Multiplicando toda a equação por $-\dfrac{2}{5}$, obtemos $-\dfrac{6}{5}x - \dfrac{8}{5}y = -\dfrac{2}{5}$.
+\item $-12x+9y=-87$.
+\item Para atender o que foi pedido no \titem{g}), pegue qualquer reta concorrente a $r$ que passe por $(8,1)$, divida a equação pelo coeficiente do $y$ e multiplique por $9$. Para atender as condições do item \titem{e)}, multiplique a equação encontrada em \titem{e)} por qualquer numero real não nulo. Para o item \titem{f)} é impossível achar outra opção, pois só existe uma única reta que cumpra as condições exigidas, assim, todas as equações são múltiplas umas das outras, portanto, apenas uma tem o coeficiente do $x$ igual a $6$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

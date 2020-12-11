@@ -1,0 +1,170 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Mãos à obra}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+% \ifdefined\prof
+% %Habilidades da BNCC
+% % \begin{objetivos}
+% % \item 
+% % \end{objetivos}
+
+% %Caixa do Para o Professor
+% \begin{goals}
+% %Objetivos específicos
+% \begin{enumerate}
+% \item
+% \end{enumerate}
+
+% \tcblower
+
+% %Orientações e sugestões
+% \begin{itemize}
+% \item 
+% \end{itemize}
+% \end{goals}
+
+% \bigskip
+% \begin{center}
+% {\large \scshape Atividade}
+% \end{center}
+% \fi
+
+A prefeitura de uma cidade, com o fim de melhorar as atividades comerciais locais, fez um levantamento com produtores, fornecedores e compradores. Ficou claro que a redução no percurso até a cidade beneficiaria a todos. Por esse motivo, a prefeitura encomendou a contrução de uma nova estrada, que exigiria dois túneis em certo trecho, um para cada sentido da estrada. O formato das entradas ou das saídas dos túneis, a pedido da prefeitura, deverão ser arcos parabólicos.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=300bp]{{5_1}.jpg}
+\end{figure}
+
+Limitações geológicas impedem que as alturas dos túneis sejam maiores do que \(5\) m e cada túnel deve permitir a passagem de caminhões comerciais, que tem \(4\text{,}3\) m de altura e \(2\text{,}6\) m de largura. Além disso, para que os caminhões não arrastem pelas paredes dos túneis, uma largura extra de \(0\text{,}4\) m deverá ser considerada conforme o rascunho a seguir.
+\begin{center}\begin{tikzpicture}[every node/.style={scale=4}]
+
+\draw [dashed, color=secundario] (2.2,-2) -- (-2.2,-2);
+       \draw [color=atento,  thick] (3.6,-4.9) -- (3.8,-4.9) --  (3.7,-4.9) -- (3.7,-1.98) -- (3.6, -1.98) -- (3.8,-1.98);
+       \draw [color=atento,  thick] (5.6,-4.9) -- (5.8,-4.9) --  (5.7,-4.9) -- (5.7,0) -- (5.6, 0) -- (5.8,0);
+       \node [above, align=center, scale=0.25] at (0, -2) {(2,6+0,4)$m$};
+       \node [above, align=center, scale=0.25] at (4.3,-3.5) {4,3 $m$};
+       \node [above, align=center, scale=0.25] at (6.2,-2.5) {5 $m$};
+       \draw [ thick, domain=-3.5:3.5] plot (\x,{-0.4*(\x)^2});
+\end{tikzpicture}\end{center}
+Por fim, o projeto dos túneis deve satisfazer as condições mínimas apresentadas por questões econômicas. Sendo assim, a empresa deve calcular a largura das bases das entradas ou saídas dos túneis. {[}Para simplificar o texto, as medidas das entradas ou saídas dos túneis serão tratatas apenas por \textit{medidas dos túneis}.{]}
+\begin{enumerate}
+\item {} 
+Caso você conhecesse a função que descreve essa parábola, você seria capaz de calcular a largura da base dos túneis?
+
+\item {} 
+Dentre as opções a seguir marque a que faz o rascunho de um dos túneis no plano cartesiano.
+
+
+\begin{multicols}{3}
+\begin{center}\begin{tikzpicture}
+[scale=0.5]
+  \draw [help lines, secundario!30, step=.5] (-2,-1.5) grid (6,5);
+       \draw [, ->] (-2,0) -- (6,0) node [below left, scale=0.3] {$x$};
+       \draw [, ->] (0,-1.5) -- (0,5) node [below left, scale=0.3] {$y$};
+  \draw [color=\currentcolor!80,  , domain=-0.35:5.35] plot (\x,{-0.8*(\x)^2+4*(\x)});
+  \node [above, align=center] at (2.5,5) {Figura 1};
+\end{tikzpicture}\end{center}\begin{center}\begin{tikzpicture}
+[scale=0.5]
+\draw [help lines, secundario!30, step=.5] (-4,-1.5) grid (4,5);
+\draw [, ->] (-4,0) -- (4,0) node [below left, scale=0.3] {$x$};
+       \draw [, ->] (0,-1.5) -- (0,5) node [below left, scale=0.3] {$y$};
+             \draw [color=\currentcolor!80,, domain=-3.15:3.15] plot (\x,{-0.4*(\x)^2+4});
+       \node [above, align=center] at (0,5) {Figura 2};
+\end{tikzpicture}\end{center}\begin{center}\begin{tikzpicture}
+[scale=0.5]
+       \draw [help lines, secundario!30, step=.5] (-4,-5) grid (4,1.5);
+       \draw [, ->] (-4,0) -- (4,0) node [below left, scale=0.3] {$x$};
+       \draw [, ->] (0,-5) -- (0,1.5) node [below left, scale=0.3] {$y$};
+       \draw [color=\currentcolor!80, , domain=-3.5:3.5] plot (\x,{-0.4*(\x)^2});
+  \node [above, align=center] at (0,1.5) {Figura 3};
+\end{tikzpicture}\end{center}
+\end{multicols}
+\item {} 
+Para essa escolha, qual o significado dos valores de \(x\) e de \(y\)?
+
+\item {} 
+Que pontos do plano cartesiano são conhecidos, se juntarmos a escolha gráfica com os dados fornecidos as medidas dos túneis?
+
+\item {} 
+Com base em sua escolha do rascunho gráfico mais adequado e considerando os pontos conhecidos da parábola, qual forma da função quadrática resulta em maior quantidade de informações conhecidas?
+
+\(\Box \; f(x)=ax^2+bx+c\)
+
+\(\Box \; f(x)=a(x-p)^2+q\)
+
+\(\Box \; f(x)=a(x-x_1)(x-x_2)\)
+
+\item {} 
+Quantos dados estão faltando para que seja conhecida a função que descreve esta parábola?
+
+\item {} 
+Com alguma coordenada ainda não utilizada desta curva, determine a informação que falta para conhecer a função que descreve esta parábola.
+
+\item {} 
+Determine, segundo esse plano cartesiano, as coordenadas das extremidades das bases desses túneis {[}Se julgar útil, use apenas a aproximação \(\sqrt{14}=3,75\){]}.
+
+\item {} 
+Com tudo que foi feito, qual a largura das bases desses túneis?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item {} 
+Sim.
+
+\item {} 
+Figura 2.
+
+\item {} 
+Em \(x\) temos medidas que se referem a base dos túneis e em \(y\) temos para cada ponto das bases, as alturas relativas na curva.
+
+\item {} 
+\((\ -\dfrac{2\text{,}6+0\text{,}4}{2};4\text{,}3)\ = (-1\text{,}5;4\text{,}3)\), \((0\text{,}5)\) e \((\ \dfrac{2\text{,}6+0\text{,}4}{2};4\text{,}3)\ = (1\text{,}5;4\text{,}3)\).
+
+\item {} 
+\(f(x)=a(x-p)^2+q\).
+
+\item {} 
+Somente um, o valor de \(a\).
+
+\item {} \begin{equation*}
+\begin{split}f(1\text{,}5)= a \cdot (1\text{,}5-0)^2+5=4\text{,}3 
+      & \Rightarrow 2\text{,}25 \cdot a = 4\text{,}3-5 \\
+      & \Rightarrow a = \frac{-0\text{,}7}{2\text{,}25} \\
+      & \Rightarrow a = - \frac{14}{45}. \\\end{split}
+\end{equation*}
+\item {} \begin{equation*}
+\begin{split}- \frac{14}{45} x^2 + 5 = 0 & \Rightarrow \frac{14}{45} x^2 = 5 \\
+& \Rightarrow x^2 = \frac{45 \cdot 5}{14} \Rightarrow x= \pm \sqrt{\frac{225}{14}} \\
+& \Rightarrow x = \pm \frac{\sqrt{225}}{\sqrt{14}} \Rightarrow x = \pm \frac{15}{3\text{,}75} \\
+& \Rightarrow x = \pm 4. \\\end{split}
+\end{equation*}
+Portanto, as coordenadas das extremidades das bases são \((-4,0)\) e \((4,0)\).
+
+\item {} 
+As larguras das bases dos túneis deverão ser iguais a \(2 \cdot 4 = 8\) m.
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

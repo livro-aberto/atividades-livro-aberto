@@ -1,0 +1,85 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Intervalo de tempo}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT304} Resolver e elaborar problemas com funções exponenciais nos quais é necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como o da Matemática Financeira e o do crescimento de seres vivos microscópicos, entre outros. 
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Concluir que o fator de crescimento de uma função exponencial depende apenas do comprimento do intervalo de tempo considerado;
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Nos itens em que se espera uma generalização (c, d, e) certifique-se de que os estudantes foram além dos exemplos, que escreveram intervalos do tipo $[t,t+h]$.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Um biólogo observou que a área ocupada por uma cultura de bactérias em uma placa de Petri estava crescendo a uma taxa de $44\%$ a cada hora. No início da observação a área ocupada pela cultura era de $100 mm^{2}$. A função exponencial que modela essa situação é, portanto, dada por $A(t)=100\cdot(1,45)^{t}$.
+
+\begin{enumerate}
+
+\item{}
+Determine o fator de crescimento na primeira meia hora.
+
+\item{}
+Determine o fator de crescimento na segunda, na terceira e na décima meia hora, ou seja, os valores de $\dfrac{A(1)}{A(0{,}5)}, \dfrac{A(1{,}5)}{A(1)}$ e $\dfrac{A(5)}{A(4{,}5)}$.
+
+\item{}
+Mostre que o fator de crescimento é o mesmo em qualquer intervalo de meia hora.
+
+\item{}
+Mostre que, para qualquer intervalo de $\dfrac{1}{4}$ de hora, o fator de crescimento é o mesmo.
+
+\item{}
+Justifique a seguinte afirmação: "O fator de crescimento da área na cultura de bactérias em um dado intervalo de tempo depende apenas do tamanho desse intervalo.''
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item $\sqrt{1,44}=1,2$, ou $20\%$ a cada meia hora.
+
+\item Todos iguais a $1,2$.
+
+\item $\dfrac{A(t+0,5)}{A(t)}=\dfrac{100\cdot 1,44^{t+0,5}}{100\cdot 1,44^t}=\dfrac{1,44^t \cdot 1,44^{0,5}}{1,44^t}=\sqrt{1,44}$.
+
+\item $\dfrac{A(t+0,25)}{A(t)}=\dfrac{100\cdot 1,44^{t+0,25}}{100\cdot 1,44^t}=\dfrac{1,44^t \cdot 1,44^{0,25}}{1,44^t}=\sqrt[4]{1,44}$.
+
+\item $\dfrac{A(t+h)}{A(t)}=\dfrac{100\cdot 1,44^{t+h}}{100\cdot 1,44^t}=\dfrac{1,44^t \cdot 1,44^{h}}{1,44^t}=1,44^h$.
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

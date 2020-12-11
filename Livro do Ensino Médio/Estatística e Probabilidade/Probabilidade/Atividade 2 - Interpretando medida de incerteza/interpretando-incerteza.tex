@@ -1,0 +1,70 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Interpretando medida de incerteza}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Reconhecer que toda probabilidade se traduz como uma taxa de ocorrência de um evento.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item Algumas afirmações envolvendo uma probabilidade serão apresentadas para depois explorar a interpretação dessa informação.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Responda aos itens a seguir.
+\begin{enumerate}
+\item {} 
+A probabilidade de ocorrer cara quando lançamos uma moeda honesta é $0{,}5$. Isso significa que toda vez que lançarmos essa moeda $100$ vezes, ocorrerão $50$ caras? Por quê?
+
+\item {} 
+Foi publicada a previsão do tempo, indicando que a probabilidade de chover amanhã na região onde você mora e estuda é de $30\%$. Que decisão você tomaria com base nessa previsão: levar ou não um guarda-chuva para a escola? Por quê? Como você interpreta essa previsão?
+
+\item {} 
+Um estudo na área de Saúde indicou que a probabilidade de uma pessoa vir a ter o Diabetes é $10\%$. Isso significa que ao acompanhar um grupo de $500$ pessoas, $50$ delas terão Diabetes? Por quê?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Não. A probabilidade $0{,}5$ indica uma taxa de ocorrência de modo que se, de fato, a probabilidade é $0{,}5$ de ocorrer cara, isso significa que se lançarmos a moeda muitas vezes ($N$), esperamos observar um número de caras que seja próximo de $0{,}5\cdot N$ ($50\%$ do número de lançamentos). Assim, se a moeda é lançada $100$ vezes, espera-se observar um número de caras próximo a $50$, mas não necessariamente igual a $50$. Vocês podem rapidamente fazer uma experiência, reunindo-se em $10$ grupos de cerca de $4$ alunos e cada grupo deverá lançar uma moeda $10$ vezes e registrar o número de caras. Depois, a informação dos $10$ grupos deverá ser reunida, totalizando $100$ lançamentos. Quantas caras foram observadas?
+\item Se a probabilidade de chover amanhã é de $30\%$, isso significa que para cada $10$ dias com as mesmas características, espera-se que em $3$ deles chova e em $7$ não. Se é muito trabalhosos carregar um guarda-chuva, talvez a melhor decisão seja a de não levar o guarda chuva, dado que a probabilidade é inferior a $50\%$. Por outro lado, se você está resfriado e quer evitar de todo o modo o risco de se molhar, carregar o guarda-chuva, mesmo que ele venha a não ser útil, pode ser a melhor decisão. O importante aqui, é que não há como não correr riscos, qualquer que seja a sua decisão, mas a informação da probabilidade de chover é útil para tomarmos uma decisão com base nas nossas necessidades e expectativas.
+\item Não. Aqui podemos usar a mesma ideia da moeda: como a probabilidade é de $10\%$, espera-se que ao observar um grande número de pessoas ($N$), cerca de $0{,}1\cdot N$ ($10\%)$ delas irão apresentar o Diabetes. Em $500$ pessoas, espera-se que $10\%$ de $500=50$ pessoas irão ter o Diabetes. Observe também que nesse último caso, a introdução de políticas públicas na área da saúde e de campanhas sobre hábitos saudáveis, poderia reduzir essa probabilidade.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

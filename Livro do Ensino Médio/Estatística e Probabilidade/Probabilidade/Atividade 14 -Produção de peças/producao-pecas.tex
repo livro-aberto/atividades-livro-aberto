@@ -1,0 +1,99 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Produção de peças}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar a definição de probabilidade condicional para reconhecer eventos independentes e eventos dependentes.
+\end{enumerate}
+
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=350bp]{maquinas}
+
+\caption{Produção de peças}
+\end{figure}
+
+
+
+Para fins de controle de qualidade das peças produzidas em uma fábrica, foram analisadas amostras de peças produzidas por máquinas diferentes. Os resultados obtidos estão resumidos no quadro a seguir.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Máquina
+&
+Defeituosas
+&
+Boas
+\\
+\hline
+$I$
+&
+5
+&
+195
+\\
+\hline
+$II$
+&
+15
+&
+585
+\\
+\hline
+\end{tabu}
+\end{table}
+
+
+Pela informação das amostras coletadas, há razão para se acreditar que a produção de defeituosas ou boas é independente do tipo de máquina utilizada na produção?
+
+\ifdefined\prof
+\begin{solucao}
+
+Defina os eventos $A$: “peça produzida pela máquina $I”$ e $B$: “peça defeituosa”. Observe que os respectivos eventos complementares são $\overline{A}$: “peça produzida pela máquina $II$”, pois são apenas duas máquinas e $\overline{B}$: “peça boa”, pois são apenas duas classificações das peças (boas ou defituosas).
+
+Se os eventos são independentes, deve-se ter $P(B|A)=P(B)$, por exemplo. Tem-se que $P(A)=\frac{200}{200+600}=0{,}25$, $P(B)=\frac{20}{800}=0{,}025$ e $P(B|A)=P(A\cap B)P(A)=\frac{5/800}{200/800}=\frac{1}{40}=0{,}025$. Logo, conlui-se que a produção de defeituosas é independente do tipo de máquina, pois $P(B|A)=P(B)$.
+
+Observe que tanto faz a escolha dos eventos máquina $I$ ou máquina $II$ e peça defeituosa ou peça boa. Por exemplo,
+
+$P(\overline{A})=\frac{3}{4}=0{,}75, P(B)=\frac{20}{800}=0{,}025$ e $P(\overline{B})=0{,}975$. Além disso, $P(\overline|B)=0{,}75=P(\overline{A}), P(A|\overline{B})=0{,}25=P(A), P(\overline{A}|\overline{B})=0{,}75=P(\overline{A})$.
+
+De fato, essa propriedade não é um caso específico desse problema e ela é explorada na próxima atividade.
+
+\end{solucao}
+\fi
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Pressão Arterial}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+% \ifdefined\prof
+% %Habilidades da BNCC
+% % \begin{objetivos}
+% % \item 
+% % \end{objetivos}
+
+% %Caixa do Para o Professor
+% \begin{goals}
+% %Objetivos específicos
+% \begin{enumerate}
+% \item
+% \end{enumerate}
+
+% \tcblower
+
+% %Orientações e sugestões
+% \begin{itemize}
+% \item 
+% \end{itemize}
+% \end{goals}
+
+% \bigskip
+% \begin{center}
+% {\large \scshape Atividade}
+% \end{center}
+% \fi
+\textit{(ENEM 2017)}
+
+Um cientista, em seus estudos para modelar a pressão arterial de uma pessoa, utiliza uma função do tipo $P(t) = A + B\cos(Kt)$ em que $A$, $B$ e $K$ são constantes reais positivas e $t$ representa a variável tempo, medida em segundos. Considere que um batimento cardíaco representa o intervalo de tempo entre duas sucessivas pressões máximas. Ao analisar um caso específico, o cientista obteve os dados:
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|c|f|}
+\hline
+Pressão mínima & 78 \\
+\hline
+Pressão máxima & 120 \\
+\hline
+Número de batimentos cardíacos por minuto & 90 \\
+\hline
+\end{tabular}
+\end{table}
+
+A função P(t) obtida, por este cientista, ao analisar o caso específico foi:
+
+\begin{enumerate}
+\item $P(t) = 99 + 21\cos(3\pi t)$
+\item $P(t) = 78 + 42\cos(3\pi t)$
+\item $P(t) = 99 + 21\cos(2\pi t)$
+\item $P(t) = 99 + 21\cos(t)$
+\item $P(t) = 78 + 42\cos(t)$
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+O período da função é dado pelo tempo entre um batimento cardíaco e outro. Como em $1$ minuto ($60$ s) o coração faz $90$ batimentos, o tempo necessário para um batimento é $\frac{2}{3}$s. 
+
+Utilizando o fato de que o período é $\frac{2\pi}{K}$, segue que $K = 3\pi$. Por outro lado, o parâmetro $B$ fornece a amplitude da função, que tem $120$ como valor máximo e $78$ como valor mínimo. Portanto, $B =\frac{(120-78)}{2} = 21$. Segue que $P(t) = A + 21\cos(3\pi t)$.
+
+Para determinar o parâmetro $A$, note que $P(t)$ é máximo quando o cosseno for máximo, isto é, quanto $t = 0$. Logo, $120 = P(0) = A + 21\cos(0) = A + 21$, donde concluímos que $A = 99$.
+
+\end{solucao}
+\fi
+
+\end{document}

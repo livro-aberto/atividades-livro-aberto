@@ -1,0 +1,126 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: A jogada vencedora}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{sugestions}
+%Objetivos específicos
+
+Os jogos eletrônicos constituem ótimos laboratórios de aprendizagem por simular situações que podem ir assumindo toda a complexidade da realidade aos poucos, uma “variável” por vez. De acordo com {[}WANG{]}, jogos de computador podem criar ambientes e mundos que de outra forma seriam inacessíveis aos estudantes.
+
+Existe disponível na internet diversos projetos que envolvem o uso do jogo Angry Birds para o estudo das parábolas e lançamentos oblíquos. Por exemplo, \href{https://algebra2coach.com/transforming-parabolas-angry-birds-project/}{Transforming Parabolas \textendash{} The Angry Birds Project} e \href{https://www.tes.com/teaching-resource/angry-bird-parabolas-graphing-quadratic-equations-6165424}{Transforming Parabolas \textendash{} The Angry Birds Project}.
+\end{sugestions}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Vamos trabalhar aqui com um famoso jogo que simula lançamento de objetos. No caso, são “pássaros” caricaturados em formato de personagens de cinema que tem que impedir o plano dos “porcos verdes” de roubarem seus ovos e trazer destruição ao universo. A “variável” resistência do ar, por exemplo, não está incluída em boa parte das fases deste jogo.
+
+Digamos que o programador de uma das fases decida, dentre todos os possíveis lançamentos, um que forneça a maior quantidade de pontos possível para a fase. Entendendo a tela como um plano cartesiano, o programador deve escolher a parábola que representará a “Jogada Vencedora”. A figura a seguir ilustra a situação.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=300bp]{{AB_Plano_Cartesiano}.png}
+\caption{Imagem de divulgação.}\label{\detokenize{AF209-9:id6}}\end{figure}
+
+Com a finalidade de inserir na programação a função que descreve a “Jogada Vencedora” o programador usou três coordenadas como referência: o pássaro e os dois “sóis”, cujas coordenadas estão destacadas a seguir.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=300bp]{{AB_Coordenadas}.png}
+\end{figure}
+\begin{enumerate}
+\item {} 
+Quais são as coordenadas indicadas no gráfico pelo programador?
+
+\item {} 
+Quais os significados dos valores de \(x\) e de \(y\) neste contexto?
+
+\item {} 
+Das formas da função quadrática apresentadas a seguir, qual delas parece mais adequada diante das informações fornecidas?
+
+\(\Box \; f(x)=ax^2+bx+c\)
+
+\(\Box \; f(x)=a(x-p)^2+q\)
+
+\(\Box \; f(x)=a(x-x_1)(x-x_2)\)
+
+\item {} 
+Substituido a origem na forma escolhida do item anterior, qual a conclusão?
+
+\item {} 
+Faça o mesmo para as outras duas coordenadas, mas considere também o que você concluiu no item anterior, e obtenha duas equações diferentes com variáveis \(a\) e \(b\).
+
+\item {} 
+Nas equações apresentadas no item anterior, uma tem o \(49\) e a outra tem o \(25\). Na que tem o \(49\), multiplique toda ela por \(25\) e, na outra, a que tem o \(25\), multiplique toda ela por \(49\). Feito isso, subtrai, membro a membro, as duas equações resultantes. Qual a conclusão?
+
+\item {} 
+Mais uma vez vamos pegar as equações do item ‘e’. Repare que uma tem um coeficiente \(7\) e a outra tem um coeficiente \(5\). Multiplique a que tem o \(7\) por \(5\) e a que tem o \(5\), por \(7\). Depois subtrai, membro a membro, as equações assim obtidas. Qual a conclusão?
+
+\item {} 
+Qual a função que o programador vai inserir como a “Jogada Vencedora”?
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item {} 
+\((0,0)\), \((5,3)\) e \((7,1)\).
+
+\item {} 
+\(x\) será o deslocamento horizontal do pássaro após o lançamento e \(y\) será a altura do pássaro em relação ao eixo \(x\) durante o arremesso.
+
+\item {} 
+\(f(x)=ax^2+bx+c\).
+
+\item {} 
+\(f(0)=a \cdot 0^2+b \cdot 0+c=0 \Rightarrow c=0\).
+
+\item {} \begin{align*}\!\begin{aligned}
+f(5)& =a \cdot 5^2+b \cdot 5+0=3 \Rightarrow 25a+5b=3 \\\\
+f(7)& =a \cdot 7^2+b \cdot 7+0=1 \Rightarrow 49a+7b=1 \\\\
+\end{aligned}\end{align*}
+\item {} \begin{align*}\!\begin{aligned}
+49 \cdot 25a+ 49 \cdot 5b= 49 \cdot 3 & \Rightarrow 1225a+245b=147 \\\\
+25 \cdot 49a+ 25 \cdot 7b = 25 \cdot 1 & \Rightarrow 1225a+175b=25 \\\\
+(245-175) \cdot b = 147-25 & \Rightarrow b= \frac{122}{70} \Rightarrow b= \frac{61}{35} \\\\
+\end{aligned}\end{align*}
+\item {} \begin{align*}\!\begin{aligned}
+7 \cdot 25a+ 7 \cdot 5b= 7 \cdot 3 & \Rightarrow 175a+35b=21 \\\\
+5 \cdot 49a+ 5 \cdot 7b = 5 \cdot 1 & \Rightarrow 245a+35b=5 \\\\
+(245-175) \cdot a = 5-21 & \Rightarrow a= - \frac{16}{70} \Rightarrow a=- \frac{8}{35} \\\\
+\end{aligned}\end{align*}
+\item {} 
+\(f(x)= - \frac{8}{35}x^2+ \frac{61}{35}x\).
+
+\end{enumerate}
+\end{solucao}
+\fi
+
+\end{document}

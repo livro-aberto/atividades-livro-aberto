@@ -1,0 +1,116 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Simulação do lançamento de um dado honesto}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar o modelo probabilístico equiprovável e usar tecnologia para realizar simulações de um fenômeno aleatório.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Essa atividade demanda o uso de tenologia. Sugere-se realizá-la em laboratório de informática. Sugere-se também que os alunos trabalhem em pequenos grupos de dois ou três alunos para cada computador disponível. As atividades poderão ser adaptadas de acordo com o conhecimento prévio dos estudantes. Nesssa atividade poderá ser usado exemplo dado anteriormente, gerando-se um número aleatório entre $1$ e $6$ e, depois, contando as quantidades obtidas de cada face.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Deseja-se simular o lançamento de um dado honesto uma grande quantidade de vezes e comparar a frequência relativa de faces “6”{} com a probabilidade teórica \(\frac{1}{6}\approx 0,167\) de obter uma face “6”{} quando o dado é honesto.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=225bp]{{lancamento_dado}.png}
+\end{figure}
+\begin{enumerate}
+\item {} 
+Usando o GeoGebra ou algum outro recurso tecnológico, simule 30 lançamentos do dado e observe a quantidade de faces “6”{} obtidas, calculando a frequência relativa.
+
+\item {} 
+Repita a simulação para 60, 120, 300 e 1500 lançamentos do dado.
+
+\item {} 
+Complete o quadro a seguir e comente sobre os resultados que você obteve.
+
+\end{enumerate}
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+\centering
+Número de Observações & Frequência relativa de 6 \\
+\hline
+30 &\\
+\hline
+60 &\\
+\hline
+120 &\\
+\hline
+300 &\\
+\hline
+1500 &\\
+\hline
+\end{tabu}
+\end{table}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Você pode realizar a simulação usando a planilha do GeoGebra e a função \textit{=NúmeroAleatório(1,6)} na célula A1. Essa função retornará, com probabilidades iguais, um entre os números 1,2,3,4,5 e 6. Depois, arraste, copiando esta função para mais 29 células A2 até A30, obtendo as 30 simulações. Veja exemplo no início dessa seção. Depois use a função \textit{=ContarSe(5<x<7,A1:A30)}. É claro que as respostas irão variar, dependendo da simulação. Mas, espera-se que o número de faces “6” obtidas oscile em torno de 5, pois a função gera o número $6$ com probabilidade $\frac{1}{6}$ e assim, em média espera-se obter $30\cdot16=5$ dígitos $6$.
+
+\item Idem ao item anterior, só que agora o número de células a ser considerado na planilha será $60$, $120$, $300$ e $1500$.
+
+\item No preenchimento da tabela você deverá perceber que a medida que o número de simulações é maior, a frequência relativa de faces 6 se aproxima da probabilidade teórica de obter uma face 6 ($\approx0{,}167$). Se de fato o gerador de números aleatórios do programa que você está usando é bom, esse é o resultado esperado. Por exemplo, em uma simulação com o GeoGebra foram observadas as seguintes frequências relativas de faces 6 conforme o número de lançamentos:
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|f|f|}
+\hline
+$\tcolor{Número de Observações}$ & $\tcolor{Frequência relativa de 6's}$ \\
+\hline
+30 & 0{,}17 \\
+\hline
+60 & 0{,}18 \\
+\hline
+120 & 0{,}18 \\
+\hline
+300 & 0{,}16 \\
+\hline
+1500 & 0{,}17 \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

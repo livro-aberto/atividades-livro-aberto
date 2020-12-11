@@ -1,0 +1,63 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Marcando ângulos no círculo trigonométrico}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+\begin{sugestions}
+\vspace{1em}
+Caro professor, para esse item, vale muito a pena estimular os alunos a usar uma calculadora, preferencialmente científica, que pode ser acessada pelo próprio smartphone.
+
+\end{sugestions}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Dê a menor determinação positiva dos arcos a seguir e indique sua expressão geral dos arcos.
+\begin{enumerate}
+\item $1047^{\circ}$
+\item $327\pi\rad$
+\item $247\rad$
+\item $247^{\circ}$
+\item $247\pi\rad$
+\item $-1032\rad$
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item $1047^{\circ} = 2\cdot360^{\circ} + 327^{\circ}$, o que indica que esse arco deu duas voltas inteiras no círculo trigonométrico e que tem como menor determinação positiva  o arco de $327^{\circ}$. A expressão geral é $327$ + $k\cdot360^{\circ}, k\in \Z$.
+
+\item $327\pi=326\pi+\pi=162\cdot2\pi+\pi\rad$, o que indica que esse arco deu $163$ voltas completas no círculo trigonométrico e que tem como menor determinação positiva o arco $\pi\rad$. Sua expressão geral é $2k\pi+\pi\rad, k\in\Z$.
+\item $247\rad\cong39\cdot2\pi+(247-39\cdot\pi)$, o que indica que esse arco deu $39$ voltas inteiras no círculo trigonométrico e que tem como menor determinação positiva o arco $(247-39\cdot2\pi)$. Sua expressão geral é $(247-39\cdot2\pi)+2k\pi, k\in\Z$.
+\item $247^{\circ}$ é menor que $360^{\circ}$, logo já é a menor determinação positiva. A expressão geral dos arcos é $247^{\circ}+360^{\circ}\cdot k, k\in\Z$.
+\item $247\pi\rad=123\cdot2\pi+\pi$, o que indica que $\pi$ é a menor determinação positiva desse arco e que, portanto, sua expressão geral é $2k\pi+\pi\rad,k \in\Z$.
+\item $-1032\rad=-164\cdot2\pi-(-1032+164\cdot\pi)$, o que indica que $(-1032+164\cdot2\pi)$ é a menor determinação negativa. Somando $2\pi$, obtemos $(-1032+164\cdot2\pi)$, que será a menor determinação positiva. Logo, a expressão geral dos arcos é $(-1032+164\cdot2\pi)+2k\pi,k\in\Z$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

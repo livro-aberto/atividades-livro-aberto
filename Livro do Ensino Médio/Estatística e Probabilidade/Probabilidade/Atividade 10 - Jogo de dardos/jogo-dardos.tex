@@ -1,0 +1,183 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Jogo de dardos}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Calcular probabilidades de eventos em situações cujo espaço amostral é uma região do plano, estendendo a noção clássica de probabilidade para um espaço amostral não discreto.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+O objetivo desta atividade é estender a noção de probabilidade para uma situação envolvendo um espaço amostral não discreto e induzir à noção de probabilidade geométrica como razão de áreas em que uma região de área bem definida e finita do plano é fixada como o espaço amostral e, os eventos são tomados como sub-regiões de área bem definida do espaço amostral. A situação a ser tratada aqui é bem restrita, pois usará a noção clássica de probabilidade, adotando a suposição de sub-regiões do espaço amostral de áreas iguais têm probabilidades iguais.
+
+Note que a frase “Suponha que você seja suficientemente experiente de modo que sempre atinja o tabuleiro de darodos”{} especifica que o espaço amostral resume-se ao tabuleiro de dardos.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+No jogo de dardos o vencedor é quem zera os seus pontos mais rapidamente. Você começa, por exemplo, com um total de $200$ pontos. A cada lançamento do dardo, dependendo do local atingido, você ganha uma certa pontuação que é descontada do seu total. Se você for o primeiro a zerar, será o vencedor do jogo.
+
+Quanto mais próximo do centro do tabuleiro de dardos (um tabuleiro circular conforme a \hyperref[dardos]{figura \ref{dardos}}), mais pontos você ganha.
+
+Suponha que você seja suficentemente experiente de modo que todos os seus lançamentos atingem o tabuleiro de dardos.
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}[scale=1]
+
+\draw [fill= secundario!70] (0,0) circle (2);
+\draw [fill= white!70] (0,0) circle (1.85);
+\draw [fill= \currentcolor!70] (0,0) circle (1.55);
+\draw [fill= white!70] (0,0) circle (1);
+\draw [fill= \currentcolor!70] (0,0) circle (.5);
+\draw [fill= destacado!70] (0,0) circle (.1);
+\draw [fill=secundario] (1.4142,1.4142) arc (45:-135:2);
+\draw [fill=secundario!7] (1.30814,1.30814) arc (45:-135:1.85);
+\draw [fill=\currentcolor] (1.0960,1.0960) arc (45:-135:1.55);
+\draw [fill=secundario!7] (.70710,.70710) arc (45:-135:1);
+\draw [fill=\currentcolor] (.35355,.35355) arc (45:-135:.5);
+\draw [fill=destacado] (.070710,.070710) arc (45:-135:.1);
+\draw [,color=blue!30!\currentcolor, fill=blue!30!\currentcolor] (1.8,1.8)--++(15:.2) --(2.19318,2.05176) -- (2,2);
+\draw [,color=blue!30!\currentcolor, fill=blue!30!\currentcolor] (1.8,1.8)--++(75:.2) --(2.05176,2.19318) --(2,2);
+\draw [] (0,0) -- (2.04,2.04);
+\draw [secundario!7] (-1.29814,-1.29814)--(-1.1060,-1.1060);
+\draw [secundario!7] (-.69710,-.69710)--(-.36355,-.36355);
+\draw [destacado] (-.066710,-.066710)--(0,0);
+\end{tikzpicture}
+\caption{Tabuleiro de jogo de dardos}
+\label{dardos}
+\end{figure}
+
+Suponha que a medida do raio do tabuleiro de dardos seja $20$cm e que a medida do menor raio (círculo em verde no centro do tabuleiro) seja $5$cm, e que os acréscimos de comprimento do raio nas faixas branca, verde e branca do tabuleiro sejam iguais a $5$cm. A moldura em preto não faz parte do alvo. Suponha também que atingindo o
+\begin{itemize}
+\item {} 
+círculo de raio $5$cm (em verde), você ganha $100$ pontos;
+
+\item {} 
+o anel cicular mais próximo ao centro (em branco), você ganha $50$ pontos;
+
+\item {} 
+o anel circular em verde subsequente, você ganha $20$ pontos e
+
+\item {} 
+a anel circular mais externo (em branco), você ganha $10$ pontos.
+
+\end{itemize}
+
+
+Observe que, neste caso, não é possível usar a interpretação clássica de probabilidade, pois existem infinitos eventos elementares. No entanto, é razoável supor uniformidade de probabilidades se, de fato, o jogador acerte em qualquer ponto do tabuleiro de dardos ao acaso. Neste espaço amostral, o círculo de raio $20$cm, se os pontos são obtidos ao acaso, ao considerar regiões de mesma área, contidas no círculo, as probabilidades de se obter pontos nestas regiões devem ser iguais.
+
+Assim, calcula-se a probabilidade do dardo cair numa região dentro do círculo como o quociente entre a medida da área da região sobre a medida da área do círculo (espaço amostral), isto é, se
+\begin{equation*}
+\begin{split}A\subset S \text{, então } P(A)=\displaystyle{\frac{\text{Área de }A}{\text{Área de }S}}\end{split}
+\end{equation*}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=0.5]  
+
+\draw [thick] (0,0) circle (5cm);
+\draw [fill = \currentcolor!50, thick]  (1.5,1.5) circle (2cm);
+\node at (2,2) {$A$};
+
+\node at (2.5,5) {$S$};
+\end{tikzpicture}
+
+
+\caption{Exemplo de um evento \(A\) no tabuleiro de dardos}
+\end{figure}
+
+Observações:
+\begin{itemize}
+\item {} 
+Nesta situação, a probabilidade do dardo atingir um ponto fixado no círculo será sempre zero, pois a medida de área correspondente a um ponto é nula.
+
+\item {} 
+Esta forma de calcular probabilidades costuma ser denominada como \textit{probabilidade geométrica} e pode ser considerada como uma extensão da interpretação clássica de probabilidade para espaços amostrais representados por uma região do plano com área definida. Esta mesma noção poderá ser usada para espaços amostrais representados por intervalos da reta limitados de comprimento definido, neste caso, calculando-se probabilidades como uma razão de comprimentos de intervalos.
+
+\end{itemize}
+
+Calcule a probabilidade de que em um lançamento você ganhe
+\begin{enumerate}
+\item {} 
+exatamente $100$ pontos;
+
+\item {} 
+exatamente $20$ pontos;
+
+\item {} 
+no máximo $50$ pontos.
+
+\item {} 
+Suponha também que pode ser combinado, antes do início do jogo, conceder um bônus adicional de $10\%$ da pontuação, se o dardo atingir o semicírculo, destacado na \hyperref[dardos]{figura \ref{dardos}}. Calcule a probabilidade de que em um lançamento você atinja
+\begin{enumerate}
+\item {} 
+o semicírculo destacado ou uma faixa de exatamente 50 pontos;
+
+\item {} 
+o semicírculo destacado e uma faixa de pelo menos 20 pontos.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Para ganhar $100$ pontos o dardo deve cair no círculo menor de raio $5$cm (em verde). Logo, 
+$$P(A)=\dfrac{\pi\cdot5^2}{\pi\cdot20^2}=\dfrac{1}{16}=0{,}0625$$.
+\item Para ganhar $20$ pontos o dardo deve cair no anel circular verde mais externo. Logo, usando a definição 
+\begin{equation*}
+P(B)=\frac{\text{área de $B$}}{\text{área de $S$}}=\frac{\pi(15^2-10^2)}{\pi\cdot20^2}=\frac{125}{400}=0{,}3125
+\end{equation*}
+\item Para ganhar no máximo $50$ pontos, o dardo deve cair em qualquer ponto exceto no círculo menor em verde onde se ganha $100$ pontos. Logo, usando a propriedade que explicita a probabilidade do evento complementar, \begin{equation*}
+P(C)=P(\overline{A})=1-P(A)=1-0{,}0625\approx0{,}9375
+\end{equation*}.
+\item Considerando o semicírculo destacado na \hyperref[dardos]{figura \ref{dardos}}:\begin{enumerate}
+\item A região que determina o evento de interesse é a reunião de duas regiões, a saber, o semicírculo $(A)$ e o anel circular correspondente a faixa de $50$ pontos $(B)$. Logo, usando a propriedade da probabilidade da união de dois eventos tem-se 
+
+\begin{align*}
+P(A\cup B)&=P(A)+P(B)-P(A\cap B)\\
+&=\frac{1}{2}+\frac{\pi\cdot(10^2-5^2)}{\pi\cdot20^2}-\frac{(\pi/2)\cdot(10^2-5^2)}{\pi\cdot20^2}\\
+&=\frac{1}{2}+\frac{75}{400}-\frac{75}{800}\approx0{,}59.
+\end{align*}
+
+\item A região que determina o evento de interesse $(D)$ corresponde a um semicírculo de raio $15$cm. $P(D)=\dfrac{1}{2}\cdot\dfrac{\pi\cdot15^2}{\pi\cdot20^2}=\dfrac{9}{32}\approx0{,}28$.
+\end{enumerate}
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

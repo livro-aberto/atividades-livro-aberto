@@ -1,0 +1,151 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Avaliando probabilidades a partir de um histograma}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Avaliar probabilidades de eventos usando dados quantitativos coletados, representados em um histograma e em uma tabela de frequências.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item A partir de dados coletados e representados por meio de um histograma, os alunos deverão responder perguntas referentes a probabilidades de certos eventos e para isso deverão usar a noção frequentista de probabilidade.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+No capítulo \textbf{Medidas de posição e dispersão} foram trabalhados os dados sobre os 100 melhores tempos atingidos na Maratona de Nova Iorque (2017) para as categorias homens e mulheres. Na \hyperref[maratona-homens-prob]{figura \ref{maratona-homens-prob}}, apresenta-se um histograma construído para os 100 melhores tempos na maratona de Nova Iorque (2017) para a categoria homens, após a conversão destes tempos para minutos.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=0.5,yscale=.8, scale=0.3]
+
+\draw (-0.2,0) -- (33.5,0);
+\draw (0,0) -- (0,25);
+
+\foreach \x in {0,5,10,15,20,25}  \draw (0,\x) -- (-0.5,\x) node [above, rotate=90] at (-0.3,\x) {\x}  
+;
+
+
+\foreach \x/\y in {3/7,6/4,9/1,12/2,15/4,18/4,21/14,24/21,27/24,30/19}{ \draw [fill=\currentcolor!80] (\x,0) rectangle (\x+3,\y);
+\node [above, align=center, scale=.9] at (\x+1.5,\y) {$(\y)$};}
+
+\foreach \x/\y in {3/130,6/\quad,9/136,12/\quad,15/142,18/\quad,21/148,24/\quad,27/153,30/\quad,33/160} \draw (\x,0) -- (\x,-0.25) node [below] {\y};
+
+\foreach \x in {0,5,10,15,20,25}  \draw [dashed] (0,\x) -- (33.5,\x)
+;
+
+\node [rotate=90] at (-4,12.5) {frequência absoluta};
+\node  at (16.5,-3) {tempos em minutos};
+\node [align=center] at (15.6, 27.5) {Histograma dos 100 melhores tempos na categoria \\ Maratona de Nova Iorque - 2017};
+
+
+\end{tikzpicture}
+\caption{Histograma dos 100 melhores tempos para homens na Maratona de Nova Iorque (2017), destacando a frequência absoluta de cada intervalo de classe.}
+\label{maratona-homens-prob}
+\end{figure}
+
+
+Na \hyperref[maratonatabela]{
+tabela \ref{maratonatabela}} são apresentados os intervalos de classe e suas respectivas frequências, usados na construção do histograma da \hyperref[maratona-homens-prob]{figura \ref{maratona-homens-prob}}. Os intervalos considerados são fechados à esquerda e abertos à direita.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+\parbox[c][1cm]{3.5cm}{\centering Intervalo de classe} & \parbox[c][1cm]{3.5cm}{\centering Frequência Absoluta} & \parbox[c][1cm]{3.5cm}{\centering Frequência Relativa} \\
+\hline\relax
+$[130,0;133,0[$ & $7$ & $0{,}07$ \\
+\hline
+$[133,0;136,0[$ & $4$ & $0{,}04$ \\
+\hline
+$[136,0;139,0[$ & $1$ & $0{,}01$ \\
+\hline
+$[139,0;142,0[$ & $2$ & $0{,}02$ \\
+\hline
+$[142,0;145,0[$ & $4$ & $0{,}04$ \\
+\hline
+$[145,0;148,0[$ & $4$ & $0{,}04$ \\
+\hline
+$[148,0;151,0[$ & $14$ & $0{,}14$ \\
+\hline
+$[151,0;154,0[$ & $21$ & $0{,}21$ \\
+\hline
+$[154,0;157,0[$ & $24$ & $0{,}24$ \\
+\hline
+$[157,0;160,0[$ & $19$ & $0{,}19$ \\
+\hline
+\end{tabu}
+\caption{Distribuição de frequências dos 100 melhores tempos na categoria homens da maratona de Nova Iorque (2017)}
+\label{maratonatabela}
+\end{table}
+
+Suponha que o comportamento dos 100 melhores tempos para homens na Maratona de Nova Iorque (2017) represente bem os 100 melhores tempos para homens em qualquer Maratona de Nova Iorque.
+
+Com base nessa suposição, estime a probabilidade de que na próxima maratona de Nova Iorque o tempo de conclusão da corrida, entre os 100 melhores na categoria homens,
+\begin{enumerate}
+\item {} 
+ocorra entre $157{,}0$ e $160{,}0$ minutos;
+
+\item {} 
+seja inferior a $154{,}0$ minutos;
+
+\item {} 
+seja superior a $152{,}5$ minutos;
+
+\item {} 
+caia entre $152{,}5$ e $158$ minutos.
+
+Observação: Para responder os dois últimos itens, suponha, em cada intervalo, que as frequências obervadas são proporcionais aos comprimentos dos intervalos, para poder avaliar frequências em subintervalos.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+Para responder as questões desta atividade será usada a interpretação frequentista de probabilidade.
+
+\begin{enumerate}
+\item Pela tabela de frequências observa-se que $19$ tempos de chegada dos $100$ melhores estão no intervalo dado, portanto, a probabilidade será $\frac{19}{100}=0{,}19$.
+
+\item Pela tabela de frequências observa-se que há $100−24−19=57$ tempos de chegada entre os $100$ melhores que são inferiores a $154{,}0$ minutos. Portanto a probabilidade será $\frac{57}{100}=0{,}57$. A resposta poderia ser obtida também, somando-se as frequências dos intervalos de classe do início até o intervalo $[151{,}0 ; 154{,}0[$: $7+4+1+2+4+4+14+21=57$, obtendo-se $0{,}57$ como probabilidade.
+
+\item Pela tabela, vemos que $152{,}5$ minutos não é extremo de intervalo na construção apresentada, desse modo podemos concluir que a probabilidade solicitada será um número no intervalo $]0{,}43 ; 0{,}64[$. Observe que $152{,}5$ está no intervalo $[151{,}0 ; 154{,}0[$ de comprimento 3, cuja frequência absoluta é $21$. Observe também que o subintervalo $[152{,}5; 154{,}0[$ de $[151{,}0 ; 154{,}0[$ tem comprimento $1{,}5$. Usando a suposição de proporcionalidade da frequência em cada intervalo por unidade de comprimento do intervalo, podemos a aproximar a frequência do subintervalo por $21\times\frac{1{,}5}{3}=10{,}5$. Logo, a probabilidade será obtida por $\frac{10{,}5+24+19}{100}=\frac{53{,}5}{100}=0{,}535$ que de fato é um número no intervalo inicialmente obtido.
+
+\item Pela tabela, nem $152,5$ nem $158,0$ são extremos de intervalo, porém podemos obter um limite superior para a probabilidade solicitada, que neste caso será um número menor do que $0,64$ $\big(\frac{21+24+19}{100}\big)$. Para um valor pontual, serão necessárias duas aproximações de frequências. A primeira no intervalo $[152{,}5; 154{,}0[$ já realizada no item anterior que foi aproximada para $10{,}5$. A frequência do intervalo $[154{,}0 ; 157{,}0 [$ é $24$. Para o intervalo $[157{,}0 ; 158{,}0[$ calcularemos uma frequência aproximada, usando o argumento da proporcionalidade. O intervalo $[157{,}0 ; 160{,}0[$ tem comprimento $3$ com frequência $10$, então, uma aproximação para o subintervalo $[157{,}0 ; 158{,}0[$ de $[157{,}0 ; 160{,}0[$ de comprimento $1$ é dada por $19\times\frac{1}{3}\approx6{,}3$. Assim, a probabilidade será $\frac{10{,}5+24+6{,}3}{100}=\frac{40{,}8}{100}=0{,}408$.
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

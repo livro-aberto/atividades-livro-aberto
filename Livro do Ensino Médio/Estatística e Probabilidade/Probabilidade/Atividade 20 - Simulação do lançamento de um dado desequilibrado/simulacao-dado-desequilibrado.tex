@@ -1,0 +1,114 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Simulação do lançamento de um dado desequilibrado}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item a
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Aplicar modelo probabilístico não equiprovável e usar tecnologia para realizar simulações de um fenômeno aleatório.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+Nessa atividade será proposta a simulação de um dado desequilibrado de tal modo que as faces não ocorrem com probabilidades iguais. Inicialmente será necessária uma discussão sobre com os alunos desequilibrados. Em particular, nessa atividade será suposto que a probabilidade da face é proporcional ao número da face. Assim, a primeira pergunta envolverá obter as probabilidades de cada face. Fazendo $P({i})=k\cdot i$ em que $i=1,2,3,4,5,6$ e $k$ é a constante de proporcionalidade, lembre com os alunos a segunda regra básica de que $P(S)=1$ e que $\{1\}\cup\{2\}\cup\cdots\cup\{6\}=S$. Além disso, como os eventos elementares são disjuntos segue que $1=P(\{1\})+P(\{2\})+\cdots+P(\{6\})=k+2k+3k+4k+5k+6k=21k$ tal que $k=121$. Depois dessa dedução será necessária uma discussão sobre como usar o gerador de números aleatórios para simular os resultados desse dado, para finalmente realizar a simulação de um número aleatório entre $1$ e $21$ e atribuido o $1$ à face $1$, depois o $2$ e o $3$ à face $2$, o $4$, o $5$ e o $6$ à face $3$, o $7$, o $8$, o $9$ e o $10$ à face $4$, o $11$, o $12$, o $13$, o $14$ e o $15$ à face $5$ e, finalmente, o $16$, o $17$, o $18$, o $19$, o $20$ e o $21$ à face $6$. Leve o aluno a observar que desse modo estaremos respeitando as probabilidades desiguais, a saber, $1/21$ para a face $1$, $2/21$ para a face $2,..., 6/21$ para a face $6$.
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Um dado é desequilibrado quando suas faces ocorrem com probabilidades desiguais. Suponha que um dado seja desequilibrado de tal modo que a probabilidade de ocorrer cada uma de suas faces, entre os números 1, 2, 3, 4, 5 e 6, sejam proporcionais aos respectivos números das faces.
+\begin{enumerate}
+\item {} 
+Determine as probabilidades de cada face no caso desse dado.
+
+\item {} 
+Usando as funções de geração de números aleatórios, simule o lançamento desse dado 42 vezes e compare a frequência relativa de faces 6 obtidas com a probabilidade teórica da face 6 obtida no item anterior.
+
+\item {} 
+Repita o item anterior para 84, 210, 630, 840 e 1680 lançamentos do dado desequilibrado e registre o número de vezes que você obteve a face 6.
+
+\item {} 
+Complete a tabela a seguir e comente sobre os resultados que você obteve.
+
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Número de Observações & Frequência relativa de 6 \\
+\hline
+42 &\\
+\hline
+210 &\\
+\hline
+630 &\\
+\hline
+840 &\\
+\hline
+1680 &\\
+\hline
+\end{tabu}
+\end{table}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item Você pode realizar a simulação usando a planilha do Geogebra e a função \textit{=NúmeroAleatório(1,21)} na célula A1. Essa função retornará, com probabilidades iguais, um entre os números 1,2,3,4,5, …,21. Depois, arraste, copiando esta função para mais 41 células A2 até A42, obtendo as 42 simulações. Observe que nesse caso, você deverá usar apenas um número para atribuir à ocorrência da face 1, dois números para a face 2, e assim por diante, com seis números para a face 6. Se consideraros os seis últimos, a saber, $21$, $20$, $19$, $18$, $17$ e $16$, use a função \textit{=ContarSe(15<x<22,A1:A42)}, para obter a quantidade de faces 6 obtidas nos $42$ lançamentos. É claro que as respostas irão variar de um para outro. Mas, espera-se que o número de faces $“6”$ obtidas oscile em torno de $12$, pois a probabilidade de gerar uma face $“6”$ com esse procedimento é $\frac{6}{21}\approx0{,}286$ e estamos simulando $42$ lançamentos.
+
+\item Idem ao item anterior, só que agora o número de células a ser considerado na planilha será $210$, $630$, $840$ e $160$.
+
+\item No preenchimento da tabela você deverá perceber que a medida que o número de simulações é maior, a frequência relativa de faces $6$ se aproxima da probabilidade teórica de obter uma face $6$ ($\approx0,286$). Se de fato o gerador de números aleatórios do programa que você está usando é bom, esse é o resultado esperado. Por exemplo, em uma simulação com o GeoGebra foram obserdas as seguintes frequências relativas de faces 6 conforme o número de lançamentos:
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|f|f|}
+\hline
+$\tcolor{Número de Observações}$ & $\tcolor{Frequência relativa de 6}$ \\
+\hline
+42 & 0{,}29 \\
+\hline
+84 & 0{,}31 \\
+\hline 
+210 & 0{,}30 \\
+\hline
+630 & 0{,}28 \\
+\hline
+840 & 0{,}29 \\
+\hline
+1680 & 0{,}29 \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

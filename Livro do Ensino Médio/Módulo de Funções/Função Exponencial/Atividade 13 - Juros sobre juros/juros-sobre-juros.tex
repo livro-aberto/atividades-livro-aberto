@@ -1,0 +1,87 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Juros sobre juros}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\ifdefined\prof
+%Habilidades da BNCC
+\begin{objetivos}
+\item \textbf{EM13MAT304} Resolver e elaborar problemas com funções exponenciais nos quais é necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como o da Matemática Financeira e o do crescimento de seres vivos microscópicos, entre outros. 
+\end{objetivos}
+
+%Caixa do Para o Professor
+\begin{goals}
+%Objetivos específicos
+\begin{enumerate}
+\item Praticar em situações concretas os conceitos de juro, taxa e período.
+\end{enumerate}
+
+\tcblower
+
+%Orientações e sugestões
+\begin{itemize}
+\item A ideia aqui não é fazer uma exposição exaustiva sobre juros compostos, mas sim se apoiar nas ideias construídas até aqui para resolver os problemas propostos.
+
+\item  Sugerimos dividir a turma em duplas/trios para a resolução dos problemas e posterior apresentação para os colegas. Caso julgue necessário aumente a lista de problemas para deixar a atividade mais interessante.
+\end{itemize}
+\end{goals}
+
+\bigskip
+\begin{center}
+{\large \scshape Atividade}
+\end{center}
+\fi
+
+Resolva os seguintes problemas:
+
+\begin{enumerate}
+
+\item{}
+Se uma pessoa deseja obter R\$ $27.500{,}00$ em um ano, quanto deverá depositar hoje em uma alternativa de poupança que rende $1{,}7\%$ de juros compostos ao mês?
+
+\item{}
+Qual a taxa percentual mensal de juros de uma aplicação de R\$ $40.000{,}00$ que produz um total de R\$ $43.894{,}63$ ao final de um quadrimestre.
+
+\item{}
+Determinar o juro total a ser pago em um empréstimo de R\$ $88.000{,}00$ pelo prazo de $5$ meses à taxa composta de $4{,}5\%$ ao mês.
+
+\item{}
+Qual das opções gera um valor maior ao final de 1 ano: aplicar um capital de $R\$60.000{,}00$ à taxa de juros de $9{,}9\%$ ao semestre ou à taxa de $20{,}78\%$ ao ano.
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+
+\item{}
+$\dfrac{27.500}{1{,}017^{12}}=22.463{,}70$
+
+\item{}
+$40.000(1+r)^4=43.894{,}63 \iff r=0,0235=2{,}35\%$
+
+\item
+$88.000(1{,}045)^5-88.000=21.664{,}01$
+
+\item
+$(1{,}099)^2=1{,}2078$, portanto geram o mesmo valor.
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}

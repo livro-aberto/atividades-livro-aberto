@@ -1,0 +1,173 @@
+\documentclass[10 pt,usenames,dvipsnames, oneside]{article}
+\usepackage{../../../modelo-ensino-medio}
+
+
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}[l]{3cm}
+\includegraphics[width=2cm]{logo}    
+\end{minipage}\hfill
+\begin{minipage}[r]{.8\textwidth}
+ {\Large \scshape Atividade: Menino Gauss}  
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+% \ifdefined\prof
+%Habilidades da BNCC
+% \begin{objetivos}
+% \item 
+% \end{objetivos}
+
+%Caixa do Para o Professor
+% \begin{goals}
+% %Objetivos específicos
+% \begin{enumerate}
+% \item
+% \end{enumerate}
+
+% \tcblower
+
+% %Orientações e sugestões
+% \begin{itemize}
+% \item 
+% \end{itemize}
+% \end{goals}
+
+% \bigskip
+% \begin{center}
+% {\large \scshape Atividade}
+% \end{center}
+% \fi
+
+No livro \textit{Antologia Matemática} de Malba Tahan, conta um episódio cuja personagem principal seria o “príncipe da matemática” Carl Frederick \textbf{Gauss} (\(\star 1777- \dagger 1855\)). Não se sabe se o episódio é real, mas conta-se que aos sete anos de idade, chegando para mais um dia de aula, \textit{Gauss} e seus colegas teriam encontrado o professor com pouca paciência. Assim, o professor, com o intuito de entreter seus alunos por longo tempo e não precisar dar-lhes qualquer atenção, pediu para que todos somassem os números naturais desde \(1\) até \(100\). Contudo, o jovem \textit{Gauss} em pouco tempo levou o resultado do exercício para o professor e este, incrédulo do feito, teria mandado \textit{Gauss} para a direção. Mais tarde, tudo se esclareceu e o professor reconheceu o acerto no método e no resultado dado pelo jovem e desculpou-se.
+
+Como o jovem \textit{Gauss} teria obtido este resultado por um método aparentemente desconhido do enfurecido professor e com tanta rapidez?
+
+Com a finalidade de responder a essa pergunta sugerimos uma atividade. Ela necessitará de uma fita métrica.
+
+\begin{figure}[H]
+\centering
+
+
+\noindent\includegraphics[width=200bp]{{plastic-tape-measure}.jpg}
+\caption{Imagem de \href{https://commons.wikimedia.org/wiki/File:Plastic\_tape\_measure.jpg}{Pastorius} CC-BY}\label{\detokenize{AF209-4:id1}}\end{figure}
+
+Como as fitas métricas comercializadas tem um tamanho padrão, em nossa atividade vamos entender como o jovem \textit{Gauss} fez a soma começando por somar os números da fita métrica, ou seja, vamos começar resolvendo a expressão
+\begin{equation*}
+\begin{split}1+2+3+4+5+ \cdots +147+148+149+150\end{split}
+\end{equation*}\begin{enumerate}
+\item {} 
+De posse da fita métrica, perceba que ela tem os dois lados numerados. Cada um desses lados tem todos os números que queremos somar?
+
+\item {} 
+Qual o número que corresponde ao verso (outro lado da fita) do número \(1\)? E quais são os números dos versos correspondentes de \(18\) e \(75\)?
+\newpage
+
+\item {} 
+Agora, vamos fazer algumas somas de um número com o seu correspondente no verso da fita. Faça:
+
+\begin{enumerate}[label=\Roman*)]
+\item \(1 + \,\;\) seu correspondente;
+
+\item \(15 + \;\) seu correspondente;
+
+\item \(31 + \;\) seu correspondente;
+
+\item \(49 + \;\) seu correspondente;
+
+\item \(75 + \;\) seu correspondente.
+\end{enumerate}
+
+\item {} 
+Qual o resultado obtido sempre que se soma um número com o seu correspondente no verso desta fita?
+
+\item {} 
+Com base na resposta do item anterior, qual o resultado da soma de todos os números dos dois lados dessa fita?
+
+\item {} 
+A soma de todos os números em ambos os lados da fita é o resultado que queríamos obter?
+
+\item {} 
+Que operação devemos fazer com a soma de todos os números da fita para que ele seja o resultado da expressão
+\begin{equation*}
+\begin{split}1+2+3+4+5+ \cdots +147+148+149+150 \text{ ?}\end{split}
+\end{equation*}
+Qual é o valor dessa expressão?
+
+\item {} 
+Imagine agora uma outra fita que tenha em cada lado, todos os números de 1 até 100.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=250bp]{{fita1}.jpg}
+\end{figure}
+
+Utilizando o mesmo raciocício, tente responder a mesma pergunta feita para a turma do jovem \textit{Gauss}, ou seja, quanto dá \(1+2+3+ \cdots +97+98+99+100\)?
+
+\item {} 
+E se a fita fosse até o número natural \(n\)?
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=250bp]{{fita2}.jpg}
+\end{figure}
+
+Com o que foi aprendido, obtenha uma expressão para o resultado da soma dos \(n\) primeiros números naturais. Ou seja, tente expressar em função de \(n\), o resultado de \(1+2+3+4+5+ \cdots +(n-3)+(n-2)+(n-1)+n\).
+
+\end{enumerate}
+
+\ifdefined\prof
+\begin{solucao}
+
+\begin{enumerate}
+\item {} 
+Sim.
+
+\item {} 
+\(150\); \(133\) e \(76\).
+
+\item {} 
+\begin{enumerate}[label=\Roman*)]
+\item \(1+150=151\);
+
+\item \(15+136=151\);
+
+\item \(31+120=151\);
+
+\item \(49+102=151\);
+
+\item \(75+76=151\).
+\end{enumerate}
+
+\item {} 
+\(151\).
+
+\item {} 
+\(150 \cdot 151=22650\).
+
+\item {} 
+Não.
+
+\item {} 
+Devemos dividir a soma obtida por \(2\); \(22650 \div 2=11325\).
+
+\item {} 
+As somas de cada número com seu correspondente no verso dá, agora, \(101\). Com isso, a soma de todos os números de ambos os lados dessa fita será \(100 \cdot 101\) e \((100 \cdot 101) \div 2 = 10100 \div 2 = 5050\).
+
+\item {} 
+As somas de cada número com seu correspondente no verso dá, agora, \(n+1\). Com isso, a soma de todos os números de ambos os lados dessa fita será \(n \cdot (n+1)\) e
+\begin{equation*}
+1+2+3+4+5+ \cdots +(n-3)+(n-2)+(n-1)+n=\frac{n \cdot (n+1)}{2} = \frac{n^2 + n}{2}=\frac{n^2}{2} + \frac{n}{2}
+\end{equation*}
+
+\end{enumerate}
+
+\end{solucao}
+\fi
+
+\end{document}
